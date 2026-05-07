@@ -11,7 +11,7 @@
 #define WEATHER_VOLCANIC_ASH            7
 #define WEATHER_SANDSTORM               8
 #define WEATHER_FOG_DIAGONAL            9   // Unused
-#define WEATHER_UNDERWATER              10  // Unused
+
 #define WEATHER_SHADE                   11  // Original name was closer to WEATHER_CLOUDY/OVERCAST
 #define WEATHER_DROUGHT                 12
 #define WEATHER_DOWNPOUR                13
@@ -21,6 +21,7 @@
 #define WEATHER_ROUTE123_CYCLE          21
 #define WEATHER_FOG                     22  // Aggregate of WEATHER_FOG_HORIZONTAL and WEATHER_FOG_DIAGONAL
 #define WEATHER_LEAVES                  23
+#define WEATHER_DYNAMIC                 10
 #define WEATHER_COUNT                   24
 
 // These are used in maps' coord_weather_event entries.
