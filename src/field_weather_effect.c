@@ -2655,6 +2655,7 @@ static u8 GetDynamicWeather(void)
 {
     u8 count;
     const u8 *weathers = GetDynamicWeatherPool(&count);
+    rng_value_t localRngState;
     const u32 hashPieces[] =
     {
         gSaveBlock1Ptr->dailySeed,
@@ -2667,7 +2668,8 @@ static u8 GetDynamicWeather(void)
     if (count == 0)
         return WEATHER_NONE;
 
-    return weathers[Crc32B((const u8 *)hashPieces, sizeof(hashPieces)) % count];
+    localRngState = LocalRandomSeed(Crc32B((const u8 *)hashPieces, sizeof(hashPieces)));
+    return weathers[LocalRandom32(&localRngState) % count];
 }
 
 static u8 TranslateWeatherNum(u8 weather)
