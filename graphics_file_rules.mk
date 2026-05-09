@@ -329,3 +329,57 @@ $(PKNAVOPTIONSGFXDIR)/options.4bpp: $(PKNAVOPTIONSGFXDIR)/hoenn_map.4bpp \
                                     $(PKNAVOPTIONSGFXDIR)/tough.4bpp \
                                     $(PKNAVOPTIONSGFXDIR)/cancel.4bpp
 	@cat $^ >$@
+
+$(PKNAVGFXDIR)/hns/options/options.4bpp: $(PKNAVGFXDIR)/hns/options/hoenn_map.4bpp \
+                                         $(PKNAVOPTIONSGFXDIR)/condition.4bpp \
+                                         $(PKNAVGFXDIR)/hns/options/match_call.4bpp \
+                                         $(PKNAVOPTIONSGFXDIR)/ribbons.4bpp \
+                                         $(PKNAVOPTIONSGFXDIR)/switch_off.4bpp \
+                                         $(PKNAVOPTIONSGFXDIR)/party.4bpp \
+                                         $(PKNAVOPTIONSGFXDIR)/search.4bpp \
+                                         $(PKNAVOPTIONSGFXDIR)/cool.4bpp \
+                                         $(PKNAVOPTIONSGFXDIR)/beauty.4bpp \
+                                         $(PKNAVOPTIONSGFXDIR)/cute.4bpp \
+                                         $(PKNAVOPTIONSGFXDIR)/smart.4bpp \
+                                         $(PKNAVOPTIONSGFXDIR)/tough.4bpp \
+                                         $(PKNAVOPTIONSGFXDIR)/cancel.4bpp
+	@cat $^ >$@
+
+$(PKNAVGFXDIR)/header.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 53 -Wnum_tiles
+
+$(PKNAVGFXDIR)/hns/header.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 53 -Wnum_tiles
+
+$(PKNAVGFXDIR)/device_outline.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 53 -Wnum_tiles
+
+$(PKNAVGFXDIR)/match_call/ui.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 13 -Wnum_tiles
+
+$(POKEDEXGFXDIR)/region_map.8bpp: %.8bpp: %.png
+	$(GFX) $< $@ -num_tiles 232 -Wnum_tiles
+
+$(POKEDEXGFXDIR)/region_map_affine.8bpp: %.8bpp: %.png
+	$(GFX) $< $@ -num_tiles 233 -Wnum_tiles
+
+$(NAMINGGFXDIR)/cursor.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 5 -Wnum_tiles
+
+$(NAMINGGFXDIR)/cursor_squished.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 5 -Wnum_tiles
+
+$(NAMINGGFXDIR)/cursor_filled.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 5 -Wnum_tiles
+
+$(SPINDAGFXDIR)/spot_0.1bpp: %.1bpp: %.png
+	$(GFX) $< $@ -plain -data_width 2
+
+$(SPINDAGFXDIR)/spot_1.1bpp: %.1bpp: %.png
+	$(GFX) $< $@ -plain -data_width 2
+
+$(SPINDAGFXDIR)/spot_2.1bpp: %.1bpp: %.png
+	$(GFX) $< $@ -plain -data_width 2
+
+$(SPINDAGFXDIR)/spot_3.1bpp: %.1bpp: %.png
+	$(GFX) $< $@ -plain -data_width 2

@@ -242,8 +242,13 @@ static const u16 sPokedexPlusHGSS_MenuSearch_dark_Pal[] = INCGFX_U16("graphics/p
 static const u16 sPokedexPlusHGSS_SearchResults_dark_Pal[] = INCGFX_U16("graphics/pokedex/hgss/palette_search_results_dark.pal", ".gbapal");
 static const u32 sPokedexPlusHGSS_MenuList_Gfx[] = INCGFX_U32("graphics/pokedex/hgss/tileset_menu_list.png", ".4bpp.smol");
 static const u32 sPokedexPlusHGSS_MenuList_DECA_Gfx[] = INCGFX_U32("graphics/pokedex/hgss/tileset_menu_list_DECA.png", ".4bpp.smol");
+#if IS_HNS
+static const u32 sPokedexPlusHGSS_Interface_Gfx[] = INCBIN_U32("graphics/pokedex/hgss/tileset_interface_hns.4bpp.smol");
+static const u32 sPokedexPlusHGSS_Interface_DECA_Gfx[] = INCBIN_U32("graphics/pokedex/hgss/tileset_interface_DECA_hns.4bpp.smol");
+#else
 static const u32 sPokedexPlusHGSS_Interface_Gfx[] = INCGFX_U32("graphics/pokedex/hgss/tileset_interface.png", ".4bpp.smol");
 static const u32 sPokedexPlusHGSS_Interface_DECA_Gfx[] = INCGFX_U32("graphics/pokedex/hgss/tileset_interface_DECA.png", ".4bpp.smol");
+#endif
 static const u32 sPokedexPlusHGSS_Menu_1_Gfx[] = INCGFX_U32("graphics/pokedex/hgss/tileset_menu1.png", ".4bpp.smol");
 static const u32 sPokedexPlusHGSS_Menu_2_Gfx[] = INCGFX_U32("graphics/pokedex/hgss/tileset_menu2.png", ".4bpp.smol");
 static const u32 sPokedexPlusHGSS_Menu_3_Gfx[] = INCGFX_U32("graphics/pokedex/hgss/tileset_menu3.png", ".4bpp.smol");
