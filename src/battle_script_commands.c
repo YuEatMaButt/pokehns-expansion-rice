@@ -2176,7 +2176,7 @@ static void Cmd_waitmessage(void)
         else
         {
             u16 toWait = cmd->time;
-            if (gTestRunnerHeadless)
+            if (gTestRunnerHeadless || !gSaveBlock3Ptr->challengeSettings.fastBattle)
                 gPauseCounterBattle = toWait;
             if (++gPauseCounterBattle >= toWait)
             {
@@ -4922,7 +4922,7 @@ static void Cmd_pause(void)
     if (gBattleControllerExecFlags == 0)
     {
         u16 value = cmd->frames;
-        if (gTestRunnerHeadless)
+        if (gTestRunnerHeadless || !gSaveBlock3Ptr->challengeSettings.fastBattle)
             gPauseCounterBattle = value;
         if (++gPauseCounterBattle >= value)
         {
