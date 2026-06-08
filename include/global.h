@@ -1183,6 +1183,14 @@ struct Bag
     struct ItemSlot treasures[BAG_TREASURES_COUNT];
 };
 
+struct MomSavingsData
+{
+    u32 momsMoney;
+    u16 normalGiftFlags;
+    u8 isSavingMoney;
+    u8 isInitialized;
+};
+
 struct SaveBlock1
 {
     /*0x00*/ struct Coords16 pos;
@@ -1301,6 +1309,9 @@ struct SaveBlock1
 #if IS_FRLG
     u8 rivalName[PLAYER_NAME_LENGTH + 1];
     struct DaycareMon route5DayCareMon;
+#endif
+#if IS_HNS
+    struct MomSavingsData momSavings;
 #endif
     // sizeof: 0x3???
 };
