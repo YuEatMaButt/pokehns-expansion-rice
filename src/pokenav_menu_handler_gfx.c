@@ -108,9 +108,15 @@ static const u16 sPokenavBgDotsPal[] = INCGFX_U16("graphics/pokenav/bg_dots.png"
 static const u32 sPokenavBgDotsTiles[] = INCGFX_U32("graphics/pokenav/bg_dots.png", ".4bpp.smol");
 static const u32 sPokenavBgDotsTilemap[] = INCBIN_U32("graphics/pokenav/bg_dots.bin.smolTM");
 #endif
+#if IS_HNS
+static const u16 sPokenavDeviceBgPal[] = INCBIN_U16("graphics/pokenav/hns/device_outline.gbapal");
+static const u32 sPokenavDeviceBgTiles[] = INCBIN_U32("graphics/pokenav/hns/device_outline.4bpp.smol");
+static const u32 sPokenavDeviceBgTilemap[] = INCBIN_U32("graphics/pokenav/hns/device_outline_map.bin.smolTM");
+#else
 static const u16 sPokenavDeviceBgPal[] = INCGFX_U16("graphics/pokenav/device_outline.png", ".gbapal");
 static const u32 sPokenavDeviceBgTiles[] = INCGFX_U32("graphics/pokenav/device_outline.png", ".4bpp.smol", "-num_tiles 53 -Wnum_tiles");
 static const u32 sPokenavDeviceBgTilemap[] = INCBIN_U32("graphics/pokenav/device_outline_map.bin.smolTM");
+#endif
 static const u16 sMatchCallBlueLightPal[] = INCGFX_U16("graphics/pokenav/blue_light.png", ".gbapal");
 static const u32 sMatchCallBlueLightTiles[] = INCGFX_U32("graphics/pokenav/blue_light.png", ".4bpp.smol");
 

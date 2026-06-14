@@ -2007,7 +2007,11 @@ const u32 gPokenavHeader_Gfx[] = INCGFX_U32("graphics/pokenav/header.png", ".4bp
 const u32 gPokenavHeader_Tilemap[] = INCBIN_U32("graphics/pokenav/header.bin.smolTM");
 #endif
 
+#if IS_HNS
+const u16 gPokenavLeftHeader_Pal[] = INCBIN_U16("graphics/pokenav/hns/left_headers/palette.gbapal");
+#else
 const u16 gPokenavLeftHeader_Pal[] = INCGFX_U16("graphics/pokenav/left_headers/palette.pal", ".gbapal");
+#endif
 const u32 gPokenavLeftHeaderBeauty_Gfx[] = INCGFX_U32("graphics/pokenav/left_headers/beauty.png", ".4bpp.smol");
 const u32 gPokenavLeftHeaderSmart_Gfx[] = INCGFX_U32("graphics/pokenav/left_headers/smart.png", ".4bpp.smol");
 const u32 gPokenavLeftHeaderCondition_Gfx[] = INCGFX_U32("graphics/pokenav/left_headers/condition.png", ".4bpp.smol");
@@ -2029,8 +2033,13 @@ const u32 gPokenavLeftHeaderTough_Gfx[] = INCGFX_U32("graphics/pokenav/left_head
 const u32 gPokenavLeftHeaderCool_Gfx[] = INCGFX_U32("graphics/pokenav/left_headers/cool.png", ".4bpp.smol");
 const u32 gPokenavLeftHeaderParty_Gfx[] = INCGFX_U32("graphics/pokenav/left_headers/party.png", ".4bpp.smol");
 
+#if IS_HNS
+const u16 gPokenavMessageBox_Pal[] = INCBIN_U16("graphics/pokenav/hns/message.gbapal");
+const u32 gPokenavMessageBox_Gfx[] = INCBIN_U32("graphics/pokenav/hns/message.4bpp.smol");
+#else
 const u16 gPokenavMessageBox_Pal[] = INCGFX_U16("graphics/pokenav/message.png", ".gbapal");
 const u32 gPokenavMessageBox_Gfx[] = INCGFX_U32("graphics/pokenav/message.png", ".4bpp.smol");
+#endif
 const u32 gPokenavMessageBox_Tilemap[] = INCBIN_U32("graphics/pokenav/message.bin.smolTM");
 
 const u16 gRegionMapCityZoomTiles_Pal[] = INCGFX_U16("graphics/pokenav/region_map/zoom_tiles.png", ".gbapal");
