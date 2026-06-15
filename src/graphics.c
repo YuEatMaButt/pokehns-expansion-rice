@@ -1839,7 +1839,11 @@ const u16 gBagScreenFemale_Pal[] = INCGFX_U16("graphics/bag/menu_female.pal", ".
 #endif
 
 const u32 gBagScreen_Gfx[] = INCGFX_U32("graphics/bag/menu.png", ".4bpp.smol", "-num_tiles 53 -Wnum_tiles");
-const u32 gBagScreen_GfxTileMap[] = INCBIN_U32("graphics/bag/menu.bin.smolTM");
+#if I_COMBINE_BAG_POCKETS
+const u32 gBagScreen_GfxTileMap[] = INCBIN_U32("graphics/bag/menu_6.bin.smolTM");
+#else
+const u32 gBagScreen_GfxTileMap[] = INCBIN_U32("graphics/bag/menu_8.bin.smolTM");
+#endif
 
 const u32 gBattlePyramidBag_Gfx[]          = INCGFX_U32("graphics/bag/bag_pyramid.png", ".4bpp.smol");
 const u16 gBattlePyramidBag_Pal[]          = INCGFX_U16("graphics/bag/bag_pyramid.pal", ".gbapal"); // female palette is first and male is second.
