@@ -629,16 +629,19 @@ const u16 gTrainerPalette_TwinsHns[] = INCBIN_U16("graphics/trainers/palettes/tw
 const u32 gTrainerFrontPic_YoungsterHns[] = INCBIN_U32("graphics/trainers/front_pics/youngster_hns.4bpp.smol");
 const u16 gTrainerPalette_YoungsterHns[] = INCBIN_U16("graphics/trainers/palettes/youngster_hns.gbapal");
 
-const u8 gTrainerBackPic_Brendan[] = INCGFX_U8("graphics/trainers/back_pics/brendan.png", ".4bpp");
-const u8 gTrainerBackPic_May[] = INCGFX_U8("graphics/trainers/back_pics/may.png", ".4bpp");
-const u8 gTrainerBackPic_Red[] = INCGFX_U8("graphics/trainers/back_pics/red.png", ".4bpp");
-const u8 gTrainerBackPic_Leaf[] = INCGFX_U8("graphics/trainers/back_pics/leaf.png", ".4bpp");
-const u8 gTrainerBackPic_RubySapphireBrendan[] = INCGFX_U8("graphics/trainers/back_pics/brendan_rs.png", ".4bpp");
-const u8 gTrainerBackPic_RubySapphireMay[] = INCGFX_U8("graphics/trainers/back_pics/may_rs.png", ".4bpp");
-const u8 gTrainerBackPic_Wally[] = INCGFX_U8("graphics/trainers/back_pics/wally.png", ".4bpp");
-const u8 gTrainerBackPic_Steven[] = INCGFX_U8("graphics/trainers/back_pics/steven.png", ".4bpp");
-const u8 gTrainerBackPic_Pokedude[] = INCGFX_U8("graphics/trainers/back_pics/pokedude.png", ".4bpp");
-const u8 gTrainerBackPic_OldMan[] = INCGFX_U8("graphics/trainers/back_pics/old_man.png", ".4bpp");
+const u32 gTrainerFrontPic_SamsonOakHns[] = INCBIN_U32("graphics/trainers/front_pics/samson_oak_hns.4bpp.smol");
+const u16 gTrainerPalette_SamsonOakHns[] = INCBIN_U16("graphics/trainers/front_pics/samson_oak_hns.gbapal");
+
+const u8 gTrainerBackPic_Brendan[] = INCBIN_U8("graphics/trainers/back_pics/brendan.4bpp");
+const u8 gTrainerBackPic_May[] = INCBIN_U8("graphics/trainers/back_pics/may.4bpp");
+const u8 gTrainerBackPic_Red[] = INCBIN_U8("graphics/trainers/back_pics/red.4bpp");
+const u8 gTrainerBackPic_Leaf[] = INCBIN_U8("graphics/trainers/back_pics/leaf.4bpp");
+const u8 gTrainerBackPic_RubySapphireBrendan[] = INCBIN_U8("graphics/trainers/back_pics/brendan_rs.4bpp");
+const u8 gTrainerBackPic_RubySapphireMay[] = INCBIN_U8("graphics/trainers/back_pics/may_rs.4bpp");
+const u8 gTrainerBackPic_Wally[] = INCBIN_U8("graphics/trainers/back_pics/wally.4bpp");
+const u8 gTrainerBackPic_Steven[] = INCBIN_U8("graphics/trainers/back_pics/steven.4bpp");
+const u8 gTrainerBackPic_Pokedude[] = INCBIN_U8("graphics/trainers/back_pics/pokedude.4bpp");
+const u8 gTrainerBackPic_OldMan[] = INCBIN_U8("graphics/trainers/back_pics/old_man.4bpp");
 // HnS Trainer Back Pics
 const u8 gTrainerBackPic_GoldHns[] = INCBIN_U8("graphics/trainers/back_pics/gold_hns.4bpp");
 const u8 gTrainerBackPic_KrisHns[] = INCBIN_U8("graphics/trainers/back_pics/kris_hns.4bpp");
@@ -881,6 +884,7 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(TRAINER_PIC_FRONT_SUPER_NERD_HNS, gTrainerFrontPic_SuperNerdHns, gTrainerPalette_SuperNerdHns),
     TRAINER_SPRITE(TRAINER_PIC_FRONT_TWINS_HNS, gTrainerFrontPic_TwinsHns, gTrainerPalette_TwinsHns),
     TRAINER_SPRITE(TRAINER_PIC_FRONT_YOUNGSTER_HNS, gTrainerFrontPic_YoungsterHns, gTrainerPalette_YoungsterHns),
+    TRAINER_SPRITE(TRAINER_PIC_FRONT_SAMSON_OAK_HNS, gTrainerFrontPic_SamsonOakHns, gTrainerPalette_SamsonOakHns),
 };
 
 static const union AnimCmd sAnimCmd_Hoenn[] =
