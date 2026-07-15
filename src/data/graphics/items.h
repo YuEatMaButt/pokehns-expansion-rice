@@ -1863,6 +1863,9 @@ const u16 gItemIconPalette_PowderJar[] = INCGFX_U16("graphics/items/icon_palette
 const u32 gItemIcon_WailmerPail[] = INCGFX_U32("graphics/items/icons/wailmer_pail.png", ".4bpp.smol");
 const u16 gItemIconPalette_WailmerPail[] = INCGFX_U16("graphics/items/icon_palettes/wailmer_pail.pal", ".gbapal");
 
+const u32 gItemIcon_SquirtBottle[] = INCBIN_U32("graphics/items/icons/squirt_bottle.4bpp.smol");
+const u16 gItemIconPalette_SquirtBottle[] = INCBIN_U16("graphics/items/icon_palettes/squirt_bottle.gbapal");
+
 const u32 gItemIcon_PokeRadar[] = INCGFX_U32("graphics/items/icons/poke_radar.png", ".4bpp.smol");
 const u16 gItemIconPalette_PokeRadar[] = INCGFX_U16("graphics/items/icon_palettes/poke_radar.pal", ".gbapal");
 
