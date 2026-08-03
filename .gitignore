@@ -21,7 +21,6 @@
 *.hwjpnfont
 *.fwjpnfont
 sound/**/*.bin
-!sound/direct_sound_samples/pl_musicbox62.bin
 sound/songs/midi/*.s
 tools/agbcc
 *.map
