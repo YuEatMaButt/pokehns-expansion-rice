@@ -203,194 +203,39 @@ Debug_EventScript_Text_DefensiveIVs:
 	.string "HP IVs: {STR_VAR_1}, DEF IVs: {STR_VAR_2}, SPDEF IVs: {STR_VAR_3}$"
 
 Debug_EventScript_Script_1::
-	@ Unlock all HMs
-	setflag FLAG_BADGE01_GET
-	setflag FLAG_BADGE02_GET
-	setflag FLAG_BADGE03_GET
-	setflag FLAG_BADGE04_GET
-	setflag FLAG_BADGE05_GET
-	setflag FLAG_BADGE06_GET
-	setflag FLAG_BADGE07_GET
-	setflag FLAG_BADGE08_GET
-	setflag FLAG_RECEIVED_HM_CUT
-	setflag FLAG_RECEIVED_HM_ROCK_SMASH
-	setflag FLAG_GET_HEADBUTT
-	giveitem ITEM_HM01
-	giveitem ITEM_HM02
-	giveitem ITEM_HM03
-	giveitem ITEM_HM04
-	giveitem ITEM_HM05
-	giveitem ITEM_HM06
-	giveitem ITEM_HM07
-	giveitem ITEM_HM08
-	msgbox Debug_Text_HMsUnlocked, MSGBOX_DEFAULT
+	setvar VAR_SINJOH_STORYLINE, 6
+	setvar VAR_NOBLE_TYPHLOSION, 1
+	setvar VAR_NOBLE_ELECTRODE, 1
+	setvar VAR_NOBLE_KLEAVOR, 1
+	setflag FLAG_HIDE_NEWSINJOH_HOUSE3_NOBLE_TYPHLOSION
 	release
 	end
 
-Debug_Text_HMsUnlocked:
-	.string "All HM flags set!$"
-
 Debug_EventScript_Script_2::
-	setflag FLAG_HIDE_COPYCAT_CLEFAIRY_DOLL
-	setflag FLAG_HIDE_CERULEAN_GYM_TRAINERS
-	setflag FLAG_HIDE_CERULEAN_CAPE_ROCKET
-	setflag FLAG_HIDE_CERULEAN_GYM_ROCKET
-	setflag FLAG_HIDDEN_ITEM_MACHINE_PART
-	setflag FLAG_HIDE_ROUTE25_MISTY
-	setflag FLAG_HIDE_ROUTE25_EUSINE
-	setflag FLAG_HIDE_ROUTE25_SUICUNE
-	setflag FLAG_HIDE_CELADON_EUSINE
-	setflag FLAG_HIDE_SEAFOAM_GYMGUY
-	setflag FLAG_HIDE_VIRIDIAN_BLUE
-	setflag FLAG_HIDE_ROUTE14_EUSINE
-	setflag FLAG_HIDE_ROUTE14_SUICUNE
-	setflag FLAG_HIDE_VIRIDIAN_FOREST_SPIKY_EARED_PICHU
-	setflag FLAG_HIDE_VIRIDIAN_FOREST_SPIKY_EARED_PICHU1
-	setflag FLAG_HIDE_VIRIDIAN_FOREST_SPIKY_EARED_PICHU2
-	setflag FLAG_HIDE_VIRIDIAN_FOREST_SPIKY_EARED_PICHU3
-	setflag FLAG_HIDE_VIRIDIAN_FOREST_SPIKY_EARED_PICHU4
-	setflag FLAG_HIDE_ROUTE13_BOAT
-	
-	clearflag FLAG_BADGE09_GET
-	clearflag FLAG_BADGE10_GET
-	clearflag FLAG_BADGE11_GET
-	clearflag FLAG_BADGE12_GET
-	clearflag FLAG_BADGE13_GET
-	clearflag FLAG_BADGE14_GET
-	clearflag FLAG_BADGE15_GET
-	clearflag FLAG_BADGE16_GET
-	clearflag FLAG_GOT_VERMILION_HP_UP
-	clearflag FLAG_KANTO_RADIO_GOT
-	clearflag FLAG_HIDE_VERMILION_SNORLAX
-	clearflag FLAG_HIDE_FAN_CLUB_CLEFAIRY_DOLL
-	clearflag FLAG_FOUND_BOTH_VERMILION_GYM_SWITCHES
-	clearflag FLAG_RETURNED_MACHINE_PART
-	clearflag FLAG_GOT_TM_PSYCHIC
-	clearflag FLAG_GOT_HOENN_STARTER
-	clearflag FLAG_GOT_UP_GRADE
-	clearflag FLAG_GOT_CLEANSE_TAG
-	clearflag FLAG_ROUTE25_GOT_NUGGET
-	clearflag FLAG_HIDE_POWER_PLANT_ENGINEER
-	clearflag FLAG_HIDE_ZAPDOS
-	clearflag FLAG_HIDE_ARTICUNO
-	clearflag FLAG_HIDE_MOLTRES
-	clearflag FLAG_GOT_TM_SLEEP_TALK
-	clearflag FLAG_GOT_SUPER_ROD
-	clearflag FLAG_HIDE_CINNABAR_BLUE
-	clearflag FLAG_GOT_ROUTE2_NUGGET
-	clearflag FLAG_GOT_VIRIDIAN_TM_DREAM_EATER
-	clearflag FLAG_GOT_ROUTE_14_AERIAL_ACE
-	clearflag FLAG_HIDE_PEWTER_ROOT_FOSSIL
-	clearflag FLAG_HIDE_PEWTER_CLAW_FOSSIL
-	clearflag FLAG_HIDE_MTMOON_SILVER
-	clearflag FLAG_GOT_TM_STEEL_WING
-	clearflag FLAG_HIDE_CERULEANCAVE_GUARD
-	clearflag FLAG_HIDE_MTSILVER_RED
-	clearflag FLAG_HIDE_MEWTWO
-	clearflag FLAG_HIDE_LATIAS
-	clearflag FLAG_HIDE_LATIOS
-	clearflag FLAG_HIDE_GROUDON
-	clearflag FLAG_HIDE_KYOGRE
-	clearflag FLAG_HIDE_RAYQUAZA
-	clearflag FLAG_HIDE_SEAFOAM_BLAINE
-
-	clearflag FLAG_HIDE_CELADON_FALKNER
-	clearflag FLAG_HIDE_VIRIDIAN_BUGSY
-	clearflag FLAG_HIDE_DEPTSTORE_WHITNEY
-	clearflag FLAG_HIDE_BELLCHIME_MORTY
-	clearflag FLAG_HIDE_CAFE_JASMINE
-	clearflag FLAG_HIDE_LAKE_PRYCE
-	clearflag FLAG_HIDE_DEN_CLAIR
-
-
-	setvar VAR_KANTO_ROCKET_STORY_STATE, 0
-	setvar VAR_BILLS_GRANDPA, 0
-	setvar VAR_VERMILION_CITY_STEVEN, 0
-	setvar VAR_OAK_MT_SILVER_CALL, 0
-	setvar VAR_VIRIDIAN_FOREST_PICHU, 0
-
-
-	setvar VAR_FAN_CLUB_CLEFAIRY, 0
-	setvar VAR_FAN_CLUB_GUY, 0
-	setvar VAR_CLEFAIRY_DOLL_STATE, 0
-	setvar VAR_NUM_BADGES, 8
-	setvar VAR_VERMILION_CITY_STATE, 1
-
-	setvar VAR_KANTO_SAFARI_ZONE_PROGRESS, 0 
-	clearflag FLAG_IN_KANTO_SAFARI_ZONE 
-	clearflag FLAG_IS_KANTO_CHAMPION 
-	setvar VAR_BAOBA_QUEST_STATE, 0 
-	setvar VAR_CINNABAR_ISLAND_STATE, 0 
-	setvar VAR_MT_SILVER_STATE, 0, 
-	setvar VAR_PALLETTOWN_LABSTATE, 0 
-	clearflag FLAG_HIDE_LEAGUE_BLACKBELT 
-	
-	setflag FLAG_HIDE_DOJO_FALKNER
-	setflag FLAG_HIDE_DOJO_BUGSY
-	setflag FLAG_HIDE_DOJO_WHITNEY
-	setflag FLAG_HIDE_DOJO_MORTY
-	setflag FLAG_HIDE_DOJO_CHUCK
-	setflag FLAG_HIDE_DOJO_JASMINE
-	setflag FLAG_HIDE_DOJO_PRYCE
-	setflag FLAG_HIDE_DOJO_CLAIR
-	setflag FLAG_HIDE_DOJO_BROCK
-	setflag FLAG_HIDE_DOJO_MISTY
-	setflag FLAG_HIDE_DOJO_SURGE
-	setflag FLAG_HIDE_DOJO_ERIKA
-	setflag FLAG_HIDE_DOJO_JANINE
-	setflag FLAG_HIDE_DOJO_SABRINA
-	setflag FLAG_HIDE_DOJO_BLAINE
-	setflag FLAG_HIDE_DOJO_BLUE
+	givemon SPECIES_REGICE, 100
+	givemon SPECIES_REGIROCK, 100
+	givemon SPECIES_REGISTEEL, 100
+	givemon SPECIES_REGIDRAGO, 100
+	givemon SPECIES_REGIELEKI, 100
+	setvar VAR_REGIS_SCANNED, 0
 	release
 	end
 
 Debug_EventScript_Script_3::
-	setvar VAR_KENYA, 0
+	pokenavcall SinjohRuins_Lab_Text_StevenCall6Plates
 	release
 	end
 
 Debug_EventScript_Script_4::
-	special InitRoamer
-	givemon SPECIES_RATTATA_ALOLA 5
-	givemon SPECIES_RATICATE_ALOLA 5
-	givemon SPECIES_MEOWTH_ALOLA 5
-	givemon SPECIES_PERSIAN_ALOLA 5
-	givemon SPECIES_GEODUDE_ALOLA 5
-	givemon SPECIES_GRAVELER_ALOLA 5
-	givemon SPECIES_GOLEM_ALOLA 5
-	givemon SPECIES_SANDSHREW_ALOLA 5
-	givemon SPECIES_SANDSLASH_ALOLA 5
-	givemon SPECIES_VULPIX_ALOLA 5
-	givemon SPECIES_NINETALES_ALOLA 5
-	givemon SPECIES_GRIMER_ALOLA 5
-	givemon SPECIES_MUK_ALOLA 5
-	givemon SPECIES_EXEGGUTOR_ALOLA 5
-	givemon SPECIES_MAROWAK_ALOLA 5
-	givemon SPECIES_DIGLETT_ALOLA 5
-	givemon SPECIES_DUGTRIO_ALOLA 5
+	msgbox SinjohRuins_Lab_Text_StevenCall3Plates, MSGBOX_DEFAULT
+	pokenavcall SinjohRuins_Lab_Text_StevenCall6Plates
 	release
 	end
 
 Debug_EventScript_Script_5::
 	special InitKantoRoamers
-	givemon SPECIES_RAICHU_ALOLA 5
 	release
 	end
-
-Debug_EventScript_Script_6_String_0:
-	.string "Number of {STR_VAR_1} Pokemeon:  {STR_VAR_2}\n(not including cross gen evos)$"
-	
-Debug_EventScript_Script_6_String_Alolan:
-	.string "Alolan$"
-
-Debug_EventScript_Script_6_String_Galarian:
-	.string "Galarian$"
-
-Debug_EventScript_Script_6_String_Hisuian:
-	.string "Hisuian$"
-
-Debug_EventScript_Script_6_String_Paldean:
-	.string "Paldean$"
 
 Debug_EventScript_Script_6::
 	lockall
@@ -406,31 +251,10 @@ Debug_EventScript_Script_6::
 	end
 
 Debug_EventScript_Script_7::
-  specialvar VAR_RESULT, GetAlolaCatchProgress
-	bufferstring STR_VAR_1, Debug_EventScript_Script_6_String_Alolan
-	buffernumberstring STR_VAR_2, VAR_RESULT
-	msgbox Debug_EventScript_Script_6_String_0, MSGBOX_DEFAULT
-
-	specialvar VAR_RESULT, GetGalarCatchProgress
-	bufferstring STR_VAR_1, Debug_EventScript_Script_6_String_Galarian
-	buffernumberstring STR_VAR_2, VAR_RESULT
-	msgbox Debug_EventScript_Script_6_String_0, MSGBOX_DEFAULT
-
-	specialvar VAR_RESULT, GetHisuiCatchProgress
-	bufferstring STR_VAR_1, Debug_EventScript_Script_6_String_Hisuian
-	buffernumberstring STR_VAR_2, VAR_RESULT
-	msgbox Debug_EventScript_Script_6_String_0, MSGBOX_DEFAULT
-
-	specialvar VAR_RESULT, GetPaldeaCatchProgress
-	bufferstring STR_VAR_1, Debug_EventScript_Script_6_String_Paldean
-	buffernumberstring STR_VAR_2, VAR_RESULT
-	msgbox Debug_EventScript_Script_6_String_0, MSGBOX_DEFAULT
-
 	release
 	end
 
 Debug_EventScript_Script_8::
-	helpwindow HELP_DEMO_WINDOW
 	release
 	end
 
@@ -1121,21 +945,3 @@ Debug_EventScript_TellTheTime_Text_0:
 
 DebugEventScript_PrintWeekday_Text_0:
 	.string "Time of day: {STR_VAR_1}$"
-
-@ Mom Savings debug: enables saving + force-deposits 50000
-Debug_MomSavings_BigDeposit::
-	lockall
-	special Special_MomEnsureInitialized
-	special Special_MomEnableSaving
-	setvar VAR_0x8000, 50000
-	special Special_MomDeposit
-	special Special_MomGetBalance
-	msgbox Debug_MomSavings_Text_Deposited, MSGBOX_DEFAULT
-	releaseall
-	end
-
-Debug_MomSavings_Text_Deposited:
-	.string "Mom savings enabled.\n"
-	.string "Deposited ¥50000.\p"
-	.string "Balance: {STR_VAR_2}\n"
-	.string "Walk outside for gift call.$"

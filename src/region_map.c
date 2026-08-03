@@ -52,6 +52,7 @@ enum {
     TAG_CURSOR,
     TAG_PLAYER_ICON,
     TAG_FLY_ICON,
+    TAG_FLY_ICON_BLUE,
     TAG_FLY_ICON_GREEN,
 };
 
@@ -166,7 +167,7 @@ static const struct RegionMapLocation sRegionMapEntries_Johto[] = {
     [MAPSEC_CHERRYGROVE_CITY]  = { 9,  11, 1, 1, COMPOUND_STRING("CHERRYGROVE CITY") },
     [MAPSEC_NEW_BARK_TOWN]     = { 13, 11, 1, 1, COMPOUND_STRING("NEW BARK TOWN") },
     [MAPSEC_INDIGO_PLATEAU]    = { 16, 2,  1, 2, COMPOUND_STRING("INDIGO PLATEAU") },
-    [MAPSEC_BATTLE_FRONTIER]   = { 14, 14, 1, 1, COMPOUND_STRING("BATTLE FRONTIER") },
+    [MAPSEC_BATTLE_FRONTIER]   = { 12, 14, 1, 1, COMPOUND_STRING("BATTLE FRONTIER") },
     [MAPSEC_ROUTE_26]          = { 16, 7,  1, 4, COMPOUND_STRING("ROUTE 26") },
     [MAPSEC_ROUTE_27]          = { 14, 11, 3, 1, COMPOUND_STRING("ROUTE 27") },
     [MAPSEC_ROUTE_28]          = { 15, 7,  1, 1, COMPOUND_STRING("ROUTE 28") },
@@ -247,6 +248,11 @@ static const struct RegionMapLocation sRegionMapEntries_Johto[] = {
     [MAPSEC_LAKE_OF_RAGE]      = { 9,  1,  1, 1, COMPOUND_STRING("LAKE OF RAGE") },
     [MAPSEC_ICE_PATH]          = { 11, 2,  2, 1, COMPOUND_STRING("ICE PATH") },
     [MAPSEC_MT_SILVER]         = { 14, 7,  1, 1, COMPOUND_STRING("MT. SILVER") },
+    [MAPSEC_SNOWSWEPT_CAVERN]  = { 14, 6,  1, 1, COMPOUND_STRING("SNOWSWEPT CAVERN") },
+    [MAPSEC_ROUTE_49]          = { 14, 6,  1, 1, COMPOUND_STRING("ROUTE 49") },
+    [MAPSEC_NEW_SINJOH]        = { 14, 5,  1, 1, COMPOUND_STRING("NEW SINJOH") },
+    [MAPSEC_ROUTE_50]          = { 14, 4,  1, 1, COMPOUND_STRING("ROUTE 50") },
+    [MAPSEC_SINJOH_RUINS]      = { 14, 3,  1, 1, COMPOUND_STRING("SINJOH RUINS") },
     [MAPSEC_TOHJO_FALLS]       = { 14, 10, 1, 1, COMPOUND_STRING("TOHJO FALLS") },
     [MAPSEC_SPROUT_TOWER]      = { 7,  5,  1, 1, COMPOUND_STRING("SPROUT TOWER") },
     [MAPSEC_SLOWPOKE_WELL]     = { 6,  12, 1, 1, COMPOUND_STRING("SLOWPOKE WELL") },
@@ -479,6 +485,7 @@ static const u16 sRegionMapFramePal[] = INCGFX_U16("graphics/pokenav/region_map/
 static const u32 sRegionMapFrameGfxLZ[] = INCGFX_U32("graphics/pokenav/region_map/frame.png", ".4bpp.smol");
 static const u32 sRegionMapFrameTilemapLZ[] = INCBIN_U32("graphics/pokenav/region_map/frame.bin.smolTM");
 static const u16 sFlyTargetIcons_Pal[] = INCGFX_U16("graphics/pokenav/region_map/fly_target_icons.png", ".gbapal");
+static const u16 sFlyTargetIconsBlue_Pal[] = INCBIN_U16("graphics/pokenav/region_map/fly_target_icons_blue.gbapal");
 static const u16 sFlyTargetIconsGreen_Pal[] = INCBIN_U16("graphics/pokenav/region_map/fly_target_icons_green.gbapal");
 static const u32 sFlyTargetIcons_Gfx[] = INCGFX_U32("graphics/pokenav/region_map/fly_target_icons.png", ".4bpp.smol");
 
@@ -778,6 +785,7 @@ static const u8 sMapHealLocations[][3] =
     [MAPSEC_MT_SILVER] = {MAP_GROUP(MAP_MT_SILVER_OUTSIDE_HNS), MAP_NUM(MAP_MT_SILVER_OUTSIDE_HNS), HEAL_LOCATION_MT_SILVER_HNS},
     [MAPSEC_INDIGO_PLATEAU] = {MAP_GROUP(MAP_INDIGO_PLATEAU_HNS), MAP_NUM(MAP_INDIGO_PLATEAU_HNS), HEAL_LOCATION_INDIGO_PLATEAU_HNS},
     [MAPSEC_BATTLE_FRONTIER] = {MAP_GROUP(MAP_BATTLE_FRONTIER_OUTSIDE_EAST_HNS), MAP_NUM(MAP_BATTLE_FRONTIER_OUTSIDE_EAST_HNS), HEAL_LOCATION_BATTLE_FRONTIER_OUTSIDE_EAST_HNS},
+    [MAPSEC_NEW_SINJOH] = {MAP_GROUP(MAP_NEW_SINJOH_HNS), MAP_NUM(MAP_NEW_SINJOH_HNS), HEAL_LOCATION_NEW_SINJOH_HNS},
     [MAPSEC_ROUTE_26] = {MAP_GROUP(MAP_ROUTE26_HNS), MAP_NUM(MAP_ROUTE26_HNS), HEAL_LOCATION_NONE},
     [MAPSEC_ROUTE_27] = {MAP_GROUP(MAP_ROUTE27_HNS), MAP_NUM(MAP_ROUTE27_HNS), HEAL_LOCATION_NONE},
     [MAPSEC_ROUTE_28] = {MAP_GROUP(MAP_ROUTE28_HNS), MAP_NUM(MAP_ROUTE28_HNS), HEAL_LOCATION_NONE},
@@ -897,6 +905,12 @@ static const struct SpritePalette sFlyTargetIconsSpritePalette =
     .tag = TAG_FLY_ICON
 };
 
+static const struct SpritePalette sFlyTargetIconsBluePalette =
+{
+    .data = sFlyTargetIconsBlue_Pal,
+    .tag = TAG_FLY_ICON_BLUE
+};
+
 static const struct SpritePalette sFlyTargetIconsGreenPalette =
 {
     .data = sFlyTargetIconsGreen_Pal,
@@ -910,6 +924,10 @@ static const mapsec_u16_t sRedOutlineFlyDestinations[][2] =
         MAPSEC_BATTLE_FRONTIER
     },
 #if IS_HNS
+    {
+        FLAG_VISITED_NEW_SINJOH,
+        MAPSEC_NEW_SINJOH
+    },
     {
         FLAG_VISITED_ALOLA,
         MAPSEC_MELEMELE_ISLAND
@@ -986,6 +1004,14 @@ static const struct SpriteTemplate sFlyDestIconSpriteTemplate =
 {
     .tileTag = TAG_FLY_ICON,
     .paletteTag = TAG_FLY_ICON,
+    .oam = &sFlyDestIcon_OamData,
+    .anims = sFlyDestIcon_Anims,
+};
+
+static const struct SpriteTemplate sFlyDestIconBlueSpriteTemplate =
+{
+    .tileTag = TAG_FLY_ICON,
+    .paletteTag = TAG_FLY_ICON_BLUE,
     .oam = &sFlyDestIcon_OamData,
     .anims = sFlyDestIcon_Anims,
 };
@@ -1774,6 +1800,13 @@ static u8 GetMapsecType(mapsec_u16_t mapSecId)
     case MAPSEC_BATTLE_FRONTIER:
         return FlagGet(FLAG_LANDMARK_BATTLE_FRONTIER) ? MAPSECTYPE_BATTLE_FRONTIER : MAPSECTYPE_NONE;
 #if IS_HNS
+    case MAPSEC_NEW_SINJOH:
+        return FlagGet(FLAG_VISITED_NEW_SINJOH) ? MAPSECTYPE_BATTLE_FRONTIER : MAPSECTYPE_NONE;
+    case MAPSEC_SNOWSWEPT_CAVERN:
+    case MAPSEC_ROUTE_49:
+    case MAPSEC_ROUTE_50:
+    case MAPSEC_SINJOH_RUINS:
+        return FlagGet(FLAG_VISITED_NEW_SINJOH) ? MAPSECTYPE_ROUTE : MAPSECTYPE_NONE;
     case MAPSEC_MELEMELE_ISLAND:
         return FlagGet(FLAG_VISITED_ALOLA) ? MAPSECTYPE_BATTLE_FRONTIER : MAPSECTYPE_NONE;
     case MAPSEC_AKALA_ISLAND:
@@ -2524,6 +2557,7 @@ static void LoadFlyDestIcons(void)
     sheet.tag = TAG_FLY_ICON;
     LoadSpriteSheet(&sheet);
     LoadSpritePalette(&sFlyTargetIconsSpritePalette);
+    LoadSpritePalette(&sFlyTargetIconsBluePalette);
     LoadSpritePalette(&sFlyTargetIconsGreenPalette);
     CreateFlyDestIcons();
     TryCreateRedOutlineFlyDestIcons();
@@ -2831,7 +2865,7 @@ static void TryCreateRedOutlineFlyDestIcons(void)
             GetMapSecDimensions(mapSecId, &x, &y, &width, &height);
             x = (x + MAPCURSOR_X_MIN) * 8;
             y = (y + MAPCURSOR_Y_MIN) * 8;
-            spriteId = CreateSprite(mapSecId == MAPSEC_MELEMELE_ISLAND ? &sFlyDestIconGreenSpriteTemplate : &sFlyDestIconSpriteTemplate, x, y, 10);
+            spriteId = CreateSprite(mapSecId == MAPSEC_NEW_SINJOH ? &sFlyDestIconBlueSpriteTemplate : mapSecId == MAPSEC_MELEMELE_ISLAND ? &sFlyDestIconGreenSpriteTemplate : &sFlyDestIconSpriteTemplate, x, y, 10);
             if (spriteId != MAX_SPRITES)
             {
                 gSprites[spriteId].oam.size = SPRITE_SIZE(16x16);
