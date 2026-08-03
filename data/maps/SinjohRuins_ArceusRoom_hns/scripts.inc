@@ -273,6 +273,10 @@ SinjohRuins_ArceusRoom_EventScript_Arceus::
 	msgbox SinjohRuins_ArceusRoom_Text_CryArceus, MSGBOX_AUTOCLOSE
 	delay 40
 	waitmoncry
+	setflag FLAG_NO_WILD_CATCHING
+	setflag FLAG_NO_WILD_RUNNING
+	setflag FLAG_SMART_WILD_AI
+	setflag FLAG_NO_SHINY
 	setwildbossbattle species=SPECIES_ARCEUS_STEEL, level=100, item=ITEM_IRON_PLATE, move1_1=MOVE_JUDGMENT, move1_2=MOVE_HYDRO_PUMP, move1_3=MOVE_RECOVER move1_4=MOVE_DAZZLING_GLEAM
 	settotemboost B_POSITION_OPPONENT_LEFT, 1, 0, 2, 0, 0, 0
 	special BattleSetup_StartLegendaryBattle
@@ -281,13 +285,17 @@ SinjohRuins_ArceusRoom_EventScript_Arceus::
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SinjohRuins_ArceusRoom_EventScript_ArceusRan
 	setvar VAR_SINJOH_STORYLINE, 12
+	clearflag FLAG_NO_WILD_CATCHING
+	clearflag FLAG_NO_WILD_RUNNING
+	clearflag FLAG_SMART_WILD_AI
+	clearflag FLAG_NO_SHINY
 SinjohRuins_ArceusRoom_EventScript_ArceusPhase2::
 	playmoncry SPECIES_ARCEUS, CRY_MODE_ENCOUNTER
 	msgbox SinjohRuins_ArceusRoom_Text_CryArceus2, MSGBOX_AUTOCLOSE
 	delay 40
 	waitmoncry
 	setwildbossbattle species=SPECIES_ARCEUS, level=80, item=ITEM_NONE, move1_1=MOVE_EXTREME_SPEED, move1_2=MOVE_EARTH_POWER, move1_3=MOVE_RECOVER move1_4=MOVE_HYPER_BEAM
-	settotemboost B_POSITION_OPPONENT_LEFT, 1, 0, 2, 0, 0, 0
+	@settotemboost B_POSITION_OPPONENT_LEFT, 1, 0, 2, 0, 0, 0
 	special BattleSetup_StartLegendaryBattle
 	playbgm MUS_HG_VS_ARCEUS, 0
 	waitstate

@@ -310,8 +310,19 @@ SinjohRuins_EventScript_StevenBattle::
     trainerbattle_no_intro TRAINER_STEVEN_HNS, SinjohRuins_Text_StevenDefeat
     msgbox SinjohRuins_Text_StevenAfterBattle, MSGBOX_AUTOCLOSE
     giveitem ITEM_STONE_PLATE
+    msgbox SinjohRuins_Text_HealParty, MSGBOX_AUTOCLOSE
+    fadescreenswapbuffers FADE_TO_BLACK
+	special HealPlayerParty
+	closemessage
+	playfanfare MUS_HEAL
+	waitfanfare
+    fadescreenswapbuffers FADE_FROM_BLACK
     msgbox SinjohRuins_Text_StevenAfterPlate, MSGBOX_AUTOCLOSE
     return
+
+SinjohRuins_Text_HealParty::
+    .string "STEVEN: Let me heal your POKéMON\n"
+    .string "before you go.$"
 
 SinjohRuins_Text_StevenAfterPlate:
     .string "STEVEN: Good luck, {PLAYER}\p"

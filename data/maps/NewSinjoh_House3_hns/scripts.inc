@@ -78,8 +78,8 @@ NewSinjoh_House3_EventScript_NobleTyphlosion::
 	faceplayer
 	playmoncry SPECIES_TYPHLOSION_HISUI, CRY_MODE_ENCOUNTER
 	waitmoncry
-	setwildbossbattle species=SPECIES_TYPHLOSION_HISUI, level=80, item=ITEM_CHARCOAL, move1_1=MOVE_DIRE_CLAW, move1_2=MOVE_ROCK_SLIDE, move1_3=MOVE_BRICK_BREAK move1_4=MOVE_LASH_OUT
-	settotemboost B_POSITION_OPPONENT_LEFT, 1, 0, 2, 0, 0, 0
+	setwildbossbattle species=SPECIES_TYPHLOSION_HISUI, level=80, item=ITEM_SPOOKY_PLATE, move1_1=MOVE_INFERNAL_PARADE, move1_2=MOVE_LAVA_PLUME, move1_3=MOVE_CONFUSE_RAY move1_4=MOVE_SOLAR_BEAM
+	settotemboost B_POSITION_OPPONENT_LEFT, 0, 2, 0, 1, 2, 0
 	setflag FLAG_NO_WILD_CATCHING
 	setflag FLAG_NO_WILD_RUNNING
 	setflag FLAG_SMART_WILD_AI

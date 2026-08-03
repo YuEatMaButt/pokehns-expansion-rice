@@ -222,7 +222,7 @@ Debug_EventScript_Script_2::
 	end
 
 Debug_EventScript_Script_3::
-	pokenavcall SinjohRuins_Lab_Text_StevenCall6Plates
+	goto SinjohRuins_EventScript_StevenBattle
 	release
 	end
 

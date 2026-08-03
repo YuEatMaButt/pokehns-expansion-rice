@@ -206,9 +206,8 @@ NewSinjoh_EventScript_OldLady1::
 	end
 
 NewSinjoh_Text_OldLady1:
-	.string "There's nothing like a nice\n"
-	.string "view to invigorate\l"
-	.string "this old soul.$"
+	.string "There's nothing like a nice view to\n"
+	.string "invigorate this old soul.$"
 
 NewSinjoh_EventScript_OldLady2::
 	goto_if_ge VAR_SINJOH_STORYLINE, 13, NewSinjoh_EventScript_OldLady2Steven
