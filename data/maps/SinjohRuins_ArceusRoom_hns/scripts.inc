@@ -67,6 +67,7 @@ SinjohRuins_ArceusRoom_TriggerScene::
 	playse SE_THUNDER
 	fadescreen FADE_TO_WHITE
 	addobject LOCALID_SINJOHRUINS_ARCEUSROOM_ARCEUS
+	clearflag FLAG_HIDE_SINJOHRUINS_ARCEUSROOM_ARCEUS
 
 	playse SE_THUNDER
 	applymovement2 LOCALID_SINJOHRUINS_ARCEUSROOM_ARCEUS, SinjohRuins_ArceusRoom_Movement_ArceusWalkDown

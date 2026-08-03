@@ -203,11 +203,7 @@ Debug_EventScript_Text_DefensiveIVs:
 	.string "HP IVs: {STR_VAR_1}, DEF IVs: {STR_VAR_2}, SPDEF IVs: {STR_VAR_3}$"
 
 Debug_EventScript_Script_1::
-	setvar VAR_SINJOH_STORYLINE, 6
-	setvar VAR_NOBLE_TYPHLOSION, 1
-	setvar VAR_NOBLE_ELECTRODE, 1
-	setvar VAR_NOBLE_KLEAVOR, 1
-	setflag FLAG_HIDE_NEWSINJOH_HOUSE3_NOBLE_TYPHLOSION
+	setvar VAR_SINJOH_STORYLINE, 10
 	release
 	end
 
