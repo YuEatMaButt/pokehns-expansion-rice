@@ -3001,7 +3001,8 @@ static const u8 *BattleStringGetOpponentNameByTrainerId(u16 trainerId, u8 *text,
     {
         enum TrainerClassID trainerClass = GetTrainerClassFromId(TRAINER_BATTLE_PARAM.opponentA);
 
-        if (trainerClass == TRAINER_CLASS_RIVAL_EARLY_FRLG || trainerClass == TRAINER_CLASS_RIVAL_LATE_FRLG || trainerClass == TRAINER_CLASS_CHAMPION_FRLG)
+        if (trainerClass == TRAINER_CLASS_RIVAL_EARLY_FRLG || trainerClass == TRAINER_CLASS_RIVAL_LATE_FRLG || trainerClass == TRAINER_CLASS_CHAMPION_FRLG
+            || trainerClass == TRAINER_CLASS_RIVAL_HNS)
             toCpy = GetExpandedPlaceholder(PLACEHOLDER_ID_RIVAL);
         else
             toCpy = GetTrainerNameFromId(trainerId);
