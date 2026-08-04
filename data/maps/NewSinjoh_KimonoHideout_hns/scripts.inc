@@ -233,7 +233,7 @@ NewSinjoh_KimonoHideout_EventScript_YoukoFinal::
 
 NewSinjoh_KimonoHideout_Text_YoukoFinal:
 	.string "YOUKO: I had my doubts, at first.\p"
-	.string "But after what you've done, it\l"
+	.string "But after what you've done, it\n"
 	.string "cannot be denied.$"
 
 NewSinjoh_KimonoHideout_EventScript_Shizuko::

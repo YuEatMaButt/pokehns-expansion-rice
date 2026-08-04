@@ -121,8 +121,7 @@ Route49_Text_KimonoGirl:
 	.string "in Ecruteak City.\p"
 	.string "My sisters wish to meet with you.\l"
 	.string "If you find the time, please\n"
-	.string "seek us out in the town\l"
-	.string "up ahead.$"
+	.string "seek us out in the town up ahead.$"
 
 Route49_EventScript_Item_StarDust::
     finditem ITEM_STARDUST
