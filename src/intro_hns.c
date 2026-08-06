@@ -905,6 +905,7 @@ static void CB2_WaitFadeBeforeSetUpIntro(void)
 {
     if (!UpdatePaletteFade())
     {
+        m4aSongNumStart(MUS_HG_INTRO, FlagGet(FLAG_SYS_GBS_ENABLED));   
 #if EXPANSION_INTRO == TRUE
         SetMainCallback2(CB2_ExpansionIntro);
         CreateTask(Task_HandleExpansionIntro, 0);
@@ -955,7 +956,6 @@ bool8 SetUpCopyrightScreenHns(void)
         SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_OBJ_1D_MAP | DISPCNT_BG0_ON);
         SetSerialCallback(SerialCB_CopyrightScreen);
         GameCubeMultiBoot_Init(&sGcmb);
-        m4aSongNumStart(MUS_HG_INTRO, FlagGet(FLAG_SYS_GBS_ENABLED));
         // fallthrough
     default:
         UpdatePaletteFade();
