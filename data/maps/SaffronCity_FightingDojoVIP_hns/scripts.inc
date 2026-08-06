@@ -1,6 +1,29 @@
 SaffronCity_FightingDojoVIP_hns_MapScripts::
 	.byte 0
 
+SaffronCity_FightingDojoVIP_EventScript_Nurse::
+	specialvar VAR_RESULT, IsPokecenterChallengeActivated
+	goto_if_eq VAR_RESULT, TRUE, SSAquaRooms_EventScript_Bed_PokecenterChallenge
+	msgbox SaffronCity_FightingDojoVIP_Text_Nurse1, MSGBOX_NPC
+	waitmessage
+	fadescreen 0x1
+	playfanfare MUS_HEAL
+	waitfanfare
+	special HealPlayerParty
+	fadescreen 0x0
+	msgbox SaffronCity_FightingDojoVIP_Text_Nurse2, MSGBOX_NPC
+	waitmessage
+	release
+	end
+
+SaffronCity_FightingDojoVIP_Text_Nurse1:
+	.string "Hi! Welcome to the TRAINING DOJO!\n"
+	.string "I will heal your POKéMON.$"
+
+SaffronCity_FightingDojoVIP_Text_Nurse2:
+	.string "We hope to see you again!$"
+
+
 SaffronCity_FightingDojoVIP_EventScript_Declined::
 	closemessage
 	applymovement2 VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
