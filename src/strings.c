@@ -253,6 +253,7 @@ const u8 gText_YouDontHaveEnoughBP[] = _("You don't have enough\nBP.{PAUSE_UNTIL
 const u8 gText_DontHaveEnoughVar1[] = _("You don't have enough\n{STR_VAR_1}s.{PAUSE_UNTIL_PRESS}");
 const u8 gText_Var1SureHowMany[] = _("{STR_VAR_1}s? Sure.\nHow many would you like?");
 const u8 gText_xOne[] = _("x1");
+const u8 gText_xFive[] = _("x5");
 const u8 gText_KurtVar1AndYouWantedVar2Plural[] = _("And you wanted {STR_VAR_2} of 'em?\nThat will be {STR_VAR_3} berries.");
 const u8 gText_KurtVar1AndYouWantedVar2Singular[] = _("And you wanted {STR_VAR_2} of 'em?\nThat will be {STR_VAR_3} berry.");
 const u8 gText_KurtGettingStarted[] = _("KURT: I'll get started right now!");
