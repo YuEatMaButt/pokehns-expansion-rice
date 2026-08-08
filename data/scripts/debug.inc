@@ -203,9 +203,15 @@ Debug_EventScript_Text_DefensiveIVs:
 	.string "HP IVs: {STR_VAR_1}, DEF IVs: {STR_VAR_2}, SPDEF IVs: {STR_VAR_3}$"
 
 Debug_EventScript_Script_1::
-	goto AzaleaTown_KurtsHouse_EventScript_Kurt
+	buffernumberstring STR_VAR_1, VAR_KENYA 
+	msgbox Debug_Text_1, MSGBOX_DEFAULT
+	closemessage
 	release
 	end
+
+Debug_Text_1:
+	.string "{STR_VAR_1}$"
+
 
 Debug_EventScript_Script_2::
 	givemon SPECIES_REGICE, 100
