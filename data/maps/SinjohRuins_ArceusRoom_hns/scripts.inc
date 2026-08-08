@@ -305,6 +305,7 @@ SinjohRuins_ArceusRoom_EventScript_ArceusPhase2::
 	fadescreenswapbuffers FADE_TO_BLACK
 	removeobject LOCALID_SINJOHRUINS_ARCEUSROOM_ARCEUS
 	setflag FLAG_HIDE_SINJOHRUINS_ARCEUSROOM_ARCEUS
+	special GivePartyMonSkyRibbon
 	fadescreenswapbuffers FADE_FROM_BLACK
 	release
 	end

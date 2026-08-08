@@ -253,6 +253,7 @@ waitstate
 	fadescreenswapbuffers FADE_TO_BLACK
 	removeobject LOCALID_ILEX_FOREST_CELEBI
 	setflag FLAG_HIDE_CELEBI
+	special GivePartyMonNationalRibbon
 	fadescreenswapbuffers FADE_FROM_BLACK
 IlexForest_EventScript_Kurt::
 	clearflag FLAG_HIDE_ILEX_FOREST_KURT
@@ -295,6 +296,7 @@ waitstate
 	removeobject LOCALID_ILEX_FOREST_SECOND_CELEBI
 	setflag FLAG_HIDE_ILEX_FOREST_SECOND_CELEBI
 	fadescreenswapbuffers FADE_FROM_BLACK
+	special GivePartyMonNationalRibbon
 	release
 	end
 
