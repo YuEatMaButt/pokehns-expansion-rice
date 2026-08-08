@@ -673,7 +673,6 @@
 #define FLAG_MINTS_CLERK                            0x262
 #define FLAG_MINTS_ENABLED                          0x263
 #define FLAG_NO_SHINY                               0x264
-#define FLAG_ENABLE_CONDITION                        0x265
 
 #define HNS_FEATURE_COUNT                           10
 
@@ -847,7 +846,7 @@
 #define FLAG_FUCHSIA_SAFARI_NPC_TRADE_COMPLETED      0x300
 #define FLAG_PEWTER_GYM_NPC_TRADE_COMPLETED          0x301
 #define FLAG_OLIVINE_GYM_NPC_TRADE_COMPLETED         0x302
-#define FLAG_UNUSED_35                              0x303
+#define FLAG_ENABLE_CONDITION                       0x303
 #define FLAG_UNUSED_36                              0x304
 #define FLAG_UNUSED_37                              0x305
 #define FLAG_UNUSED_38                              0x306
