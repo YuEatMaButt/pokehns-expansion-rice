@@ -16,7 +16,6 @@ NewSinjoh_Cafe_Pokemart_Resturant:
 	.2byte ITEM_YACHE_BERRY
     .2byte ITEM_LANSAT_BERRY
     .2byte ITEM_ROWAP_BERRY
-	.2byte ITEM_FRESH_START_MOCHI
     .2byte ITEM_BERRY_JUICE
 	.2byte ITEM_SODA_POP
 	.2byte ITEM_LAVA_COOKIE
