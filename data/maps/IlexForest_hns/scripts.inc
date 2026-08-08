@@ -312,7 +312,7 @@ IlexForest_EventScript_Sign::
 
 IlexForest_EventScript_Kimono::
 	lock
-	playbgm MUS_HG_KIMONO_GIRL, TRUE
+	playbgm MUS_HG_KIMONO_GIRL, FALSE
 	playse SE_PIN
 	turnobject OBJ_EVENT_ID_FOLLOWER, DIR_NORTH
 	applymovement2 LOCALID_ILEX_FOREST_KIMONO, Common_Movement_ExclamationMark
