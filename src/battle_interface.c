@@ -3349,6 +3349,7 @@ static void Task_BounceBall(u8 taskId)
             gBattleStruct->ballSpriteIds[0] = AddItemIconSprite(102, 102, gBallToDisplay);
             gSprites[gBattleStruct->ballSpriteIds[0]].x = LAST_USED_BALL_X_F;
             gSprites[gBattleStruct->ballSpriteIds[0]].y = LAST_USED_BALL_Y_BNC;
+            sprite = &gSprites[gBattleStruct->ballSpriteIds[0]];
             task->sState++;
         }  // Fallthrough
     case 3: // Bounce Down
