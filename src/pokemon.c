@@ -7130,7 +7130,7 @@ u32 GetEvolutionTargetSpecies(struct Pokemon *mon, enum EvolutionMode mode, u16 
         for (i = 0; evolutions[i].method != EVOLUTIONS_END; i++)
         {
             bool32 conditionsMet = FALSE;
-            if (!IsSpeciesEnabled(evolutions[i].targetSpecies))
+            if (SanitizeSpeciesId(evolutions[i].targetSpecies) == SPECIES_NONE)
                 continue;
 
             // Check main primary evolution method
@@ -7160,7 +7160,7 @@ u32 GetEvolutionTargetSpecies(struct Pokemon *mon, enum EvolutionMode mode, u16 
         for (i = 0; evolutions[i].method != EVOLUTIONS_END; i++)
         {
             bool32 conditionsMet = FALSE;
-            if (!IsSpeciesEnabled(evolutions[i].targetSpecies))
+            if (SanitizeSpeciesId(evolutions[i].targetSpecies) == SPECIES_NONE)
                 continue;
 
             switch (evolutions[i].method)
@@ -7185,7 +7185,7 @@ u32 GetEvolutionTargetSpecies(struct Pokemon *mon, enum EvolutionMode mode, u16 
         for (i = 0; evolutions[i].method != EVOLUTIONS_END; i++)
         {
             bool32 conditionsMet = FALSE;
-            if (!IsSpeciesEnabled(evolutions[i].targetSpecies))
+            if (SanitizeSpeciesId(evolutions[i].targetSpecies) == SPECIES_NONE)
                 continue;
 
             switch (evolutions[i].method)
@@ -7213,7 +7213,7 @@ u32 GetEvolutionTargetSpecies(struct Pokemon *mon, enum EvolutionMode mode, u16 
         for (i = 0; evolutions[i].method != EVOLUTIONS_END; i++)
         {
             bool32 conditionsMet = FALSE;
-            if (!IsSpeciesEnabled(evolutions[i].targetSpecies))
+            if (SanitizeSpeciesId(evolutions[i].targetSpecies) == SPECIES_NONE)
                 continue;
 
             switch (evolutions[i].method)
@@ -7238,7 +7238,7 @@ u32 GetEvolutionTargetSpecies(struct Pokemon *mon, enum EvolutionMode mode, u16 
         for (i = 0; evolutions[i].method != EVOLUTIONS_END; i++)
         {
             bool32 conditionsMet = FALSE;
-            if (!IsSpeciesEnabled(evolutions[i].targetSpecies))
+            if (SanitizeSpeciesId(evolutions[i].targetSpecies) == SPECIES_NONE)
                 continue;
 
             switch (evolutions[i].method)
@@ -7262,7 +7262,7 @@ u32 GetEvolutionTargetSpecies(struct Pokemon *mon, enum EvolutionMode mode, u16 
     case EVO_MODE_SCRIPT_TRIGGER:
         for (i = 0; evolutions[i].method != EVOLUTIONS_END; i++)
         {
-            if (!IsSpeciesEnabled(evolutions[i].targetSpecies))
+            if (SanitizeSpeciesId(evolutions[i].targetSpecies) == SPECIES_NONE)
                 continue;
             if (evolutions[i].method != EVO_SCRIPT_TRIGGER)
                 continue;
@@ -7308,7 +7308,7 @@ bool8 IsMonPastEvolutionLevel(struct Pokemon *mon)
 
     for (i = 0; evolutions[i].method != EVOLUTIONS_END; i++)
     {
-        if (!IsSpeciesEnabled(evolutions[i].targetSpecies))
+        if (SanitizeSpeciesId(evolutions[i].targetSpecies) == SPECIES_NONE)
             continue;
 
         switch (evolutions[i].method)
