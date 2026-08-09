@@ -2594,7 +2594,7 @@ static void SafariTextIntoHealthboxObject(void *dest, u8 *windowTileData, u32 wi
  * FG = ForeGround
  * SH = SHadow
  */
-#define ABILITY_POP_UP_BATTLER_BG_TXTCLR 2
+#define ABILITY_POP_UP_BATTLER_BG_TXTCLR 5
 #define ABILITY_POP_UP_BATTLER_FG_TXTCLR 7
 #define ABILITY_POP_UP_BATTLER_SH_TXTCLR 1
 
@@ -2640,12 +2640,17 @@ static const struct SpriteSheet sSpriteSheet_AbilityPopUp =
     sAbilityPopUpGfx, sizeof(sAbilityPopUpGfx), TAG_ABILITY_POP_UP
 };
 
-static struct SpritePalette GetAbilityPopUpSpritePal(void)
+static const u16 *GetAbilityPopUpPal(void)
 {
     if (UseGen4BattleUI())
-        return (struct SpritePalette){ sAbilityPopUpPaletteGen4, TAG_ABILITY_POP_UP };
+        return sAbilityPopUpPaletteGen4;
     else
-        return (struct SpritePalette){ sAbilityPopUpPaletteGen3, TAG_ABILITY_POP_UP };
+        return sAbilityPopUpPaletteGen3;
+}
+
+static struct SpritePalette GetAbilityPopUpSpritePal(void)
+{
+    return (struct SpritePalette){ GetAbilityPopUpPal(), TAG_ABILITY_POP_UP };
 }
 
 static const struct OamData sOamData_AbilityPopUp =
@@ -3394,11 +3399,11 @@ void ArrowsChangeColorLastBallCycle(bool32 showArrows)
     if (gBattleStruct->ballSpriteIds[1] == MAX_SPRITES)
         return;
     paletteNum *= 16;
-    pltArrow = (struct PlttData *)&gPlttBufferFaded[paletteNum + 9];  // Arrow color is in idx 9
-    pltOutline = (struct PlttData *)&gPlttBufferFaded[paletteNum + 8];  // Arrow outline is in idx 8
+    pltArrow = (struct PlttData *)&gPlttBufferFaded[paletteNum + 11];  // Arrow color is in idx 11
+    pltOutline = (struct PlttData *)&gPlttBufferFaded[paletteNum + 10];  // Arrow outline is in idx 10
     if (!showArrows) //Make invisible
     {
-        defaultPlttArrow = (struct PlttData *)&gPlttBufferFaded[paletteNum + 13];  // Background color is idx 13
+        defaultPlttArrow = (struct PlttData *)&GetAbilityPopUpPal()[13];  // Background color is idx 13
         pltArrow->r = defaultPlttArrow->r;
         pltArrow->g = defaultPlttArrow->g;
         pltArrow->b = defaultPlttArrow->b;
@@ -3408,8 +3413,8 @@ void ArrowsChangeColorLastBallCycle(bool32 showArrows)
     }
     else // Make gray
     {
-        defaultPlttArrow = (struct PlttData *)&gPlttBufferFaded[paletteNum + 11];  // Grey color is idx 11
-        defaultPlttOutline = (struct PlttData *)&gPlttBufferFaded[paletteNum + 10];  //Light grey color for outline is idx 10
+        defaultPlttArrow = (struct PlttData *)&GetAbilityPopUpPal()[11];  // Grey color is idx 11
+        defaultPlttOutline = (struct PlttData *)&GetAbilityPopUpPal()[10];  //Light grey color for outline is idx 10
         pltArrow->r = defaultPlttArrow->r;
         pltArrow->g = defaultPlttArrow->g;
         pltArrow->b = defaultPlttArrow->b;
