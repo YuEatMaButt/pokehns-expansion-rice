@@ -3365,6 +3365,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .teachableLearnset = sAegislashTeachableLearnset,
         .formSpeciesIdTable = sAegislashFormSpeciesIdTable,
         .formChangeTable = sAegislashFormChangeTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 #endif //P_FAMILY_HONEDGE
 
