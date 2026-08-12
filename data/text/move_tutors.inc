@@ -167,7 +167,7 @@ MoveTutor_Text_DynamicPunchTeach:
 	.string "I can't do this anymore!\p"
 	.string "It's utterly hopeless!\p"
 	.string "I'm a FIGHTING-type TRAINER,\n"
-	.string "so I can't win at the MOSSDEEP GYM\l"
+	.string "so I can't win at the GYM\l"
 	.string "no matter how hard I try!\p"
 	.string "Argh! Punch! Punch! Punch!\n"
 	.string "Punch! Punch! Punch!\p"
