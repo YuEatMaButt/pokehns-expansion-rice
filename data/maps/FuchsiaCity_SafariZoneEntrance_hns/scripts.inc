@@ -220,7 +220,7 @@ FuchsiaCity_SafariZoneEntrance_Text_StevenWelcome:
 	.string "Hello again, {PLAYER}!\p"
 	.string "Welcome to the DEVON SAFARI ZONE!\p"
 	.string "This specially designed safari\n"
-	.string "Has 4 different habitats that\l"
+	.string "has 4 different habitats that\l"
 	.string "attract and house different invasive\l"
 	.string "species from the HOENN region.\p"
 	.string "We encourage trainers to capture\n"
