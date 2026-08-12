@@ -14628,9 +14628,15 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("METEORITE"),
         .price = 0,
+#if IS_HNS
+        .description = COMPOUND_STRING(
+            "A meteorite found\n"
+            "at Birth Island."),
+#else
         .description = COMPOUND_STRING(
             "A meteorite found\n"
             "at Meteor Falls."),
+#endif
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
