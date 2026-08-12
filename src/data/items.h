@@ -10613,7 +10613,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "Makes the holder\n"
             "float but bursts\n"
-            "if hit by an attack."),
+            "if hit by Attack."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -12984,7 +12984,7 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("TM54"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "An attack that leaves\n"
+            "Attack that leaves\n"
             "the foe with at\n"
             "least 1 HP."),
         .importance = I_REUSABLE_TMS,
@@ -13068,7 +13068,7 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("TM60"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "An attack that\n"
+            "Attack that\n"
             "absorbs half the\n"
             "damage inflicted."),
         .importance = I_REUSABLE_TMS,
@@ -13152,7 +13152,7 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("TM66"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "An attack that gains\n"
+            "Attack that gains\n"
             "power if the user\n"
             "moves last."),
         .importance = I_REUSABLE_TMS,
@@ -13251,7 +13251,7 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("TM72"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "An attack that moves\n"
+            "Attack that moves\n"
             "last and gains power\n"
             "if hit."),
         .importance = I_REUSABLE_TMS,

@@ -25,7 +25,7 @@ const u8 gNotDoneYetDescription[] = _(
 static const u8 sNullDescription[] = _("");
 
 static const u8 sMegaDrainDescription[] = _(
-    "An attack that absorbs\n"
+    "Attack that absorbs\n"
     "half the damage inflicted.");
 
 #if B_SKIP_RECHARGE != GEN_1
@@ -39,7 +39,7 @@ static const u8 sHyperBeamDescription[] = _(
 #endif
 
 static const u8 sRevengeDescription[] = _(
-    "An attack that moves last\n"
+    "Attack that moves last\n"
     "and gains power if hit.");
 
 static const u8 sPluckDescription[] = _(
@@ -87,11 +87,11 @@ static const u8 sShadowForceDescription[] = _(
     "then strikes the next turn.");
 
 static const u8 sFalseSwipeDescription[] = _(
-    "An attack that leaves the\n"
+    "Attack that leaves the\n"
     "foe with at least 1 HP.");
 
 static const u8 sDrainingKissDescription[] = _(
-    "An attack that absorbs over\n"
+    "Attack that absorbs over\n"
     "half the damage inflicted.");
 
 static const u8 sCloseCombatDescription[] = _(
@@ -104,10 +104,10 @@ static const u8 sHyperspaceHoleDescription[] = _(
 
 static const u8 sSuckerPunchDescription[] = _(
     "Strikes first if the foe\n"
-    "is preparing an attack.");
+    "is preparing Attack.");
 
 static const u8 sFeintDescription[] = _(
-    "An attack that hits foes\n"
+    "Attack that hits foes\n"
     "using moves like Protect.");
 
 static const u8 sProtectDescription[] = _(
@@ -1985,7 +1985,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("ABSORB"),
         .description = COMPOUND_STRING(
-            "An attack that absorbs\n"
+            "Attack that absorbs\n"
             "half the damage inflicted."),
         .effect = EFFECT_ABSORB,
         .power = 20,
@@ -3840,7 +3840,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("LEECH LIFE"),
         .description = COMPOUND_STRING(
-            "An attack that steals half\n"
+            "Attack that steals half\n"
             "the damage inflicted."),
         .effect = EFFECT_ABSORB,
         .power = B_UPDATED_MOVE_DATA >= GEN_7 ? 80 : 20,
@@ -3954,7 +3954,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("BUBBLE"),
         .description = COMPOUND_STRING(
-            "An attack using bubbles.\n"
+            "Attack using bubbles.\n"
             "May lower the foe's Speed."),
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 40 : 20,
@@ -5493,7 +5493,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("GIGA DRAIN"),
         .description = COMPOUND_STRING(
-            "An attack that steals half\n"
+            "Attack that steals half\n"
             "the damage inflicted."),
         .effect = EFFECT_ABSORB,
         .power = B_UPDATED_MOVE_DATA >= GEN_5 ? 75 : 60,
@@ -5577,7 +5577,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("ROLLOUT"),
         .description = COMPOUND_STRING(
-            "An attack lasting 5 turns\n"
+            "Attack lasting 5 turns\n"
             "with rising intensity."),
         .effect = EFFECT_ROLLOUT,
         .power = 30,
@@ -5701,7 +5701,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("FURY CUTTER"),
         .description = COMPOUND_STRING(
-            "An attack that intensifies\n"
+            "Attack that intensifies\n"
             "on each successive hit."),
         #if B_UPDATED_MOVE_DATA >= GEN_6
             .power = 40,
@@ -5870,7 +5870,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("RETURN"),
         .description = COMPOUND_STRING(
-            "An attack that increases\n"
+            "Attack that increases\n"
             "in power with friendship."),
         .effect = EFFECT_RETURN,
         .power = 1,
@@ -5916,7 +5916,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("FRUSTRATION"),
         .description = COMPOUND_STRING(
-            "An attack that is stronger\n"
+            "Attack that is stronger\n"
             "if the Trainer is disliked."),
         .effect = EFFECT_FRUSTRATION,
         .power = 1,
@@ -6662,7 +6662,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("ANCIENT POWER"),
         .description = COMPOUND_STRING(
-            "An attack that may raise\n"
+            "Attack that may raise\n"
             "all stats."),
         .effect = EFFECT_HIT,
         .power = 60,
@@ -7834,7 +7834,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("SECRET POWER"),
         .description = COMPOUND_STRING(
-            "An attack with effects\n"
+            "Attack with effects\n"
             "that vary by location."),
         .effect = EFFECT_HIT,
         .power = 70,
@@ -8364,7 +8364,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("ASTONISH"),
         .description = COMPOUND_STRING(
-            "An attack that may shock\n"
+            "Attack that may shock\n"
             "the foe into flinching."),
         .effect = EFFECT_HIT,
         .power = 30,
@@ -9915,7 +9915,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("PAYBACK"),
         .description = COMPOUND_STRING(
-            "An attack that gains power\n"
+            "Attack that gains power\n"
             "if the user moves last."),
         .effect = EFFECT_PAYBACK,
         .power = 50,
@@ -9937,7 +9937,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("ASSURANCE"),
         .description = COMPOUND_STRING(
-            "An attack that gains power\n"
+            "Attack that gains power\n"
             "if the foe has been hurt."),
         .effect = EFFECT_ASSURANCE,
         .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 60 : 50,
@@ -13392,7 +13392,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("RETALIATE"),
         .description = COMPOUND_STRING(
-            "An attack that does more\n"
+            "Attack that does more\n"
             "damage if an ally fainted."),
         .effect = EFFECT_RETALIATE,
         .power = 70,
@@ -17315,7 +17315,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("MULTI-ATTACK"),
         .description = COMPOUND_STRING(
-            "An attack that changes\n"
+            "Attack that changes\n"
             "with Memories."),
         .effect = EFFECT_CHANGE_TYPE_ON_ITEM,
         .power = B_UPDATED_MOVE_DATA >= GEN_8 ? 120 : 90,
@@ -17506,7 +17506,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("BOUNCY BUBBLE"),
         .description = COMPOUND_STRING(
-            "An attack that absorbs\n"
+            "Attack that absorbs\n"
         #if B_UPDATED_MOVE_DATA >= GEN_8
             "all the damage inflicted."),
         #else
@@ -19230,7 +19230,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("FIERY WRATH"),
         .description = COMPOUND_STRING(
-            "An attack fueled by your\n"
+            "Attack fueled by your\n"
             "wrath. May cause flinching."),
         .effect = EFFECT_HIT,
         .power = 90,
@@ -20723,7 +20723,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("BITTER BLADE"),
         .description = COMPOUND_STRING(
-            "An attack that absorbs\n"
+            "Attack that absorbs\n"
             "half the damage inflicted."),
         .effect = EFFECT_ABSORB,
         .power = 90,
