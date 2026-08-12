@@ -239,6 +239,17 @@ PokedexRating_Text_LoveSeeingYourPokedex::
 
 @ HnS (mostly directly copied from HGSS)
 
+gElmDexRatingText_GoFindMrPokemon::
+	.string "PROF. ELM: Ah, {PLAYER}{KUN}!\p"
+	.string "Have you found MR. POKéMON's\n"
+	.string "home yet? It is on ROUTE 30,\p"
+	.string "you can't miss it!$"
+
+gElmDexRatingText_Robbery::
+	.string "PROF. ELM: {PLAYER}{KUN}!\p"
+	.string "Get here quick! Something\n"
+	.string "awful has happened!$"
+
 gElmDexRatingText_AreYouCurious::
 	.string "PROF. ELM: Ah, {PLAYER}{KUN}!\p"
 	.string "Are you curious about how your\n"

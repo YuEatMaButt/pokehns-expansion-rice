@@ -1133,6 +1133,8 @@ static const struct MatchCallText *const sMatchCallGeneralTopics[] =
 extern const u8 gBirchDexRatingText_AreYouCurious[];
 extern const u8 gElmDexRatingText_AreYouCurious[];
 extern const u8 gElmDexRatingText_AreYouCuriousNational[];
+extern const u8 gElmDexRatingText_GoFindMrPokemon[];
+extern const u8 gElmDexRatingText_Robbery[];
 extern const u8 gBirchDexRatingText_SoYouveSeenAndCaught[];
 extern const u8 gBirchDexRatingText_OnANationwideBasis[];
 
@@ -2281,6 +2283,19 @@ void BufferPokedexRatingForMatchCall(u8 *destStr)
 {
     int numSeen, numCaught;
     u8 *str, *str2;
+
+#if IS_HNS
+    if (VarGet(VAR_NEWBARKTOWN_LABSTATE) == 3)
+    {
+        StringCopy(destStr, gElmDexRatingText_GoFindMrPokemon);
+        return;
+    }
+    if (VarGet(VAR_NEWBARKTOWN_LABSTATE) == 4)
+    {
+        StringCopy(destStr, gElmDexRatingText_Robbery);
+        return;
+    }
+#endif
 
     u8 *buffer = Alloc(sizeof(gStringVar4));
     if (!buffer)
