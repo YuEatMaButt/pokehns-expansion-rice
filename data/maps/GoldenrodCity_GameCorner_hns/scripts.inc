@@ -454,19 +454,19 @@ GoldenrodCity_GameCorner_PrizeRoom_EventScript_CancelTMSelect::
 	end
 
 GoldenrodCity_GameCorner_PrizeRoom_Text_TM13:
-	.string "Ice Beam   4000$"
+	.string "ICE BEAM   4000$"
 
 GoldenrodCity_GameCorner_PrizeRoom_Text_TM35:
-	.string "Flamethrower 4000$"
+	.string "FLAMETHROWER 4000$"
 
 GoldenrodCity_GameCorner_PrizeRoom_Text_TM44:
-	.string "Rest       2000$"
+	.string "REST       2000$"
 
 GoldenrodCity_GameCorner_PrizeRoom_Text_TM75:
-	.string "Swords Dance 3000$"
+	.string "SWORDS DANCE 3000$"
 
 GoldenrodCity_GameCorner_PrizeRoom_Text_TM90:
-	.string "Substitute 2000$"
+	.string "SUBSTITUTE 2000$"
 
 GoldenrodCity_GameCorner_PrizeRoom_Text_Cancel:
 	.string "Cancel$"
