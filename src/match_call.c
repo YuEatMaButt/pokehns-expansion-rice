@@ -2163,7 +2163,7 @@ static int GetNumOwnedBadges(void)
 {
     u32 i;
 
-    for (i = 0; i < NUM_BADGES; i++)
+    for (i = 0; i < ARRAY_COUNT(gBadgeFlags); i++)
     {
         if (!FlagGet(gBadgeFlags[i]))
             break;
