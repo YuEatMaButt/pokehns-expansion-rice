@@ -7793,7 +7793,8 @@ void MonGainEVs(struct Pokemon *mon, u16 defeatedSpecies)
     u8 bonus;
     u32 currentEVCap = GetCurrentEVCap();
 
-    if (gSaveBlock3Ptr->challengeSettings.tx_Challenges_NoEVs)
+    // No EVs challenge is lifted once Red is defeated, matching the EV item check in ItemUseCB_Medicine
+    if (gSaveBlock3Ptr->challengeSettings.tx_Challenges_NoEVs && !FlagGet(FLAG_DEFEATED_RED))
         return;
 
     heldItem = GetMonData(mon, MON_DATA_HELD_ITEM, 0);
