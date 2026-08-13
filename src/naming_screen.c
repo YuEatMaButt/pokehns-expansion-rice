@@ -1680,7 +1680,7 @@ static bool8 KeyboardKeyHandler_Backspace(u8 input)
 static bool8 KeyboardKeyHandler_OK(u8 input)
 {
     TryStartButtonFlash(BUTTON_OK, TRUE, FALSE);
-    if (IsNuzlockeNicknamingActive() && GetTextEntryPosition() == 0)
+    if (IsNuzlockeNicknamingActive() && (sNamingScreen->templateNum == NAMING_SCREEN_CAUGHT_MON || sNamingScreen->templateNum == NAMING_SCREEN_NICKNAME) && GetTextEntryPosition() == 0)
         return FALSE;
     if (input == INPUT_A_BUTTON)
     {
