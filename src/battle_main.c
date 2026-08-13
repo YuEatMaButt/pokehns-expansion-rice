@@ -5804,7 +5804,7 @@ static void HandleEndTurn_FinishBattle(void)
             TryPutBreakingNewsOnAir();
         }
 
-        if (gSaveBlock3Ptr->challengeSettings.tx_Nuzlocke_EasyMode && !IsNuzlockeActive())
+        if (IsNuzlockeEasyActive())
         {
             if (!(gBattleTypeFlags & (BATTLE_TYPE_LINK
                                         | BATTLE_TYPE_LINK_IN_BATTLE
