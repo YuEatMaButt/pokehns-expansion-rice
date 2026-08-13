@@ -37936,6 +37936,7 @@
   ],
   "VENOMOTH": [
     "MOVE_ACID_SPRAY",
+    "MOVE_FLY",
     "MOVE_ACROBATICS",
     "MOVE_AERIAL_ACE",
     "MOVE_AGILITY",
