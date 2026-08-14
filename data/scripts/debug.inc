@@ -203,7 +203,10 @@ Debug_EventScript_Text_DefensiveIVs:
 	.string "HP IVs: {STR_VAR_1}, DEF IVs: {STR_VAR_2}, SPDEF IVs: {STR_VAR_3}$"
 
 Debug_EventScript_Script_1::
-	clearflag FLAG_DAILY_FLOWER_SHOP_RECEIVED_BERRY_HNS
+	additem ITEM_CLAW_FOSSIL
+	additem ITEM_OLD_AMBER
+	additem ITEM_ROOT_FOSSIL
+	additem ITEM_DOME_FOSSIL
 	release
 	end
 
