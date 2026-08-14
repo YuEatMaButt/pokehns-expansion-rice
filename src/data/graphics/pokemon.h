@@ -25152,11 +25152,19 @@ const u32 gObjectEventPic_Substitute[] = INCGFX_COMP("graphics/pokemon/question_
     const u32 gMonBackPic_Zarude[] = INCGFX_U32("graphics/pokemon/zarude/back.png", ".4bpp.smol");
     const u16 gMonShinyPalette_Zarude[] = INCGFX_U16("graphics/pokemon/zarude/shiny.pal", ".gbapal");
     const u8 gMonIcon_Zarude[] = INCGFX_U8("graphics/pokemon/zarude/icon.png", ".4bpp");
+
+    const u32 gMonFrontPic_ZarudeDada[] = INCBIN_U32("graphics/pokemon/zarude/dada/front.4bpp.smol");
+    const u16 gMonPalette_ZarudeDada[] = INCBIN_U16("graphics/pokemon/zarude/dada/normal.gbapal");
+    const u32 gMonBackPic_ZarudeDada[] = INCBIN_U32("graphics/pokemon/zarude/dada/back.4bpp.smol");
+    const u16 gMonShinyPalette_ZarudeDada[] = INCBIN_U16("graphics/pokemon/zarude/dada/shiny.gbapal");
+    const u8 gMonIcon_ZarudeDada[] = INCBIN_U8("graphics/pokemon/zarude/dada/icon.4bpp");
 #if P_FOOTPRINTS
     const u8 gMonFootprint_Zarude[] = INCGFX_U8("graphics/pokemon/zarude/footprint.png", ".1bpp");
+    const u8 gMonFootprint_ZarudeDada[] = INCBIN_U8("graphics/pokemon/zarude/footprint.1bpp");
 #endif //P_FOOTPRINTS
 #if OW_POKEMON_OBJECT_EVENTS
     const u32 gObjectEventPic_Zarude[] = INCGFX_COMP("graphics/pokemon/zarude/overworld.png", ".4bpp", "-mwidth 4 -mheight 4");
+    const u32 gObjectEventPic_ZarudeDada[] = INCBIN_COMP("graphics/pokemon/zarude/dada/overworld.4bpp");
 #if OW_PKMN_OBJECTS_SHARE_PALETTES == FALSE
     const u16 gOverworldPalette_Zarude[] = INCGFX_U16("graphics/pokemon/zarude/overworld_normal.pal", ".gbapal");
     const u16 gShinyOverworldPalette_Zarude[] = INCGFX_U16("graphics/pokemon/zarude/overworld_shiny.pal", ".gbapal");
