@@ -19,7 +19,11 @@ FallarborTown_BattleTentLobby_Text_AwaitAnotherChallenge:
 	.string "another occasion!$"
 
 FallarborTown_BattleTentLobby_Text_ExplainFallarborTent:
+#if IS_HNS
+	.string "In the ARENA BATTLE TENT,\n"
+#else
 	.string "In the FALLARBOR BATTLE TENT,\n"
+#endif
 	.string "we undertake the Set KO Tourney.\p"
 	.string "All participants enter with a team of\n"
 	.string "three POKéMON.\p"
@@ -141,7 +145,11 @@ VerdanturfTown_BattleTentLobby_Text_TakeChallenge:
 	.string "BATTLE TENT challenge?$"
 
 VerdanturfTown_BattleTentLobby_Text_ExplainVerdanturfTent:
+#if IS_HNS
+	.string "In the PALACE BATTLE TENT,\n"
+#else
 	.string "In the VERDANTURF BATTLE TENT,\n"
+#endif
 	.string "there is one crucial rule that must\l"
 	.string "be obeyed.\p"
 	.string "TRAINERS are permitted only to switch\n"
@@ -245,7 +253,11 @@ SlateportCity_BattleTentLobby_Text_TakeChallenge:
 	.string "Swap challenge?$"
 
 SlateportCity_BattleTentLobby_Text_ExplainSlateportTent:
+#if IS_HNS
+	.string "Here at the FACTORY BATTLE TENT,\n"
+#else
 	.string "Here at the SLATEPORT BATTLE TENT,\n"
+#endif
 	.string "we hold Battle Swap events\l"
 	.string "using rental POKéMON.\p"
 	.string "First, you will be loaned three\n"
