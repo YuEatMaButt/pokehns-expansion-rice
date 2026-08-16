@@ -15,8 +15,9 @@ SeafoamIslands_Gym_EventScript_Blaine::
 	message SeafoamIslands_Gym_Text_ReceivedVolcanoBadge
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
-	msgbox SeafoamIslands_Gym_Text_TM, MSGBOX_DEFAULT
+	msgbox SeafoamIslands_Gym_Text_Blaine_GiveTM, MSGBOX_DEFAULT
 	giveitem ITEM_TM_OVERHEAT
+	msgbox SeafoamIslands_Gym_Text_Blaine_ExplainTM, MSGBOX_DEFAULT
 	setflag FLAG_BADGE15_GET
 	setflag FLAG_DEFEATED_CINNABAR_ISLAND_GYM
 	addvar VAR_NUM_BADGES, 1
@@ -66,11 +67,17 @@ SeafoamIslands_Gym_Text_GymStatuePlayerWon::
     .string "WINNING TRAINERS:\n"
 	.string "BLUE, RED, {PLAYER}$"
 
-SeafoamIslands_Gym_Text_TM:
-	.string "Take this too. This TM contains\n"
-	.string "the awesome OVERHEAT.\p"
+SeafoamIslands_Gym_Text_Blaine_GiveTM:
+	.string "Take this too!$"
+
+SeafoamIslands_Gym_Text_Blaine_ExplainTM:
+	.string "This TM contains\n"
+	.string "the awesome OVERHEAT!\p"
+	.string "The overwhelming heat scorches your\n"
+	.string "opponents, but then drops your power.\p"
 	.string "I hope your next opponent has an\n"
 	.string "extra BURN HEAL! Waaah!$"
+
 SeafoamIslands_Gym_Text_BlaineIntro:
 	.string "BLAINE: Waaah!\p"
 	.string "My GYM in CINNABAR burned down.\p"

@@ -275,9 +275,11 @@ VermilionCity_Gym_EventScript_GiveThunderstone::
 	msgbox VermilionGym_Text_LtSurgeThunderstone, MSGBOX_DEFAULT
 	giveitem ITEM_THUNDER_STONE
 	return
+
 VermilionCity_Gym_EventScript_GiveTM::
-	msgbox VermilionGym_Text_LtSurgeTm, MSGBOX_DEFAULT
+	msgbox VermilionGym_Text_LtSurge_GiveTM, MSGBOX_DEFAULT
 	giveitem ITEM_TM_SHOCK_WAVE
+	msgbox VermilionGym_Text_LtSurge_ExplainTM, MSGBOX_DEFAULT
 	return
 
 VermilionCity_Gym_EventScript_Surge_Defeated::
@@ -312,9 +314,14 @@ VermilionGym_Text_ThunderBadgeInfo:
 	.string "defeated me.\p"
 	.string "You wear it proudly, hear?$"
 
-VermilionGym_Text_LtSurgeTm:
+VermilionGym_Text_LtSurge_GiveTM:
 	.string "And take this TM. It served me\n"
 	.string "well in the war!$"
+
+VermilionGym_Text_LtSurge_ExplainTM:
+	.string "It's SHOCK WAVE.\p"
+	.string "A shockingly accurate move\n"
+	.string "which hits every time!$"
 
 VermilionGym_Text_LtSurgeThunderstone:
 	.string "And take this stone. It has real\n"

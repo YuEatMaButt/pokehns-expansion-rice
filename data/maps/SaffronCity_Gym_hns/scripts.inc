@@ -40,7 +40,9 @@ SaffronCity_Gym_EventScript_Sabrina::
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
 	msgbox SaffronCity_Gym_Text_MarshBadgeInfo, MSGBOX_DEFAULT
+	msgbox SaffronCity_Gym_Text_Sabrina_GiveTM, MSGBOX_DEFAULT
 	giveitem ITEM_TM_SKILL_SWAP
+	msgbox SaffronCity_Gym_Text_Sabrina_ExplainTM, MSGBOX_DEFAULT
 	setflag FLAG_BADGE13_GET
 	setflag FLAG_DEFEATED_SAFFRON_GYM
 	addvar VAR_NUM_BADGES, 1
@@ -88,6 +90,15 @@ SaffronCity_Gym_Text_MarshBadgeInfo:
 	.string "know to be true.\p"
 	.string "You will become a celebrated and\n"
 	.string "beloved CHAMPION!$"
+
+SaffronCity_Gym_Text_Sabrina_GiveTM:
+	.string "Here, take this as well.$"
+
+SaffronCity_Gym_Text_Sabrina_ExplainTM:
+	.string "It holds SKILL SWAP.\p"
+	.string "It can take your opponents abilities\n"
+	.string "away from them and give them your own.\p"
+	.string "Use it wisely...$"
 
 SaffronCity_Gym_Text_SabrinaPostBattle:
 	.string "SABRINA: Your love for your\n"
