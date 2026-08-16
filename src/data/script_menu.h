@@ -265,20 +265,41 @@ static const struct MenuAction MultichoiceList_GameCornerDolls[] =
     {gText_Exit},
 };
 
+static const struct MenuAction MultichoiceList_GameCornerDolls2[] =
+{
+    {COMPOUND_STRING("REGIROCK DOLL{CLEAR_TO 0x58}9,000 C.")},
+    {COMPOUND_STRING("REGICE DOLL{CLEAR_TO 0x58}9,000 C.")},
+    {COMPOUND_STRING("REGISTEEL DOLL{CLEAR_TO 0x58}9,000 C.")},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_PrizeMons[] = 
+{
+    {COMPOUND_STRING("ABRA{CLEAR_TO 0x61}120 C.")},
+    {COMPOUND_STRING("CLEFAIRY{CLEAR_TO 0x61}500 C.")},
+    {COMPOUND_STRING("MUNCHLAX{CLEAR_TO 0x58}2,800 C.")},
+    {COMPOUND_STRING("DRATINI{CLEAR_TO 0x58}5,500 C.")},
+    {COMPOUND_STRING("PORYGON{CLEAR_TO 0x58}6,500 C.")},
+    {gText_Exit},
+};
+
 static const struct MenuAction MultichoiceList_GameCornerTMs[] =
 {
-    {COMPOUND_STRING("DOUBLE TEAM{CLEAR_TO 0x58}1,500")},
-    {COMPOUND_STRING("PSYCHIC{CLEAR_TO 0x58}3,500")},
-    {COMPOUND_STRING("FLAMETHROWER{CLEAR_TO 0x58}4,000")},
-    {COMPOUND_STRING("THUNDERBOLT{CLEAR_TO 0x58}4,000")},
-    {COMPOUND_STRING("ICE BEAM{CLEAR_TO 0x58}4,000")},
+    {COMPOUND_STRING("DOUBLE TEAM{CLEAR_TO 0x58}1,500 C.")},
+    {COMPOUND_STRING("PSYCHIC{CLEAR_TO 0x58}3,500 C.")},
+    {COMPOUND_STRING("ICE BEAM{CLEAR_TO 0x58}4,000 C.")},
+    {COMPOUND_STRING("THUNDERBOLT{CLEAR_TO 0x58}4,000 C.")},
+    {COMPOUND_STRING("FLAMETHROWER{CLEAR_TO 0x58}4,000 C.")},
     {gText_Exit},
 };
 
 static const struct MenuAction MultichoiceList_GameCornerCoins[] =
 {
-    {COMPOUND_STRING("  50 COINS    ¥1,000")},
-    {COMPOUND_STRING("500 COINS  ¥10,000")},
+    {COMPOUND_STRING("50 COINS{CLEAR_TO 0x48}¥500")},
+    {COMPOUND_STRING("500 COINS{CLEAR_TO 0x48}¥5,000")},
+    {COMPOUND_STRING("1,000 COINS{CLEAR_TO 0x48}¥10,000")},
+    {COMPOUND_STRING("2,500 COINS{CLEAR_TO 0x48}¥25,000")},
+    {COMPOUND_STRING("5,000 COINS{CLEAR_TO 0x48}¥50,000")},
     {gText_Exit},
 };
 
@@ -1141,15 +1162,6 @@ static const struct MenuAction MultichoiceList_VermilionHarbor[] =
     {gText_Exit},
 };
 
-static const struct MenuAction MultichoiceList_PrizeMons[] = 
-{
-    {gText_Abra},
-    {gText_Clefairy},
-    {gText_Munchlax},
-    {gText_Dratini},
-    {gText_Porygon},
-    {gText_Exit},
-};
 static const struct MenuAction MultichoiceList_7Floors[] = 
 {
     {gText_Floor6},
@@ -1430,7 +1442,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_LINK_SERVICES_HNS]          = MULTICHOICE(MultichoiceList_LinkServicesHns),
     [MULTI_BATTLE_MODE_HNS]            = MULTICHOICE(MultichoiceList_BattleModeHns),
     [MULTI_FOSSIL_HNS]                = MULTICHOICE(MultichoiceList_FossilHns),
-    
+    [MULTI_GAME_CORNER_DOLLS2]         = MULTICHOICE(MultichoiceList_GameCornerDolls2),
 };
 
 const u8 *const gStdStrings[] =
