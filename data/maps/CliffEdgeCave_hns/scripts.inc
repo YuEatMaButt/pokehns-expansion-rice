@@ -14,4 +14,4 @@ CliffEdgeCave_Text_Baldman:
 	.string "inside a cave, most likely one\l"
 	.string "way is right and the other leads\l"
 	.string "to a dead end.\p"
-	.string "but people can't help trying both.$"
+	.string "But people can't help trying both.$"
