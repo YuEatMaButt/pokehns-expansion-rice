@@ -240,7 +240,7 @@ GoldenrodCity_GameCorner_PrizeRoom_EventScript_ReturnToChooseTMPrize::
 	goto GoldenrodCity_GameCorner_PrizeRoom_EventScript_ChooseTMPrize
 
 GoldenrodCity_GameCorner_PrizeRoom_EventScript_ChooseTMPrize::
-	dynmultichoice 12, 0, FALSE, 7, 0, DYN_MULTICHOICE_CB_NONE, GoldenrodCity_GameCorner_PrizeRoom_Text_TM13, GoldenrodCity_GameCorner_PrizeRoom_Text_TM35, GoldenrodCity_GameCorner_PrizeRoom_Text_TM24, GoldenrodCity_GameCorner_PrizeRoom_Text_TM44, GoldenrodCity_GameCorner_PrizeRoom_Text_TM75, GoldenrodCity_GameCorner_PrizeRoom_Text_TM90, GoldenrodCity_GameCorner_PrizeRoom_Text_Cancel
+	dynmultichoice 12, 0, FALSE, 6, 0, DYN_MULTICHOICE_CB_NONE, GoldenrodCity_GameCorner_PrizeRoom_Text_TM13, GoldenrodCity_GameCorner_PrizeRoom_Text_TM35, GoldenrodCity_GameCorner_PrizeRoom_Text_TM24, GoldenrodCity_GameCorner_PrizeRoom_Text_TM44, GoldenrodCity_GameCorner_PrizeRoom_Text_TM75, GoldenrodCity_GameCorner_PrizeRoom_Text_TM90, GoldenrodCity_GameCorner_PrizeRoom_Text_Cancel
 	switch VAR_RESULT
 	case 0, GoldenrodCity_GameCorner_PrizeRoom_EventScript_TMIceBeam
 	case 1, GoldenrodCity_GameCorner_PrizeRoom_EventScript_TMFlamethrower
@@ -490,25 +490,25 @@ GoldenrodCity_GameCorner_PrizeRoom_EventScript_CancelTMSelect::
 	end
 
 GoldenrodCity_GameCorner_PrizeRoom_Text_TM13:
-	.string "ICE BEAM   4000$"
+	.string "ICE BEAM{CLEAR_TO 0x58}4,000$"
 
 GoldenrodCity_GameCorner_PrizeRoom_Text_TM35:
-	.string "FLAMETHROWER 4000$"
+	.string "FLAMETHROWER{CLEAR_TO 0x58}4,000$"
 
 GoldenrodCity_GameCorner_PrizeRoom_Text_TM24:
-	.string "THUNDERBOLT  4000$"
+	.string "THUNDERBOLT{CLEAR_TO 0x58}4,000$"
 
 GoldenrodCity_GameCorner_PrizeRoom_Text_TM44:
-	.string "REST       2000$"
+	.string "REST{CLEAR_TO 0x58}2,000$"
 
 GoldenrodCity_GameCorner_PrizeRoom_Text_TM75:
-	.string "SWORDS DANCE 3000$"
+	.string "SWORDS DANCE{CLEAR_TO 0x58}3,000$"
 
 GoldenrodCity_GameCorner_PrizeRoom_Text_TM90:
-	.string "SUBSTITUTE 2000$"
+	.string "SUBSTITUTE{CLEAR_TO 0x58}2,000$"
 
 GoldenrodCity_GameCorner_PrizeRoom_Text_Cancel:
-	.string "Cancel$"
+	.string "EXIT$"
 
 GoldenrodCity_GameCorner_PrizeRoom_Text_SoYourChoiceIsTM:
 	.string "So your choice is\n"
