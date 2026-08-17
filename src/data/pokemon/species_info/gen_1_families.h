@@ -18853,7 +18853,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
                                 {EVO_ITEM, ITEM_LEAF_STONE, SPECIES_LEAFEON},
                                 {EVO_LEVEL, 0, SPECIES_LEAFEON, CONDITIONS({IF_IN_MAPSEC, MAPSEC_ILEX_FOREST})},
                                 {EVO_LEVEL, 0, SPECIES_LEAFEON, CONDITIONS({IF_IN_MAPSEC, MAPSEC_VIRIDIAN_FOREST})},
-                                {EVO_ITEM, ITEM_ICE_STONE, SPECIES_GLACEON}
+                                {EVO_ITEM, ITEM_ICE_STONE, SPECIES_GLACEON},
                                 {EVO_LEVEL, 0, SPECIES_GLACEON, CONDITIONS({IF_IN_MAPSEC, MAPSEC_ICE_PATH})},
                                 {EVO_LEVEL, 0, SPECIES_GLACEON, CONDITIONS({IF_IN_MAPSEC, MAPSEC_SEAFOAM_ISLANDS})},
                               #else
@@ -18862,7 +18862,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
                               #endif
                                 
                               #if P_GEN_2_CROSS_EVOS
-                                ,
+
                               #endif
                             #endif
                             #if P_GEN_2_CROSS_EVOS
