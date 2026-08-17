@@ -18847,23 +18847,20 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
                             #if P_GEN_6_CROSS_EVOS
                                 {EVO_ITEM, ITEM_SHINY_STONE, SPECIES_SYLVEON},
                             #endif
-                            // Location-based evolutions must come before the friendship ones:
-                            // the evolution loop stops at the first match, and Espeon/Umbreon
-                            // between them cover every hour of the day, so a high-friendship
-                            // Eevee would never reach Leafeon/Glaceon.
                             #if P_GEN_4_CROSS_EVOS
-                                {EVO_LEVEL, 0, SPECIES_LEAFEON, CONDITIONS({IF_IN_MAP, MAP_PETALBURG_WOODS})},
+
                               #if IS_HNS
-                                {EVO_LEVEL, 0, SPECIES_LEAFEON, CONDITIONS({IF_IN_MAPSEC, MAPSEC_ILEX_FOREST})},
-                              #endif
-                                {EVO_LEVEL, 0, SPECIES_LEAFEON, CONDITIONS({IF_IN_MAPSEC, MAPSEC_VIRIDIAN_FOREST})},
                                 {EVO_ITEM, ITEM_LEAF_STONE, SPECIES_LEAFEON},
-                                {EVO_LEVEL, 0, SPECIES_GLACEON, CONDITIONS({IF_IN_MAP, MAP_SHOAL_CAVE_LOW_TIDE_ICE_ROOM})},
-                              #if IS_HNS
-                                {EVO_LEVEL, 0, SPECIES_GLACEON, CONDITIONS({IF_IN_MAPSEC, MAPSEC_ICE_PATH})},
-                              #endif
-                                {EVO_LEVEL, 0, SPECIES_GLACEON, CONDITIONS({IF_IN_MAPSEC, MAPSEC_SEAFOAM_ISLANDS})},
+                                {EVO_LEVEL, 0, SPECIES_LEAFEON, CONDITIONS({IF_IN_MAPSEC, MAPSEC_ILEX_FOREST})},
+                                {EVO_LEVEL, 0, SPECIES_LEAFEON, CONDITIONS({IF_IN_MAPSEC, MAPSEC_VIRIDIAN_FOREST})},
                                 {EVO_ITEM, ITEM_ICE_STONE, SPECIES_GLACEON}
+                                {EVO_LEVEL, 0, SPECIES_GLACEON, CONDITIONS({IF_IN_MAPSEC, MAPSEC_ICE_PATH})},
+                                {EVO_LEVEL, 0, SPECIES_GLACEON, CONDITIONS({IF_IN_MAPSEC, MAPSEC_SEAFOAM_ISLANDS})},
+                              #else
+                                {EVO_LEVEL, 0, SPECIES_LEAFEON, CONDITIONS({IF_IN_MAP, MAP_PETALBURG_WOODS})},
+                                {EVO_LEVEL, 0, SPECIES_GLACEON, CONDITIONS({IF_IN_MAP, MAP_SHOAL_CAVE_LOW_TIDE_ICE_ROOM})},
+                              #endif
+                                
                               #if P_GEN_2_CROSS_EVOS
                                 ,
                               #endif
