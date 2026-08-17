@@ -16056,8 +16056,10 @@ const struct ItemInfo gItemsInfo[] =
             "with a gold and\n"
             "silver design."),
         .pocket = POCKET_POKE_BALLS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
+        .battleUsage = EFFECT_ITEM_THROW_BALL,
+        .secondaryId = BALL_GS,
         .iconPic = gItemIcon_GSBall,
         .iconPalette = gItemIconPalette_GSBall,
     },

@@ -10852,6 +10852,12 @@ static void ComputeBallData(u32 wildMonBattler, u32 playerBattler, struct BallDa
         ball->multiplier = 410;
         ball->divider = 4096;
         break;
+    case BALL_GS:
+        if (battleMon->species == SPECIES_CELEBI)
+            ball->guaranteedCapture = TRUE;
+        else
+            ball->multiplier = 2550;
+        break;
     }
 
 }
