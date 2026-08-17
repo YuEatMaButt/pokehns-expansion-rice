@@ -20,10 +20,18 @@ EventTicket_Text_ShowEonTicket:
 	.string "That shivers my timbers!\p"
 	.string "All aboard!$"
 
+#if IS_HNS
+EventTicket_Text_SouthernIslandSailBack:
+	.string "Aye, mate, there's nothing here to\n"
+	.string "see or do on this forgettable island.\p"
+	.string "What say we sail back to OLIVINE?$"
+#else
 EventTicket_Text_SouthernIslandSailBack:
 	.string "Aye, mate, there's nothing here to\n"
 	.string "see or do on this forgettable island.\p"
 	.string "What say we sail back to LILYCOVE?$"
+#endif 
+
 
 EventTicket_Text_SailHome:
 	.string "Aye, right, then!\n"
