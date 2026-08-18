@@ -13,7 +13,7 @@ MahoganyTown_EventScript_FixTree::
 	end
 
 Mahoganytown_OnFrame::
-	map_script_2 VAR_MAHOGANY_TOWN_STATE, 15, Mahoganytown_EventScript_RocketTrigger
+	map_script_2 VAR_TRIGGER_ELM_ROCKET_CALL, 1, Mahoganytown_EventScript_RocketTrigger
 	.2byte 0
 
 Mahoganytown_EventScript_RocketTrigger::
@@ -27,6 +27,7 @@ Mahoganytown_EventScript_RocketTrigger::
 	setflag FLAG_HIDE_GOLDENROD_NPCS
 	clearflag FLAG_HIDE_ROCKET_GOLDENROD_RADIOTOWER_1
 	setvar VAR_MAHOGANY_TOWN_STATE, 16
+	setvar VAR_TRIGGER_ELM_ROCKET_CALL, 2
 	delay 10
 	release
 	end
