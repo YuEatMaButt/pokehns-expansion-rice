@@ -757,7 +757,8 @@ Alola_Melemele_Bugcatcher_Text_0:
 
 Alola_Melemele_camper_Text_0:
 	.string "I traveled all the way from Kanto to see\n"
-	.string "my favorite bird Pokémon, Chatot!$"
+	.string "a variant of my favorite cat Pokémon,\n"
+	.string "Meowth!$"
 
 Alola_Melemele_Picnicker_Text_0:
 	.string "These Isles are chock full of unique\n"
