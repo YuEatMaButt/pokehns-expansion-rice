@@ -14524,10 +14524,17 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("BASEMENT KEY"),
         .price = 0,
+#if IS_HNS
+        .description = COMPOUND_STRING(
+            "The key for the\n"
+            "GOLDENROD\n"
+            "UNDERGROUND."),
+#else
         .description = COMPOUND_STRING(
             "The key for New\n"
             "Mauville beneath\n"
             "Mauville City."),
+#endif
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
@@ -14747,10 +14754,17 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("CARD KEY"),
         .price = 0,
+#if IS_HNS
+        .description = COMPOUND_STRING(
+            "A card-type door\n"
+            "key used in RADIO\n"
+            "TOWER."),
+#else
         .description = COMPOUND_STRING(
             "A card-type door\n"
             "key used in Silph\n"
             "Co's office."),
+#endif
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
