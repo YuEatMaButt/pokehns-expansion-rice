@@ -52,6 +52,7 @@
 #include "constants/event_objects.h"
 #include "constants/game_stat.h"
 #include "constants/items.h"
+#include "constants/metatile_behaviors.h"
 #include "constants/songs.h"
 #include "constants/trainers.h"
 #include "constants/trainer_hill.h"
