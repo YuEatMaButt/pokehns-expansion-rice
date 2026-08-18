@@ -2,7 +2,6 @@ GoldenrodCity_RadioTower_5F_hns_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, GoldenrodCity_RadioTower_5F_OnLoad
 	.byte 0
 
-@ During Rocket Takeover, hide Petrel and show the Director (Petrel in disguise)
 GoldenrodCity_RadioTower_5F_OnLoad::
 	call_if_eq VAR_GOLDENROD_CITY_STATE, 6, GoldenrodCity_RadioTower_5F_MapScript_HidePetrel
 	end
@@ -17,10 +16,8 @@ GoldenrodCity_RadioTower_5F_MapScript_HidePetrel::
 
 GoldenrodCity_RadioTower_5F_EventScript_Petrel::
 	lock
-	@ After Rocket Takeover, this is the real Director
 	goto_if_ge VAR_GOLDENROD_CITY_STATE, 10, GoldenrodCity_RadioTower_5F_EventScript_Director
 	goto_if_eq VAR_FACING, DIR_SOUTH, GoldenrodCity_RadioTower_5F_EventScript_PetrelNorth
-	playse SE_SELECT
 	faceplayer
 	msgbox GoldenrodCity_RadioTower_5F_Text_FakeDirector1, MSGBOX_DEFAULT
 	closemessage
@@ -53,44 +50,10 @@ GoldenrodCity_RadioTower_5F_EventScript_Petrel2::
 	release
 	end
 
-@ Modified in 1.3 to retroactively fix the Baoba Sequence Break on a 1.2.1 save file
 GoldenrodCity_RadioTower_5F_EventScript_Director::
 	lock
 	faceplayer
-
-	@ If player has either wing, skip to default director
-	checkitem ITEM_SILVER_WING
-	goto_if_eq VAR_RESULT, TRUE, GoldenrodCity_RadioTower_5F_EventScript_DirectorDone
-	checkitem ITEM_RAINBOW_WING
-	goto_if_eq VAR_RESULT, TRUE, GoldenrodCity_RadioTower_5F_EventScript_DirectorDone
-	
-	@ If player has neither wing, and hasn't spoken to Baoba, direct them toward him
-	goto_if_eq VAR_LUGIA_OR_HOOH, 0, GoldenrodCity_RadioTower_5F_EventScript_DirectorWest
-	
-	@ If player has neither wing and has spoken to Baoba, give one
-	msgbox GoldenrodCity_RadioTower_5F_Text_DirectorThanksAgain, MSGBOX_DEFAULT
-	closemessage
-	call_if_eq VAR_LUGIA_OR_HOOH, 1, GoldenrodCity_RadioTower_5F_EventScript_GiveTidalWing2
-	call_if_eq VAR_LUGIA_OR_HOOH, 2, GoldenrodCity_RadioTower_5F_EventScript_GiveClearWing2
-	
-	playse SE_PIN
-	applymovement LOCALID_DIRECTOR_STUDIO, Common_Movement_ExclamationMark
-	delay 55
-	waitmovement LOCALID_DIRECTOR_STUDIO
-	msgbox GoldenrodCity_RadioTower_5F_Text_DirectorLegendary, MSGBOX_DEFAULT
-	closemessage
-
-	release
-	end
-
-GoldenrodCity_RadioTower_5F_EventScript_DirectorDone::
 	msgbox GoldenrodCity_RadioTower_5F_Text_DirectorIntro, MSGBOX_DEFAULT
-	closemessage
-	release
-	end
-
-GoldenrodCity_RadioTower_5F_EventScript_DirectorWest::
-	msgbox GoldenrodCity_RadioTower_5F_Text_DirectorWest, MSGBOX_DEFAULT
 	closemessage
 	release
 	end
@@ -179,7 +142,7 @@ GoldenrodCity_RadioTower_5F_EventScript_Ben::
 	end
 
 GoldenrodRaidoTower4_EventScript_ARIANA::
-	trainerbattle_single TRAINER_ARIANA_2_HNS, GoldenrodCity_RadioTower_5F_Text_ExecutiveF1Seen, GoldenrodCity_RadioTower_5F_Text_ExecutiveF1Beaten
+	trainerbattle_single TRAINER_ARIANA_2_HNS GoldenrodCity_RadioTower_5F_Text_ExecutiveF1Seen, GoldenrodCity_RadioTower_5F_Text_ExecutiveF1Beaten
 	msgbox GoldenrodCity_RadioTower_5F_Text_ExecutiveF1After, MSGBOX_AUTOCLOSE
 	end
 
@@ -201,7 +164,7 @@ GoldenrodCity_RadioTower_5F_EventScript_Archer::
 	clearflag FLAG_HIDE_GOLDENROD_RADIOTOWER_DIRECTOR
 	removeobject LOCALID_PETREL_OFFICE
 	addobject LOCALID_DIRECTOR_STUDIO
-	playbgm MUS_HG_GOLDENROD, FALSE
+	playbgm MUS_HG_GOLDENROD, TRUE
 	delay 120
 	fadescreen FADE_FROM_BLACK
 	goto_if_eq VAR_FACING, DIR_SOUTH, GoldenrodCity_RadioTower_5F_EventScript_WingTop
@@ -216,7 +179,7 @@ GoldenrodCity_RadioTower_5F_EventScript_WingTop::
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
 	msgbox GoldenrodCity_RadioTower_5F_Text_DirectorThanks, MSGBOX_DEFAULT
 	closemessage
-	call_if_eq VAR_LUGIA_OR_HOOH, 1, GoldenrodCity_RadioTower_5F_EventScript_GiveTidalWing
+	call_if_eq VAR_LUGIA_OR_HOOH, 1,  GoldenrodCity_RadioTower_5F_EventScript_GiveTidalWing
 	call_if_eq VAR_LUGIA_OR_HOOH, 2, GoldenrodCity_RadioTower_5F_EventScript_GiveClearWing
 	applymovement LOCALID_DIRECTOR_STUDIO, GoldenrodCity_RadioTower_5F_Movement_LeaveTop
 	waitmovement 0
@@ -229,7 +192,7 @@ GoldenrodCity_RadioTower_5F_EventScript_WingMid::
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
 	msgbox GoldenrodCity_RadioTower_5F_Text_DirectorThanks, MSGBOX_DEFAULT
 	closemessage
-	call_if_eq VAR_LUGIA_OR_HOOH, 1, GoldenrodCity_RadioTower_5F_EventScript_GiveTidalWing
+	call_if_eq VAR_LUGIA_OR_HOOH, 1,  GoldenrodCity_RadioTower_5F_EventScript_GiveTidalWing
 	call_if_eq VAR_LUGIA_OR_HOOH, 2, GoldenrodCity_RadioTower_5F_EventScript_GiveClearWing
 	applymovement LOCALID_DIRECTOR_STUDIO, GoldenrodCity_RadioTower_5F_Movement_LeaveMid
 	waitmovement 0
@@ -242,7 +205,7 @@ GoldenrodCity_RadioTower_5F_EventScript_WingBot::
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
 	msgbox GoldenrodCity_RadioTower_5F_Text_DirectorThanks, MSGBOX_DEFAULT
 	closemessage
-	call_if_eq VAR_LUGIA_OR_HOOH, 1, GoldenrodCity_RadioTower_5F_EventScript_GiveTidalWing
+	call_if_eq VAR_LUGIA_OR_HOOH, 1,  GoldenrodCity_RadioTower_5F_EventScript_GiveTidalWing
 	call_if_eq VAR_LUGIA_OR_HOOH, 2, GoldenrodCity_RadioTower_5F_EventScript_GiveClearWing
 	applymovement LOCALID_DIRECTOR_STUDIO, GoldenrodCity_RadioTower_5F_Movement_LeaveBot
 	waitmovement 0
@@ -256,14 +219,6 @@ GoldenrodCity_RadioTower_5F_EventScript_GiveTidalWing::
 	release
 	return
 
-@ 1.3 Sequence Break version - slightly different text
-GoldenrodCity_RadioTower_5F_EventScript_GiveTidalWing2::
-	giveitem ITEM_SILVER_WING
-	msgbox GoldenrodCity_RadioTower_5F_Text_DirectorTidalWingExplanation2, MSGBOX_DEFAULT
-	closemessage
-	release
-	return
-
 GoldenrodCity_RadioTower_5F_EventScript_GiveClearWing::
 	giveitem ITEM_RAINBOW_WING
 	msgbox GoldenrodCity_RadioTower_5F_Text_DirectorClearWingExplanation, MSGBOX_DEFAULT
@@ -271,19 +226,10 @@ GoldenrodCity_RadioTower_5F_EventScript_GiveClearWing::
 	release
 	return
 
-@ 1.3 Sequence Break version - slightly different text
-GoldenrodCity_RadioTower_5F_EventScript_GiveClearWing2::
-	giveitem ITEM_RAINBOW_WING
-	msgbox GoldenrodCity_RadioTower_5F_Text_DirectorClearWingExplanation2, MSGBOX_DEFAULT
-	closemessage
-	release
-	return
-
 GoldenrodCity_RadioTower_5F_Fakeout::
 	playse SE_PIN
 	applymovement LOCALID_DIRECTOR_STUDIO, Common_Movement_ExclamationMark
-	delay 55
-	waitmovement LOCALID_DIRECTOR_STUDIO
+	delay 60
 	turnobject LOCALID_DIRECTOR_STUDIO, DIR_WEST
 	msgbox GoldenrodCity_RadioTower_5F_Text_DirectorLegendary, MSGBOX_DEFAULT
 	closemessage
@@ -291,8 +237,7 @@ GoldenrodCity_RadioTower_5F_Fakeout::
 	waitmovement 0
 	playse SE_PIN
 	applymovement LOCALID_DIRECTOR_STUDIO, Common_Movement_ExclamationMark
-	delay 55
-	waitmovement LOCALID_DIRECTOR_STUDIO
+	delay 60
 	turnobject LOCALID_DIRECTOR_STUDIO, DIR_SOUTH
 	msgbox GoldenrodCity_RadioTower_5F_Text_DirectorFakeout, MSGBOX_DEFAULT
 	closemessage
@@ -425,14 +370,6 @@ GoldenrodCity_RadioTower_5F_Text_DirectorThanks:
 	.string "I know it's not much, but please\n"
 	.string "take this.$"
 
-GoldenrodCity_RadioTower_5F_Text_DirectorThanksAgain:
-	.string "DIRECTOR: {PLAYER}, once again, thank you!\p"
-	.string "The large winged POKéMON that flew past\n"
-	.string "reminded me, I have a reward for your\l"
-	.string "courageous actions.\p"
-	.string "I know it's not much, but please\n"
-	.string "take this.$"
-
 GoldenrodCity_RadioTower_5F_Text_DirectorClearWingExplanation:
 	.string "There used to be a tower right here\n"
 	.string "in GOLDENROD CITY.\p"
@@ -448,21 +385,6 @@ GoldenrodCity_RadioTower_5F_Text_DirectorClearWingExplanation:
 	.string "TIN TOWER in ECRUTEAK CITY…\p"
 	.string "OK, I better go to my OFFICE.$"
 
-@ 1.3 Sequence Break version - slightly different text
-GoldenrodCity_RadioTower_5F_Text_DirectorClearWingExplanation2:
-	.string "There used to be a tower right here\n"
-	.string "in GOLDENROD CITY.\p"
-	.string "But it was old and creaky.\p"
-	.string "So we replaced it with our RADIO\n"
-	.string "TOWER.\p"
-	.string "We dug up that wing during\n"
-	.string "construction.\p"
-	.string "I heard that all sorts of POKéMON\n"
-	.string "lived in GOLDENROD in the past.\p"
-	.string "Perhaps…\p"
-	.string "That wing has some connection to the\n"
-	.string "TIN TOWER in ECRUTEAK CITY…$"
-
 GoldenrodCity_RadioTower_5F_Text_DirectorTidalWingExplanation:
 	.string "There used to be a tower right here\n"
 	.string "in GOLDENROD CITY.\p"
@@ -477,21 +399,6 @@ GoldenrodCity_RadioTower_5F_Text_DirectorTidalWingExplanation:
 	.string "That wing has some connection to the\n"
 	.string "WHIRL ISLANDS near CIANWOOD CITY…\p"
 	.string "OK, I better go to my OFFICE.$"
-
-@ 1.3 Sequence Break version - slightly different text
-GoldenrodCity_RadioTower_5F_Text_DirectorTidalWingExplanation2:
-	.string "There used to be a tower right here\n"
-	.string "in GOLDENROD CITY.\p"
-	.string "But it was old and creaky.\p"
-	.string "So we replaced it with our RADIO\n"
-	.string "TOWER.\p"
-	.string "We dug up that wing during\n"
-	.string "construction.\p"
-	.string "I heard that all sorts of POKéMON\n"
-	.string "lived in GOLDENROD in the past.\p"
-	.string "Perhaps…\p"
-	.string "That wing has some connection to the\n"
-	.string "WHIRL ISLANDS near CIANWOOD CITY…$"
 
 GoldenrodCity_RadioTower_5F_Text_DirectorLegendary:
 	.string "Ah!\p"
@@ -519,16 +426,6 @@ GoldenrodCity_RadioTower_5F_Text_DirectorIntro:
 	.string "express my love of POKéMON.\p"
 	.string "It would be nice if people enjoyed\n"
 	.string "our programs.$"
-
-@ 1.3 Sequence Break - Directs player toward Baoba
-GoldenrodCity_RadioTower_5F_Text_DirectorWest:
-	.string "DIRECTOR: Hello, {PLAYER}!\p"
-	.string "Did you see the large winged POKéMON\n"
-	.string "that flew past earlier?\p"
-	.string "It's the talk of the town!\n"
-	.string "Or should I say, of the RADIO TOWER?\p"
-	.string "It seemed to be headed West, in the\n"
-	.string "direction of ROUTE 39.$"
 
 GoldenrodCity_RadioTower_5F_Text_Ben:
 	.string "BEN: Do you listen to our music?$"
