@@ -184,7 +184,6 @@ Alola_Melemele_SamsonOak_Trigger_Beginning::
 	fadedefaultbgm
 	setvar VAR_ALOLA_STATE, 1
 	removeobject SamsonOakMelemeleIntro
-	setflag FLAG_VISITED_ALOLA
 	release
 	end
 
