@@ -350,8 +350,8 @@ VermilionCity_Text_SnorlaxSleeping:
 	.string "SNORLAX is snoring peacefully…$"
 
 VermilionCity_Text_RadioNearSnorlax:
-	.string "The RADIO was placed near the\n"
-	.string "sleeping SNORLAX…\p"
+	.string "The POKéGEAR was placed near \n"
+	.string "the sleeping SNORLAX…\p"
 	.string "…\p"
 	.string "SNORLAX woke up!$"
 
