@@ -1185,7 +1185,7 @@ static u32 HandleRadioInput(void)
 
 static u32 GetExitRadioMenuId(void)
 {
-    return POKENAV_MAIN_MENU_CURSOR_ON_MAP;
+    return POKENAV_MAIN_MENU_CURSOR_ON_RADIO;
 }
 
 bool32 OpenPokenavRadio(void)
