@@ -125,7 +125,7 @@ MilkMan_Battle_text:
 	.string "Special delivery today!$"
 
 NewSinjoh_MilkMan_text_Lose:
-	.string "This world is perfect.\p"
+	.string "This world is perfect.\n"
 	.string "isn't it?$"
 
 NewSinjoh_Script_TravelMart::
