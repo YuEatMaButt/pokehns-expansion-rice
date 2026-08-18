@@ -168,7 +168,7 @@ static const struct RegionMapLocation sRegionMapEntries_Johto[] = {
     [MAPSEC_NEW_BARK_TOWN]     = { 13, 11, 1, 1, COMPOUND_STRING("NEW BARK TOWN") },
     [MAPSEC_INDIGO_PLATEAU]    = { 16, 2,  1, 2, COMPOUND_STRING("INDIGO PLATEAU") },
     [MAPSEC_BATTLE_FRONTIER]   = { 12, 14, 1, 1, COMPOUND_STRING("BATTLE FRONTIER") },
-    [MAPSEC_ROUTE_26]          = { 16, 7,  1, 4, COMPOUND_STRING("ROUTE 26") },
+    [MAPSEC_ROUTE_26]          = { 16, 8,  1, 4, COMPOUND_STRING("ROUTE 26") },
     [MAPSEC_ROUTE_27]          = { 14, 11, 3, 1, COMPOUND_STRING("ROUTE 27") },
     [MAPSEC_ROUTE_28]          = { 15, 7,  1, 1, COMPOUND_STRING("ROUTE 28") },
     [MAPSEC_ROUTE_29]          = { 10, 11, 3, 1, COMPOUND_STRING("ROUTE 29") },
@@ -2776,6 +2776,7 @@ static const struct FlyLocation sFlyLocations[] =
     { .regionMapType = REGION_MAP_JOHTO, .mapsec = MAPSEC_BLACKTHORN_CITY, .flag = FLAG_VISITED_BLACKTHORN_CITY },
     { .regionMapType = REGION_MAP_JOHTO, .mapsec = MAPSEC_INDIGO_PLATEAU, .flag = FLAG_VISITED_INDIGO_PLATEAU },
     { .regionMapType = REGION_MAP_JOHTO, .mapsec = MAPSEC_MT_SILVER, .flag = FLAG_VISITED_MT_SILVER },
+    { .regionMapType = REGION_MAP_JOHTO, .mapsec = MAPSEC_ROUTE_26, .flag = FLAG_VISITED_RECEPTION_GATE },
     // Combined JK map fly destinations (Johto)
     { .regionMapType = REGION_MAP_JK, .mapsec = MAPSEC_NEW_BARK_TOWN, .flag = FLAG_VISITED_NEWBARK_TOWN },
     { .regionMapType = REGION_MAP_JK, .mapsec = MAPSEC_CHERRYGROVE_CITY, .flag = FLAG_VISITED_CHERRYGROVE_CITY },
@@ -2791,6 +2792,7 @@ static const struct FlyLocation sFlyLocations[] =
     { .regionMapType = REGION_MAP_JK, .mapsec = MAPSEC_BLACKTHORN_CITY, .flag = FLAG_VISITED_BLACKTHORN_CITY },
     { .regionMapType = REGION_MAP_JK, .mapsec = MAPSEC_INDIGO_PLATEAU, .flag = FLAG_VISITED_INDIGO_PLATEAU },
     { .regionMapType = REGION_MAP_JK, .mapsec = MAPSEC_MT_SILVER, .flag = FLAG_VISITED_MT_SILVER },
+    { .regionMapType = REGION_MAP_JK, .mapsec = MAPSEC_ROUTE_26, .flag = FLAG_VISITED_RECEPTION_GATE },
     // Combined JK map fly destinations (Kanto)
     { .regionMapType = REGION_MAP_JK, .mapsec = MAPSEC_PALLET_TOWN, .flag = FLAG_VISITED_PALLET_TOWN },
     { .regionMapType = REGION_MAP_JK, .mapsec = MAPSEC_VIRIDIAN_CITY, .flag = FLAG_VISITED_VIRIDIAN_CITY },
@@ -2802,6 +2804,8 @@ static const struct FlyLocation sFlyLocations[] =
     { .regionMapType = REGION_MAP_JK, .mapsec = MAPSEC_SAFFRON_CITY, .flag = FLAG_VISITED_SAFFRON_CITY },
     { .regionMapType = REGION_MAP_JK, .mapsec = MAPSEC_FUCHSIA_CITY, .flag = FLAG_VISITED_FUCHSIA_CITY },
     { .regionMapType = REGION_MAP_JK, .mapsec = MAPSEC_CINNABAR_ISLAND, .flag = FLAG_VISITED_CINNABAR_ISLAND },
+    { .regionMapType = REGION_MAP_JK, .mapsec = MAPSEC_ROUTE_4, .flag = FLAG_VISITED_ROUTE4 },
+    { .regionMapType = REGION_MAP_JK, .mapsec = MAPSEC_ROUTE_10, .flag = FLAG_VISITED_ROUTE10 },
 #endif
 };
 
