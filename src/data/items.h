@@ -13252,8 +13252,8 @@ const struct ItemInfo gItemsInfo[] =
         .price = 3000,
         .description = COMPOUND_STRING(
             "Attack that moves\n"
-            "last and gains power\n"
-            "if hit."),
+            "last and gains\n"
+            "power if hit."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13279,8 +13279,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("TM74"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "A high-speed spin\n"
-            "that does more damage\n"
+            "A rapid spin that\n"
+            "does more damage\n"
             "to faster foes."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
@@ -13307,7 +13307,7 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("TM76"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "Sets floating stones\n"
+            "Floating stones\n"
             "that hurt a foe\n"
             "switching in."),
         .importance = I_REUSABLE_TMS,
@@ -16306,7 +16306,7 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("TIDAL BELL"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "A bell that produces\n"
+            "Bell that produces\n"
             "an echoing sound\n"
             "that calls Lugia."),
         .importance = 1,
