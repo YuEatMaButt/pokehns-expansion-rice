@@ -3262,7 +3262,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "An ornament that\n"
             "depicts a Pokémon\n"
-            "from Alola."),
+            "from ALOLA."),
         .pocket = POCKET_TREASURES,
         .sortType = ITEM_TYPE_RELIC,
         .type = ITEM_USE_BAG_MENU,

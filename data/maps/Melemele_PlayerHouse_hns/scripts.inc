@@ -557,7 +557,7 @@ Alola_Melemele_SamsonOakVillaIntro_Trigger_Text_2:
 	.string "You'd be perfect to help with my survey\n"
 	.string "of the ALOLA ISLES!\p"
 	.string "Explore all the ISLES have to offer,\n"
-	.string "and if you find any familiar Pokémon\l"
+	.string "and if you find any familiar POKéMON\l"
 	.string "that resemble those from KANTO…\l"
 	.string "come back and show me your POKéDEX!\p"
 	.string "I'll be here patiently waiting to hear\n"
@@ -587,7 +587,7 @@ Alola_Melemele_SamsonOakVilla_Dialogue_Text_2:
 Alola_Melemele_SamsonOakVilla_Dialogue_Text_3:
 	.string "Alola {PLAYER}!\p"
 	.string "So you managed to defeat all of the\n"
-	.string "Totem Pokémon on the ISLES, did you?\p"
+	.string "Totem POKéMON on the ISLES, did you?\p"
 	.string "That's quite an accomplishment!\p"
 	.string "It's been long enough…\p"
 	.string "I think it's about time we had a battle,\n"
@@ -704,7 +704,8 @@ Alola_Melemele_SamsonOakVilla_Dialogue_Text_23:
 	.string "just yet.\p"
 	.string "I've heard MELEMELE ISLE has {COLOR RED}4 {COLOR DARK_GRAY}Alolan\n"
 	.string "variants for you to find…\p"
-	.string "{COLOR RED}RATTATA{COLOR DARK_GRAY}, {COLOR RED}RATICATE{COLOR DARK_GRAY}, {COLOR RED}MEOWTH{COLOR DARK_GRAY}, and {COLOR RED}PERSIAN{COLOR DARK_GRAY}.\p"
+	.string "{COLOR RED}RATTATA{COLOR DARK_GRAY}, {COLOR RED}RATICATE{COLOR DARK_GRAY}, {COLOR RED}MEOWTH{COLOR DARK_GRAY}, and\p"
+	.string "{COLOR RED}PERSIAN{COLOR DARK_GRAY}.\p"
 	.string "Keep on searching and come back when\n"
 	.string "you've caught them all!$"
 

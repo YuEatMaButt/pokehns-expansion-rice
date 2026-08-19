@@ -639,8 +639,8 @@ Alola_Melemele_Pokecenter_Sign_Text_0:
 	.string "Welcome to MELEMELE ISLE\n"
 	.string "POKéMON CENTER!\p"
 	.string "This is the only POKéMON CENTER on the\n"
-	.string "ALOLA ISLES but you can rest on benches\l"
-	.string "around the ISLES.$"
+	.string "ALOLA ISLES but you can rest on\l"
+	.string "benches around the ISLES.$"
 
 Alola_Melemele_MelemeleMart_Sign_Text_0:
 	.string "MELEMELE ISLE MART$"
@@ -670,8 +670,8 @@ Alola_Melemele_SamsonOak_Trigger_Beginning_Text_4:
 	.string "This is the main town on these Islands.\p"
 	.string "It's eerily similar to HAU'OLI CITY in\n"
 	.string "ALOLA… {PAUSE 30}And when I think about it…\p"
-	.string "This whole island reminds me of Melemele\n"
-	.string "Island…$"
+	.string "This whole island reminds me of MELEMELE\n"
+	.string "ISLAND…$"
 
 Alola_Melemele_SamsonOak_Trigger_Beginning_Text_5:
 	.string "Well, anyways!\p"
@@ -690,8 +690,8 @@ Alola_Melemele_SamsonOak_Trigger_Beginning_Text_6:
 	.string "native to ALOLA are here.\p"
 	.string "If you happen to come across any,\n"
 	.string "please come by my villa on the east side\l"
-	.string "of the Isle and show them to me!\p"
-	.string "Oh. And feel free to explore the Isle\n"
+	.string "of the ISLE and show them to me!\p"
+	.string "Oh. And feel free to explore the ISLE\n"
 	.string "while on your way!\p"
 	.string "See you there!$"
 
@@ -757,7 +757,7 @@ Alola_Melemele_Bugcatcher_Text_0:
 
 Alola_Melemele_camper_Text_0:
 	.string "I traveled all the way from KANTO to see\n"
-	.string "a variant of my favorite cat POKéMON,\n"
+	.string "a variant of my favorite cat POKéMON,\p"
 	.string "MEOWTH!$"
 
 Alola_Melemele_Picnicker_Text_0:
