@@ -574,11 +574,13 @@ Route25_BillsHouse_Text_GrampsSlowpoke:
 
 Route25_BillsHouse_Text_TeleporterUnlocked:
 	.string "Oh, one more thing!\p"
-	.string "BILL left a note saying that\n"
-	.string "if I found someone who truly\l"
-	.string "appreciates POKéMON, I should\l"
-	.string "let them use his machine.\p"
-	.string "Feel free to use it anytime!\n"
+	.string "BILL's TELEPORTER.\n"
+	.string "That's the big machine over there.\p"
+	.string "He never quite got it working.\p"
+	.string "But it does curious things to\n"
+	.string "POKéMON.\p"
+	.string "You're welcome to try it, if\n"
+	.string "you'd like!\p"
 	.string "Just use that computer over there.$"
 
 Route25_BillsHouse_Text_AskToSeeMon:
