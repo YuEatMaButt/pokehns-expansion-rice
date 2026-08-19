@@ -757,7 +757,7 @@ Alola_Melemele_Bugcatcher_Text_0:
 
 Alola_Melemele_camper_Text_0:
 	.string "I traveled all the way from KANTO to see\n"
-	.string "a variant of my favorite cat POKéMON,\p"
+	.string "a variant of my favorite cat POKéMON,\l"
 	.string "MEOWTH!$"
 
 Alola_Melemele_Picnicker_Text_0:
