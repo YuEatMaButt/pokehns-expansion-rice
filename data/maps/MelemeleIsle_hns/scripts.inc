@@ -386,7 +386,7 @@ Alola_Melemele_Totem_sign_12:
 	end
 
 Alola_Melemele_Totem_sign_15:
-	warp MAP_AKALA_ISLE_HNS, 9, 10
+	warp MAP_AKALA_ISLE_HNS, 9, 11
 	waitstate
 	end
 

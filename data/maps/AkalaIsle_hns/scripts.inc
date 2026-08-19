@@ -250,7 +250,7 @@ Alola_Akala_Totem_sign_12:
 	end
 
 Alola_Akala_Totem_sign_15:
-	warp MAP_AKALA_ISLE_HNS, 9, 10
+	warp MAP_AKALA_ISLE_HNS, 9, 11
 	waitstate
 	end
 
@@ -454,7 +454,7 @@ Alola_Akala_TotemBattle_Text_1:
 	.string "It scampered off somewhere…$"
 
 Alola_Akala_TotemBattle_Text_2:
-	.string "Salaa!$"
+	.string "Prrrob!$"
 
 Alola_Akala_TotemBattle_Text_3:
 	.string "Totem PROBOPASS was defeated!\n"
