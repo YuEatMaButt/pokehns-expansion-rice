@@ -401,3 +401,7 @@ Route49_EventScript_WyrdeerRan::
 	clearflag FLAG_NO_SHINY
 	release
 	end
+
+Route49_EventScript_Item_TMRockClimb::
+	finditem ITEM_TM_ROCK_CLIMB
+	end
