@@ -308,7 +308,7 @@ NewSinjoh_EventScript_Welcome_Sign::
 	end
 
 NewSinjoh_Text_Welcome_Sign:
-	.string "New Sinjoh$"
+	.string "NEW SINJOH$"
 
 NewSinjoh_EventScript_Resturant_Sign::
 	msgbox NewSinjoh_Text_Resturant_Sign, MSGBOX_SIGN

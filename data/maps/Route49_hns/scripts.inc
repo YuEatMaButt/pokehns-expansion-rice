@@ -254,7 +254,6 @@ Route49_Movement_PlayerWyrdeerLeft:
 	walk_up
 	walk_right
 	walk_up
-	walk_up
 	step_end
 
 Route49_EventScript_ActivateWyrdeerLeft::
@@ -286,7 +285,7 @@ Route49_EventScript_ActivateWyrdeerLeft::
     waitmoncry
     waitmovement 0
     applymovement2 LOCALID_ROUTE49_NOBLE_WYRDEER, Route49_Movement_WyrdeerEntrance2
-    delay 10
+    delay 90
     playse SE_LEDGE
     delay 20
 	waitmovement LOCALID_ROUTE49_NOBLE_WYRDEER

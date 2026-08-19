@@ -68,7 +68,7 @@ Route50_Text_WesselDefeat:
 	.string "My hypothesis was wrong...$"
 
 Route50_Text_WesselAfter:
-	.string "Take it the PLATE. I don't want to\n"
+	.string "Take the PLATE. I don't want to\n"
 	.string "talk about it.$"
 
 Route50_EventScript_Finley::
