@@ -146,7 +146,9 @@
 #define BERRY_BLENDER_THROW_ALL_BERRIES_AT_ONCE TRUE        // This is a small little addition, that basically speeds up the animation where all players' berries are thrown into the blender. Self-explanatory I hope!
 
 // Trainer Rematches
-#if IS_HNS
+// NOTE: this header is included from constants/global.h *before* IS_HNS is
+// defined, so test the raw build define here instead.
+#ifdef POKEMON_HNS
 #define OW_REMATCH_BADGE_COUNT      3 // After Whitney
 #else
 #define OW_REMATCH_BADGE_COUNT      5 // Number of badges necessary before the match call or vs seeker features allow rematches
