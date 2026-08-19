@@ -231,18 +231,6 @@ static const u8 sRadioText_Buena4[] = _("{STR_VAR_1}!");
 static const u8 sRadioText_Buena5[] = _("Don't forget it! I'm in");
 static const u8 sRadioText_Buena6[] = _("GOLDENROD's RADIO TOWER!");
 
-// Buena midnight shutdown
-static const u8 sRadioText_BuenaMidnight1[] = _("BUENA: Oh my…");
-static const u8 sRadioText_BuenaMidnight2[] = _("It's midnight! I");
-static const u8 sRadioText_BuenaMidnight3[] = _("have to shut down!");
-static const u8 sRadioText_BuenaMidnight4[] = _("Thanks for tuning");
-static const u8 sRadioText_BuenaMidnight5[] = _("in to the end! But");
-static const u8 sRadioText_BuenaMidnight6[] = _("don't stay up too");
-static const u8 sRadioText_BuenaMidnight7[] = _("late! Presented to");
-static const u8 sRadioText_BuenaMidnight8[] = _("you by DJ BUENA!");
-static const u8 sRadioText_BuenaMidnight9[] = _("I'm outta here!");
-static const u8 sRadioText_BuenaMidnight10[] = _("…");
-static const u8 sRadioText_BuenaOffAir[] = _("");
 
 // ==========================================================
 // Buena's Password Categories & Options
