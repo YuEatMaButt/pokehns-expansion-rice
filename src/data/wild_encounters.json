@@ -70933,12 +70933,12 @@
               {
                 "min_level": 43,
                 "max_level": 45,
-                "species": "SPECIES_RATICATE_ALOLA"
+                "species": "SPECIES_EXEGGCUTE"
               },
               {
                 "min_level": 43,
                 "max_level": 45,
-                "species": "SPECIES_RATTATA_ALOLA"
+                "species": "SPECIES_SURSKIT"
               },
               {
                 "min_level": 43,
@@ -71117,7 +71117,7 @@
               {
                 "min_level": 43,
                 "max_level": 45,
-                "species": "SPECIES_DIGLETT_ALOLA"
+                "species": "SPECIES_GOLBAT"
               },
               {
                 "min_level": 43,
@@ -71127,7 +71127,7 @@
               {
                 "min_level": 43,
                 "max_level": 45,
-                "species": "SPECIES_DIGLETT_ALOLA"
+                "species": "SPECIES_GOLBAT"
               }
             ]
           },
@@ -71315,27 +71315,27 @@
               {
                 "min_level": 43,
                 "max_level": 45,
+                "species": "SPECIES_MANKEY"
+              },
+              {
+                "min_level": 43,
+                "max_level": 45,
+                "species": "SPECIES_MAKUHITA"
+              },
+              {
+                "min_level": 43,
+                "max_level": 45,
+                "species": "SPECIES_TANGELA"
+              },
+              {
+                "min_level": 43,
+                "max_level": 45,
                 "species": "SPECIES_PINSIR"
               },
               {
                 "min_level": 43,
                 "max_level": 45,
                 "species": "SPECIES_SCYTHER"
-              },
-              {
-                "min_level": 43,
-                "max_level": 45,
-                "species": "SPECIES_HERACROSS"
-              },
-              {
-                "min_level": 43,
-                "max_level": 45,
-                "species": "SPECIES_TANGELA"
-              },
-              {
-                "min_level": 43,
-                "max_level": 45,
-                "species": "SPECIES_TANGELA"
               },
               {
                 "min_level": 43,
@@ -71370,7 +71370,7 @@
               {
                 "min_level": 43,
                 "max_level": 45,
-                "species": "SPECIES_MANKEY"
+                "species": "SPECIES_HERACROSS"
               }
             ]
           },
@@ -71479,12 +71479,12 @@
               {
                 "min_level": 43,
                 "max_level": 45,
-                "species": "SPECIES_RATICATE_ALOLA"
+                "species": "SPECIES_WINGULL"
               },
               {
                 "min_level": 43,
                 "max_level": 45,
-                "species": "SPECIES_RATTATA_ALOLA"
+                "species": "SPECIES_NATU"
               },
               {
                 "min_level": 43,
