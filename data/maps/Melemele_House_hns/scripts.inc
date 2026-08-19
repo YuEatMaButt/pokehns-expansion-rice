@@ -23,7 +23,7 @@ Alola_Melemele_Pokecenter_BugCatcher::
 	applymovement Melemele_PokecenterGrubbin, Alola_Melemele_Pokecenter_BugCatcher_Movement_0
 	waitmovement 0
 	waitse
-	playmoncry SPECIES_AIPOM, 0
+	playmoncry SPECIES_RATTATA, 0
 	waitmoncry
 	release
 	end
@@ -32,7 +32,7 @@ Alola_Melemele_Pokecenter_BugCatcher::
 Alola_Melemele_Pokecenter_Grubbin::
 	lock
 	faceplayer
-	playmoncry SPECIES_AIPOM, 0
+	playmoncry SPECIES_RATTATA, 0
 	msgbox Alola_Melemele_Pokecenter_Grubbin_Text_0, MSGBOX_AUTOCLOSE
 	waitmoncry
 	release
@@ -51,10 +51,10 @@ Alola_Melemele_Pokecenter_AceTrainer_Text_0:
 Alola_Melemele_Pokecenter_BugCatcher_Text_0:
 	.string "I found some brand new POKéMON\n"
 	.string "here on the ISLES!\p"
-	.string "Like my new friend AIPOM here!$"
+	.string "Like my new friend RATTATA here!$"
 
 Alola_Melemele_Pokecenter_Grubbin_Text_0:
-	.string "Aiip!$"
+	.string "Grrr!$"
 
 
 @ Jessica's Paldean Tauros trade. Which Tauros she offers depends on the

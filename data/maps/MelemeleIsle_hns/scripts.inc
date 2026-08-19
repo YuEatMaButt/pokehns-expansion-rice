@@ -636,7 +636,7 @@ Alola_Melemele_Melemele_Sign_Text_0:
 	.string "Welcome to MELEMELE ISLE!$"
 
 Alola_Melemele_Pokecenter_Sign_Text_0:
-	.string "Welcome to MELEMELE ISLE\n"
+	.string "Welcome to the MELEMELE ISLE\n"
 	.string "POKéMON CENTER!\p"
 	.string "This is the only POKéMON CENTER on the\n"
 	.string "ALOLA ISLES but you can rest on\l"
@@ -667,7 +667,7 @@ Alola_Melemele_SamsonOak_Trigger_Beginning_Text_3:
 	.string "Let me show you to town!$"
 
 Alola_Melemele_SamsonOak_Trigger_Beginning_Text_4:
-	.string "This is the main town on these Islands.\p"
+	.string "This is the main town on these islands.\p"
 	.string "It's eerily similar to HAU'OLI CITY in\n"
 	.string "ALOLA… {PAUSE 30}And when I think about it…\p"
 	.string "This whole island reminds me of MELEMELE\n"
@@ -680,8 +680,8 @@ Alola_Melemele_SamsonOak_Trigger_Beginning_Text_5:
 	.string "On my way back from the ALOLA region,\n"
 	.string "I stumbled across these isles…\p"
 	.string "Surprisingly, many of the POKéMON I saw\n"
-	.string "in ALOLA were here as well, so I've called\l"
-	.string "this place… {PAUSE 30}the ALOLA ISLES!$"
+	.string "in ALOLA were here as well, so I've\l"
+	.string "called this place… {PAUSE 30}the ALOLA ISLES!$"
 
 Alola_Melemele_SamsonOak_Trigger_Beginning_Text_6:
 	.string "Now I haven't completely explored the\n"

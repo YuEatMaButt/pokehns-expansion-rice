@@ -48,7 +48,7 @@ Melemele_House5_Mom_Text_0:
 	.string "on the ISLES!$"
 
 Melemele_House5_Son_Text_0:
-	.string "Hehe... Tag is so fun!$"
+	.string "Hehe... tag is so fun!$"
 
 Melemele_House5_Son_Text_1:
 	.string "Try to catch me MEOWTH!$"
