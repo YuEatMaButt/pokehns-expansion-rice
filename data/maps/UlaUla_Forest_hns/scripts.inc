@@ -297,19 +297,19 @@ Alola_Ulaula_Totem_sign_Text_0:
 	.string "Isle?$"
 
 Alola_Ulaula_Totem_sign_Text_1:
-	.string "Melemele Isle$"
+	.string "MELEMELE ISLE$"
 
 Alola_Ulaula_Totem_sign_Text_2:
-	.string "Akala Isle$"
+	.string "AKALA ISLE$"
 
 Alola_Ulaula_Totem_sign_Text_3:
-	.string "Ula'ula Isle$"
+	.string "ULA'ULA ISLE$"
 
 Alola_Ulaula_Totem_sign_Text_4:
-	.string "Poni Isle$"
+	.string "PONI ISLE$"
 
 Alola_Ulaula_Totem_sign_Text_5:
-	.string "Cancel$"
+	.string "CANCEL$"
 
 Alola_Ulaula_Totem_sign_Text_6:
 	.string "A strange totem stands here,\n"

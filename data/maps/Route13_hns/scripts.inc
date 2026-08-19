@@ -319,7 +319,6 @@ Route13_TravelToAlola_13:
 	setflag FLAG_HIDE_FLYOVER
 	setflag FLAG_HIDE_PHANT_OUTSIDE
 	setflag FLAG_HIDE_PHANT_INSIDE
-	setflag FLAG_VISITED_ALOLA
 	delay 90
 	fadescreenswapbuffers FADE_TO_BLACK
 	removeobject LOCALID_ROUTE13_BOAT
@@ -426,12 +425,12 @@ Route13_Movement_BoatArrive:
 Route13_GetOffBoat_Text_0:
 	.string "Welcome back to mainland Kanto!\p"
 	.string "Come back if you'd like to take a trip\n"
-	.string "to the Alola Isles!$"
+	.string "to the ALOLA ISLES!$"
 
 Route13_TravelToAlola_Text_0:
 	.string "Ahoy there!\p"
 	.string "That's one strange souvenir.\n"
-	.string "You must be from the Isles!$"
+	.string "You must be from the ISLES!$"
 Route13_TravelToAlola_Text_0_5:
 	.string "Would you like to take the next ship?\n"
 	.string "It departs shortly!$"
@@ -444,13 +443,13 @@ Route13_TravelToAlola_Text_2:
 	.string "Come back when you'd like to set sail.$"
 
 Route13_TravelToAlola_Text_3:
-	.string "Ah, its you again!\n"
-	.string "Do you want to go to the Alola Isles?$"
+	.string "Ah, it's you again!\n"
+	.string "Do you want to go to the ALOLA ISLES?$"
 
 Route13_TravelToAlola_Text_4:
 	.string "Ahoy!\n"
 	.string "This port is for residents only.\p"
-	.string "All of the residents of these Isles\n"
+	.string "All of the residents of these ISLES\n"
 	.string "carry some… {PAUSE 30}strange souvenirs.\p"
 	.string "It makes them so easy to identify,\n"
 	.string "I don't even need to check tickets!$"

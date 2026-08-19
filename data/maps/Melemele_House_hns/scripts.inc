@@ -45,13 +45,13 @@ Alola_Melemele_Pokecenter_BugCatcher_Movement_0:
 	step_end
 
 Alola_Melemele_Pokecenter_AceTrainer_Text_0:
-	.string "There are so many unique Pokémon here!\n"
+	.string "There are so many unique POKéMON here!\n"
 	.string "I'm gonna catch 'em all!$"
 
 Alola_Melemele_Pokecenter_BugCatcher_Text_0:
-	.string "I found some brand new Pokémon\n"
-	.string "here on the Isles!\p"
-	.string "Like my new friend Aipom here!$"
+	.string "I found some brand new POKéMON\n"
+	.string "here on the ISLES!\p"
+	.string "Like my new friend AIPOM here!$"
 
 Alola_Melemele_Pokecenter_Grubbin_Text_0:
 	.string "Aiip!$"

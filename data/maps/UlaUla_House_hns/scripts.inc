@@ -175,7 +175,7 @@ Alola_Ulaula_House_Phant_Text_4:
 	.string "You received an Egg from PHANTONOMY!$"
 
 Alola_Ulaula_House_Phant_Text_5:
-	.string "That Egg contains my favorite Pokémon.\p"
+	.string "That Egg contains my favorite POKéMON.\p"
 	.string "Please, take good care of it…$"
 
 Alola_Ulaula_House_Phant_Text_6:

@@ -260,13 +260,29 @@ Alola_Poni_NPC_girl::
 	end
 
 
-Alola_Poni_Bench_Heal::
+Alola_Poni_Bench_Heal_Right::
+	specialvar VAR_RESULT, GetPlayerFacingDirection
+	compare VAR_RESULT, DIR_EAST
+	goto_if_eq Alola_Poni_Bench_Heal_Skip
+	goto Alola_Poni_Bench_Heal
+
+Alola_Poni_Bench_Heal_Left::
+	specialvar VAR_RESULT, GetPlayerFacingDirection
+	compare VAR_RESULT, DIR_WEST
+	goto_if_eq Alola_Poni_Bench_Heal_Skip
+	goto Alola_Poni_Bench_Heal
+
+Alola_Poni_Bench_Heal_Skip:
+	end
+
+Alola_Poni_Bench_Heal:
 	lock
 	faceplayer
 	msgbox Alola_Poni_Bench_Heal_Text_0, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Alola_Poni_Bench_Heal_2
 Alola_Poni_Bench_Heal_1:
+	callnative UpdateFollowingPokemon
 	release
 	end
 
@@ -316,7 +332,7 @@ Alola_Poni_BattleExeggutor_Text_0:
 	.string "Gaah-aah!$"
 
 Alola_Poni_Island_Sign_Text_0:
-	.string "Poni Isle$"
+	.string "PONI ISLE$"
 
 Alola_Poni_TotemBattle_Text_0:
 	.string "Buzz!!$"
@@ -332,16 +348,16 @@ Alola_Poni_Totem_sign_Text_0:
 	.string "Isle?$"
 
 Alola_Poni_Totem_sign_Text_1:
-	.string "Melemele Isle$"
+	.string "MELEMELE ISLE$"
 
 Alola_Poni_Totem_sign_Text_2:
-	.string "Akala Isle$"
+	.string "AKALA ISLE$"
 
 Alola_Poni_Totem_sign_Text_3:
-	.string "Ula'ula Isle$"
+	.string "ULA'ULA ISLE$"
 
 Alola_Poni_Totem_sign_Text_4:
-	.string "Cancel$"
+	.string "CANCEL$"
 
 Alola_Poni_Totem_sign_Text_5:
 	.string "A strange totem stands here,\n"
@@ -357,7 +373,7 @@ Alola_Poni_TrainerBattleSwimmer1_Text_1:
 	.string "Gah, I forgot my sunscreen…$"
 
 Alola_Poni_TrainerBattleSwimmer1_Text_2:
-	.string "I've swam into so many cool Pokémon!\n"
+	.string "I've swam into so many cool POKéMON!\n"
 	.string "It must be something in the water.$"
 
 Alola_Poni_TrainerBattleSwimmer2_Text_0:
@@ -371,7 +387,7 @@ Alola_Poni_TrainerBattleSwimmer2_Text_2:
 	.string "I don't think I'll tube anywhere else!$"
 
 Alola_Poni_NPC_girl_Text_0:
-	.string "Poni Isle is my favorite.\n"
+	.string "PONI ISLE is my favorite.\n"
 	.string "The wilderness just speaks for itself!$"
 
 Alola_Poni_Bench_Heal_Text_0:

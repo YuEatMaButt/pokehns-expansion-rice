@@ -40,8 +40,8 @@ Alola_Pokemart_BaldMan::
 
 Alola_Pokemart_Cook_Text_0:
 	.string "The Malasadas here are delicious.\n"
-	.string "Just like the real ones in Alola!$"
+	.string "Just like the real ones in ALOLA!$"
 
 Alola_Pokemart_BaldMan_Text_0:
 	.string "I'm looking for some sunscreen!\p"
-	.string "It's sunnier here on the Isles!$"
+	.string "It's sunnier here on the ISLES!$"

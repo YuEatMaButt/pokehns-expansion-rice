@@ -172,13 +172,29 @@ Alola_Ulaula_LassNPC::
 	end
 
 
-Alola_Ulaula_Bench_Heal::
+Alola_Ulaula_Bench_Heal_Right::
+	specialvar VAR_RESULT, GetPlayerFacingDirection
+	compare VAR_RESULT, DIR_EAST
+	goto_if_eq Alola_Ulaula_Bench_Heal_Skip
+	goto Alola_Ulaula_Bench_Heal
+
+Alola_Ulaula_Bench_Heal_Left::
+	specialvar VAR_RESULT, GetPlayerFacingDirection
+	compare VAR_RESULT, DIR_WEST
+	goto_if_eq Alola_Ulaula_Bench_Heal_Skip
+	goto Alola_Ulaula_Bench_Heal
+
+Alola_Ulaula_Bench_Heal_Skip:
+	end
+
+Alola_Ulaula_Bench_Heal:
 	lock
 	faceplayer
 	msgbox Alola_Ulaula_Bench_Heal_Text_0, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Alola_Ulaula_Bench_Heal_2
 Alola_Ulaula_Bench_Heal_1:
+	callnative UpdateFollowingPokemon
 	release
 	end
 
@@ -292,20 +308,20 @@ Alola_Ulaula_BattlePalossand_Text_0:
 
 Alola_Ulaula_MtLanikalaSign_Text_0:
 	.string "This mountain is affectionately\n"
-	.string "referred to as Mt. Lanikala by the\l"
+	.string "referred to as MT. LANIKALA by the\l"
 	.string "locals, as it is the tallest mountain\l"
-	.string "on the Alola Isles.\p"
+	.string "on the ALOLA ISLES.\p"
 	.string "The real name of this mountain has been\n"
 	.string "lost to time.$"
 
 Alola_Ulaula_UlaulaSign_Text_0:
-	.string "Ula'ula Isle$"
+	.string "ULA'ULA ISLE$"
 
 Alola_Ulaula_Phant_outside_Text_0:
 	.string "Hello there, {PLAYER}!\p"
 	.string "I'm the developer who built this\n"
 	.string "section of the game!\p"
-	.string "I hope you enjoyed this taste of Alola.\p"
+	.string "I hope you enjoyed this taste of ALOLA.\p"
 	.string "I'm working on a full demake of the\n"
 	.string "region called ULTRA ECLIPSE.$"
 
@@ -323,18 +339,18 @@ Alola_Ulaula_TrainerBattlePicnicker_Text_1:
 Alola_Ulaula_TrainerBattlePicnicker_Text_2:
 	.string "I thought I saw something red flying\n"
 	.string "through the sky.\p"
-	.string "Could it have been a Pokémon?$"
+	.string "Could it have been a POKéMON?$"
 
 Alola_Ulaula_TrainerBattleYoungster_Text_0:
-	.string "Hey, I'm going to be the first to climb\nMt. Lanikala!$"
+	.string "Hey, I'm going to be the first to climb\nMT. LANIKALA!$"
 
 Alola_Ulaula_TrainerBattleYoungster_Text_1:
-	.string "It's not even the real Mt. Lanikala…$"
+	.string "It's not even the real MT. LANIKALA…$"
 
 Alola_Ulaula_TrainerBattleYoungster_Text_2:
 	.string "My dad never told me the real name of\n"
 	.string "this mountain.\p"
-	.string "We've always just called it Mt. Lanikala.$"
+	.string "We've always just called it MT. LANIKALA.$"
 
 Alola_Ulaula_TrainerBattleHiker_Text_0:
 	.string "You must be tough to handle this\nrough terrain!$"
@@ -343,10 +359,10 @@ Alola_Ulaula_TrainerBattleHiker_Text_1:
 	.string "Oof,\nI should've trained harder…$"
 
 Alola_Ulaula_TrainerBattleHiker_Text_2:
-	.string "Ula'ula Isle has the best hiking!\p"
+	.string "ULA'ULA ISLE has the best hiking!\p"
 	.string "The locals refer to this mountain as\n"
-	.string "Mt. Lanikala, as it is the tallest on\l"
-	.string "the Alola Isles!$"
+	.string "MT. LANIKALA, as it is the tallest on\l"
+	.string "the ALOLA ISLES!$"
 
 Alola_Ulaula_TrainerBattleCooltrainer_Text_0:
 	.string "This cave smells terrible!\n Let's battle to get my mind off of it!$"
@@ -359,7 +375,7 @@ Alola_Ulaula_TrainerBattleCooltrainer_Text_2:
 	.string "on going in that cave.$"
 
 Alola_Ulaula_LassNPC_Text_0:
-	.string "The sea by the Isles is truly\n"
+	.string "The sea by the ISLES is truly\n"
 	.string "breathtaking.\p"
 	.string "I could sit here all day and just\n"
 	.string "watch the waves.$"
