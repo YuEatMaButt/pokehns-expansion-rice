@@ -433,7 +433,7 @@ Alola_Akala_Sign_Text_0:
 	.string "AKALA ISLE$"
 
 Alola_Akala_House_Sign_Text_0:
-	.string "AKALA VILLA.\p"
+	.string "AKALA VILLA\p"
 	.string "A place for visitors to stay while\n"
 	.string "on AKALA ISLE.$"
 

@@ -604,7 +604,7 @@ Alola_Melemele_SamsonOakVilla_Dialogue_Text_6:
 	.string "Wow, {PLAYER}!\n"
 	.string "You really are a powerful Trainer!\p"
 	.string "You've proven worthy of a secret\n"
-	.string "I've been keeping about these isles…\p"
+	.string "I've been keeping about these ISLES…\p"
 	.string "I'm not the only one who's noticed a\n"
 	.string "striking resemblance between the ALOLA\l"
 	.string "ISLES and the ALOLA region…\p"
@@ -656,7 +656,7 @@ Alola_Melemele_SamsonOakVilla_Dialogue_Text_15:
 	.string "Not right now.$"
 
 Alola_Melemele_SamsonOakVilla_Dialogue_Text_16:
-	.string "Let me take a look at your Pokédex{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.$"
+	.string "Let me take a look at your POKéDEX{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.$"
 
 Alola_Melemele_SamsonOakVilla_Dialogue_Text_17:
 	.string "Wow, {PLAYER}!$"
@@ -667,7 +667,7 @@ Alola_Melemele_SamsonOakVilla_Dialogue_Text_18:
 
 Alola_Melemele_SamsonOakVilla_Dialogue_Text_19:
 	.string "And it looks like you've found all the\n"
-	.string "Alolan variants on the other isles too!\p"
+	.string "Alolan variants on the other ISLES too!\p"
 	.string "That's amazing, {PLAYER}!\p"
 	.string "You should be very proud of yourself!$"
 
@@ -679,7 +679,7 @@ Alola_Melemele_SamsonOakVilla_Dialogue_Text_20:
 	.string "thing…\p"
 	.string "Could you help me investigate the Totem\n"
 	.string "POKéMON that are said to be guarding\l"
-	.string "the totems on each isle?\p"
+	.string "the totems on each ISLE?\p"
 	.string "But beware! These Totem POKéMON are\n"
 	.string "said to be much stronger than their\l"
 	.string "normal counterparts…\p"
@@ -687,14 +687,14 @@ Alola_Melemele_SamsonOakVilla_Dialogue_Text_20:
 	.string "to see if you are a worthy opponent!$"
 
 Alola_Melemele_SamsonOakVilla_Dialogue_Text_21:
-	.string "Keep exploring the other isles and\n"
+	.string "Keep exploring the other ISLES and\n"
 	.string "report your progress to me!$"
 
 Alola_Melemele_SamsonOakVilla_Dialogue_Text_22:
 	.string "It seems you've already found all the\n"
 	.string "Alolan variants on MELEMELE ISLE!\p"
 	.string "Great job!\p"
-	.string "Keep exploring the other isles and\n"
+	.string "Keep exploring the other ISLES and\n"
 	.string "report your progress to me!$"
 
 Alola_Melemele_SamsonOakVilla_Dialogue_Text_23:
@@ -732,7 +732,7 @@ Alola_Melemele_SamsonOakVilla_Dialogue_Text_26:
 	.string "It seems you've already found all the\n"
 	.string "Alolan variants on AKALA ISLE!\p"
 	.string "Great job!\p"
-	.string "Keep exploring the other isles and\n"
+	.string "Keep exploring the other ISLES and\n"
 	.string "report your progress to me!$"
 
 Alola_Melemele_SamsonOakVilla_Dialogue_Text_27:
@@ -754,7 +754,7 @@ Alola_Melemele_SamsonOakVilla_Dialogue_Text_29:
 	.string "It seems you've already found all the\n"
 	.string "Alolan variants on ULA'ULA ISLE!\p"
 	.string "Great job!\p"
-	.string "Keep exploring the other isles and\n"
+	.string "Keep exploring the other ISLES and\n"
 	.string "report your progress to me!$"
 
 Alola_Melemele_SamsonOakVilla_Dialogue_Text_30:
@@ -777,7 +777,7 @@ Alola_Melemele_SamsonOakVilla_Dialogue_Text_32:
 	.string "It seems you've already found all the\n"
 	.string "Alolan variants on PONI ISLE!\p"
 	.string "Great job!\p"
-	.string "Keep exploring the other isles and\n"
+	.string "Keep exploring the other ISLES and\n"
 	.string "report your progress to me!$"
 
 Alola_Melemele_SamsonOakVilla_Dialogue_Text_33:

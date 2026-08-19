@@ -338,7 +338,7 @@ Alola_Poni_TotemBattle_Text_0:
 	.string "Buzz!!$"
 
 Alola_Poni_TotemBattle_Text_1:
-	.string "Totem Electivire was defeated!\n"
+	.string "Totem ELECTIVIRE was defeated!\n"
 	.string "It scampered off somewhere…$"
 
 Alola_Poni_Totem_sign_Text_0:
