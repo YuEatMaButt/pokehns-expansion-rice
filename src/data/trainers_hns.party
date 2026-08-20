@@ -11053,6 +11053,19 @@ Beldum
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+=== TRAINER_BRANDON_BF_BRAIN_HNS ===
+Name: BRANDON
+Class: Pyramid King Hns
+Pic: Pyramid King Brandon
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Beldum
+Level: 5
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_JOEY_2_HNS ===
 Name: JOEY
 Class: Youngster Hns
