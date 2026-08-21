@@ -31,4 +31,4 @@ Melemele_House6_GameboyKid_Text_0:
 	.string "It's called ULTRA ECLIPSE,\n"
 	.string "by PHANTONOMY!\p"
 	.string "Haha, look!\n"
-	.string "I'm riding an Icy NOIVERN!$"
+	.string "I'm riding an icy NOIVERN!$"
