@@ -29,6 +29,6 @@ Melemele_House6_GameboyKid_Text_0:
 	.string "that lets me explore the ALOLA Region!\p"
 	.string "It's just like the real thing.\p"
 	.string "It's called ULTRA ECLIPSE,\n"
-	.string "by Phantonomy!\p"
+	.string "by PHANTONOMY!\p"
 	.string "Haha, look!\n"
 	.string "I'm riding an Icy NOIVERN!$"
