@@ -365,7 +365,7 @@ Alola_Ulaula_TrainerBattleHiker_Text_2:
 	.string "the ALOLA ISLES!$"
 
 Alola_Ulaula_TrainerBattleCooltrainer_Text_0:
-	.string "This cave smells terrible!\n Let's battle to get my mind off of it!$"
+	.string "This cave smells terrible!\nLet's battle to get my mind off of it!$"
 
 Alola_Ulaula_TrainerBattleCooltrainer_Text_1:
 	.string "Should've brought some air freshener…$"
