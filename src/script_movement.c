@@ -31,8 +31,10 @@ bool8 ScriptMovement_StartObjectMovementScript(u8 localId, u8 mapNum, u8 mapGrou
     taskId = GetMoveObjectsTaskId();
     // CreateTask returns 0 without allocating when gTasks is full, which leaves
     // GetMoveObjectsTaskId() as TASK_NONE. Bail rather than index gTasks[0xFF].
-    if (taskId == TASK_NONE)
+    assertf(taskId != TASK_NONE, "No move object task found")
+    {
         return TRUE;
+    }
     return ScriptMovement_TryAddNewMovement(taskId, objEventId, movementScript);
 }
 
@@ -45,8 +47,10 @@ bool8 ScriptMovement_IsObjectMovementFinished(u8 localId, u8 mapNum, u8 mapGroup
     if (TryGetObjectEventIdByLocalIdAndMap(localId, mapNum, mapGroup, &objEventId))
         return TRUE;
     taskId = GetMoveObjectsTaskId();
-    if (taskId == TASK_NONE)
+    assertf(taskId != TASK_NONE, "No move object task found")
+    {
         return TRUE;
+    }
     moveScrId = GetMovementScriptIdFromObjectEventId(taskId, objEventId);
     if (moveScrId == OBJECT_EVENTS_COUNT)
         return TRUE;
