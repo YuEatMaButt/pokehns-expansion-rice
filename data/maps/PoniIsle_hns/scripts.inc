@@ -1,5 +1,37 @@
 PoniIsle_hns_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, PoniIsle_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, PoniIsle_hns_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE
 	.byte 0
+
+PoniIsle_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION:
+	call PoniIsle_hns_SetTotemSignWarpFacing
+	return
+
+PoniIsle_hns_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE:
+	map_script_2 VAR_TEMP_C, 0, PoniIsle_hns_EventScript_FacePlayerUpAfterTotemWarp
+	.2byte 0
+
+PoniIsle_hns_SetTotemSignWarpFacing:
+	setvar VAR_TEMP_C, 1
+	getplayerxy VAR_TEMP_A, VAR_TEMP_B
+	compare VAR_TEMP_A, 13
+	goto_if_ne PoniIsle_hns_SetTotemSignWarpFacing_End
+	compare VAR_TEMP_B, 8
+	goto_if_eq PoniIsle_hns_SetTotemSignWarpFacing_Set
+	compare VAR_TEMP_B, 9
+	goto_if_eq PoniIsle_hns_SetTotemSignWarpFacing_Set
+	goto PoniIsle_hns_SetTotemSignWarpFacing_End
+
+PoniIsle_hns_SetTotemSignWarpFacing_Set:
+	setvar VAR_TEMP_C, 0
+
+PoniIsle_hns_SetTotemSignWarpFacing_End:
+	return
+
+PoniIsle_hns_EventScript_FacePlayerUpAfterTotemWarp::
+	setvar VAR_TEMP_C, 1
+	applymovement LOCALID_PLAYER, PoniIsle_hns_Movement_FacePlayerUpAfterTotemWarp
+	return
 
 
 Alola_Poni_BattleExeggutor::
@@ -364,6 +396,11 @@ Alola_Poni_TotemBattle_Text_0:
 Alola_Poni_TotemBattle_Text_1:
 	.string "Totem ELECTIVIRE was defeated!\n"
 	.string "It scampered off somewhere…$"
+
+PoniIsle_hns_Movement_FacePlayerUpAfterTotemWarp:
+	face_up
+	step_end
+
 
 Alola_Poni_Totem_sign_Text_0:
 	.string "The totem is emanating a strong\n"
