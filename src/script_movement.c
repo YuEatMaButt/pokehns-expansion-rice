@@ -22,12 +22,18 @@ static EWRAM_DATA const u8 *sMovementScripts[OBJECT_EVENTS_COUNT] = {0};
 bool8 ScriptMovement_StartObjectMovementScript(u8 localId, u8 mapNum, u8 mapGroup, const u8 *movementScript)
 {
     u8 objEventId;
+    u8 taskId;
 
     if (TryGetObjectEventIdByLocalIdAndMap(localId, mapNum, mapGroup, &objEventId))
         return TRUE;
     if (!FuncIsActiveTask(ScriptMovement_MoveObjects))
         ScriptMovement_StartMoveObjects(50);
-    return ScriptMovement_TryAddNewMovement(GetMoveObjectsTaskId(), objEventId, movementScript);
+    taskId = GetMoveObjectsTaskId();
+    // CreateTask returns 0 without allocating when gTasks is full, which leaves
+    // GetMoveObjectsTaskId() as TASK_NONE. Bail rather than index gTasks[0xFF].
+    if (taskId == TASK_NONE)
+        return TRUE;
+    return ScriptMovement_TryAddNewMovement(taskId, objEventId, movementScript);
 }
 
 bool8 ScriptMovement_IsObjectMovementFinished(u8 localId, u8 mapNum, u8 mapGroup)
@@ -39,6 +45,8 @@ bool8 ScriptMovement_IsObjectMovementFinished(u8 localId, u8 mapNum, u8 mapGroup
     if (TryGetObjectEventIdByLocalIdAndMap(localId, mapNum, mapGroup, &objEventId))
         return TRUE;
     taskId = GetMoveObjectsTaskId();
+    if (taskId == TASK_NONE)
+        return TRUE;
     moveScrId = GetMovementScriptIdFromObjectEventId(taskId, objEventId);
     if (moveScrId == OBJECT_EVENTS_COUNT)
         return TRUE;
