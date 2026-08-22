@@ -24,24 +24,42 @@
 - ... and much more!
 
 ## Features added/changed in 2.0
-- Option to choose between vanilla Gen 3 learnsets or customized Gen 7 learnsets
-- All 92 HGSS TMs
+- Rebuilt the game and all features on pokeemerald-expansion
+- Restored Surf and Bike music, with option to disable
 - Abilities up to Gen 9, including Hidden Abilities
 - Items from up to Gen 9 available, including shiny charm (not all items)
+- Randomizer has all mons Gen 1-9
 - Hidden Items + Itemfinder
 - Overhauled Kanto maps and tilesets
+- Kanto rematch trainers
 - Kanto in-game trades
-- All PokéGear Rematches from GSC (and some new ones), including gift items
+- All PokéGear Rematches from GSC (and some new ones), including gift items, with option to disable
 - Full PokéGear Radio with all channels from Crystal (and some new ones)
 - PokéGear Condition menu
+- All 92 HGSS TMs
 - New postgame content
 - Kurt's Berry Balls boost catch rate by custom-defined type affinity if more impactful than the vanilla boost
 - GB Player Key Item to toggle Gen 2 music and sounds
 - Ice Path boulder puzzle
 - Mom's Savings System
 - Voltorb Flip
+- Entei, Raikou and new kanto roamer are all independent
+- Choose one lati to roam kanto. The other will be at southern island.
+- Roamers no longer intentionally avoid the player's route
+- Added a sound cue and animation when the player enters the same route as a roamer
+- Added clock to start menu
+- Changed [REDACTED]
 - Room Decoration (dolls only) in New Bark Town
+- Spiky eared pichu event in viridian
+- Added [REDACTED]
+- Slowpokes grow their tails back when you beat the league
+- Tutors and trades can utilize your pc pokemon
+- Added [REDACTED]
+- Can fly to more routes and pokemoncenters
+- Rocket takeover only happens after 7th badge, no matter where you get it
+- Buffed the kimono girls
 - Various UI/UX improvements, including Shiny Markers for colorblindness accessibility and shiny-hunting QOL
+- New Battle Backgrounds: Cave ponds, snowy routes, snowy mountain, snowy cave, volcano cave, new beach
 
 ## Differences from GSC/HGSS:
 - Level curve is greatly improved
@@ -58,7 +76,7 @@
 - Choose between our "Recommended" preset or your "Custom" settings.
 - **Pokemon Movepool**: Choose between Vanilla Gen 3 learnsets or Gen 7 learnsets with HnS-specific changes.
 - **Physical/Special** Split: Choose between Gen 1-3 pre-split mechanics or Gen 4+ split mechanics.
-- **Add Fairy Type**: For Pokémon and Moves that gained the Fairy type in Gen 6+, choose between their old or new typing.
+- **Add Fairy Type**: For Pokémon *and Moves* (new in 2.0) that gained the Fairy type in Gen 6+, choose between their old or new typing.
 - **Reusable TMs**: Choose between finite or infinite TMs. <!--This also impacts any one-time move tutors, if any.-->
 - **Nature Mints**: Choose between being able to buy Mints in the Goldenrod Flower Shop either after Badge 3 or after completing the game.
 - **Recharge Moves**: For recharge being skipped when fainting an opposing Pokemon, choose between Gen 1 and Gen 3 behavior.
@@ -122,84 +140,3 @@
 - **BST Equalizer**: Choose between Off, 100, 255, or 500
 - **Mirror Mode**: If enabled, the player get a copy of the enemy trainer's party for trainer battles.
 - **Mirror Mode Thief**: If enabled, the player keeps the most recently battled trainer's party between battles.
-
-## Options
-* Faster battle intros. Enable "Fast Intros" option in the options menu.
-* Faster-paced battles. Enable "Fast Battles" option in the options menu.
-
-**Battle related:**
-* (HnS EXP SHARE is different) Gen. VI EXP. SHARE and Gen III EXP. SHARE in the same game. "EXP. SHARE S" can be obtained at the Slateport Mart after obtaining the "EXP. SHARE" at Devon Corp.
-* EV and Exp Training available in the Saffron Dojo.
-* 3 beeps when low-health, then it stops.
-* Press L while selecting a move to open a new Submenu with information about the selected move.
-* Trainer class-based Pokéballs.
-* Catching EXP.
-* Macho Brace multiplies EV gain * 5.
-
-**UI related:**
-* New Pokédex! You can now see important information on the new "Stats" page. It's very, VERY useful and it's like having the game documentation in-game.
-* Faster battle transitions ported from Fire Red.
-* Hold L+R, then A when entering a Wild Battle to instantly run.
-* You can now register 2 key items: Pressing (as usual) and holding SELECT!
-* Swap Pokémon pressing SELECT.
-* Colored Stats (red = good, blue = bad).
-* Pressing L in the stats section of a Pokémon will bring the EVs, pressing R will bring the IVs, and pressing START will bring the default stats.
-* HM moves don't need to be taught anymore. If you have a Pokémon that can use a certain HM, if you have the correct HM in the bag, and if you have the required badge, you will be able to perform an HM move.
-* HM moves can be deleted since they are not that important anymore.
-* TM had their price changed, especially if you are not using Infinite TMs.
-* The bag now holds up to 90 items, and item capacity has been upgraded to x999.
-* When the bag is full, items go to the PC.
-* You can change the ball your Pokémon is in using a different ball from the bag.
-* Reusable repel prompt.
-* The time on the clock can be changed.
-* Two pages with additional options in the options menu.
-* Debug menu can be enabled by everybody so you can cheat or modify whatever you want. To enable it, just hold "SELECT" then press "START" inside the options menu and you'll hear a noise. Pressing "START" to open the menu from that moment will show a "DEBUG" option at the bottom. It can also be opened with "R" + "START". Be careful, using certain options can break your save so I'm not responsible for any misuse.
-
-
-**Gameplay related: (Not in HnS)** 
-* Wonder-trade on the second floor of the Pokémon Center, available after the 5th badge (unless you are doing a randomizer, which makes it available from the start, or a challenge, which enables WT after beating the game). Can be uncapped now.
-* 3 difficulty modes (EASY, NORMAL and HARD). Selected at the start of the game, can be changed anytime from the options menu.
-    EASY mode: Makes the game quite a lot easier by scaling levels down, and obtaining more EXP (+20%).
-    - Trainer Pokémon and Wild Pokémon scale down to 10 levels compared to the original game. More badges, less level.
-    - There are no restrictions on the Battle Frontier.
-
-    NORMAL mode: Vanilla.
-    - No changes, except rematches and small things (also on EASY mode).
-
-    HARD mode: Makes the game a bit more difficult by scaling levels up, and obtaining less EXP (-40%). This mode does not intent do be a "super difficult" hack-rom. It only tries to be a bit more difficult than vanilla.
-    - Trainer Pokémon and Wild Pokémon scale up to 10 levels compared to the original game. More badges, more level.
-    - Certain ace Pokémon have had their abilities or items changed to make everything a bit more difficult. This mode does not change anything else in trainer parties, or their strategies.
-    - SET MODE is automatically selected and can't be disabled if you lock the difficulty.
-    - There are more restrictions on the Battle Frontier.
-    - The GEN VI Exp. Share will give less Exp. to the battling Pokémon.
-    - Legendaries will have higher stats WHILE battling, to make it more challenging.
-    - (OPTIONAL but recommended) Use in combination with scaling IV/EV trainers from the Challenge Menu at the start of the game for an interesting challenge. You can also lock the difficulty in the Challenges menu at the start of the game.
-* Optional and recommended PHYSICAL / SPECIAL MOVE split from Gen. IV. Selected in the options menu, second page.
-* New Challenge Menu at the start of the game.
-* Bag capacity increased to 90,
-* Day / Night System with Day / Night encounters. Now Daytime is from 6AM to 20PM. Night-time is from 20PM to 6AM. For (2 new) evolutions, Morning is from 6AM to 9AM. Also includes cool lighting at night!
-* Run everywhere.
-* Autorun (in the options menu).
-* HM moves text and interaction is way faster.
-* Link with Fire Red / Leaf Green available from the start.
-* One-time tutors are infinite, but you have to pay now (only if Infinite TMs is on).
-* Trainer HIll prizes are the berries that were not available in the GBA games.
-* Match and Acro Bike are now one. Change between them by pressing "R".
-* Chain fishing has been added.
-* Easier fishing has been added to the options menu (FR/LG fishing).
-* All tickets are available to buy, together with its events.
-* Faster nurse Joy healing, and now with an even faster version in options.
-* Daily money event with Meowth (post-game).
-* You can check the Soot Sack to know how much ash you have.
-* Interacting with berry trees is faster, berry trees that are in rainy routes don't need to be watered, and berry trees don't decay.
-* Higher berry yield (6 max, 4 min).
-* A new "Growth Mulch" item which makes berries instantly grow.
-* New Self-trader to force trade evolutions (trading with another game still works).
-* PokéMarts items change with every badge.
-* AI improvements.
-* Amulet coin works always, doesn't matter who has it.
-
-**Map related: (not in HnS)**
-* Altering cave is now an Unown cave.
-* A few new maps to introduce the new Regis and the legendary events.
-* Mirage Island can be forced with a certain Pokémon in the party, apart from its unusual rate.

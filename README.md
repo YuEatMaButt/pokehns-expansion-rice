@@ -1,5 +1,3 @@
-# THIS IS A DRAFT OF THE README.md, NOT FINAL
-
 ![HnS Logo](HnS_Logo.png)
 
 # About `pokemonHnS-expansion`
@@ -21,7 +19,6 @@ Unfortunately, saves from before 2.0 will not be compatible moving forward.
 
 # [Features](FEATURES.md)
 
-<!-- TODO: customize FEATURES.md to better suit our purposes -->
 **`pokemonHnS-expansion`** includes a mix of vanilla Emerald/FRLG features, re/de-made implementations of GSC/HGSS features, custom **`Modern Emerald`** features, and both features from [core series Pokémon games](https://bulbapedia.bulbagarden.net/wiki/Core_series) and popular QOL enhancements made available by **`pokeemerald-expansion`**.  
 A full list of the features present in Pokémon Heart & Soul 2.0 can be found in [`FEATURES.md`](FEATURES.md)
 A full list of the features made available by **`pokeemerald-expansion`** can be found in [`AVAILABLE_FEATURES.md`](AVAILABLE_FEATURES.md).
@@ -29,7 +26,7 @@ A full list of the features made available by **`pokeemerald-expansion`** can be
 # [Credits](CREDITS.md)
 
 <!-- TODO: update .all-contributorsrc and CREDITS.md to match https://pokemonhns-development.github.io/pokehns-expansion-documentation/credits.html -->
- [![](https://img.shields.io/github/all-contributors/pokemonHnS-Development/pokemonHnS-expansion/upcoming)](CREDITS.md)
+<!-- [![](https://img.shields.io/github/all-contributors/pokemonHnS-Development/pokemonHnS-expansion/upcoming)](CREDITS.md) -->
 
 <!-- TODO: confirm our actual crediting policy and how best to respect our upstreams -->
 If you use **`pokemonHnS-expansion`**, please credit **Pokemon Heart and Soul**, and retain the full chain of credits as best possible.  
@@ -45,7 +42,6 @@ Finally, please consider [crediting all contributors](CREDITS.md) involved in th
 
 # **`pokemonHnS-expansion`** multiplayer compatibility
 
-<!-- TODO: wait actually how would trading with any non-HnS game work w/o the Union Room? -->
 - **`pokemonHnS-expansion`** supports trade and link battle multiplayer functionality, which *should* extend to forks built on **`pokemonHnS-expansion`** but cannot be guaranteed.
 - **`pokemonHnS-expansion`** is not compatible with official Pokémon games, **`pokemonHnS 1.X`**, **`Modern Emerald`**, or other **`pokeemerald-expansion`** projects.
 
@@ -68,3 +64,17 @@ For our player-facing documentation, visit the [**`pokemonHnS-expansion`** docum
 [![](https://dcbadge.limes.pink/api/server/ksNTFNSBj)](https://discord.gg/ksNTFNSBj)
 
 If - in the window between 2.0 release and 2.0.1 release - you are looking to report a bug, make a suggestion, or give feedback, please join the [Pokémon Heart and Soul Discord server](https://discord.gg/ksNTFNSBj). You are also welcome to join just to participate in the community, including pinging our @guides (and only our guides) for help answering questions not sufficiently covered by our documentation or in-game resources.
+
+# AI Disclosure
+Since this is a controversial topic at the moment, we'd like to be transparent about use of AI for this project.
+
+Every line of code written for the game is either hand-written or manually reviewed by a member of the team. However, it is still important to point out that LLMs like Claude Code and GitHub Copilot have been used for some tasks.
+
+Here is what AI has been used for:
+- Code Reviews of hand-written code
+- Debugging more complex scenarios
+- Auto Completion (stuff like repeating lists, DebugPrints, etc.)
+- Creating Python Scripts for I/O procedures (like downloading/writing list data, I/O data with Excel, etc. namely for documentation)
+
+AI has not been used for:
+- Generating assets of any kind; Art or Music
