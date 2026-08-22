@@ -472,7 +472,6 @@ Alola_Melemele_BattleVsTapuKoko::
 	faceplayer
 	playmoncry SPECIES_TAPU_KOKO, CRY_MODE_ENCOUNTER
 	msgbox Alola_Melemele_BattleVsTapuKoko_Text_0
-	waitmovement 0
 	waitmoncry
 	seteventmon SPECIES_TAPU_KOKO, 60
 	special BattleSetup_StartLegendaryBattle
