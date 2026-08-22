@@ -9,7 +9,7 @@ Alola_Poni_BattleExeggutor::
 	playmoncry SPECIES_EXEGGUTOR_ALOLA, 0
 	msgbox Alola_Poni_BattleExeggutor_Text_0, MSGBOX_AUTOCLOSE
 	waitmoncry
-	setwildbattle SPECIES_EXEGGUTOR_ALOLA, 45
+	setwildbattle SPECIES_EXEGGUTOR_ALOLA, 60
 	dowildbattle
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_CAUGHT
