@@ -13204,26 +13204,72 @@ Pic: Samson Oak Hns
 Gender: Male
 Music: Elite Four
 Double Battle: No
-AI: Check Bad Move
+AI: Smart Trainer
 Mugshot: Green
 
 Raichu Alola
-Level: 60
+Level: 70
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Nasty Plot
+- Thunderbolt
+- Psychic
+- Substitute
 
-Exeggutor Alola
-Level: 65
+Exeggutor Alola @ Choice Specs
+Level: 70
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Modest Nature
+- Draco Meteor
+- Leaf Storm
+- Flamethrower
+- Giga Drain
 
-Ninetales Alola
-Level: 63
 
-Golem Alola
-Level: 65
+Ninetales Alola @ Light Clay
+Level: 70
+Ability: Snow Warning
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 4 SpA / 0 SpD / 252 Spe
+Timid Nature
+- Freeze Dry
+- Hypnosis
+- Hail
+- Aurora Veil
 
-Muk Alola
-Level: 65
+Golem Alola @ Choice Band
+Level: 70
+Ability: Magnet Pull
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 4 SpA / 0 SpD / 252 Spe
+Adamant Nature
+- Stone Edge
+- Fire Punch
+- Earthquake
+- Volt Switch
 
-Tropius
-Level: 67
+Muk Alola @ Assault Vest
+Level: 70
+Ability: Poison Touch
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 0 Def / 0 SpA / 252 SpD / 0 Spe
+Adamant Nature
+- Pursuit
+- Gunk Shot
+- Knock Off
+- Fire Punch
+
+
+Tropius @ Sitrus Berry
+Level: 70
+Ability: Harvest
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 248 HP / 0 Atk / 252 Def / 0 SpA / 8 SpD / 0 Spe
+Bold Nature
+- Leech Seed
+- Substitute
+- Air Slash
+- Toxic
 
 === TRAINER_PHANTONOMY_UNUSED_HNS ===
 Name: PHANTONOMY
@@ -13265,13 +13311,13 @@ Double Battle: No
 AI: Check Bad Move
 
 Mantine
-Level: 52
+Level: 59
 
 Politoed
-Level: 54
+Level: 59
 
 Luvdisc
-Level: 50
+Level: 61
 
 === TRAINER_MELEMELE_SWIMMER_2_HNS ===
 Name: JIMMY
@@ -13283,13 +13329,13 @@ Double Battle: No
 AI: Check Bad Move
 
 Pelipper
-Level: 53
+Level: 61
 
 Poliwrath
-Level: 55
+Level: 61
 
 Huntail
-Level: 51
+Level: 62
 
 === TRAINER_AKALA_SWIMMER_1_HNS ===
 Name: KELSIE
@@ -13301,13 +13347,13 @@ Double Battle: No
 AI: Check Bad Move
 
 Starmie
-Level: 54
+Level: 61
 
 Seaking
-Level: 52
+Level: 62
 
 Golduck
-Level: 53
+Level: 62
 
 === TRAINER_AKALA_SWIMMER_2_HNS ===
 Name: PORTIA
@@ -13319,13 +13365,13 @@ Double Battle: No
 AI: Check Bad Move
 
 Corsola
-Level: 50
+Level: 62
 
 Octillery
-Level: 53
+Level: 62
 
-Raticate Alola
-Level: 51
+Mantine
+Level: 62
 
 === TRAINER_AKALA_SWIMMER_3_HNS ===
 Name: GEOFF
@@ -13337,13 +13383,13 @@ Double Battle: No
 AI: Check Bad Move
 
 Gyarados
-Level: 56
+Level: 61
 
 Tentacruel
-Level: 54
+Level: 62
 
 Huntail
-Level: 52
+Level: 63
 
 === TRAINER_PONI_SWIMMER_1_HNS ===
 Name: JADE
@@ -13355,13 +13401,13 @@ Double Battle: No
 AI: Check Bad Move
 
 Gorebyss
-Level: 53
+Level: 63
 
 Luvdisc
-Level: 51
+Level: 63
 
 Milotic
-Level: 56
+Level: 61
 
 === TRAINER_PONI_SWIMMER_2_HNS ===
 Name: RODDY
@@ -13373,13 +13419,13 @@ Double Battle: No
 AI: Check Bad Move
 
 Corsola
-Level: 50
+Level: 63
 
 Mantine
-Level: 52
+Level: 61
 
 Politoed
-Level: 54
+Level: 61
 
 === TRAINER_AKALA_HIKER_HNS ===
 Name: IAN
@@ -13391,13 +13437,13 @@ Double Battle: No
 AI: Check Bad Move
 
 Solrock
-Level: 53
+Level: 60
 
 Lunatone
-Level: 53
+Level: 60
 
 Magmar
-Level: 56
+Level: 61
 
 === TRAINER_AKALA_PICNICKER_HNS ===
 Name: TATIANA
@@ -13409,13 +13455,13 @@ Double Battle: No
 AI: Check Bad Move
 
 Dustox
-Level: 52
+Level: 64
 
 Pinsir
-Level: 54
+Level: 61
 
 Ludicolo
-Level: 55
+Level: 60
 
 === TRAINER_AKALA_CAMPER_HNS ===
 Name: OLIVER
@@ -13427,13 +13473,13 @@ Double Battle: No
 AI: Check Bad Move
 
 Swellow
-Level: 54
+Level: 62
 
 Beedrill
-Level: 56
+Level: 64
 
 Dustox
-Level: 51
+Level: 64
 
 === TRAINER_AKALA_FOREST_BUGCATCHER_1_HNS ===
 Name: STANLEY
@@ -13445,10 +13491,10 @@ Double Battle: No
 AI: Check Bad Move
 
 Pinsir
-Level: 55
+Level: 61
 
 Scyther
-Level: 57
+Level: 61
 
 === TRAINER_AKALA_FOREST_BUGCATCHER_2_HNS ===
 Name: SCOTTY
@@ -13460,10 +13506,10 @@ Double Battle: No
 AI: Check Bad Move
 
 Butterfree
-Level: 54
+Level: 63
 
 Heracross
-Level: 58
+Level: 61
 
 === TRAINER_AKALA_CAVE_PICNICKER_HNS ===
 Name: MELISSA
@@ -13475,13 +13521,13 @@ Double Battle: No
 AI: Check Bad Move
 
 Mankey
-Level: 51
+Level: 63
 
 Tangrowth
-Level: 55
+Level: 61
 
 Tropius
-Level: 53
+Level: 62
 
 === TRAINER_AKALA_CAVE_CAMPER_HNS ===
 Name: RONNY
@@ -13493,13 +13539,13 @@ Double Battle: No
 AI: Check Bad Move
 
 Primeape
-Level: 54
+Level: 61
 
 Hariyama
-Level: 56
+Level: 61
 
 Machoke
-Level: 52
+Level: 61
 
 === TRAINER_AKALA_CAVE_HIKER_HNS ===
 Name: FRANK
@@ -13511,13 +13557,13 @@ Double Battle: No
 AI: Check Bad Move
 
 Kangaskhan
-Level: 56
+Level: 61
 
 Lunatone
-Level: 52
+Level: 60
 
 Solrock
-Level: 52
+Level: 60
 
 === TRAINER_ULAULA_PICNICKER_HNS ===
 Name: MELISSA
@@ -13529,13 +13575,13 @@ Double Battle: No
 AI: Check Bad Move
 
 Swellow
-Level: 53
+Level: 62
 
 Tangela
-Level: 50
+Level: 63
 
 Miltank
-Level: 55
+Level: 61
 
 === TRAINER_ULAULA_YOUNGSTER_HNS ===
 Name: JOEY
@@ -13547,13 +13593,13 @@ Double Battle: No
 AI: Check Bad Move
 
 Scizor
-Level: 57
+Level: 61
 
 Leafeon
-Level: 54
+Level: 61
 
 Raticate Alola
-Level: 51
+Level: 62
 
 === TRAINER_ULAULA_HIKER_HNS ===
 Name: FRANK
@@ -13565,13 +13611,13 @@ Double Battle: No
 AI: Check Bad Move
 
 Magmar
-Level: 55
+Level: 62
 
 Electabuzz
-Level: 55
+Level: 63
 
 Mawile
-Level: 53
+Level: 62
 
 === TRAINER_ULAULA_COOLTRAINER_HNS ===
 Name: LOIS
@@ -13583,13 +13629,13 @@ Double Battle: No
 AI: Check Bad Move
 
 Skarmory
-Level: 57
+Level: 64
 
 Primeape
-Level: 54
+Level: 64
 
 Tauros
-Level: 60
+Level: 64
 
 === TRAINER_MILKMAN_HNS ===
 Name: MILKMAN
