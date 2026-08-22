@@ -216,22 +216,46 @@ Alola_Ulaula_Totem_sign_8:
 	goto Alola_Ulaula_Totem_sign_3
 
 Alola_Ulaula_Totem_sign_12:
+	goto_if_unset FLAG_HIDE_TAPU_KOKO, Alola_Ulaula_Totem_sign_12_Lower
 	warp MAP_MELEMELE_ISLE_HNS, 34, 26
 	waitstate
 	end
 
+Alola_Ulaula_Totem_sign_12_Lower:
+	warp MAP_MELEMELE_ISLE_HNS, 34, 27
+	waitstate
+	end
+
 Alola_Ulaula_Totem_sign_15:
+	goto_if_unset FLAG_HIDE_TAPU_LELE, Alola_Ulaula_Totem_sign_15_Lower
 	warp MAP_AKALA_ISLE_HNS, 9, 11
 	waitstate
 	end
 
+Alola_Ulaula_Totem_sign_15_Lower:
+	warp MAP_AKALA_ISLE_HNS, 9, 12
+	waitstate
+	end
+
 Alola_Ulaula_Totem_sign_18:
+	goto_if_unset FLAG_HIDE_TAPU_BULU, Alola_Ulaula_Totem_sign_18_Lower
 	warp MAP_ULA_ULA_FOREST_HNS, 16, 5
 	waitstate
 	end
 
+Alola_Ulaula_Totem_sign_18_Lower:
+	warp MAP_ULA_ULA_FOREST_HNS, 16, 6
+	waitstate
+	end
+
 Alola_Ulaula_Totem_sign_20:
+	goto_if_unset FLAG_HIDE_TAPU_FINI, Alola_Ulaula_Totem_sign_20_Lower
 	warp MAP_PONI_ISLE_HNS, 13, 8
+	waitstate
+	end
+
+Alola_Ulaula_Totem_sign_20_Lower:
+	warp MAP_PONI_ISLE_HNS, 13, 9
 	waitstate
 	end
 
