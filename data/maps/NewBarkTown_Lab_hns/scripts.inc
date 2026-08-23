@@ -153,6 +153,7 @@ NewBarkTown_Lab_EventScript_TriggerReturnPlayer::
 NewBarkTown_Lab_EventScript_ShouldntTouch::
 	msgbox NewBarkTown_Lab_Text_ShouldntTouch, MSGBOX_DEFAULT
 	closemessage
+	release
 	end
 
 
@@ -277,6 +278,7 @@ NewBarkTown_Lab_EventScript_GiveStarter_Shiny::
 NewBarkTown_Lab_EventScript_NicknameStarter::
 	setvar VAR_0x8004, 0
 	call Common_EventScript_NameReceivedPartyMon
+	release
 	end
 
 NewBarkTown_Lab_EventScript_ChoseStarter_NicknameStarter_Nuzlocke::
@@ -422,6 +424,7 @@ NewBarkTown_Lab_EventScript_PoliceYes::
 	setflag FLAG_START_NUZLOCKE
 	setflag FLAG_EXP_SHARE_ENABLED
 	removeitem ITEM_MYSTERY_EGG
+	release
 	end
 
 NewBarkTown_Lab_EventScript_ElmState5::
