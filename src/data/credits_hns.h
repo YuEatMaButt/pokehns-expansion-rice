@@ -81,7 +81,7 @@ static const u8 sCreditsText_Phantonomy[]                      = _("Phantonomy")
 static const u8 sCreditsText_DaniRainbow[]                     = _("DaniRainbow");
 static const u8 sCreditsText_Resetes[]                         = _("Resetes");
 static const u8 sCreditsText_Jozuno[]                          = _("Jozuno");
-static const u8 sCreditsText_Skeletonkey[]                     = _("skeletonkey");
+static const u8 sCreditsText_Skeletonkey[]                     = _("Skeletonkey36");
 static const u8 sCreditsText_Pinny[]                           = _("Pinny");
 static const u8 sCreditsText_Grintoul[]                        = _("Grintoul");
 
