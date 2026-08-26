@@ -217,8 +217,6 @@ u32 IsBoxMonExcluded(struct BoxPokemon *boxmon)
     struct Pokemon mon = {0};
     BoxMonToMon(boxmon, &mon);
 
-    MgbaPrintf(MGBA_LOG_ERROR, "%d %d", GetMonData(&mon, MON_DATA_HP), GetMonData(&mon, MON_DATA_IS_EGG));
-
     if ((IsNuzlockeActive() || IsNuzlockeEasyActive()) && GetMonData(&mon, MON_DATA_HP) == 0 && GetMonData(&mon, MON_DATA_IS_EGG) == FALSE)
         return TRUE;
 
