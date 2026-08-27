@@ -617,7 +617,7 @@ GoldenrodUnderground_Text_GruntM13Beaten:
 
 GoldenrodUnderground_Text_GruntM13After:
     .string "You must have ice in your veins to\n"
-    .string "dis TEAM ROCKET.$"
+    .string "diss TEAM ROCKET.$"
 
 GoldenrodUnderground_Text_GruntF3Seen:
     .string "Are you lost? No, you can't be.\p"
