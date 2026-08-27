@@ -722,7 +722,7 @@ static const u8 *const sDesc_RandomTrainer[] = {
 };
 static const u8 *const sDesc_RandomStatic[] = {
     COMPOUND_STRING("Static encounters will be the same\nas in the base game."),
-    COMPOUND_STRING("Named {PKMN}, casino {PKMN}, roamers,\nand some other special {PKMN} won't change."),
+    COMPOUND_STRING("Named {PKMN}, casino {PKMN}, roamers, and\nsome other special {PKMN} won't change."),
 };
 static const u8 *const sDesc_RandomSimilar[] = {
     COMPOUND_STRING("{PKMN} replaced with similar tiered\nones. Currently based on evo stages."),
