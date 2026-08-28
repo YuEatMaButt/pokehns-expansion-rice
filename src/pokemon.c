@@ -5385,14 +5385,8 @@ u8 GiveCapturedMonToPlayer(struct Pokemon *mon)
     if (i >= GetMaxPartySize())
         return CopyMonToPC(mon);
 
-    if (IsOneTypeChallengeActive())
-    {
-        u8 typeChallenge = gSaveBlock3Ptr->challengeSettings.tx_Challenges_OneTypeChallenge;
-        u16 species = GetMonData(mon, MON_DATA_SPECIES);
-        if (GetSpeciesType(species, 0) != typeChallenge
-         && GetSpeciesType(species, 1) != typeChallenge)
-            return CopyMonToPC(mon);
-    }
+    if (!DoesSpeciesPassOneTypeChallenge(GetMonData(mon, MON_DATA_SPECIES)))
+        return CopyMonToPC(mon);
 
     CopyMon(&gPlayerParty[i], mon, sizeof(*mon));
     gPlayerPartyCount = i + 1;
@@ -9729,11 +9723,7 @@ u32 GiveScriptedMonToPlayer(struct Pokemon *mon, u8 slot)
         }
         else
         {
-            u8 typeChallenge = gSaveBlock3Ptr->challengeSettings.tx_Challenges_OneTypeChallenge;
-            u16 species = GetMonData(mon, MON_DATA_SPECIES);
-            if (IsOneTypeChallengeActive()
-             && GetSpeciesType(species, 0) != typeChallenge
-             && GetSpeciesType(species, 1) != typeChallenge)
+            if (!DoesSpeciesPassOneTypeChallenge(GetMonData(mon, MON_DATA_SPECIES)))
             {
                 sentToPc = CopyMonToPC(mon);
             }
