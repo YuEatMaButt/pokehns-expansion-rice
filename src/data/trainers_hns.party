@@ -15974,13 +15974,15 @@ Level: 92
 - Outrage  
 - Steel Wing  
 
-Zapdos-Galar @ Expert Belt  
-Ability: Defiant  
-Level: 92 
-- Thunderous Kick  
-- Blaze Kick  
-- Drill Peck  
-- Bulk Up  
+Corsola-Galar @ Eviolite  
+Ability: Cursed Body  
+Level: 95  
+Tera Type: Ghost  
+IVs: 0 Atk  
+- Shadow Ball  
+- Strength Sap  
+- Ice Beam  
+- Calm Mind  
 
 Blastoise @ Leftovers  
 Ability: Torrent  
