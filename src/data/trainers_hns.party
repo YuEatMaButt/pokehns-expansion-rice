@@ -14336,7 +14336,7 @@ Pic: Steven
 Music: Hg Champion
 Gender: Male
 Double Battle: No
-AI: Smart AI / Prediction AI
+AI: Smart Trainer / Prediction
 Items: Full Restore / Full Restore
 Mugshot: Orange
 
@@ -14409,7 +14409,7 @@ Pic: Sage Hns
 Music: Hg Sage
 Gender: Male
 Double Battle: Yes
-AI: Smart AI / Prediction AI
+AI: Smart Trainer / Prediction
 
 Flygon @ Focus Sash  
 Ability: Levitate  
@@ -14458,7 +14458,7 @@ Pic: Swimmer F
 Gender: female
 Music: Hg Girl 2
 Double Battle: Yes
-AI: Smart AI / Prediction AI
+AI: Smart Trainer / Prediction
 
 Politoed @ Damp Rock  
 Ability: Drizzle  
@@ -14649,7 +14649,7 @@ Pic: Leader Falkner Hns
 Gender: Male
 Music: Hg Boy 1
 Double Battle: No
-AI: Smart AI / Prediction AI
+AI: Smart Trainer / Prediction
 Mugshot: Light Blue
 Items: Full Restore / Full Restore
 
@@ -14710,7 +14710,7 @@ Pic: Leader Bugsy Hns
 Gender: Male
 Music: Hg Boy 1
 Double Battle: No
-AI: Smart AI / Prediction AI
+AI: Smart Trainer / Prediction
 Mugshot: Green
 Items: Full Restore / Full Restore
 
@@ -14772,7 +14772,7 @@ Pic: Leader Whitney Hns
 Gender: Male
 Music: Hg Boy 1
 Double Battle: No
-AI: Smart AI / Prediction AI
+AI: Smart Trainer / Prediction
 Mugshot: Pink
 Items: Full Restore / Full Restore
 
@@ -14833,7 +14833,7 @@ Pic: Leader Morty Hns
 Gender: Male
 Music: Hg Boy 1
 Double Battle: No
-AI: Smart AI / Prediction AI
+AI: Smart Trainer / Prediction
 Mugshot: Purple
 Items: Full Restore / Full Restore
 
@@ -14897,7 +14897,7 @@ Pic: Leader Chuck Hns
 Gender: Male
 Music: Hg Boy 1
 Double Battle: No
-AI: Smart AI / Prediction AI
+AI: Smart Trainer / Prediction
 Mugshot: Orange
 Items: Full Restore / Full Restore
 
@@ -14956,7 +14956,7 @@ Pic: Leader Jasmine Hns
 Gender: Male
 Music: Hg Boy 1
 Double Battle: No
-AI: Smart AI / Prediction AI
+AI: Smart Trainer / Prediction
 Mugshot: Yellow
 Items: Full Restore / Full Restore
 
@@ -15019,7 +15019,7 @@ Pic: Leader Pryce Hns
 Gender: Male
 Music: Hg Boy 1
 Double Battle: No
-AI: Smart AI / Prediction AI
+AI: Smart Trainer / Prediction
 Mugshot: Light Blue
 Items: Full Restore / Full Restore
 
@@ -15082,7 +15082,7 @@ Pic: Leader Clair Hns
 Gender: Male
 Music: Hg Boy 1
 Double Battle: No
-AI: Smart AI / Prediction AI
+AI: Smart Trainer / Prediction
 Mugshot: Blue
 Items: Full Restore / Full Restore
 
@@ -15142,7 +15142,7 @@ Pic: Leader Brock Hns
 Gender: Male
 Music: Hg Boy 1
 Double Battle: No
-AI: Smart AI / Prediction AI
+AI: Smart Trainer / Prediction
 Mugshot: Orange
 Items: Full Restore / Full Restore
 
@@ -15195,14 +15195,14 @@ Level: 77
 - Autotomize  
 - Charge  
 
-=== TRAINER_MISTY_HNS ===
+=== TRAINER_MISTY_POSTOBC_HNS ===
 Name: MISTY
 Class: Leader Kanto Hns
 Pic: Leader Misty Hns
 Gender: Male
 Music: Hg Boy 1
 Double Battle: No
-AI: Smart AI / Prediction AI
+AI: Smart Trainer / Prediction
 Mugshot: Light Blue
 Items: Full Restore / Full Restore
 
@@ -15266,7 +15266,7 @@ Pic: Leader Surge Hns
 Gender: Male
 Music: Hg Boy 1
 Double Battle: No
-AI: Smart AI / Prediction AI
+AI: Smart Trainer / Prediction
 Items: Full Restore / Full Restore
 Mugshot: Yellow
 
@@ -15320,14 +15320,14 @@ IVs: 0 Atk
 - Psyshock  
 - Calm Mind  
 
-=== TRAINER_ERIKA_HNS ===
+=== TRAINER_ERIKA_POSTOBC_HNS ===
 Name: ERIKA
 Class: Leader Kanto Hns
 Pic: Leader Erika Hns
 Gender: Male
 Music: Hg Boy 1
 Double Battle: No
-AI: Smart AI / Prediction AI
+AI: Smart Trainer / Prediction
 Mugshot: Green
 Items: Full Restore / Full Restore
 
@@ -15391,7 +15391,7 @@ Pic: Leader Janine Hns
 Gender: Male
 Music: Hg Boy 1
 Double Battle: No
-AI: Smart AI / Prediction AI
+AI: Smart Trainer / Prediction
 Mugshot: Purple
 Items: Full Restore / Full Restore
 
@@ -15453,7 +15453,7 @@ Pic: Leader Sabrina Hns
 Gender: Male
 Music: Hg Boy 1
 Double Battle: No
-AI: Smart AI / Prediction AI
+AI: Smart Trainer / Prediction
 Mugshot: Pink
 Items: Full Restore / Full Restore
 
@@ -15516,7 +15516,7 @@ Pic: Leader Blaine Hns
 Gender: Male
 Music: Hg Boy 1
 Double Battle: No
-AI: Smart AI / Prediction AI
+AI: Smart Trainer / Prediction
 Mugshot: Dark Red
 Items: Full Restore / Full Restore
 
@@ -15579,7 +15579,7 @@ Pic: Leader Blue Hns
 Gender: Male
 Music: Hg Boy 1
 Double Battle: No
-AI: Smart AI / Prediction AI
+AI: Smart Trainer / Prediction
 Mugshot: Blue
 Items: Full Restore / Full Restore
 
@@ -15639,7 +15639,7 @@ Pic: Elite Four Will Hns
 Gender: Male
 Music: Elite Four
 Double Battle: No
-AI: Smart AI / Prediction AI
+AI: Smart Trainer / Prediction
 Mugshot: Pink
 Items: Full Restore / Full Restore
 
@@ -15703,7 +15703,7 @@ Pic: Elite Four Koga Hns
 Gender: Male
 Music: Elite Four
 Double Battle: No
-AI: Smart AI / Prediction AI
+AI: Smart Trainer / Prediction
 Mugshot: Purple
 Items: Full Restore / Full Restore
 
@@ -15766,7 +15766,7 @@ Pic: Elite Four Bruno Hns
 Gender: Male
 Music: Elite Four
 Double Battle: No
-AI: Smart AI / Prediction AI
+AI: Smart Trainer / Prediction
 Mugshot: Orange
 Items: Full Restore / Full Restore
 
@@ -15827,7 +15827,7 @@ Pic: Elite Four Karen Hns
 Gender: Male
 Music: Elite Four
 Double Battle: No
-AI: Smart AI / Prediction AI
+AI: Smart Trainer / Prediction
 Mugshot: Yellow
 Items: Full Restore / Full Restore
 
@@ -15887,7 +15887,7 @@ Pic: Champion Lance Hns
 Gender: Male
 Music: Hg Champion
 Double Battle: No
-AI: Smart AI / Prediction AI
+AI: Smart Trainer / Prediction
 Items: Full Restore / Full Restore
 Mugshot: Blue
 
@@ -15947,7 +15947,7 @@ Pic: Red Hns
 Gender: Male
 Music: Hg Champion
 Double Battle: No
-AI: Smart AI / Prediction AI
+AI: Smart Trainer / Prediction
 Items: Full Restore / Full Restore
 
 Pikachu-Starter @ Light Ball  
