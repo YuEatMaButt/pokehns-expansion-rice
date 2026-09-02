@@ -15974,12 +15974,16 @@ Level: 91
 - Outrage  
 - Steel Wing  
 
-Venusaur @ Miracle Seed
-Level: 90
-- Petal Blizzard
-- Double Edge
+Venusaur @ Blunder Policy  
+Ability: Chlorophyll  
+Level: 93  
+Tera Type: Grass  
+EVs: 252 Spe  
+IVs: 0 Atk  
+- Sunny Day  
+- Solar Beam  
+- Earth Power  
 - Sleep Powder 
-- Leech Seed
 
 Blastoise @ Leftovers  
 Ability: Torrent  
@@ -15989,12 +15993,12 @@ Level: 91
 - Ice Beam  
 - Flash Cannon  
 
-Espeon @ Ability Shield  
-Ability: Magic Bounce  
-Level: 92 
-IVs: 0 Atk  
-- Psychic  
-- Shadow Ball  
-- Morning Sun  
-- Reflect  
+Tauros-Paldea-Combat @ Sitrus Berry  
+Ability: Cud Chew  
+Level: 92  
+Tera Type: Fighting  
+- Raging Bull  
+- Wild Charge  
+- Bulk Up  
+- Throat Chop
 
