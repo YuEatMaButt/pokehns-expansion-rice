@@ -15960,7 +15960,7 @@ Level: 100
 
 Snorlax @ Chesto Berry  
 Ability: Immunity  
-Level: 92  
+Level: 89  
 - Belly Drum  
 - Earthquake  
 - Rest  
@@ -15968,24 +15968,22 @@ Level: 92
 
 Charizard  
 Ability: Blaze  
-Level: 92  
+Level: 91  
 - Fire Blast  
 - Seismic Toss  
 - Outrage  
 - Steel Wing  
 
-Corsola-Galar @ Eviolite  
-Ability: Cursed Body  
-Level: 95
-IVs: 0 Atk  
-- Shadow Ball  
-- Strength Sap  
-- Ice Beam  
-- Calm Mind  
+Venusaur @ Miracle Seed
+Level: 90
+- Petal Blizzard
+- Double Edge
+- Sleep Powder
+- Leech Seed
 
 Blastoise @ Leftovers  
 Ability: Torrent  
-Level: 92
+Level: 91
 - Hydro Cannon  
 - Skull Bash  
 - Ice Beam  
