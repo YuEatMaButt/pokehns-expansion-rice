@@ -16203,6 +16203,18 @@
       "blockdata_filepath": "data/layouts/NewSinjoh_KimonoHideout_hns/map.bin",
       "game_version": "hns",
       "layout_version": "hns"
+    },
+    {
+      "id": "LAYOUT_NATIONAL_PARK_MEADOW_HNS",
+      "name": "NationalPark_Meadow_hns_Layout",
+      "width": 36,
+      "height": 30,
+      "primary_tileset": "gTileset_Johto_General_Hns",
+      "secondary_tileset": "gTileset_IlexForest_Hns",
+      "border_filepath": "data/layouts/NationalPark_Meadow_Hns/border.bin",
+      "blockdata_filepath": "data/layouts/NationalPark_Meadow_Hns/map.bin",
+      "game_version": "hns",
+      "layout_version": "hns"
     }
   ]
 }
