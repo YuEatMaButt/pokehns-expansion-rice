@@ -71,7 +71,7 @@ enum __attribute__((packed)) CategoryOWE
 
 struct InfoOWE
 {
-    enum Species speciesId;
+    u16 speciesId;
     enum CategoryOWE category;
     u8 localId;
     u8 level;
@@ -144,7 +144,7 @@ static bool32 CreateEnemyPartyOWE(struct InfoOWE *info, s32 x, s32 y);
 static bool32 OWE_DoesOWERoamerExist(void);
 static bool32 StartWildBattleWithOWE_CheckRoamer(enum CategoryOWE category);
 static bool32 StartWildBattleWithOWE_CheckBattleFrontier(u32 headerId);
-static bool32 StartWildBattleWithOWE_CheckMassOutbreak(enum CategoryOWE category, enum Species speciesId);
+static bool32 StartWildBattleWithOWE_CheckMassOutbreak(enum CategoryOWE category, u16 speciesId);
 static bool32 StartWildBattleWithOWE_CheckDoubleBattle(struct ObjectEvent *owe, u32 headerId);
 static bool32 CheckCurrentWildMonHeaderForOWE(bool32 shouldSpawnWaterMons);
 static u32 GetOldestActiveOWESlot(bool32 forceRemove);
@@ -153,9 +153,9 @@ static u32 GetSpeciesByOWESpawnSlot(u32 spawnSlot);
 static bool32 TrySelectTileForOWE(s32* outX, s32* outY);
 static void SetSpeciesInfoForOWE(struct InfoOWE *info, u32 x, u32 y);
 static u32 GetGraphicsIdForOWE(const struct InfoOWE *info);
-static bool32 CheckCanLoadOWE(enum Species speciesId, bool32 isFemale, bool32 isShiny, s32 x, s32 y);
-static bool32 CheckCanLoadOWE_Palette(enum Species speciesId, bool32 isFemale, bool32 isShiny, s32 x, s32 y);
-static bool32 CheckCanLoadOWE_Tiles(enum Species speciesId, bool32 isFemale, bool32 isShiny, s32 x, s32 y);
+static bool32 CheckCanLoadOWE(u16 speciesId, bool32 isFemale, bool32 isShiny, s32 x, s32 y);
+static bool32 CheckCanLoadOWE_Palette(u16 speciesId, bool32 isFemale, bool32 isShiny, s32 x, s32 y);
+static bool32 CheckCanLoadOWE_Tiles(u16 speciesId, bool32 isFemale, bool32 isShiny, s32 x, s32 y);
 static void SortOWEAges(void);
 static bool32 ShouldDespawnGeneratedForNewOWE(struct ObjectEvent *owe);
 static void SetNewOWESpawnCountdown(void);
@@ -172,7 +172,7 @@ static bool32 CanOWEReachPlayer(struct ObjectEvent *owe);
 static bool32 IsOWENextToObject(struct ObjectEvent *owe, struct ObjectEvent *object);
 static enum Direction CheckOWEPathToPlayerFromCollision(struct ObjectEvent *owe, enum Direction newDirection);
 static void Task_OWEApproachForBattle(u8 taskId);
-static bool32 CheckValidOWESpecies(enum Species speciesId);
+static bool32 CheckValidOWESpecies(u16 speciesId);
 
 static EWRAM_DATA u8 sOWESpawnCountdown = 0;
 
@@ -380,7 +380,7 @@ void StartWildBattleWithOWE(struct ScriptContext *ctx)
     if (category < ROAMER_COUNT && StartWildBattleWithOWE_CheckRoamer(category))
         return;
 
-    enum Species speciesId = OW_SPECIES(owe);
+    u16 speciesId = OW_SPECIES(owe);
     bool32 shiny = OW_SHINY(owe) ? TRUE : FALSE;
     u32 gender = OW_FEMALE(owe) ? MON_FEMALE : MON_MALE;
     u32 level = owe->sOverworldEncounterLevel & ~OWE_NO_DESPAWN_FLAG;
@@ -393,9 +393,9 @@ void StartWildBattleWithOWE(struct ScriptContext *ctx)
 
     ZeroEnemyPartyMons();
     personality = GetMonPersonality(speciesId, gender, NATURE_RANDOM, RANDOM_UNOWN_LETTER);
-    CreateMonWithIVs(&gParties[B_TRAINER_1][0], speciesId, level, personality, OTID_STRUCT_PLAYER_ID, USE_RANDOM_IVS);
-    GiveMonInitialMoveset(&gParties[B_TRAINER_1][0]);
-    SetMonData(&gParties[B_TRAINER_1][0], MON_DATA_IS_SHINY, &shiny);
+    CreateMonWithIVs(&gEnemyParty[0], speciesId, level, personality, OTID_STRUCT_PLAYER_ID, USE_RANDOM_IVS);
+    GiveMonInitialMoveset(&gEnemyParty[0]);
+    SetMonData(&gEnemyParty[0], MON_DATA_IS_SHINY, &shiny);
     
     if (StartWildBattleWithOWE_CheckBattleFrontier(headerId))
         return;
@@ -414,7 +414,7 @@ void SetOverworldObjectSpecies(struct ScriptContext *ctx)
     u32 varId = ScriptReadHalfword(ctx);
     u32 localId = VarGet(ScriptReadHalfword(ctx));
     struct ObjectEvent *object = &gObjectEvents[GetObjectEventIdByLocalId(localId)];
-    enum Species speciesId = SPECIES_NONE;
+    u16 speciesId = SPECIES_NONE;
 
     Script_RequestEffects(SCREFF_V1);
     Script_RequestWriteVar(varId);
@@ -833,9 +833,9 @@ static bool32 CreateEnemyPartyOWE(struct InfoOWE *info, s32 x, s32 y)
             if (TryGenerateWildMon(gBattlePyramidWildMonHeaders[headerId].encounterTypes[timeOfDay].landMonsInfo, WILD_AREA_LAND, 0) != TRUE)
                 return FALSE;
 
-            u32 id = GetMonData(&gParties[B_TRAINER_1][0], MON_DATA_SPECIES);
+            u32 id = GetMonData(&gEnemyParty[0], MON_DATA_SPECIES);
             GenerateBattlePyramidWildMon(SPECIES_NONE);
-            SetMonData(&gParties[B_TRAINER_1][0], MON_DATA_LEVEL, &id);
+            SetMonData(&gEnemyParty[0], MON_DATA_LEVEL, &id);
             return TRUE;
         }
 
@@ -866,7 +866,7 @@ static bool32 CreateEnemyPartyOWE(struct InfoOWE *info, s32 x, s32 y)
         4. Attempt to generate a Standard Wild Encounter
     
     The structure of this statement ensures that only one of these encounter types can succeed per call,
-    with the resultant wild mon being created in gParties[B_TRAINER_1][0].
+    with the resultant wild mon being created in gEnemyParty[0].
     If none of these checks succeed, speciesId is set to SPECIES_NONE and FALSE is returned.
     */
 
@@ -939,9 +939,9 @@ static bool32 StartWildBattleWithOWE_CheckBattleFrontier(u32 headerId)
         }
         if (gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR)
         {
-            u32 id = GetMonData(&gParties[B_TRAINER_1][0], MON_DATA_LEVEL);
-            enum Species species = GetMonData(&gParties[B_TRAINER_1][0], MON_DATA_SPECIES);
-            SetMonData(&gParties[B_TRAINER_1][0], MON_DATA_SPECIES, &id);
+            u32 id = GetMonData(&gEnemyParty[0], MON_DATA_LEVEL);
+            u16 species = GetMonData(&gEnemyParty[0], MON_DATA_SPECIES);
+            SetMonData(&gEnemyParty[0], MON_DATA_SPECIES, &id);
             if (!BATTLE_PYRAMID_RANDOM_ENCOUNTERS)
                 species = SPECIES_NONE;
             GenerateBattlePyramidWildMon(species);
@@ -953,7 +953,7 @@ static bool32 StartWildBattleWithOWE_CheckBattleFrontier(u32 headerId)
     return FALSE;
 }
 
-static bool32 StartWildBattleWithOWE_CheckMassOutbreak(enum CategoryOWE category, enum Species speciesId)
+static bool32 StartWildBattleWithOWE_CheckMassOutbreak(enum CategoryOWE category, u16 speciesId)
 {
     if (category == OWE_CATEGORY_MASS_OUTBREAK
      && gSaveBlock1Ptr->outbreakPokemonSpecies == speciesId)
@@ -976,7 +976,7 @@ static bool32 StartWildBattleWithOWE_CheckDoubleBattle(struct ObjectEvent *owe, 
 
     if (TryDoDoubleWildBattle())
     {
-        struct Pokemon mon1 = gParties[B_TRAINER_1][0];
+        struct Pokemon mon1 = gEnemyParty[0];
 
         if (MetatileBehavior_IsWaterWildEncounter(metatileBehavior))
         {
@@ -993,7 +993,7 @@ static bool32 StartWildBattleWithOWE_CheckDoubleBattle(struct ObjectEvent *owe, 
 
         if (TryGenerateWildMon(wildMonInfo, wildArea, WILD_CHECK_REPEL | WILD_CHECK_KEEN_EYE))
         {
-            gParties[B_TRAINER_1][1] = mon1;
+            gEnemyParty[1] = mon1;
             BattleSetup_StartDoubleWildBattle();
             return TRUE;
         }
@@ -1234,9 +1234,9 @@ static void SetSpeciesInfoForOWE(struct InfoOWE *info, u32 x, u32 y)
         return;
     }
  
-    info->speciesId = GetMonData(&gParties[B_TRAINER_1][0], MON_DATA_SPECIES);
-    info->level = GetMonData(&gParties[B_TRAINER_1][0], MON_DATA_LEVEL);
-    personality = GetMonData(&gParties[B_TRAINER_1][0], MON_DATA_PERSONALITY);
+    info->speciesId = GetMonData(&gEnemyParty[0], MON_DATA_SPECIES);
+    info->level = GetMonData(&gEnemyParty[0], MON_DATA_LEVEL);
+    personality = GetMonData(&gEnemyParty[0], MON_DATA_PERSONALITY);
 
     if (info->speciesId == SPECIES_UNOWN)
         info->speciesId = GetUnownSpeciesId(personality);
@@ -1262,7 +1262,7 @@ static u32 GetGraphicsIdForOWE(const struct InfoOWE *info)
     return GetGraphicsIdForMon(info->speciesId, info->isShiny, info->isFemale);
 }
 
-static bool32 CheckCanLoadOWE(enum Species speciesId, bool32 isFemale, bool32 isShiny, s32 x, s32 y)
+static bool32 CheckCanLoadOWE(u16 speciesId, bool32 isFemale, bool32 isShiny, s32 x, s32 y)
 {
     assertf(CheckCanLoadOWE_Palette(speciesId, isFemale, isShiny, x, y), "could not load palette for overworld encounter\nspecies: %d\nfemale: %d\nshiny: %d\ncoords: %d %d", speciesId, isFemale, isShiny, x, y)
     {
@@ -1277,7 +1277,7 @@ static bool32 CheckCanLoadOWE(enum Species speciesId, bool32 isFemale, bool32 is
     return TRUE;
 }
 
-static bool32 CheckCanLoadOWE_Palette(enum Species speciesId, bool32 isFemale, bool32 isShiny, s32 x, s32 y)
+static bool32 CheckCanLoadOWE_Palette(u16 speciesId, bool32 isFemale, bool32 isShiny, s32 x, s32 y)
 {
     u32 numFreePalSlots = CountFreePaletteSlots();
     u32 tag = speciesId + OBJ_EVENT_MON + (isShiny ? OBJ_EVENT_MON_SHINY : 0);
@@ -1315,7 +1315,7 @@ static u32 GetNumberOfSpawnAnimTiles(s32 x, s32 y)
     return gFieldEffectObjectTemplatePointers[visual]->images->size / TILE_SIZE_4BPP;
 }
 
-static bool32 CheckCanLoadOWE_Tiles(enum Species speciesId, bool32 isFemale, bool32 isShiny, s32 x, s32 y)
+static bool32 CheckCanLoadOWE_Tiles(u16 speciesId, bool32 isFemale, bool32 isShiny, s32 x, s32 y)
 {
     u32 graphicsId = GetGraphicsIdForMon(speciesId, isShiny, isFemale);
     const struct ObjectEventGraphicsInfo *graphicsInfo = GetObjectEventGraphicsInfo(graphicsId);
@@ -1597,7 +1597,7 @@ static void PlayOWECry(struct ObjectEvent *owe)
         return;
     
     struct ObjectEvent *player = &gObjectEvents[gPlayerAvatar.objectEventId];
-    enum Species speciesId = OW_SPECIES(owe);
+    u16 speciesId = OW_SPECIES(owe);
     s32 distanceX = owe->currentCoords.x - player->currentCoords.x;
     s32 distanceY = owe->currentCoords.y - player->currentCoords.y;
     u32 distanceMax = OWE_SPAWN_WIDTH_RADIUS + OWE_SPAWN_HEIGHT_RADIUS;
@@ -1761,7 +1761,7 @@ bool32 CanAwareOWESeePlayer(struct ObjectEvent *owe)
         return TRUE;
 
     struct ObjectEvent *player = &gObjectEvents[gPlayerAvatar.objectEventId];
-    enum Species speciesId = OW_SPECIES(owe);
+    u16 speciesId = OW_SPECIES(owe);
     u32 viewDistance = OWE_GetViewDistanceFromSpecies(speciesId);
     u32 viewWidth = OWE_GetViewWidthFromSpecies(speciesId);
     s32 halfWidth = (viewWidth - 1) / 2;
@@ -1819,7 +1819,7 @@ bool32 IsPlayerInsideOWEActiveDistance(struct ObjectEvent *owe)
 {
     struct ObjectEvent *player = &gObjectEvents[gPlayerAvatar.objectEventId];
     u32 distance = OWE_DEFAULT_CHASE_RANGE;
-    enum Species speciesId = OW_SPECIES(owe);
+    u16 speciesId = OW_SPECIES(owe);
 
     if (speciesId != SPECIES_NONE)
         distance = OWE_GetViewActiveDistanceFromSpecies(speciesId);
@@ -2006,7 +2006,7 @@ static void Task_OWEApproachForBattle(u8 taskId)
             return;
         }
 
-        enum Species speciesId = OW_SPECIES(OWE);
+        u16 speciesId = OW_SPECIES(OWE);
         enum Direction direction = DetermineObjectEventDirectionFromObject(player, OWE);
         u32 movementActionId;
     
@@ -2086,7 +2086,7 @@ const struct ObjectEventTemplate TryGetObjectEventTemplateForOWE(const struct Ob
     struct InfoOWE info = {0};
     info.category = OWE_CATEGORY_WILD;
     
-    enum Species speciesTemplate = SanitizeSpeciesId(templateOWE.graphicsId & OBJ_EVENT_MON_SPECIES_MASK);
+    u16 speciesTemplate = SanitizeSpeciesId(templateOWE.graphicsId & OBJ_EVENT_MON_SPECIES_MASK);
     bool32 isShinyTemplate = (templateOWE.graphicsId & OBJ_EVENT_MON_SHINY) ? TRUE : FALSE;
     u32 levelTemplate = templateOWE.sOverworldEncounterLevel;
     u32 x = template->x;
@@ -2159,7 +2159,7 @@ struct SpritePalette GetOWESpawnDespawnAnimFldEffPalette(enum SpawnDespawnTypeOW
     return palette;
 }
 
-static bool32 CheckValidOWESpecies(enum Species speciesId)
+static bool32 CheckValidOWESpecies(u16 speciesId)
 {
     if (speciesId == SPECIES_NONE)
         return FALSE;

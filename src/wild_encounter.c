@@ -57,7 +57,7 @@ static bool8 TryGetAbilityInfluencedWildMonIndex(const struct WildPokemon *wildM
 #else
 static bool8 TryGetAbilityInfluencedWildMonIndex(const struct WildPokemon *wildMon, enum Type type, enum Ability ability, u8 *monIndex);
 #endif
-static bool8 IsAbilityAllowingEncounter(u8 level);
+bool8 IsAbilityAllowingEncounter(u8 level);
 #if IS_HNS
 static bool8 TryGetHoennSoundWildMonIndex(const struct WildPokemon *wildMon, u8 numMon, u8 *monIndex);
 #endif
