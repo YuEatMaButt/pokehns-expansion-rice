@@ -1,3 +1,4 @@
+POKEMONGFXDIR := graphics/pokemon
 OBJEVENTGFXDIR := graphics/object_events/pics
 SLIDINGPUZZLESDIR := graphics/sliding_puzzle/puzzles
 

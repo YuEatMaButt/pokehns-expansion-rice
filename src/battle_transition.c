@@ -869,9 +869,9 @@ static const u16 sMugshotPal_Green[]  = INCGFX_U16("graphics/battle_transitions/
 static const u16 sMugshotPal_Pink[]   = INCGFX_U16("graphics/battle_transitions/pink_bg.pal", ".gbapal");
 static const u16 sMugshotPal_Blue[]   = INCGFX_U16("graphics/battle_transitions/blue_bg.pal", ".gbapal");
 static const u16 sMugshotPal_Yellow[] = INCGFX_U16("graphics/battle_transitions/yellow_bg.pal", ".gbapal");
-static const u16 sMugshotPal_DarkRed[] = INCBIN_U16("graphics/battle_transitions/dark_red_bg.gbapal");
-static const u16 sMugshotPal_Orange[] = INCBIN_U16("graphics/battle_transitions/orange_bg.gbapal");
-static const u16 sMugshotPal_LightBlue[] = INCBIN_U16("graphics/battle_transitions/light_blue_bg.gbapal");
+static const u16 sMugshotPal_DarkRed[] = INCGFX_U16("graphics/battle_transitions/dark_red_bg.pal", ".gbapal");
+static const u16 sMugshotPal_Orange[] = INCGFX_U16("graphics/battle_transitions/orange_bg.pal", ".gbapal");
+static const u16 sMugshotPal_LightBlue[] = INCGFX_U16("graphics/battle_transitions/light_blue_bg.pal", ".gbapal");
 static const u16 sMugshotPal_Brendan[] = INCGFX_U16("graphics/battle_transitions/brendan_bg.pal", ".gbapal");
 static const u16 sMugshotPal_May[] = INCGFX_U16("graphics/battle_transitions/may_bg.pal", ".gbapal");
 

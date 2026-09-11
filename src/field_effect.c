@@ -274,8 +274,8 @@ static const u32 sUnusedBirchBeauty[] = INCGFX_U32("graphics/birch_speech/unused
 static const u16 sNewGameBirch_Pal[16] = INCGFX_U16("graphics/birch_speech/birch.png", ".gbapal");
 
 #if IS_HNS
-static const u32 sNewGameOak_Gfx[] = INCBIN_U32("graphics/oak_speech_hns/oak_hns.4bpp");
-static const u16 sNewGameOak_Pal[16] = INCBIN_U16("graphics/oak_speech_hns/oak_hns.gbapal");
+static const u32 sNewGameOak_Gfx[] = INCGFX_U32("graphics/oak_speech_hns/oak_hns.png", ".4bpp");
+static const u16 sNewGameOak_Pal[16] = INCGFX_U16("graphics/oak_speech_hns/oak_hns.png", ".gbapal");
 #endif
 
 static const u32 sPokeballGlow_Gfx[] = INCGFX_U32("graphics/field_effects/pics/pokeball_glow.png", ".4bpp");

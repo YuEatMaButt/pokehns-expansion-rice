@@ -29,10 +29,10 @@ const u8 gWeatherBubbleTiles[] = INCGFX_U8("graphics/weather/bubble.png", ".4bpp
 const u8 gWeatherAshTiles[] = INCGFX_U8("graphics/weather/ash.png", ".4bpp");
 const u8 gWeatherRainTiles[] = INCGFX_U8("graphics/weather/rain.png", ".4bpp");
 const u8 gWeatherSandstormTiles[] = INCGFX_U8("graphics/weather/sandstorm.png", ".4bpp");
-const u8 gWeatherLeafTiles[] = INCBIN_U8("graphics/weather/leaves.4bpp");
-const u16 gLeavesWeatherPalette[] = INCBIN_U16("graphics/weather/leaves.gbapal");
-const u16 gLeavesOrangeWeatherPalette[] = INCBIN_U16("graphics/weather/leaves_orange.gbapal");
-const u16 gLeavesYellowWeatherPalette[] = INCBIN_U16("graphics/weather/leaves_yellow.gbapal");
+const u8 gWeatherLeafTiles[] = INCGFX_U8("graphics/weather/leaves.png", ".4bpp");
+const u16 gLeavesWeatherPalette[] = INCGFX_U16("graphics/weather/leaves.pal", ".gbapal");
+const u16 gLeavesOrangeWeatherPalette[] = INCGFX_U16("graphics/weather/leaves_orange.pal", ".gbapal");
+const u16 gLeavesYellowWeatherPalette[] = INCGFX_U16("graphics/weather/leaves_yellow.pal", ".gbapal");
 
 //------------------------------------------------------------------------------
 // WEATHER_SUNNY_CLOUDS

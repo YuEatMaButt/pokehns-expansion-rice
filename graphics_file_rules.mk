@@ -7,6 +7,7 @@ TYPESGFXDIR := graphics/types
 ROULETTEGFXDIR := graphics/roulette
 SLOTMACHINEGFXDIR := graphics/slot_machine
 PKNAVOPTIONSGFXDIR := graphics/pokenav/options
+PKNAVGFXDIR := graphics/pokenav
 WALLPAPERGFXDIR := graphics/pokemon_storage/wallpapers
 JPCONTESTGFXDIR := graphics/contest/japanese
 TITLESCREENGFXDIR := graphics/title_screen

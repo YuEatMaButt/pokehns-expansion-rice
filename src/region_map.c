@@ -134,10 +134,10 @@ static const u8 sRegionMapPlayerIcon_RedGfx[] = INCGFX_U8("graphics/pokenav/regi
 static const u16 sRegionMapPlayerIcon_LeafPal[] = INCGFX_U16("graphics/pokenav/region_map/leaf_icon.pal", ".gbapal");
 static const u8 sRegionMapPlayerIcon_LeafGfx[] = INCGFX_U8("graphics/pokenav/region_map/leaf_icon.png", ".4bpp");
 #if IS_HNS
-static const u16 sRegionMapPlayerIcon_GoldPal[] = INCBIN_U16("graphics/pokenav/region_map/gold_icon.gbapal");
-static const u8 sRegionMapPlayerIcon_GoldGfx[] = INCBIN_U8("graphics/pokenav/region_map/gold_icon.4bpp");
-static const u16 sRegionMapPlayerIcon_KrisPal[] = INCBIN_U16("graphics/pokenav/region_map/kris_icon.gbapal");
-static const u8 sRegionMapPlayerIcon_KrisGfx[] = INCBIN_U8("graphics/pokenav/region_map/kris_icon.4bpp");
+static const u16 sRegionMapPlayerIcon_GoldPal[] = INCGFX_U16("graphics/pokenav/region_map/gold_icon.png", ".gbapal");
+static const u8 sRegionMapPlayerIcon_GoldGfx[] = INCGFX_U8("graphics/pokenav/region_map/gold_icon.png", ".4bpp");
+static const u16 sRegionMapPlayerIcon_KrisPal[] = INCGFX_U16("graphics/pokenav/region_map/kris_icon.png", ".gbapal");
+static const u8 sRegionMapPlayerIcon_KrisGfx[] = INCGFX_U8("graphics/pokenav/region_map/kris_icon.png", ".4bpp");
 #endif
 
 #include "data/region_map/region_map_layout.h"
@@ -485,8 +485,8 @@ static const u16 sRegionMapFramePal[] = INCGFX_U16("graphics/pokenav/region_map/
 static const u32 sRegionMapFrameGfxLZ[] = INCGFX_U32("graphics/pokenav/region_map/frame.png", ".4bpp.smol");
 static const u32 sRegionMapFrameTilemapLZ[] = INCBIN_U32("graphics/pokenav/region_map/frame.bin.smolTM");
 static const u16 sFlyTargetIcons_Pal[] = INCGFX_U16("graphics/pokenav/region_map/fly_target_icons.png", ".gbapal");
-static const u16 sFlyTargetIconsBlue_Pal[] = INCBIN_U16("graphics/pokenav/region_map/fly_target_icons_blue.gbapal");
-static const u16 sFlyTargetIconsGreen_Pal[] = INCBIN_U16("graphics/pokenav/region_map/fly_target_icons_green.gbapal");
+static const u16 sFlyTargetIconsBlue_Pal[] = INCGFX_U16("graphics/pokenav/region_map/fly_target_icons_blue.pal", ".gbapal");
+static const u16 sFlyTargetIconsGreen_Pal[] = INCGFX_U16("graphics/pokenav/region_map/fly_target_icons_green.pal", ".gbapal");
 static const u32 sFlyTargetIcons_Gfx[] = INCGFX_U32("graphics/pokenav/region_map/fly_target_icons.png", ".4bpp.smol");
 
 static const u16 ALIGNED(4) sPokedexAreaMap_Pal[] = INCGFX_U16("graphics/pokedex/region_map.pal", ".gbapal");
@@ -522,18 +522,18 @@ static const u32 sRegionMapSevii67_Gfx[] = INCGFX_U32("graphics/pokenav/region_m
 static const u32 sRegionMapSevii67_Tilemap[] = INCBIN_U32("graphics/pokenav/region_map/map_sevii_67.bin.smolTM");
 
 #if IS_HNS
-static const u16 ALIGNED(4) sPokedexAreaMapJohto_Pal[] = INCBIN_U16("graphics/pokedex/region_map_johto.gbapal");
-static const u32 sPokedexAreaMapJohto_Gfx[] = INCBIN_U32("graphics/pokedex/region_map_johto.8bpp.smol");
+static const u16 ALIGNED(4) sPokedexAreaMapJohto_Pal[] = INCGFX_U16("graphics/pokedex/region_map_johto.pal", ".gbapal");
+static const u32 sPokedexAreaMapJohto_Gfx[] = INCGFX_U32("graphics/pokedex/region_map_johto.png", ".8bpp.smol");
 static const u32 sPokedexAreaMapJohto_Tilemap[] = INCBIN_U32("graphics/pokedex/region_map_johto.bin.smolTM");
-static const u16 ALIGNED(4) sRegionMapJohto_Pal[] = INCBIN_U16("graphics/pokenav/region_map/map_johto.gbapal");
-static const u32 sRegionMapJohto_Gfx[] = INCBIN_U32("graphics/pokenav/region_map/map_johto.8bpp.smol");
+static const u16 ALIGNED(4) sRegionMapJohto_Pal[] = INCGFX_U16("graphics/pokenav/region_map/map_johto.pal", ".gbapal");
+static const u32 sRegionMapJohto_Gfx[] = INCGFX_U32("graphics/pokenav/region_map/map_johto.png", ".8bpp.smol");
 static const u32 sRegionMapJohto_Tilemap[] = INCBIN_U32("graphics/pokenav/region_map/map_johto.bin.smolTM");
 
-static const u16 ALIGNED(4) sPokedexAreaMapJK_Pal[] = INCBIN_U16("graphics/pokedex/region_map_jk.gbapal");
-static const u32 sPokedexAreaMapJK_Gfx[] = INCBIN_U32("graphics/pokedex/region_map_jk.8bpp.smol");
+static const u16 ALIGNED(4) sPokedexAreaMapJK_Pal[] = INCGFX_U16("graphics/pokedex/region_map_jk.pal", ".gbapal");
+static const u32 sPokedexAreaMapJK_Gfx[] = INCGFX_U32("graphics/pokedex/region_map_jk.png", ".8bpp.smol");
 static const u32 sPokedexAreaMapJK_Tilemap[] = INCBIN_U32("graphics/pokedex/region_map_jk.bin.smolTM");
-static const u16 ALIGNED(4) sRegionMapJK_Pal[] = INCBIN_U16("graphics/pokenav/region_map/map_jk.gbapal");
-static const u32 sRegionMapJK_Gfx[] = INCBIN_U32("graphics/pokenav/region_map/map_jk.8bpp.smol");
+static const u16 ALIGNED(4) sRegionMapJK_Pal[] = INCGFX_U16("graphics/pokenav/region_map/map_jk.pal", ".gbapal");
+static const u32 sRegionMapJK_Gfx[] = INCGFX_U32("graphics/pokenav/region_map/map_jk.png", ".8bpp.smol");
 static const u32 sRegionMapJK_Tilemap[] = INCBIN_U32("graphics/pokenav/region_map/map_jk.bin.smolTM");
 #endif
 

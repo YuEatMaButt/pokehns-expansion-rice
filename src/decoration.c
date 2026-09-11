@@ -452,9 +452,9 @@ static const u16 sBrendanPalette[] = INCGFX_U16("graphics/decorations/brendan.pa
 
 static const u16 sMayPalette[] = INCGFX_U16("graphics/decorations/may.pal", ".gbapal");
 
-static const u16 sGoldPalette[] = INCBIN_U16("graphics/decorations/gold.gbapal");
+static const u16 sGoldPalette[] = INCGFX_U16("graphics/decorations/gold.pal", ".gbapal");
 
-static const u16 sKrisPalette[] = INCBIN_U16("graphics/decorations/kris.gbapal");
+static const u16 sKrisPalette[] = INCGFX_U16("graphics/decorations/kris.pal", ".gbapal");
 
 static const struct YesNoFuncTable sReturnDecorationYesNoFunctions =
 {

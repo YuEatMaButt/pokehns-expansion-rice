@@ -173,35 +173,35 @@ static const u8 sDoorAnimTiles_TrainerTowerRoofElevator[] = INCGFX_U8("graphics/
 
 #if IS_HNS
 
-static const u8 sDoorAnimTiles_JohtoGeneral[] = INCBIN_U8("graphics/door_anims/johtogeneral_hns.4bpp");
-static const u8 sDoorAnimTiles_JohtoPokeCenter[] = INCBIN_U8("graphics/door_anims/johtopokecenter_hns.4bpp");
-static const u8 sDoorAnimTiles_JohtoGym[] = INCBIN_U8("graphics/door_anims/johtogym_hns.4bpp");
-static const u8 sDoorAnimTiles_Goldenrod[] = INCBIN_U8("graphics/door_anims/goldenrod_hns.4bpp");
-static const u8 sDoorAnimTiles_NewBarkTownYellow[] = INCBIN_U8("graphics/door_anims/NewBarkTown_Door_Yellow_hns.4bpp");
-static const u8 sDoorAnimTiles_NewBarkTownRed[] = INCBIN_U8("graphics/door_anims/NewBarkTown_Door_Red_hns.4bpp");
-static const u8 sDoorAnimTiles_NewBarkTownGrey[] = INCBIN_U8("graphics/door_anims/NewBarkTown_Door_Grey_hns.4bpp");
-static const u8 sDoorAnimTiles_Cianwood[] = INCBIN_U8("graphics/door_anims/cianwood_hns.4bpp");
-static const u8 sDoorAnimTiles_HnsViridian[] = INCBIN_U8("graphics/door_anims/viridian_hns.4bpp");
-static const u8 sDoorAnimTiles_HnsPewter[] = INCBIN_U8("graphics/door_anims/pewter_hns.4bpp");
-static const u8 sDoorAnimTiles_HnsCerulean[] = INCBIN_U8("graphics/door_anims/cerulean_hns.4bpp");
-static const u8 sDoorAnimTiles_HnsVermilion[] = INCBIN_U8("graphics/door_anims/vermilion_hns.4bpp");
-static const u8 sDoorAnimTiles_HnsLavender[] = INCBIN_U8("graphics/door_anims/lavender_hns.4bpp");
-static const u8 sDoorAnimTiles_HnsSaffron[] = INCBIN_U8("graphics/door_anims/saffron_hns.4bpp");
-static const u8 sDoorAnimTiles_HnsFuchsia[] = INCBIN_U8("graphics/door_anims/fuchsia_hns.4bpp");
-static const u8 sDoorAnimTiles_HnsDeptStoreElevator[] = INCBIN_U8("graphics/door_anims/dept_store_elevator_hns.4bpp");
-static const u8 sDoorAnimTiles_DojoDoor[] = INCBIN_U8("graphics/door_anims/dojo_door_hns.4bpp");
-static const u8 sDoorAnimTiles_DojoDoorEcruteak[] = INCBIN_U8("graphics/door_anims/dojo_door_ecruteak_hns.4bpp");
-static const u8 sDoorAnimTiles_MtSilverNewSinjoh[] = INCBIN_U8("graphics/door_anims/mt_silver_newsinjoh_hns.4bpp");
-static const u8 sDoorAnimTiles_Olivine[] = INCBIN_U8("graphics/door_anims/olivine_hns.4bpp");
-static const u8 sDoorAnimTiles_JohtoSafariZone[] = INCBIN_U8("graphics/door_anims/johtosafari_zone_hns.4bpp");
-static const u8 sDoorAnimTiles_BlackthornCity[] = INCBIN_U8("graphics/door_anims/blackthorn_city_hns.4bpp");
-static const u8 sDoorAnimTiles_RocketElevator[] = INCBIN_U8("graphics/door_anims/rocket_elevator_hns.4bpp");
-static const u8 sDoorAnimTiles_SSAqua[] = INCBIN_U8("graphics/door_anims/ssaqua_hns.4bpp");
-static const u8 sDoorAnimTiles_HnsSafariZone[] = INCBIN_U8("graphics/door_anims/safari_zone_hns.4bpp");
-static const u8 sDoorAnimTiles_HnsBirchsLab[] = INCBIN_U8("graphics/door_anims/birchs_lab_hns.4bpp");
-static const u8 sDoorAnimTiles_AlolaDoor[] = INCBIN_U8("graphics/door_anims/alola_door_hns.4bpp");
-static const u8 sDoorAnimTiles_AlolaPokecenterDoor[] = INCBIN_U8("graphics/door_anims/alolapokecenter_hns.4bpp");
-static const u8 sDoorAnimTiles_TeleporterHns[] = INCBIN_U8("graphics/door_anims/teleporter.4bpp");
+static const u8 sDoorAnimTiles_JohtoGeneral[] = INCGFX_U8("graphics/door_anims/johtogeneral_hns.png", ".4bpp");
+static const u8 sDoorAnimTiles_JohtoPokeCenter[] = INCGFX_U8("graphics/door_anims/johtopokecenter_hns.png", ".4bpp");
+static const u8 sDoorAnimTiles_JohtoGym[] = INCGFX_U8("graphics/door_anims/johtogym_hns.png", ".4bpp");
+static const u8 sDoorAnimTiles_Goldenrod[] = INCGFX_U8("graphics/door_anims/goldenrod_hns.png", ".4bpp");
+static const u8 sDoorAnimTiles_NewBarkTownYellow[] = INCGFX_U8("graphics/door_anims/NewBarkTown_Door_Yellow_hns.png", ".4bpp");
+static const u8 sDoorAnimTiles_NewBarkTownRed[] = INCGFX_U8("graphics/door_anims/NewBarkTown_Door_Red_hns.png", ".4bpp");
+static const u8 sDoorAnimTiles_NewBarkTownGrey[] = INCGFX_U8("graphics/door_anims/NewBarkTown_Door_Grey_hns.png", ".4bpp");
+static const u8 sDoorAnimTiles_Cianwood[] = INCGFX_U8("graphics/door_anims/cianwood_hns.png", ".4bpp");
+static const u8 sDoorAnimTiles_HnsViridian[] = INCGFX_U8("graphics/door_anims/viridian_hns.png", ".4bpp");
+static const u8 sDoorAnimTiles_HnsPewter[] = INCGFX_U8("graphics/door_anims/pewter_hns.png", ".4bpp");
+static const u8 sDoorAnimTiles_HnsCerulean[] = INCGFX_U8("graphics/door_anims/cerulean_hns.png", ".4bpp");
+static const u8 sDoorAnimTiles_HnsVermilion[] = INCGFX_U8("graphics/door_anims/vermilion_hns.png", ".4bpp");
+static const u8 sDoorAnimTiles_HnsLavender[] = INCGFX_U8("graphics/door_anims/lavender_hns.png", ".4bpp");
+static const u8 sDoorAnimTiles_HnsSaffron[] = INCGFX_U8("graphics/door_anims/saffron_hns.png", ".4bpp");
+static const u8 sDoorAnimTiles_HnsFuchsia[] = INCGFX_U8("graphics/door_anims/fuchsia_hns.png", ".4bpp");
+static const u8 sDoorAnimTiles_HnsDeptStoreElevator[] = INCGFX_U8("graphics/door_anims/dept_store_elevator_hns.png", ".4bpp");
+static const u8 sDoorAnimTiles_DojoDoor[] = INCGFX_U8("graphics/door_anims/dojo_door_hns.png", ".4bpp");
+static const u8 sDoorAnimTiles_DojoDoorEcruteak[] = INCGFX_U8("graphics/door_anims/dojo_door_ecruteak_hns.png", ".4bpp");
+static const u8 sDoorAnimTiles_MtSilverNewSinjoh[] = INCGFX_U8("graphics/door_anims/mt_silver_newsinjoh_hns.png", ".4bpp");
+static const u8 sDoorAnimTiles_Olivine[] = INCGFX_U8("graphics/door_anims/olivine_hns.png", ".4bpp");
+static const u8 sDoorAnimTiles_JohtoSafariZone[] = INCGFX_U8("graphics/door_anims/johtosafari_zone_hns.png", ".4bpp");
+static const u8 sDoorAnimTiles_BlackthornCity[] = INCGFX_U8("graphics/door_anims/blackthorn_city_hns.png", ".4bpp");
+static const u8 sDoorAnimTiles_RocketElevator[] = INCGFX_U8("graphics/door_anims/rocket_elevator_hns.png", ".4bpp");
+static const u8 sDoorAnimTiles_SSAqua[] = INCGFX_U8("graphics/door_anims/ssaqua_hns.png", ".4bpp");
+static const u8 sDoorAnimTiles_HnsSafariZone[] = INCGFX_U8("graphics/door_anims/safari_zone_hns.png", ".4bpp");
+static const u8 sDoorAnimTiles_HnsBirchsLab[] = INCGFX_U8("graphics/door_anims/birchs_lab_hns.png", ".4bpp");
+static const u8 sDoorAnimTiles_AlolaDoor[] = INCGFX_U8("graphics/door_anims/alola_door_hns.png", ".4bpp");
+static const u8 sDoorAnimTiles_AlolaPokecenterDoor[] = INCGFX_U8("graphics/door_anims/alolapokecenter_hns.png", ".4bpp");
+static const u8 sDoorAnimTiles_TeleporterHns[] = INCGFX_U8("graphics/door_anims/teleporter.png", ".4bpp");
 
 #endif // IS_HNS
 

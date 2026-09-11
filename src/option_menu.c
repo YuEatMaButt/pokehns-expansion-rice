@@ -114,18 +114,8 @@ enum {
     WIN_TOPBAR,
     WIN_OPTIONS,
     WIN_DESCRIPTION,
-enum
-{
-    WIN_HEADER,
-    WIN_OPTIONS
 };
 
-#define YPOS_TEXTSPEED    (MENUITEM_TEXTSPEED * 16)
-#define YPOS_BATTLESCENE  (MENUITEM_BATTLESCENE * 16)
-#define YPOS_BATTLESTYLE  (MENUITEM_BATTLESTYLE * 16)
-#define YPOS_SOUND        (MENUITEM_SOUND * 16)
-#define YPOS_BUTTONMODE   (MENUITEM_BUTTONMODE * 16)
-#define YPOS_FRAMETYPE    (MENUITEM_FRAMETYPE * 16)
 
 static void Task_OptionMenuFadeIn(u8 taskId);
 static void Task_OptionMenuProcessInput(u8 taskId);
@@ -169,17 +159,6 @@ static const u8 gText_ButtonTypeLEqualsA[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN
 static const u16 sOptionMenuText_Pal[] = INCGFX_U16("graphics/interface/option_menu_text.pal", ".gbapal");
 // note: this is only used in the Japanese release
 static const u8 sEqualSignGfx[] = INCGFX_U8("graphics/interface/option_menu_equals_sign.png", ".4bpp");
-
-static const u8 *const sOptionMenuItemsNames[MENUITEM_COUNT] =
-{
-    [MENUITEM_TEXTSPEED]   = COMPOUND_STRING("TEXT SPEED"),
-    [MENUITEM_BATTLESCENE] = COMPOUND_STRING("BATTLE SCENE"),
-    [MENUITEM_BATTLESTYLE] = COMPOUND_STRING("BATTLE STYLE"),
-    [MENUITEM_SOUND]       = COMPOUND_STRING("SOUND"),
-    [MENUITEM_BUTTONMODE]  = COMPOUND_STRING("BUTTON MODE"),
-    [MENUITEM_FRAMETYPE]   = COMPOUND_STRING("FRAME"),
-    [MENUITEM_CANCEL]      = COMPOUND_STRING("CANCEL"),
-};
 
 static const struct WindowTemplate sWinTemplates[] = {
     [WIN_TOPBAR] = {
@@ -234,7 +213,7 @@ static const struct BgTemplate sBgTemplates[] = {
 };
 
 static const u16 sBgPal[] = {RGB(14, 20, 24)};
-static const u16 sTextPal[] = INCBIN_U16("graphics/interface/option_menu_text_custom.gbapal");
+static const u16 sTextPal[] = INCGFX_U16("graphics/interface/option_menu_text_custom.pal", ".gbapal");
 
 #define TILE_TOP_CORNER_L 0x1A2
 #define TILE_TOP_EDGE     0x1A3

@@ -65,8 +65,8 @@ static const u16 sBrendanCredits_Pal[]    = INCGFX_U16("graphics/intro/scene_2/b
 static const u32 sBrendanCredits_Gfx[]    = INCGFX_U32("graphics/intro/scene_2/brendan_credits.png", ".4bpp.smol");
 static const u16 sMayCredits_Pal[]        = INCGFX_U16("graphics/intro/scene_2/may_credits.png", ".gbapal");
 #if IS_HNS
-static const u16 sSuicuneCredits_Pal[]    = INCBIN_U16("graphics/intro/scene_2/suicune_credits.gbapal");
-static const u32 sSuicuneCredits_Gfx[]    = INCBIN_U32("graphics/intro/scene_2/suicune_credits.4bpp.smol");
+static const u16 sSuicuneCredits_Pal[]    = INCGFX_U16("graphics/intro/scene_2/suicune_credits.png", ".gbapal");
+static const u32 sSuicuneCredits_Gfx[]    = INCGFX_U32("graphics/intro/scene_2/suicune_credits.png", ".4bpp.smol");
 #endif
 static const u16 sUnused[0xF0]            = {0};
 static const u32 sMayCredits_Gfx[]        = INCGFX_U32("graphics/intro/scene_2/may_credits.png", ".4bpp.smol");

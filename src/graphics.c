@@ -2,8 +2,8 @@
 #include "graphics.h"
 
 #if IS_HNS
-const u32 gBattleTextboxTiles[] = INCBIN_U32("graphics/battle_interface/hns/textbox.4bpp.smol");
-const u16 gBattleTextboxPalette[] = INCBIN_U16("graphics/battle_interface/hns/textbox.gbapal");
+const u32 gBattleTextboxTiles[] = INCGFX_U32("graphics/battle_interface/hns/textbox.png", ".4bpp.smol");
+const u16 gBattleTextboxPalette[] = INCGFX_U16("graphics/battle_interface/hns/textbox.png", ".gbapal");
 const u32 gBattleTextboxTilemap[] = INCBIN_U32("graphics/battle_interface/hns/textbox_map.bin.smolTM");
 #else
 const u32 gBattleTextboxTiles[] = INCGFX_U32("graphics/battle_interface/textbox.png", ".4bpp.smol");
@@ -715,15 +715,15 @@ const u32 gUnusedTilemap_BasicFrame[] = INCBIN_U32("graphics/unused/basic_frame.
 
 // Gen 4 (HGSS-style) palettes — engine-wide
 const u16 gBattleInterface_BallStatusBarPalGen4[] = INCGFX_U16("graphics/battle_interface/gen4/ball_status_bar.png", ".gbapal");
-const u16 gBattleInterface_BallDisplayPalGen4[] = INCBIN_U16("graphics/battle_interface/gen4/ball_display.gbapal");
+const u16 gBattleInterface_BallDisplayPalGen4[] = INCGFX_U16("graphics/battle_interface/gen4/ball_display.png", ".gbapal");
 
 // Gen 3 palettes — per-game
 #if IS_HNS
-const u16 gBattleInterface_BallStatusBarPalGen3[] = INCBIN_U16("graphics/battle_interface/hns/ball_status_bar.gbapal");
+const u16 gBattleInterface_BallStatusBarPalGen3[] = INCGFX_U16("graphics/battle_interface/hns/ball_status_bar.png", ".gbapal");
 const u16 gBattleInterface_BallDisplayPalGen3[] = INCGFX_U16("graphics/battle_interface/hns/ball_display.png", ".gbapal");
 #else
-const u16 gBattleInterface_BallStatusBarPalGen3[] = INCBIN_U16("graphics/battle_interface/ball_status_bar.gbapal");
-const u16 gBattleInterface_BallDisplayPalGen3[] = INCBIN_U16("graphics/battle_interface/ball_display.gbapal");
+const u16 gBattleInterface_BallStatusBarPalGen3[] = INCGFX_U16("graphics/battle_interface/ball_status_bar.png", ".gbapal");
+const u16 gBattleInterface_BallDisplayPalGen3[] = INCGFX_U16("graphics/battle_interface/ball_display.png", ".gbapal");
 #endif
 
 // Gen 4 healthbox elements — engine-wide
@@ -773,7 +773,7 @@ const u8 gHealthboxElementsGfxTableGen3[][32] = INCBIN_U8("graphics/battle_inter
                                                   "graphics/battle_interface/healthbox_doubles_frameend.4bpp",
                                                   "graphics/battle_interface/healthbox_doubles_frameend_bar.4bpp");
 #endif
-const u32 gNuzlockeFirstEncounterIndicatorGfx[] = INCBIN_U32("graphics/battle_interface/nuzlocke_indicator.4bpp");
+const u32 gNuzlockeFirstEncounterIndicatorGfx[] = INCGFX_U32("graphics/battle_interface/nuzlocke_indicator.png", ".4bpp");
 const u32 gBattleInterfaceGfx_UnusedWindow3[] = INCGFX_U32("graphics/battle_interface/unused_window3.png", ".4bpp.smol");
 const u32 gBattleInterfaceGfx_UnusedWindow4[] = INCGFX_U32("graphics/battle_interface/unused_window4.png", ".4bpp.smol");
 
@@ -1049,28 +1049,28 @@ const u32 gBattleAnimSpriteGfx_Tendrils[] = INCGFX_U32("graphics/battle_anims/sp
 const u16 gBattleAnimSpritePal_Tendrils[] = INCGFX_U16("graphics/battle_anims/sprites/tendrils.png", ".gbapal");
 
 // Gen 4 healthboxes — engine-wide
-const u32 gHealthboxSinglesPlayerGfxGen4[] = INCBIN_U32("graphics/battle_interface/gen4/healthbox_singles_player.4bpp.smol");
-const u32 gHealthboxSinglesPlayerGfx_FrontierGen4[] = INCBIN_U32("graphics/battle_interface/gen4/healthbox_singles_player_frontier.4bpp.smol");
-const u32 gHealthboxSinglesOpponentGfxGen4[] = INCBIN_U32("graphics/battle_interface/gen4/healthbox_singles_opponent.4bpp.smol");
-const u32 gHealthboxDoublesPlayerGfxGen4[] = INCBIN_U32("graphics/battle_interface/gen4/healthbox_doubles_player.4bpp.smol");
-const u32 gHealthboxDoublesOpponentGfxGen4[] = INCBIN_U32("graphics/battle_interface/gen4/healthbox_doubles_opponent.4bpp.smol");
-const u32 gHealthboxSafariGfxGen4[] = INCBIN_U32("graphics/battle_interface/gen4/healthbox_safari.4bpp.smol");
+const u32 gHealthboxSinglesPlayerGfxGen4[] = INCGFX_U32("graphics/battle_interface/gen4/healthbox_singles_player.png", ".4bpp.smol");
+const u32 gHealthboxSinglesPlayerGfx_FrontierGen4[] = INCGFX_U32("graphics/battle_interface/gen4/healthbox_singles_player_frontier.png", ".4bpp.smol");
+const u32 gHealthboxSinglesOpponentGfxGen4[] = INCGFX_U32("graphics/battle_interface/gen4/healthbox_singles_opponent.png", ".4bpp.smol");
+const u32 gHealthboxDoublesPlayerGfxGen4[] = INCGFX_U32("graphics/battle_interface/gen4/healthbox_doubles_player.png", ".4bpp.smol");
+const u32 gHealthboxDoublesOpponentGfxGen4[] = INCGFX_U32("graphics/battle_interface/gen4/healthbox_doubles_opponent.png", ".4bpp.smol");
+const u32 gHealthboxSafariGfxGen4[] = INCGFX_U32("graphics/battle_interface/gen4/healthbox_safari.png", ".4bpp.smol");
 
 // Gen 3 healthboxes — per-game
 #if IS_HNS
-const u32 gHealthboxSinglesPlayerGfxGen3[] = INCBIN_U32("graphics/battle_interface/hns/healthbox_singles_player.4bpp.smol");
-const u32 gHealthboxSinglesPlayerGfx_FrontierGen3[] = INCBIN_U32("graphics/battle_interface/hns/healthbox_singles_player_frontier.4bpp.smol");
-const u32 gHealthboxSinglesOpponentGfxGen3[] = INCBIN_U32("graphics/battle_interface/hns/healthbox_singles_opponent.4bpp.smol");
-const u32 gHealthboxDoublesPlayerGfxGen3[] = INCBIN_U32("graphics/battle_interface/hns/healthbox_doubles_player.4bpp.smol");
-const u32 gHealthboxDoublesOpponentGfxGen3[] = INCBIN_U32("graphics/battle_interface/hns/healthbox_doubles_opponent.4bpp.smol");
-const u32 gHealthboxSafariGfxGen3[] = INCBIN_U32("graphics/battle_interface/hns/healthbox_safari.4bpp.smol");
+const u32 gHealthboxSinglesPlayerGfxGen3[] = INCGFX_U32("graphics/battle_interface/hns/healthbox_singles_player.png", ".4bpp.smol");
+const u32 gHealthboxSinglesPlayerGfx_FrontierGen3[] = INCGFX_U32("graphics/battle_interface/hns/healthbox_singles_player_frontier.png", ".4bpp.smol");
+const u32 gHealthboxSinglesOpponentGfxGen3[] = INCGFX_U32("graphics/battle_interface/hns/healthbox_singles_opponent.png", ".4bpp.smol");
+const u32 gHealthboxDoublesPlayerGfxGen3[] = INCGFX_U32("graphics/battle_interface/hns/healthbox_doubles_player.png", ".4bpp.smol");
+const u32 gHealthboxDoublesOpponentGfxGen3[] = INCGFX_U32("graphics/battle_interface/hns/healthbox_doubles_opponent.png", ".4bpp.smol");
+const u32 gHealthboxSafariGfxGen3[] = INCGFX_U32("graphics/battle_interface/hns/healthbox_safari.png", ".4bpp.smol");
 #else
-const u32 gHealthboxSinglesPlayerGfxGen3[] = INCBIN_U32("graphics/battle_interface/healthbox_singles_player.4bpp.smol");
-const u32 gHealthboxSinglesPlayerGfx_FrontierGen3[] = INCBIN_U32("graphics/battle_interface/healthbox_singles_player.4bpp.smol");
-const u32 gHealthboxSinglesOpponentGfxGen3[] = INCBIN_U32("graphics/battle_interface/healthbox_singles_opponent.4bpp.smol");
-const u32 gHealthboxDoublesPlayerGfxGen3[] = INCBIN_U32("graphics/battle_interface/healthbox_doubles_player.4bpp.smol");
-const u32 gHealthboxDoublesOpponentGfxGen3[] = INCBIN_U32("graphics/battle_interface/healthbox_doubles_opponent.4bpp.smol");
-const u32 gHealthboxSafariGfxGen3[] = INCBIN_U32("graphics/battle_interface/healthbox_safari.4bpp.smol");
+const u32 gHealthboxSinglesPlayerGfxGen3[] = INCGFX_U32("graphics/battle_interface/healthbox_singles_player.png", ".4bpp.smol");
+const u32 gHealthboxSinglesPlayerGfx_FrontierGen3[] = INCGFX_U32("graphics/battle_interface/healthbox_singles_player.png", ".4bpp.smol");
+const u32 gHealthboxSinglesOpponentGfxGen3[] = INCGFX_U32("graphics/battle_interface/healthbox_singles_opponent.png", ".4bpp.smol");
+const u32 gHealthboxDoublesPlayerGfxGen3[] = INCGFX_U32("graphics/battle_interface/healthbox_doubles_player.png", ".4bpp.smol");
+const u32 gHealthboxDoublesOpponentGfxGen3[] = INCGFX_U32("graphics/battle_interface/healthbox_doubles_opponent.png", ".4bpp.smol");
+const u32 gHealthboxSafariGfxGen3[] = INCGFX_U32("graphics/battle_interface/healthbox_safari.png", ".4bpp.smol");
 #endif
 const u32 gHealthboxSinglesPlayerGfx[] = INCGFX_U32("graphics/battle_interface/healthbox_singles_player.png", ".4bpp.smol", "-mwidth 8 -mheight 8");
 const u32 gHealthboxSinglesOpponentGfx[] = INCGFX_U32("graphics/battle_interface/healthbox_singles_opponent.png", ".4bpp.smol", "-mwidth 8 -mheight 4");
@@ -1497,20 +1497,20 @@ const u16 gBattleAnimBackgroundImageMuddyWater_Pal[] = INCGFX_U16("graphics/batt
 const u32 gEnemyMonShadow_GfxGen4[] = INCGFX_U32("graphics/battle_interface/gen4/enemy_mon_shadow.png", ".4bpp.smol");
 // Gen 3 shadow — per-game
 #if IS_HNS
-const u32 gEnemyMonShadow_GfxGen3[] = INCBIN_U32("graphics/battle_interface/hns/enemy_mon_shadow.4bpp.smol");
+const u32 gEnemyMonShadow_GfxGen3[] = INCGFX_U32("graphics/battle_interface/hns/enemy_mon_shadow.png", ".4bpp.smol");
 #else
-const u32 gEnemyMonShadow_GfxGen3[] = INCBIN_U32("graphics/battle_interface/enemy_mon_shadow.4bpp.smol");
+const u32 gEnemyMonShadow_GfxGen3[] = INCGFX_U32("graphics/battle_interface/enemy_mon_shadow.png", ".4bpp.smol");
 #endif
 const u32 gEnemyMonShadowsSized_GfxGen4[] = INCGFX_U32("graphics/battle_interface/gen4/enemy_mon_shadows_sized.png", ".4bpp.smol");
-const u32 gEnemyMonShadowsSized_GfxGen3[] = INCBIN_U32("graphics/battle_interface/enemy_mon_shadows_sized.4bpp.smol");
+const u32 gEnemyMonShadowsSized_GfxGen3[] = INCGFX_U32("graphics/battle_interface/enemy_mon_shadows_sized.png", ".4bpp.smol");
 
 // Gen 4 ball status bar — engine-wide
 const u32 gBattleInterface_BallStatusBarGfxGen4[] = INCGFX_U32("graphics/battle_interface/gen4/ball_status_bar.png", ".4bpp.smol");
 // Gen 3 ball status bar — per-game
 #if IS_HNS
-const u32 gBattleInterface_BallStatusBarGfxGen3[] = INCBIN_U32("graphics/battle_interface/hns/ball_status_bar.4bpp.smol");
+const u32 gBattleInterface_BallStatusBarGfxGen3[] = INCGFX_U32("graphics/battle_interface/hns/ball_status_bar.png", ".4bpp.smol");
 #else
-const u32 gBattleInterface_BallStatusBarGfxGen3[] = INCBIN_U32("graphics/battle_interface/ball_status_bar.4bpp.smol");
+const u32 gBattleInterface_BallStatusBarGfxGen3[] = INCGFX_U32("graphics/battle_interface/ball_status_bar.png", ".4bpp.smol");
 #endif
 
 const u32 gBattleAnimBgImage_Ghost[] = INCGFX_U32("graphics/battle_anims/backgrounds/ghost.png", ".4bpp.smol");
@@ -1785,8 +1785,8 @@ const u16 gBattleAnimBGPalette_Swamp[] = INCGFX_U16("graphics/battle_anims/backg
 const u32 gBattleAnimBgTilemap_Swamp[] = INCBIN_U32("graphics/battle_anims/backgrounds/swampswizzle.bin.smolTM");
 
 #if IS_HNS
-const u32 gPartyMenuBg_Gfx[] = INCBIN_U32("graphics/party_menu/hns/bg.4bpp.smol");
-const u16 gPartyMenuBg_Pal[] = INCBIN_U16("graphics/party_menu/hns/bg.gbapal");
+const u32 gPartyMenuBg_Gfx[] = INCGFX_U32("graphics/party_menu/hns/bg.png", ".4bpp.smol");
+const u16 gPartyMenuBg_Pal[] = INCGFX_U16("graphics/party_menu/hns/bg.png", ".gbapal");
 const u32 gPartyMenuBg_Tilemap[] = INCBIN_U32("graphics/party_menu/hns/bg.bin.smolTM");
 #else
 const u32 gPartyMenuBg_Gfx[] = INCGFX_U32("graphics/party_menu/bg.png", ".4bpp.smol", "-num_tiles 62 -Wnum_tiles");
@@ -1811,11 +1811,11 @@ const u32 gSummaryMoveSelect_Gfx[] = INCGFX_U32("graphics/summary_screen/move_se
 const u16 gSummaryMoveSelect_Pal[] = INCGFX_U16("graphics/summary_screen/move_select.png", ".gbapal");
 
 #if IS_HNS
-const u32 gSummaryScreen_Gfx[]                = INCBIN_U32("graphics/summary_screen/hns/tiles.4bpp.smol");
-const u16 gSummaryScreen_Pal[]                = INCBIN_U16("graphics/summary_screen/hns/tiles.gbapal");
+const u32 gSummaryScreen_Gfx[]                = INCGFX_U32("graphics/summary_screen/hns/tiles.png", ".4bpp.smol");
+const u16 gSummaryScreen_Pal[]                = INCGFX_U16("graphics/summary_screen/hns/tiles.png", ".gbapal");
 #elif P_SUMMARY_SCREEN_IV_EV_TILESET
 const u32 gSummaryScreen_Gfx[]                = INCGFX_U32("graphics/summary_screen/iv_ev_tiles.png", ".4bpp.smol");
-const u16 gSummaryScreen_Pal[]                = INCBIN_U16("graphics/summary_screen/tiles.gbapal");
+const u16 gSummaryScreen_Pal[]                = INCGFX_U16("graphics/summary_screen/tiles.png", ".gbapal");
 #else
 const u32 gSummaryScreen_Gfx[]                = INCGFX_U32("graphics/summary_screen/tiles.png", ".4bpp.smol");
 const u16 gSummaryScreen_Pal[]                = INCGFX_U16("graphics/summary_screen/tiles.png", ".gbapal");
@@ -1827,11 +1827,11 @@ const u32 gSummaryPage_ContestMoves_Tilemap[] = INCBIN_U32("graphics/summary_scr
 const u32 gSummaryPage_InfoEgg_Tilemap[]      = INCBIN_U32("graphics/summary_screen/page_info_egg.bin.smolTM");
 
 #if IS_HNS
-const u32 gBagMaleTiles[] = INCBIN_U32("graphics/bag/hns/bag_male.4bpp.smol");
-const u32 gBagFemaleTiles[] = INCBIN_U32("graphics/bag/hns/bag_female.4bpp.smol");
-const u16 gBagPalette[] = INCBIN_U16("graphics/bag/hns/bag.gbapal");
-const u16 gBagScreenMale_Pal[] = INCBIN_U16("graphics/bag/hns/menu_male.gbapal");
-const u16 gBagScreenFemale_Pal[] = INCBIN_U16("graphics/bag/hns/menu_female.gbapal");
+const u32 gBagMaleTiles[] = INCGFX_U32("graphics/bag/hns/bag_male.png", ".4bpp.smol");
+const u32 gBagFemaleTiles[] = INCGFX_U32("graphics/bag/hns/bag_female.png", ".4bpp.smol");
+const u16 gBagPalette[] = INCGFX_U16("graphics/bag/hns/bag.pal", ".gbapal");
+const u16 gBagScreenMale_Pal[] = INCGFX_U16("graphics/bag/hns/menu_male.pal", ".gbapal");
+const u16 gBagScreenFemale_Pal[] = INCGFX_U16("graphics/bag/hns/menu_female.pal", ".gbapal");
 #else
 const u32 gBagMaleTiles[] = INCGFX_U32("graphics/bag/bag_male.png", ".4bpp.smol");
 const u32 gBagFemaleTiles[] = INCGFX_U32("graphics/bag/bag_female.png", ".4bpp.smol");
@@ -1859,7 +1859,7 @@ const u32 gShopMenu_Gfx[] = INCGFX_U32("graphics/shop/menu.png", ".4bpp.smol");
 const u16 gShopMenu_Pal[] = INCGFX_U16("graphics/shop/menu.png", ".gbapal");
 const u32 gShopMenu_Tilemap[] = INCBIN_U32("graphics/shop/menu.bin.smolTM");
 const u32 gShopMenuMoney_Gfx[] = INCGFX_U32("graphics/shop/money.png", ".4bpp.smol");
-const u32 gShopMenuBP_Gfx[] = INCBIN_U32("graphics/shop/bp.4bpp.smol");
+const u32 gShopMenuBP_Gfx[] = INCGFX_U32("graphics/shop/bp.png", ".4bpp.smol");
 
 // Pokeblock
 
@@ -1996,7 +1996,7 @@ const u32 gPokenavCondition_Tilemap[] = INCBIN_U32("graphics/pokenav/condition/g
 #if IS_HNS
 const u16 gPokenavOptions_Tilemap[] = INCBIN_U16("graphics/pokenav/hns/options/options.bin");
 const u32 gPokenavOptions_Gfx[] = INCBIN_U32("graphics/pokenav/hns/options/options.4bpp.smol");
-const u16 gPokenavOptions_Pal[] = INCBIN_U16("graphics/pokenav/hns/options/options.gbapal");
+const u16 gPokenavOptions_Pal[] = INCGFX_U16("graphics/pokenav/hns/options/options.pal", ".gbapal");
 #else
 const u16 gPokenavOptions_Tilemap[] = INCBIN_U16("graphics/pokenav/options/options.bin");
 const u32 gPokenavOptions_Gfx[] = INCGFX_U32("graphics/pokenav/options/options.4bpp", ".smol");
@@ -2004,8 +2004,8 @@ const u16 gPokenavOptions_Pal[] = INCGFX_U16("graphics/pokenav/options/options.p
 #endif
 
 #if IS_HNS
-const u16 gPokenavHeader_Pal[] = INCBIN_U16("graphics/pokenav/hns/header.gbapal");
-const u32 gPokenavHeader_Gfx[] = INCBIN_U32("graphics/pokenav/hns/header.4bpp.smol");
+const u16 gPokenavHeader_Pal[] = INCGFX_U16("graphics/pokenav/hns/header.png", ".gbapal");
+const u32 gPokenavHeader_Gfx[] = INCGFX_U32("graphics/pokenav/hns/header.png", ".4bpp.smol");
 const u32 gPokenavHeader_Tilemap[] = INCBIN_U32("graphics/pokenav/hns/header.bin.smolTM");
 #else
 const u16 gPokenavHeader_Pal[] = INCGFX_U16("graphics/pokenav/header.png", ".gbapal");
@@ -2014,7 +2014,7 @@ const u32 gPokenavHeader_Tilemap[] = INCBIN_U32("graphics/pokenav/header.bin.smo
 #endif
 
 #if IS_HNS
-const u16 gPokenavLeftHeader_Pal[] = INCBIN_U16("graphics/pokenav/hns/left_headers/palette.gbapal");
+const u16 gPokenavLeftHeader_Pal[] = INCGFX_U16("graphics/pokenav/hns/left_headers/palette.pal", ".gbapal");
 #else
 const u16 gPokenavLeftHeader_Pal[] = INCGFX_U16("graphics/pokenav/left_headers/palette.pal", ".gbapal");
 #endif
@@ -2023,13 +2023,13 @@ const u32 gPokenavLeftHeaderSmart_Gfx[] = INCGFX_U32("graphics/pokenav/left_head
 const u32 gPokenavLeftHeaderCondition_Gfx[] = INCGFX_U32("graphics/pokenav/left_headers/condition.png", ".4bpp.smol");
 const u32 gPokenavLeftHeaderCute_Gfx[] = INCGFX_U32("graphics/pokenav/left_headers/cute.png", ".4bpp.smol");
 #if IS_HNS
-const u32 gPokenavLeftHeaderMatchCall_Gfx[] = INCBIN_U32("graphics/pokenav/hns/left_headers/match_call.4bpp.smol");
+const u32 gPokenavLeftHeaderMatchCall_Gfx[] = INCGFX_U32("graphics/pokenav/hns/left_headers/match_call.png", ".4bpp.smol");
 #else
 const u32 gPokenavLeftHeaderMatchCall_Gfx[] = INCGFX_U32("graphics/pokenav/left_headers/match_call.png", ".4bpp.smol");
 #endif
 const u32 gPokenavLeftHeaderMainMenu_Gfx[] = INCGFX_U32("graphics/pokenav/left_headers/main_menu.png", ".4bpp.smol");
 #if IS_HNS
-const u32 gPokenavLeftHeaderHoennMap_Gfx[] = INCBIN_U32("graphics/pokenav/hns/left_headers/hoenn_map.4bpp.smol");
+const u32 gPokenavLeftHeaderHoennMap_Gfx[] = INCGFX_U32("graphics/pokenav/hns/left_headers/hoenn_map.png", ".4bpp.smol");
 #else
 const u32 gPokenavLeftHeaderHoennMap_Gfx[] = INCGFX_U32("graphics/pokenav/left_headers/hoenn_map.png", ".4bpp.smol");
 #endif
@@ -2040,8 +2040,8 @@ const u32 gPokenavLeftHeaderCool_Gfx[] = INCGFX_U32("graphics/pokenav/left_heade
 const u32 gPokenavLeftHeaderParty_Gfx[] = INCGFX_U32("graphics/pokenav/left_headers/party.png", ".4bpp.smol");
 
 #if IS_HNS
-const u16 gPokenavMessageBox_Pal[] = INCBIN_U16("graphics/pokenav/hns/message.gbapal");
-const u32 gPokenavMessageBox_Gfx[] = INCBIN_U32("graphics/pokenav/hns/message.4bpp.smol");
+const u16 gPokenavMessageBox_Pal[] = INCGFX_U16("graphics/pokenav/hns/message.png", ".gbapal");
+const u32 gPokenavMessageBox_Gfx[] = INCGFX_U32("graphics/pokenav/hns/message.png", ".4bpp.smol");
 #else
 const u16 gPokenavMessageBox_Pal[] = INCGFX_U16("graphics/pokenav/message.png", ".gbapal");
 const u32 gPokenavMessageBox_Gfx[] = INCGFX_U32("graphics/pokenav/message.png", ".4bpp.smol");
@@ -2104,7 +2104,7 @@ const u16 gUsePokeblockNatureWin_Pal[] = INCGFX_U16("graphics/pokeblock/use_scre
 // trainer card
 
 #if IS_HNS
-const u16 gHnsTrainerCardGreen_Pal[] = INCBIN_U16("graphics/trainer_card/hns/green.gbapal");
+const u16 gHnsTrainerCardGreen_Pal[] = INCGFX_U16("graphics/trainer_card/hns/green.pal", ".gbapal");
 #endif
 const u16 gHoennTrainerCardGreen_Pal[] = INCGFX_U16("graphics/trainer_card/green.pal", ".gbapal");
 const u32 gHoennTrainerCard_Gfx[] = INCGFX_U32("graphics/trainer_card/tiles.png", ".4bpp.smol");
@@ -2207,8 +2207,8 @@ const u16 gTradeMenu_Tilemap[] = INCBIN_U16("graphics/trade/menu.bin");
 const u16 gTradeMenuMonBox_Tilemap[] = INCBIN_U16("graphics/trade/menu_mon_box.bin");
 
 #if IS_HNS
-const u16 gMessageBox_Pal[] = INCBIN_U16("graphics/text_window/hns/message_box.gbapal");
-const u8 gMessageBox_Gfx[] = INCBIN_U8("graphics/text_window/hns/message_box.4bpp");
+const u16 gMessageBox_Pal[] = INCGFX_U16("graphics/text_window/hns/message_box.png", ".gbapal");
+const u8 gMessageBox_Gfx[] = INCGFX_U8("graphics/text_window/hns/message_box.png", ".4bpp");
 #else
 const u16 gMessageBox_Pal[] = INCGFX_U16("graphics/text_window/message_box.png", ".gbapal");
 const u8 gMessageBox_Gfx[] = INCGFX_U8("graphics/text_window/message_box.png", ".4bpp");
@@ -2254,12 +2254,12 @@ const u16 gMonIconPalettes[][16] =
 #if IS_HNS
 const u16 gTitleScreenBgPalettes[]         = INCBIN_U16("graphics/title_screen/hns/pokemon_logo.gbapal",
                                                         "graphics/title_screen/hns/rayquaza_and_clouds.gbapal");
-const u16 gTitleScreenEmeraldVersionPal[]  = INCBIN_U16("graphics/title_screen/hns/emerald_version.gbapal");
+const u16 gTitleScreenEmeraldVersionPal[]  = INCGFX_U16("graphics/title_screen/hns/emerald_version.png", ".gbapal");
 const u32 gTitleScreenCloudsTilemap[]      = INCBIN_U32("graphics/title_screen/clouds.bin.smolTM");
-const u32 gTitleScreenPokemonLogoGfx[]     = INCBIN_U32("graphics/title_screen/hns/pokemon_logo.8bpp.smol");
-const u32 gTitleScreenEmeraldVersionGfx[]  = INCBIN_U32("graphics/title_screen/hns/emerald_version.8bpp.smol");
-const u16 gTitleScreenPressStartPal[]      = INCBIN_U16("graphics/title_screen/hns/press_start.gbapal");
-const u32 gTitleScreenPressStartGfx[]      = INCBIN_U32("graphics/title_screen/hns/press_start.4bpp.smol");
+const u32 gTitleScreenPokemonLogoGfx[]     = INCGFX_U32("graphics/title_screen/hns/pokemon_logo.png", ".8bpp.smol");
+const u32 gTitleScreenEmeraldVersionGfx[]  = INCGFX_U32("graphics/title_screen/hns/emerald_version.png", ".8bpp.smol");
+const u16 gTitleScreenPressStartPal[]      = INCGFX_U16("graphics/title_screen/hns/press_start.png", ".gbapal");
+const u32 gTitleScreenPressStartGfx[]      = INCGFX_U32("graphics/title_screen/hns/press_start.png", ".4bpp.smol");
 const u32 gTitleScreenPokemonLogoTilemap[] = INCBIN_U32("graphics/title_screen/hns/pokemon_logo.bin.smolTM");
 #else
 const u16 gTitleScreenBgPalettes[]         = INCBIN_U16("graphics/title_screen/pokemon_logo.gbapal",
