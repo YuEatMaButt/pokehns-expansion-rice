@@ -15,4 +15,8 @@ MtSilver_2F_OnTransition:
 
 MtSilver_2F_Item_AzureFlue::
 	finditem ITEM_AZURE_FLUTE
+	clearflag FLAG_HIDE_UXIE
+	clearflag FLAG_HIDE_MESPRIT
+	clearflag FLAG_HIDE_AZELF
+	release
 	end

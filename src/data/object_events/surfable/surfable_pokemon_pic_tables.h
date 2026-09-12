@@ -2078,6 +2078,24 @@ const struct SpriteFrameImage gSurfingOverlayPicTable_GastrodonWest[] = {
     overworld_frame(gSurfablePokemonPic_GastrodonWest, 4, 4, 11),
 };
 
+const struct SpriteFrameImage gSurfingOverworldPicTable_Garchomp[] = {
+    overworld_frame(gSurfablePokemonPic_Garchomp, 8, 8, 0),
+    overworld_frame(gSurfablePokemonPic_Garchomp, 8, 8, 1),
+    overworld_frame(gSurfablePokemonPic_Garchomp, 8, 8, 2),
+    overworld_frame(gSurfablePokemonPic_Garchomp, 8, 8, 3),
+    overworld_frame(gSurfablePokemonPic_Garchomp, 8, 8, 4),
+    overworld_frame(gSurfablePokemonPic_Garchomp, 8, 8, 5),
+};
+
+const struct SpriteFrameImage gSurfingOverlayPicTable_Garchomp[] = {
+    overworld_frame(gSurfablePokemonPic_Garchomp, 8, 8, 6),
+    overworld_frame(gSurfablePokemonPic_Garchomp, 8, 8, 7),
+    overworld_frame(gSurfablePokemonPic_Garchomp, 8, 8, 8),
+    overworld_frame(gSurfablePokemonPic_Garchomp, 8, 8, 9),
+    overworld_frame(gSurfablePokemonPic_Garchomp, 8, 8, 10),
+    overworld_frame(gSurfablePokemonPic_Garchomp, 8, 8, 11),
+};
+
 const struct SpriteFrameImage gSurfingOverworldPicTable_Finneon[] = {
     overworld_frame(gSurfablePokemonPic_Finneon, 4, 4, 0),
     overworld_frame(gSurfablePokemonPic_Finneon, 4, 4, 1),
@@ -4302,6 +4320,24 @@ const struct SpriteFrameImage gSurfingOverlayShinyPicTable_GastrodonWest[] = {
     overworld_frame(gSurfableShinyPokemonPic_GastrodonWest, 4, 4, 9),
     overworld_frame(gSurfableShinyPokemonPic_GastrodonWest, 4, 4, 10),
     overworld_frame(gSurfableShinyPokemonPic_GastrodonWest, 4, 4, 11),
+};
+
+const struct SpriteFrameImage gSurfingOverworldShinyPicTable_Garchomp[] = {
+    overworld_frame(gSurfableShinyPokemonPic_Garchomp, 8, 8, 0),
+    overworld_frame(gSurfableShinyPokemonPic_Garchomp, 8, 8, 1),
+    overworld_frame(gSurfableShinyPokemonPic_Garchomp, 8, 8, 2),
+    overworld_frame(gSurfableShinyPokemonPic_Garchomp, 8, 8, 3),
+    overworld_frame(gSurfableShinyPokemonPic_Garchomp, 8, 8, 4),
+    overworld_frame(gSurfableShinyPokemonPic_Garchomp, 8, 8, 5),
+};
+
+const struct SpriteFrameImage gSurfingOverlayShinyPicTable_Garchomp[] = {
+    overworld_frame(gSurfableShinyPokemonPic_Garchomp, 8, 8, 6),
+    overworld_frame(gSurfableShinyPokemonPic_Garchomp, 8, 8, 7),
+    overworld_frame(gSurfableShinyPokemonPic_Garchomp, 8, 8, 8),
+    overworld_frame(gSurfableShinyPokemonPic_Garchomp, 8, 8, 9),
+    overworld_frame(gSurfableShinyPokemonPic_Garchomp, 8, 8, 10),
+    overworld_frame(gSurfableShinyPokemonPic_Garchomp, 8, 8, 11),
 };
 
 const struct SpriteFrameImage gSurfingOverworldShinyPicTable_Finneon[] = {

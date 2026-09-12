@@ -842,16 +842,22 @@
 #define FLAG_HIDE_VERMILION_STEVEN                  0x2FC
 #define FLAG_MOM_HAS_GIFT                           0x2FD
 #define FLAG_PEWTER_NPC_TRADE_COMPLETED             0x2FE
-#define FLAG_POWERPLANT_NPC_TRADE_COMPLETED          0x2FF
-#define FLAG_FUCHSIA_SAFARI_NPC_TRADE_COMPLETED      0x300
-#define FLAG_PEWTER_GYM_NPC_TRADE_COMPLETED          0x301
-#define FLAG_OLIVINE_GYM_NPC_TRADE_COMPLETED         0x302
+#define FLAG_POWERPLANT_NPC_TRADE_COMPLETED         0x2FF
+#define FLAG_FUCHSIA_SAFARI_NPC_TRADE_COMPLETED     0x300
+#define FLAG_PEWTER_GYM_NPC_TRADE_COMPLETED         0x301
+#define FLAG_OLIVINE_GYM_NPC_TRADE_COMPLETED        0x302
 #define FLAG_ENABLE_CONDITION                       0x303
-#define FLAG_UNUSED_36                              0x304
-#define FLAG_UNUSED_37                              0x305
-#define FLAG_UNUSED_38                              0x306
-#define FLAG_UNUSED_39                              0x307
-#define HNS_UNUSED_COUNT                            40
+#define HNS_UNUSED_COUNT                            36
+
+// HNS Gen4 Expansion items
+#define HNS_ITEMS_G4_START                          0x304
+
+#define FLAG_ITEM_NSHOTSPRINGS_SKULLFOSSIL          0x304
+#define FLAG_ITEM_NSSNOWSWEPT_ARMORFOSSIL           0x305
+#define FLAG_ITEM_ABANDONEDHOUSE_ROTOMCATALOG       0x306
+#define FLAG_ITEM_ALOLA_GRACIDEA                    0x307
+
+#define HNS_ITEMS_G4_COUNT                          4
 
 #define HNS_CONTENT_FLAGS_END                       0x308
 
@@ -1068,20 +1074,20 @@
 #define FLAG_EXTENDED_CONTENT_183                  (HNS_EXTENDED_CONTENT_START + 183)
 #define FLAG_EXTENDED_CONTENT_184                  (HNS_EXTENDED_CONTENT_START + 184)
 #define FLAG_EXTENDED_CONTENT_185                  (HNS_EXTENDED_CONTENT_START + 185)
-#define FLAG_EXTENDED_CONTENT_186                  (HNS_EXTENDED_CONTENT_START + 186)
-#define FLAG_EXTENDED_CONTENT_187                  (HNS_EXTENDED_CONTENT_START + 187)
-#define FLAG_EXTENDED_CONTENT_188                  (HNS_EXTENDED_CONTENT_START + 188)
-#define FLAG_EXTENDED_CONTENT_189                  (HNS_EXTENDED_CONTENT_START + 189)
-#define FLAG_EXTENDED_CONTENT_190                  (HNS_EXTENDED_CONTENT_START + 190)
-#define FLAG_EXTENDED_CONTENT_191                  (HNS_EXTENDED_CONTENT_START + 191)
-#define FLAG_EXTENDED_CONTENT_192                  (HNS_EXTENDED_CONTENT_START + 192)
-#define FLAG_EXTENDED_CONTENT_193                  (HNS_EXTENDED_CONTENT_START + 193)
-#define FLAG_EXTENDED_CONTENT_194                  (HNS_EXTENDED_CONTENT_START + 194)
-#define FLAG_EXTENDED_CONTENT_195                  (HNS_EXTENDED_CONTENT_START + 195)
-#define FLAG_EXTENDED_CONTENT_196                  (HNS_EXTENDED_CONTENT_START + 196)
-#define FLAG_EXTENDED_CONTENT_197                  (HNS_EXTENDED_CONTENT_START + 197)
-#define FLAG_EXTENDED_CONTENT_198                  (HNS_EXTENDED_CONTENT_START + 198)
-#define FLAG_EXTENDED_CONTENT_199                  (HNS_EXTENDED_CONTENT_START + 199)
+#define FLAG_UNLOCKED_ROUTE34_ABANDONEDHOUSE       (HNS_EXTENDED_CONTENT_START + 186)
+#define FLAG_ITEM_NEWSINJOH_HOUSEKEY               (HNS_EXTENDED_CONTENT_START + 187)
+#define FLAG_HIDE_ROTOM                            (HNS_EXTENDED_CONTENT_START + 188)
+#define FLAG_HIDE_UXIE                             (HNS_EXTENDED_CONTENT_START + 189)
+#define FLAG_HIDE_MESPRIT                          (HNS_EXTENDED_CONTENT_START + 190)
+#define FLAG_HIDE_AZELF                            (HNS_EXTENDED_CONTENT_START + 191)
+#define FLAG_HIDE_DIALGA                           (HNS_EXTENDED_CONTENT_START + 192)
+#define FLAG_HIDE_PALKIA                           (HNS_EXTENDED_CONTENT_START + 193)
+#define FLAG_HIDE_HEATRAN                          (HNS_EXTENDED_CONTENT_START + 194)
+#define FLAG_HIDE_GIRATINA                         (HNS_EXTENDED_CONTENT_START + 195)
+#define FLAG_HIDE_CRESSELIA                        (HNS_EXTENDED_CONTENT_START + 196)
+#define FLAG_HIDE_MANAPHY                          (HNS_EXTENDED_CONTENT_START + 197)
+#define FLAG_HIDE_DARKRAI                          (HNS_EXTENDED_CONTENT_START + 198)
+#define FLAG_HIDE_SHAYMIN                          (HNS_EXTENDED_CONTENT_START + 199)
 #define FLAG_ULAULA_FOREST_HIDDEN_ITEM_1           (HNS_EXTENDED_CONTENT_START + 200) // hidden item flag for ulaula forest hidden item
 #define FLAG_HIDDEN_ITEM_ROUTE21_STARDUST_3         (HNS_EXTENDED_CONTENT_START + 201)
 #define FLAG_HIDDEN_ITEM_MT_SILVER_OUTSIDE_REAPER_CLOTH (HNS_EXTENDED_CONTENT_START + 202)

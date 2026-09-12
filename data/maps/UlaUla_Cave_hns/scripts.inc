@@ -67,6 +67,27 @@ Alola_Ulaula_BattleNinetales_3:
 	release
 	end
 
+Alola_Ulaula_BattleManaphy::
+	lock
+	faceplayer
+	playmoncry SPECIES_MANAPHY, CRY_MODE_ENCOUNTER
+	delay 20
+	waitmoncry
+	seteventmon SPECIES_MANAPHY, 45
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, Alola_Ulaula_PlayerOrManaphyRan
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject Alola_Ulaula_Manaphy
+	setflag FLAG_HIDE_MANAPHY
+	fadescreenswapbuffers FADE_FROM_BLACK
+	release
+	end
+
+Alola_Ulaula_PlayerOrManaphyRan::
+	release
+	end
 
 Alola_Ulaula_Cave_FindItem1::
 	finditem ITEM_ICE_STONE, 1

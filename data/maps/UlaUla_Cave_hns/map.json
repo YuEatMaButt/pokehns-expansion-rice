@@ -17,8 +17,8 @@
     {
       "local_id": "Alola_Ulaula_Sandslash",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(SANDSLASH_ALOLA)",
-      "x": 15,
-      "y": 26,
+      "x": 13,
+      "y": 36,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
       "movement_range_x": 0,
@@ -57,8 +57,8 @@
     {
       "local_id": "Alola_Ulaula_Ninetales",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(NINETALES_ALOLA)",
-      "x": 17,
-      "y": 6,
+      "x": 15,
+      "y": 26,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
       "movement_range_x": 0,
@@ -145,6 +145,20 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "0"
+    },
+    {
+      "local_id": "Alola_Ulaula_Manaphy",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MANAPHY",
+      "x": 17,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Alola_Ulaula_BattleManaphy",
+      "flag": "FLAG_HIDE_MANAPHY"
     }
   ],
   "warp_events": [

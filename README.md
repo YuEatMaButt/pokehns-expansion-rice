@@ -6,6 +6,13 @@
 <!-- TODO: Actually change these gifs, and generally update contents to convey HnS-specific information -->
 ![HnS Collage](HnS_Collage_YourAdventure.png)
 
+Pokemon Heart and Soul Generation 4 Expansion is a fork of Pokemon Heart and soul intended to add any missing generation 4 Pokemon to the game (with some small new areas for some legendaries). This fork also includes Eevee 50/50 gender split and some new alternate shiny palettes for Scizor, Garchomp, Onix, and Probopass. More alternate shinies will be added with next bug fix/update patch to bring this expansino to parity with the main HnS project.
+
+**NOTE: This project is designed with save compatibility with HnS in mind. However, if you encounter any issues please reach out to me (nettorizo) on the HnS Discord server. **For best results please back up your HnS save and save in a Pokemon Center before attempting to play an existing HnS 2.0+ save with this romhack.** If you are already in the post game, I also recommend re-fighting the Elite Four to completely refresh legendary flags.
+
+Please do not reach out for issues related to cheats, suggestions for changes, etc. If you would like to use this fork or any assets I've made for your own project, please feel free to clone this repository.
+_____________________________________________
+
 **`pokemonHnS-expansion`**, aka Pokémon Heart and Soul 2.0, is a GBA ROM hack that is both a remake of GSC and demake of HGSS, with added quality-of-life, customization, and more.  
 Originally built on top of [resetes12's **`Modern Emerald`**](https://github.com/resetes12/pokeemerald).  
 Now additionally built on top of [RHH's **`pokeemerald-expansion`**](https://github.com/rh-hideout/pokeemerald-expansion) GBA ROM hack base.  

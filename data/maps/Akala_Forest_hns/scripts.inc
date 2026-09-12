@@ -10,7 +10,12 @@ Alola_Akala_Forest_FindItem1::
 Alola_Akala_Forest_FindItem2::
 	finditem ITEM_PP_UP, 1
 	end
-
+	
+Alola_Akala_Forest_EventScript_Item_Gracidea::
+	finditem ITEM_GRACIDEA
+	clearflag FLAG_HIDE_SHAYMIN
+	release
+	end
 
 Alola_AkalaForest_TrainerBattleBugCatcher1::
 	trainerbattle_single TRAINER_AKALA_FOREST_BUGCATCHER_1_HNS, Alola_AkalaForest_TrainerBattleBugCatcher1_Text_0, Alola_AkalaForest_TrainerBattleBugCatcher1_Text_1

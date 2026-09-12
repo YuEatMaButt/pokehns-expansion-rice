@@ -898,8 +898,8 @@ enum __attribute__((packed)) Item
     ITEM_BASEMENT_KEY = 736,
     ITEM_SCANNER = 737,
     ITEM_STORAGE_KEY = 738,
-    ITEM_KEY_TO_ROOM_1 = 739,
-    ITEM_RM_1_KEY = ITEM_KEY_TO_ROOM_1, // Pre-Gen VI name
+    ITEM_HOUSE_KEY = 739,
+    ITEM_RM_1_KEY = ITEM_HOUSE_KEY, // Pre-Gen VI name
     ITEM_KEY_TO_ROOM_2 = 740,
     ITEM_RM_2_KEY = ITEM_KEY_TO_ROOM_2, // Pre-Gen VI name
     ITEM_KEY_TO_ROOM_4 = 741,

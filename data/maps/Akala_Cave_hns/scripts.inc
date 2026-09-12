@@ -67,6 +67,27 @@ Alola_Melemele_BattleDugtrio_3:
 	release
 	end
 
+Alola_Melemele_BattleHeatran::
+	lock
+	faceplayer
+	playmoncry SPECIES_HEATRAN, CRY_MODE_ENCOUNTER
+	delay 20
+	waitmoncry
+	seteventmon SPECIES_HEATRAN, 45
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, Alola_Melemele_PlayerOrHeatranRan
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject Alola_Melemele_Heatran
+	setflag FLAG_HIDE_HEATRAN
+	fadescreenswapbuffers FADE_FROM_BLACK
+	release
+	end
+
+Alola_Melemele_PlayerOrHeatranRan::
+	release
+	end
 
 Alola_Akala_Cave_FindItem1::
 	finditem ITEM_CARBOS, 1

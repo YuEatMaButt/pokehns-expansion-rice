@@ -140,7 +140,7 @@
       "x": 42,
       "y": 10,
       "elevation": 3,
-      "item": "ITEM_KEY_TO_ROOM_1",
+      "item": "HOUSE_KEY",
       "flag": "FLAG_HIDDEN_ITEM_ABANDONED_SHIP_RM_1_KEY"
     },
     {

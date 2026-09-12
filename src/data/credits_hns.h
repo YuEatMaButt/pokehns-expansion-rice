@@ -8,6 +8,7 @@ enum
     PAGE_HNS_SPRITES_1,
     PAGE_HNS_SPRITES_2,
     PAGE_HNS_SPRITES_3,
+    PAGE_HNS_SPRITES_4,
     PAGE_HNS_TILESETS_1,
     PAGE_HNS_TILESETS_2,
     PAGE_HNS_TILESETS_3,
@@ -127,6 +128,7 @@ static const u8 sCreditsText_TamamushiErika[]                  = _("Tamamushi Er
 static const u8 sCreditsText_Beliot419[]                       = _("Beliot419");
 static const u8 sCreditsText_shiningstar5022[]                 = _("shiningstar5022");
 static const u8 sCreditsText_Nettorizo[]                       = _("Nettorizo");
+static const u8 sCreditsText_Stellaria[]                       = _("Stellaria");
 
 static const u8 sCreditsText_Engine[]                          = _("Engine");
 static const u8 sCreditsText_Pret[]                            = _("pokeemerald - Pret");
@@ -481,6 +483,7 @@ static const struct CreditsEntry sCreditsEntry_TamamushiErika                   
 static const struct CreditsEntry sCreditsEntry_Beliot419                        = {11, FALSE, sCreditsText_Beliot419};
 static const struct CreditsEntry sCreditsEntry_shiningstar5022                  = {11, FALSE, sCreditsText_shiningstar5022};
 static const struct CreditsEntry sCreditsEntry_Nettorizo                        = {11, FALSE, sCreditsText_Nettorizo};
+static const struct CreditsEntry sCreditsEntry_Stellaria                        = {11, FALSE, sCreditsText_Stellaria};
 // Engine
 static const struct CreditsEntry sCreditsEntry_Engine                           = {8,  TRUE, sCreditsText_Engine};
 static const struct CreditsEntry sCreditsEntry_Pret                             = {11, FALSE, sCreditsText_Pret};
@@ -764,6 +767,13 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
         &sCreditsEntry_Beliot419,
         &sCreditsEntry_shiningstar5022,
         &sCreditsEntry_Nettorizo,
+    },
+    [PAGE_HNS_SPRITES_4] = {
+        &sCreditsEntry_Assets,
+        &sCreditsEntry_Sprites,
+        &sCreditsEntry_Stellaria,
+        _,
+        _,
     },
     [PAGE_HNS_TILESETS_1] = {
         &sCreditsEntry_Assets,

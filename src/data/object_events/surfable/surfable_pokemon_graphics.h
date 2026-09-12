@@ -591,6 +591,11 @@ const u32 gSurfableShinyPokemonPic_GastrodonWest[] = INCBIN_U32("graphics/object
 const u16 gSurfablePokemonPalette_GastrodonWest[] = INCBIN_U16("graphics/object_events/pics/pokemon/surfable/0423_gastrodon_west.gbapal");
 const u16 gSurfablePokemonShinyPalette_GastrodonWest[] = INCBIN_U16("graphics/object_events/pics/pokemon/surfable/0423_gastrodon_west_shiny.gbapal");
 
+const u32 gSurfablePokemonPic_Garchomp[] = INCBIN_U32("graphics/object_events/pics/pokemon/surfable/0445_garchomp.4bpp");
+const u32 gSurfableShinyPokemonPic_Garchomp[] = INCBIN_U32("graphics/object_events/pics/pokemon/surfable/0445_garchomp_shiny.4bpp");
+const u16 gSurfablePokemonPalette_Garchomp[] = INCBIN_U16("graphics/object_events/pics/pokemon/surfable/0445_garchomp.gbapal");
+const u16 gSurfablePokemonShinyPalette_Garchomp[] = INCBIN_U16("graphics/object_events/pics/pokemon/surfable/0445_garchomp_shiny.gbapal");
+
 const u32 gSurfablePokemonPic_Finneon[] = INCBIN_U32("graphics/object_events/pics/pokemon/surfable/0456_finneon.4bpp");
 const u32 gSurfableShinyPokemonPic_Finneon[] = INCBIN_U32("graphics/object_events/pics/pokemon/surfable/0456_finneon_shiny.4bpp");
 const u16 gSurfablePokemonPalette_Finneon[] = INCBIN_U16("graphics/object_events/pics/pokemon/surfable/0456_finneon.gbapal");
@@ -719,3 +724,4 @@ const u16 gSurfablePokemonShinyModernPalette_Tentacool[] = INCBIN_U16("graphics/
 const u16 gSurfablePokemonShinyModernPalette_Lapras[]    = INCBIN_U16("graphics/object_events/pics/pokemon/surfable/0131_lapras_shiny_modern.gbapal");
 const u16 gSurfablePokemonShinyModernPalette_Vaporeon[]  = INCBIN_U16("graphics/object_events/pics/pokemon/surfable/0134_vaporeon_shiny_modern.gbapal");
 const u16 gSurfablePokemonShinyModernPalette_Dragonite[]  = INCBIN_U16("graphics/object_events/pics/pokemon/surfable/0149_dragonite_shiny_modern.gbapal");
+const u16 gSurfablePokemonShinyModernPalette_Garchomp[]  = INCBIN_U16("graphics/object_events/pics/pokemon/surfable/0445_garchomp_shiny_modern.gbapal");

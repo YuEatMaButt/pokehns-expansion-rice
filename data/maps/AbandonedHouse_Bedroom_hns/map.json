@@ -1,0 +1,61 @@
+{
+  "id": "MAP_ABANDONED_HOUSE_BEDROOM_HNS",
+  "name": "AbandonedHouse_Bedroom_hns",
+  "layout": "LAYOUT_ABANDONED_HOUSE_BEDROOM_HNS",
+  "music": "MUS_HG_RADIO_UNOWN",
+  "region_map_section": "MAPSEC_ROUTE_34",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [],
+  "warp_events": [
+    {
+      "x": 5,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_ABANDONED_HOUSE_MAIN_HNS",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 5,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_ABANDONED_HOUSE_DREAM_HNS",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 2,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_ABANDONED_HOUSE_NIGHTMARE_HNS",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 4,
+      "y": 2,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "AbandonedHouse_Bedroom_CheckBed_RightSide"
+    },
+    {
+      "type": "sign",
+      "x": 3,
+      "y": 2,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "AbandonedHouse_Bedroom_CheckBed_LeftSide"
+    }
+  ],
+  "game_version": "hns",
+  "region": "REGION_JOHTO"
+}

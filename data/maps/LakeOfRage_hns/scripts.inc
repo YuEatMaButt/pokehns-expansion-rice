@@ -1,5 +1,6 @@
 LakeOfRage_hns_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, LakeOfRage_OnTransition
+	map_script MAP_SCRIPT_ON_LOAD, LakeOfRage_OnLoad
 	.byte 0
 
 LakeOfRage_OnTransition::
@@ -9,6 +10,20 @@ LakeOfRage_OnTransition::
 	special UpdateShoalTideFlag
 	goto_if_set FLAG_SYS_LAKE_OF_RAGE_TIDE, LakeOfRage_EventScript_SetHighTide
 	goto LakeOfRage_EventScript_SetLowTide
+
+LakeOfRage_OnLoad::
+	checkitem ITEM_AZURE_FLUTE
+	goto_if_eq VAR_RESULT, TRUE, LakeOfRage_EventScript_PlayerOrLakeTrioRan
+	goto_if_eq VAR_RESULT, FALSE, LakeOfRage_EventScript_HideLakeTrio
+	release
+	end
+
+LakeOfRage_EventScript_HideLakeTrio::
+	setflag FLAG_HIDE_UXIE
+	setflag FLAG_HIDE_MESPRIT
+	setflag FLAG_HIDE_AZELF
+	release
+	end
 
 LakeOfRage_EventScript_SetLowTide::
 	setweather WEATHER_NONE
@@ -440,3 +455,73 @@ LakeOfRage_Text_Sign:
 
 LakeOfRage_Text_FishingGuruSign:
     .string "FISHING GURU'S HOUSE$"
+
+LakeOfRage_EventScript_Uxie::
+	lock
+	faceplayer
+	playmoncry SPECIES_UXIE, CRY_MODE_ENCOUNTER
+	msgbox LakeOfRage_Text_Uxie
+	delay 20
+	waitmoncry
+	seteventmon SPECIES_UXIE, 50
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, LakeOfRage_EventScript_PlayerOrLakeTrioRan
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_LAKEOFRAGE_UXIE
+	setflag FLAG_HIDE_UXIE
+	fadescreenswapbuffers FADE_FROM_BLACK
+	release
+	end
+
+LakeOfRage_EventScript_Mesprit::
+	lock
+	faceplayer
+	playmoncry SPECIES_MESPRIT, CRY_MODE_ENCOUNTER
+	msgbox LakeOfRage_Text_Mesprit
+	delay 20
+	waitmoncry
+	seteventmon SPECIES_MESPRIT, 50
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, LakeOfRage_EventScript_PlayerOrLakeTrioRan
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_LAKEOFRAGE_MESPRIT
+	setflag FLAG_HIDE_MESPRIT
+	fadescreenswapbuffers FADE_FROM_BLACK
+	release
+	end
+
+LakeOfRage_EventScript_Azelf::
+	lock
+	faceplayer
+	playmoncry SPECIES_AZELF, CRY_MODE_ENCOUNTER
+	msgbox LakeOfRage_Text_Azelf
+	delay 20
+	waitmoncry
+	seteventmon SPECIES_AZELF, 50
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, LakeOfRage_EventScript_PlayerOrLakeTrioRan
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_LAKEOFRAGE_AZELF
+	setflag FLAG_HIDE_AZELF
+	fadescreenswapbuffers FADE_FROM_BLACK
+	release
+	end
+
+LakeOfRage_EventScript_PlayerOrLakeTrioRan::
+	release
+	end
+
+LakeOfRage_Text_Uxie::
+	.string "Kyouuuun!$"
+
+LakeOfRage_Text_Mesprit::
+	.string "Kyauun.$"
+
+LakeOfRage_Text_Azelf::
+	.string "Kyuuun...$"

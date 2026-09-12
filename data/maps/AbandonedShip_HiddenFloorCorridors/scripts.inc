@@ -53,11 +53,11 @@ AbandonedShip_HiddenFloorCorridors_EventScript_LockRoom6::
 AbandonedShip_HiddenFloorCorridors_EventScript_Room1Door::
 	lockall
 	goto_if_set FLAG_USED_ROOM_1_KEY, AbandonedShip_HiddenFloorCorridors_EventScript_TheDoorIsOpen
-	checkitem ITEM_KEY_TO_ROOM_1
+	checkitem ITEM_HOUSE_KEY
 	goto_if_eq VAR_RESULT, FALSE, AbandonedShip_HiddenFloorCorridors_EventScript_Rm1IsLocked
 	msgbox AbandonedShip_HiddenFloorCorridors_Text_InsertedKey, MSGBOX_DEFAULT
 	playse SE_PIN
-	removeitem ITEM_KEY_TO_ROOM_1
+	removeitem ITEM_HOUSE_KEY
 	setflag FLAG_USED_ROOM_1_KEY
 	call AbandonedShip_HiddenFloorCorridors_EventScript_UnlockRoom1
 	special DrawWholeMapView
