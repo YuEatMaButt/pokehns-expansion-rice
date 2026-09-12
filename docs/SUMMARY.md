@@ -47,6 +47,7 @@
   - [Struct Pokemon Generation](tutorials/mon_generation.md)
   - [How to use FRLG](tutorials/how_to_frlg.md)
   - [How to delete vanilla maps](tutorials/how_to_delete_vanilla_maps.md)
+  - [How to use Overworld Wild Encounters](tutorials/how_to_overworld_wild_encounters.md)
 - [Changelog](./CHANGELOG.md)
     - [1.15.x]()
         - [Version 1.15.1](changelogs/1.15.x/1.15.1.md)
