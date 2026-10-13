@@ -1,0 +1,1387 @@
+data/event_scripts.s:553:	.include "data/maps/TrainerHill_Entrance/scripts.inc"
+data/event_scripts.s:554:	.include "data/maps/TrainerHill_1F/scripts.inc"
+data/event_scripts.s:555:	.include "data/maps/TrainerHill_2F/scripts.inc"
+data/event_scripts.s:556:	.include "data/maps/TrainerHill_3F/scripts.inc"
+data/event_scripts.s:557:	.include "data/maps/TrainerHill_4F/scripts.inc"
+data/event_scripts.s:558:	.include "data/maps/TrainerHill_Roof/scripts.inc"
+data/event_scripts.s:581:	.include "data/maps/TrainerHill_Elevator/scripts.inc"
+data/event_scripts.s:2128:	.include "data/maps/Gate_Route40_TrainerHill_Courtyard_hns/scripts.inc"
+data/event_scripts.s:2129:	.include "data/maps/TrainerHill_Courtyard_hns/scripts.inc"
+data/event_scripts.s:2130:	.include "data/maps/TrainerHill_Entrance_hns/scripts.inc"
+data/event_scripts.s:2131:	.include "data/maps/TrainerHill_1F_hns/scripts.inc"
+data/event_scripts.s:2132:	.include "data/maps/TrainerHill_2F_hns/scripts.inc"
+data/event_scripts.s:2133:	.include "data/maps/TrainerHill_3F_hns/scripts.inc"
+data/event_scripts.s:2134:	.include "data/maps/TrainerHill_4F_hns/scripts.inc"
+data/event_scripts.s:2135:	.include "data/maps/TrainerHill_Roof_hns/scripts.inc"
+data/event_scripts.s:2136:	.include "data/maps/TrainerHill_Elevator_hns/scripts.inc"
+data/layouts/layouts_table.inc:888:	.4byte Gate_Route40_TrainerHill_Courtyard_hns_Layout
+data/layouts/layouts_table.inc:1115:	.4byte TrainerHill_Courtyard_hns_Layout
+data/layouts/layouts_table.inc:1116:	.4byte TrainerHill_Entrance_hns_Layout
+data/layouts/layouts_table.inc:1117:	.4byte TrainerHill_1F_hns_Layout
+data/layouts/layouts_table.inc:1118:	.4byte TrainerHill_2F_hns_Layout
+data/layouts/layouts_table.inc:1119:	.4byte TrainerHill_3F_hns_Layout
+data/layouts/layouts_table.inc:1120:	.4byte TrainerHill_4F_hns_Layout
+data/layouts/layouts_table.inc:1121:	.4byte TrainerHill_Roof_hns_Layout
+data/layouts/layouts.json:4621:      "name": "TrainerHill_Entrance_Layout",
+data/layouts/layouts.json:4625:      "secondary_tileset": "gTileset_TrainerHill",
+data/layouts/layouts.json:4626:      "border_filepath": "data/layouts/TrainerHill_Entrance/border.bin",
+data/layouts/layouts.json:4627:      "blockdata_filepath": "data/layouts/TrainerHill_Entrance/map.bin",
+data/layouts/layouts.json:4632:      "name": "TrainerHill_1F_Layout",
+data/layouts/layouts.json:4636:      "secondary_tileset": "gTileset_TrainerHill",
+data/layouts/layouts.json:4637:      "border_filepath": "data/layouts/TrainerHill_1F/border.bin",
+data/layouts/layouts.json:4638:      "blockdata_filepath": "data/layouts/TrainerHill_1F/map.bin",
+data/layouts/layouts.json:4643:      "name": "TrainerHill_2F_Layout",
+data/layouts/layouts.json:4647:      "secondary_tileset": "gTileset_TrainerHill",
+data/layouts/layouts.json:4648:      "border_filepath": "data/layouts/TrainerHill_2F/border.bin",
+data/layouts/layouts.json:4649:      "blockdata_filepath": "data/layouts/TrainerHill_2F/map.bin",
+data/layouts/layouts.json:4654:      "name": "TrainerHill_3F_Layout",
+data/layouts/layouts.json:4658:      "secondary_tileset": "gTileset_TrainerHill",
+data/layouts/layouts.json:4659:      "border_filepath": "data/layouts/TrainerHill_3F/border.bin",
+data/layouts/layouts.json:4660:      "blockdata_filepath": "data/layouts/TrainerHill_3F/map.bin",
+data/layouts/layouts.json:4665:      "name": "TrainerHill_4F_Layout",
+data/layouts/layouts.json:4669:      "secondary_tileset": "gTileset_TrainerHill",
+data/layouts/layouts.json:4670:      "border_filepath": "data/layouts/TrainerHill_4F/border.bin",
+data/layouts/layouts.json:4671:      "blockdata_filepath": "data/layouts/TrainerHill_4F/map.bin",
+data/layouts/layouts.json:4676:      "name": "TrainerHill_Roof_Layout",
+data/layouts/layouts.json:4680:      "secondary_tileset": "gTileset_TrainerHill",
+data/layouts/layouts.json:4681:      "border_filepath": "data/layouts/TrainerHill_Roof/border.bin",
+data/layouts/layouts.json:4682:      "blockdata_filepath": "data/layouts/TrainerHill_Roof/map.bin",
+data/layouts/layouts.json:10825:      "name": "Gate_Route40_TrainerHill_Courtyard_hns_Layout",
+data/layouts/layouts.json:10830:      "border_filepath": "data/layouts/Gate_Route40_TrainerHill_Courtyard_hns/border.bin",
+data/layouts/layouts.json:10831:      "blockdata_filepath": "data/layouts/Gate_Route40_TrainerHill_Courtyard_hns/map.bin",
+data/layouts/layouts.json:13549:      "name": "TrainerHill_Courtyard_hns_Layout",
+data/layouts/layouts.json:13553:      "secondary_tileset": "gTileset_TrainerHill_Courtyard_Hns",
+data/layouts/layouts.json:13554:      "border_filepath": "data/layouts/TrainerHill_Courtyard_hns/border.bin",
+data/layouts/layouts.json:13555:      "blockdata_filepath": "data/layouts/TrainerHill_Courtyard_hns/map.bin",
+data/layouts/layouts.json:13561:      "name": "TrainerHill_Entrance_hns_Layout",
+data/layouts/layouts.json:13565:      "secondary_tileset": "gTileset_TrainerHill",
+data/layouts/layouts.json:13566:      "border_filepath": "data/layouts/TrainerHill_Entrance_hns/border.bin",
+data/layouts/layouts.json:13567:      "blockdata_filepath": "data/layouts/TrainerHill_Entrance_hns/map.bin",
+data/layouts/layouts.json:13573:      "name": "TrainerHill_1F_hns_Layout",
+data/layouts/layouts.json:13577:      "secondary_tileset": "gTileset_TrainerHill",
+data/layouts/layouts.json:13578:      "border_filepath": "data/layouts/TrainerHill_1F_hns/border.bin",
+data/layouts/layouts.json:13579:      "blockdata_filepath": "data/layouts/TrainerHill_1F_hns/map.bin",
+data/layouts/layouts.json:13585:      "name": "TrainerHill_2F_hns_Layout",
+data/layouts/layouts.json:13589:      "secondary_tileset": "gTileset_TrainerHill",
+data/layouts/layouts.json:13590:      "border_filepath": "data/layouts/TrainerHill_2F_hns/border.bin",
+data/layouts/layouts.json:13591:      "blockdata_filepath": "data/layouts/TrainerHill_2F_hns/map.bin",
+data/layouts/layouts.json:13597:      "name": "TrainerHill_3F_hns_Layout",
+data/layouts/layouts.json:13601:      "secondary_tileset": "gTileset_TrainerHill",
+data/layouts/layouts.json:13602:      "border_filepath": "data/layouts/TrainerHill_3F_hns/border.bin",
+data/layouts/layouts.json:13603:      "blockdata_filepath": "data/layouts/TrainerHill_3F_hns/map.bin",
+data/layouts/layouts.json:13609:      "name": "TrainerHill_4F_hns_Layout",
+data/layouts/layouts.json:13613:      "secondary_tileset": "gTileset_TrainerHill",
+data/layouts/layouts.json:13614:      "border_filepath": "data/layouts/TrainerHill_4F_hns/border.bin",
+data/layouts/layouts.json:13615:      "blockdata_filepath": "data/layouts/TrainerHill_4F_hns/map.bin",
+data/layouts/layouts.json:13621:      "name": "TrainerHill_Roof_hns_Layout",
+data/layouts/layouts.json:13625:      "secondary_tileset": "gTileset_TrainerHill",
+data/layouts/layouts.json:13626:      "border_filepath": "data/layouts/TrainerHill_Roof_hns/border.bin",
+data/layouts/layouts.json:13627:      "blockdata_filepath": "data/layouts/TrainerHill_Roof_hns/map.bin",
+data/layouts/layouts.inc:1733:Gate_Route40_TrainerHill_Courtyard_hns_Layout_Border::
+data/layouts/layouts.inc:1734:	.incbin "data/layouts/Gate_Route40_TrainerHill_Courtyard_hns/border.bin"
+data/layouts/layouts.inc:1736:Gate_Route40_TrainerHill_Courtyard_hns_Layout_Blockdata::
+data/layouts/layouts.inc:1737:	.incbin "data/layouts/Gate_Route40_TrainerHill_Courtyard_hns/map.bin"
+data/layouts/layouts.inc:1740:Gate_Route40_TrainerHill_Courtyard_hns_Layout::
+data/layouts/layouts.inc:1743:	.4byte Gate_Route40_TrainerHill_Courtyard_hns_Layout_Border
+data/layouts/layouts.inc:1744:	.4byte Gate_Route40_TrainerHill_Courtyard_hns_Layout_Blockdata
+data/layouts/layouts.inc:5819:TrainerHill_Courtyard_hns_Layout_Border::
+data/layouts/layouts.inc:5820:	.incbin "data/layouts/TrainerHill_Courtyard_hns/border.bin"
+data/layouts/layouts.inc:5822:TrainerHill_Courtyard_hns_Layout_Blockdata::
+data/layouts/layouts.inc:5823:	.incbin "data/layouts/TrainerHill_Courtyard_hns/map.bin"
+data/layouts/layouts.inc:5826:TrainerHill_Courtyard_hns_Layout::
+data/layouts/layouts.inc:5829:	.4byte TrainerHill_Courtyard_hns_Layout_Border
+data/layouts/layouts.inc:5830:	.4byte TrainerHill_Courtyard_hns_Layout_Blockdata
+data/layouts/layouts.inc:5832:	.4byte gTileset_TrainerHill_Courtyard_Hns
+data/layouts/layouts.inc:5837:TrainerHill_Entrance_hns_Layout_Border::
+data/layouts/layouts.inc:5838:	.incbin "data/layouts/TrainerHill_Entrance_hns/border.bin"
+data/layouts/layouts.inc:5840:TrainerHill_Entrance_hns_Layout_Blockdata::
+data/layouts/layouts.inc:5841:	.incbin "data/layouts/TrainerHill_Entrance_hns/map.bin"
+data/layouts/layouts.inc:5844:TrainerHill_Entrance_hns_Layout::
+data/layouts/layouts.inc:5847:	.4byte TrainerHill_Entrance_hns_Layout_Border
+data/layouts/layouts.inc:5848:	.4byte TrainerHill_Entrance_hns_Layout_Blockdata
+data/layouts/layouts.inc:5850:	.4byte gTileset_TrainerHill
+data/layouts/layouts.inc:5855:TrainerHill_1F_hns_Layout_Border::
+data/layouts/layouts.inc:5856:	.incbin "data/layouts/TrainerHill_1F_hns/border.bin"
+data/layouts/layouts.inc:5858:TrainerHill_1F_hns_Layout_Blockdata::
+data/layouts/layouts.inc:5859:	.incbin "data/layouts/TrainerHill_1F_hns/map.bin"
+data/layouts/layouts.inc:5862:TrainerHill_1F_hns_Layout::
+data/layouts/layouts.inc:5865:	.4byte TrainerHill_1F_hns_Layout_Border
+data/layouts/layouts.inc:5866:	.4byte TrainerHill_1F_hns_Layout_Blockdata
+data/layouts/layouts.inc:5868:	.4byte gTileset_TrainerHill
+data/layouts/layouts.inc:5873:TrainerHill_2F_hns_Layout_Border::
+data/layouts/layouts.inc:5874:	.incbin "data/layouts/TrainerHill_2F_hns/border.bin"
+data/layouts/layouts.inc:5876:TrainerHill_2F_hns_Layout_Blockdata::
+data/layouts/layouts.inc:5877:	.incbin "data/layouts/TrainerHill_2F_hns/map.bin"
+data/layouts/layouts.inc:5880:TrainerHill_2F_hns_Layout::
+data/layouts/layouts.inc:5883:	.4byte TrainerHill_2F_hns_Layout_Border
+data/layouts/layouts.inc:5884:	.4byte TrainerHill_2F_hns_Layout_Blockdata
+data/layouts/layouts.inc:5886:	.4byte gTileset_TrainerHill
+data/layouts/layouts.inc:5891:TrainerHill_3F_hns_Layout_Border::
+data/layouts/layouts.inc:5892:	.incbin "data/layouts/TrainerHill_3F_hns/border.bin"
+data/layouts/layouts.inc:5894:TrainerHill_3F_hns_Layout_Blockdata::
+data/layouts/layouts.inc:5895:	.incbin "data/layouts/TrainerHill_3F_hns/map.bin"
+data/layouts/layouts.inc:5898:TrainerHill_3F_hns_Layout::
+data/layouts/layouts.inc:5901:	.4byte TrainerHill_3F_hns_Layout_Border
+data/layouts/layouts.inc:5902:	.4byte TrainerHill_3F_hns_Layout_Blockdata
+data/layouts/layouts.inc:5904:	.4byte gTileset_TrainerHill
+data/layouts/layouts.inc:5909:TrainerHill_4F_hns_Layout_Border::
+data/layouts/layouts.inc:5910:	.incbin "data/layouts/TrainerHill_4F_hns/border.bin"
+data/layouts/layouts.inc:5912:TrainerHill_4F_hns_Layout_Blockdata::
+data/layouts/layouts.inc:5913:	.incbin "data/layouts/TrainerHill_4F_hns/map.bin"
+data/layouts/layouts.inc:5916:TrainerHill_4F_hns_Layout::
+data/layouts/layouts.inc:5919:	.4byte TrainerHill_4F_hns_Layout_Border
+data/layouts/layouts.inc:5920:	.4byte TrainerHill_4F_hns_Layout_Blockdata
+data/layouts/layouts.inc:5922:	.4byte gTileset_TrainerHill
+data/layouts/layouts.inc:5927:TrainerHill_Roof_hns_Layout_Border::
+data/layouts/layouts.inc:5928:	.incbin "data/layouts/TrainerHill_Roof_hns/border.bin"
+data/layouts/layouts.inc:5930:TrainerHill_Roof_hns_Layout_Blockdata::
+data/layouts/layouts.inc:5931:	.incbin "data/layouts/TrainerHill_Roof_hns/map.bin"
+data/layouts/layouts.inc:5934:TrainerHill_Roof_hns_Layout::
+data/layouts/layouts.inc:5937:	.4byte TrainerHill_Roof_hns_Layout_Border
+data/layouts/layouts.inc:5938:	.4byte TrainerHill_Roof_hns_Layout_Blockdata
+data/layouts/layouts.inc:5940:	.4byte gTileset_TrainerHill
+data/maps/Gate_Route40_TrainerHill_Courtyard_hns/map.json:3:  "name": "Gate_Route40_TrainerHill_Courtyard_hns",
+data/maps/Gate_Route40_TrainerHill_Courtyard_hns/scripts.inc:1:Gate_Route40_TrainerHill_Courtyard_hns_MapScripts::
+data/maps/Gate_Route40_TrainerHill_Courtyard_hns/header.inc:2:@ DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/Gate_Route40_TrainerHill_Courtyard_hns/map.json
+data/maps/Gate_Route40_TrainerHill_Courtyard_hns/header.inc:5:Gate_Route40_TrainerHill_Courtyard_hns:
+data/maps/Gate_Route40_TrainerHill_Courtyard_hns/header.inc:6:	.4byte Gate_Route40_TrainerHill_Courtyard_hns_Layout
+data/maps/Gate_Route40_TrainerHill_Courtyard_hns/header.inc:7:	.4byte Gate_Route40_TrainerHill_Courtyard_hns_MapEvents
+data/maps/Gate_Route40_TrainerHill_Courtyard_hns/header.inc:8:	.4byte Gate_Route40_TrainerHill_Courtyard_hns_MapScripts
+data/maps/Gate_Route40_TrainerHill_Courtyard_hns/events.inc:2:@ DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/Gate_Route40_TrainerHill_Courtyard_hns/map.json
+data/maps/Gate_Route40_TrainerHill_Courtyard_hns/events.inc:7:Gate_Route40_TrainerHill_Courtyard_hns_ObjectEvents:
+data/maps/Gate_Route40_TrainerHill_Courtyard_hns/events.inc:10:Gate_Route40_TrainerHill_Courtyard_hns_MapWarps:
+data/maps/Gate_Route40_TrainerHill_Courtyard_hns/events.inc:14:Gate_Route40_TrainerHill_Courtyard_hns_MapEvents::
+data/maps/Gate_Route40_TrainerHill_Courtyard_hns/events.inc:15:	map_events Gate_Route40_TrainerHill_Courtyard_hns_ObjectEvents, Gate_Route40_TrainerHill_Courtyard_hns_MapWarps, NULL, NULL
+data/maps/Gate_Route40_TrainerHill_Courtyard_hns/connections.inc:2:@ DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/Gate_Route40_TrainerHill_Courtyard_hns/map.json
+data/maps/Gate_Route40_TrainerHill_Courtyard_hns/connections.inc:5:Gate_Route40_TrainerHill_Courtyard_hns_MapConnectionsList:
+data/maps/Gate_Route40_TrainerHill_Courtyard_hns/connections.inc:7:Gate_Route40_TrainerHill_Courtyard_hns_MapConnections:
+data/maps/Gate_Route40_TrainerHill_Courtyard_hns/connections.inc:9:	.4byte Gate_Route40_TrainerHill_Courtyard_hns_MapConnectionsList
+data/maps/TrainerHill_4F/map.json:3:  "name": "TrainerHill_4F",
+data/maps/TrainerHill_4F/scripts.inc:1:TrainerHill_4F_MapScripts::
+data/maps/TrainerHill_4F/scripts.inc:2:	map_script MAP_SCRIPT_ON_RESUME, TrainerHill_OnResume
+data/maps/TrainerHill_4F/scripts.inc:3:	map_script MAP_SCRIPT_ON_FRAME_TABLE, TrainerHill_OnFrame
+data/maps/TrainerHill_4F/header.inc:2:@ DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/TrainerHill_4F/map.json
+data/maps/TrainerHill_4F/header.inc:5:TrainerHill_4F:
+data/maps/TrainerHill_4F/header.inc:6:	.4byte TrainerHill_4F_Layout
+data/maps/TrainerHill_4F/header.inc:7:	.4byte TrainerHill_4F_MapEvents
+data/maps/TrainerHill_4F/header.inc:8:	.4byte TrainerHill_4F_MapScripts
+data/maps/TrainerHill_4F/events.inc:2:@ DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/TrainerHill_4F/map.json
+data/maps/TrainerHill_4F/events.inc:7:TrainerHill_4F_MapWarps:
+data/maps/TrainerHill_4F/events.inc:11:TrainerHill_4F_MapEvents::
+data/maps/TrainerHill_4F/events.inc:12:	map_events NULL, TrainerHill_4F_MapWarps, NULL, NULL
+data/maps/TrainerHill_4F_hns/map.json:3:  "name": "TrainerHill_4F_hns",
+data/maps/TrainerHill_4F_hns/scripts.inc:1:TrainerHill_4F_hns_MapScripts::
+data/maps/TrainerHill_4F_hns/scripts.inc:2:	map_script MAP_SCRIPT_ON_RESUME, TrainerHill_OnResume
+data/maps/TrainerHill_4F_hns/scripts.inc:3:	map_script MAP_SCRIPT_ON_FRAME_TABLE, TrainerHill_OnFrame
+data/maps/TrainerHill_4F_hns/scripts.inc:4:	map_script MAP_SCRIPT_ON_LOAD, TrainerHill_4F_hns_OnLoad
+data/maps/TrainerHill_4F_hns/scripts.inc:7:TrainerHill_4F_hns_OnLoad::
+data/maps/TrainerHill_4F_hns/header.inc:2:@ DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/TrainerHill_4F_hns/map.json
+data/maps/TrainerHill_4F_hns/header.inc:5:TrainerHill_4F_hns:
+data/maps/TrainerHill_4F_hns/header.inc:6:	.4byte TrainerHill_4F_hns_Layout
+data/maps/TrainerHill_4F_hns/header.inc:7:	.4byte TrainerHill_4F_hns_MapEvents
+data/maps/TrainerHill_4F_hns/header.inc:8:	.4byte TrainerHill_4F_hns_MapScripts
+data/maps/TrainerHill_4F_hns/events.inc:2:@ DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/TrainerHill_4F_hns/map.json
+data/maps/TrainerHill_4F_hns/events.inc:7:TrainerHill_4F_hns_MapWarps:
+data/maps/TrainerHill_4F_hns/events.inc:11:TrainerHill_4F_hns_MapEvents::
+data/maps/TrainerHill_4F_hns/events.inc:12:	map_events NULL, TrainerHill_4F_hns_MapWarps, NULL, NULL
+data/maps/TrainerHill_Elevator/map.json:3:  "name": "TrainerHill_Elevator",
+data/maps/TrainerHill_Elevator/map.json:29:      "script": "TrainerHill_Elevator_EventScript_Attendant",
+data/maps/TrainerHill_Elevator/scripts.inc:1:TrainerHill_Elevator_MapScripts::
+data/maps/TrainerHill_Elevator/scripts.inc:2:	map_script MAP_SCRIPT_ON_FRAME_TABLE, TrainerHill_Elevator_OnFrame
+data/maps/TrainerHill_Elevator/scripts.inc:5:TrainerHill_Elevator_OnFrame:
+data/maps/TrainerHill_Elevator/scripts.inc:6:	map_script_2 VAR_TEMP_4, 0, TrainerHill_Elevator_EventScript_EnterElevator
+data/maps/TrainerHill_Elevator/scripts.inc:9:TrainerHill_Elevator_EventScript_Attendant::
+data/maps/TrainerHill_Elevator/scripts.inc:12:TrainerHill_Elevator_EventScript_ExitToRoof::
+data/maps/TrainerHill_Elevator/scripts.inc:13:	applymovement LOCALID_PLAYER, TrainerHill_Elevator_Movement_PlayerExitElevatorToRoof
+data/maps/TrainerHill_Elevator/scripts.inc:20:TrainerHill_Elevator_EventScript_EnterElevator::
+data/maps/TrainerHill_Elevator/scripts.inc:21:	applymovement LOCALID_PLAYER, TrainerHill_Elevator_Movement_PlayerApproachAttendant
+data/maps/TrainerHill_Elevator/scripts.inc:23:	applymovement LOCALID_TRAINER_HILL_ELEVATOR_ATTENDANT, TrainerHill_Elevator_Movement_AttendantFacePlayer
+data/maps/TrainerHill_Elevator/scripts.inc:26:	msgbox TrainerHill_Elevator_Text_ReturnToReception, MSGBOX_YESNO
+data/maps/TrainerHill_Elevator/scripts.inc:27:	goto_if_eq VAR_RESULT, NO, TrainerHill_Elevator_EventScript_ExitToRoof
+data/maps/TrainerHill_Elevator/scripts.inc:29:	applymovement LOCALID_TRAINER_HILL_ELEVATOR_ATTENDANT, TrainerHill_Elevator_Movement_AttendantFaceDown
+data/maps/TrainerHill_Elevator/scripts.inc:31:	applymovement LOCALID_PLAYER, TrainerHill_Elevator_Movement_PlayerMoveToCenterOfElevator
+data/maps/TrainerHill_Elevator/scripts.inc:33:	call TrainerHill_Elevator_EventScript_MoveElevator
+data/maps/TrainerHill_Elevator/scripts.inc:35:	applymovement LOCALID_PLAYER, TrainerHill_Elevator_Movement_PlayerExitElevator
+data/maps/TrainerHill_Elevator/scripts.inc:42:TrainerHill_Elevator_EventScript_ExitFloorSelect::
+data/maps/TrainerHill_Elevator/scripts.inc:43:	goto TrainerHill_Elevator_EventScript_CloseFloorSelect
+data/maps/TrainerHill_Elevator/scripts.inc:47:TrainerHill_Elevator_EventScript_CloseFloorSelect::
+data/maps/TrainerHill_Elevator/scripts.inc:52:TrainerHill_Elevator_EventScript_MoveElevator::
+data/maps/TrainerHill_Elevator/scripts.inc:58:TrainerHill_Elevator_Movement_PlayerMoveToCenterOfElevator:
+data/maps/TrainerHill_Elevator/scripts.inc:65:TrainerHill_Elevator_Movement_PlayerApproachAttendant:
+data/maps/TrainerHill_Elevator/scripts.inc:70:TrainerHill_Elevator_Movement_PlayerExitElevator:
+data/maps/TrainerHill_Elevator/scripts.inc:76:TrainerHill_Elevator_Movement_PlayerExitElevatorToRoof:
+data/maps/TrainerHill_Elevator/scripts.inc:81:TrainerHill_Elevator_Movement_AttendantFacePlayer:
+data/maps/TrainerHill_Elevator/scripts.inc:85:TrainerHill_Elevator_Movement_AttendantFaceDown:
+data/maps/TrainerHill_Elevator/header.inc:2:@ DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/TrainerHill_Elevator/map.json
+data/maps/TrainerHill_Elevator/header.inc:5:TrainerHill_Elevator:
+data/maps/TrainerHill_Elevator/header.inc:7:	.4byte TrainerHill_Elevator_MapEvents
+data/maps/TrainerHill_Elevator/header.inc:8:	.4byte TrainerHill_Elevator_MapScripts
+data/maps/TrainerHill_Elevator/events.inc:2:@ DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/TrainerHill_Elevator/map.json
+data/maps/TrainerHill_Elevator/events.inc:7:TrainerHill_Elevator_ObjectEvents:
+data/maps/TrainerHill_Elevator/events.inc:8:	object_event 1, OBJ_EVENT_GFX_TEALA, 0, 6, 3, MOVEMENT_TYPE_FACE_DOWN, 1, 1, TRAINER_TYPE_NONE, 0, TrainerHill_Elevator_EventScript_Attendant, 0
+data/maps/TrainerHill_Elevator/events.inc:10:TrainerHill_Elevator_MapWarps:
+data/maps/TrainerHill_Elevator/events.inc:14:TrainerHill_Elevator_MapEvents::
+data/maps/TrainerHill_Elevator/events.inc:15:	map_events TrainerHill_Elevator_ObjectEvents, TrainerHill_Elevator_MapWarps, NULL, NULL
+data/maps/SaffronCity_FightingDojoVIP_hns/map.json:482:      "script": "TrainerHill_Courtyard_EventScript_RightMoveTutor",
+data/maps/SaffronCity_FightingDojoVIP_hns/map.json:495:      "script": "TrainerHill_Courtyard_EventScript_ElementalMoveTutor",
+data/maps/SaffronCity_FightingDojoVIP_hns/map.json:508:      "script": "TrainerHill_Courtyard_EventScript_LeftMoveTutor",
+data/maps/SaffronCity_FightingDojoVIP_hns/events.inc:43:	object_event 36, OBJ_EVENT_GFX_OLD_WOMAN_HNS, 5, 9, 0, MOVEMENT_TYPE_FACE_DOWN, 1, 1, TRAINER_TYPE_NONE, 0, TrainerHill_Courtyard_EventScript_RightMoveTutor, 0
+data/maps/SaffronCity_FightingDojoVIP_hns/events.inc:44:	object_event 37, OBJ_EVENT_GFX_OLD_MAN_HNS, 4, 10, 0, MOVEMENT_TYPE_FACE_RIGHT, 0, 0, TRAINER_TYPE_NONE, 0, TrainerHill_Courtyard_EventScript_ElementalMoveTutor, 0
+data/maps/SaffronCity_FightingDojoVIP_hns/events.inc:45:	object_event 38, OBJ_EVENT_GFX_OLD_WOMAN_HNS, 4, 11, 0, MOVEMENT_TYPE_FACE_RIGHT, 1, 1, TRAINER_TYPE_NONE, 0, TrainerHill_Courtyard_EventScript_LeftMoveTutor, 0
+data/maps/TrainerHill_2F_hns/map.json:3:  "name": "TrainerHill_2F_hns",
+data/maps/TrainerHill_2F_hns/scripts.inc:1:TrainerHill_2F_hns_MapScripts::
+data/maps/TrainerHill_2F_hns/scripts.inc:2:	map_script MAP_SCRIPT_ON_RESUME, TrainerHill_OnResume
+data/maps/TrainerHill_2F_hns/scripts.inc:3:	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, TrainerHill_OnWarp
+data/maps/TrainerHill_2F_hns/scripts.inc:4:	map_script MAP_SCRIPT_ON_FRAME_TABLE, TrainerHill_OnFrame
+data/maps/TrainerHill_2F_hns/scripts.inc:5:	map_script MAP_SCRIPT_ON_LOAD, TrainerHill_2F_hns_OnLoad
+data/maps/TrainerHill_2F_hns/scripts.inc:8:TrainerHill_2F_hns_OnLoad::
+data/maps/TrainerHill_2F_hns/header.inc:2:@ DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/TrainerHill_2F_hns/map.json
+data/maps/TrainerHill_2F_hns/header.inc:5:TrainerHill_2F_hns:
+data/maps/TrainerHill_2F_hns/header.inc:6:	.4byte TrainerHill_2F_hns_Layout
+data/maps/TrainerHill_2F_hns/header.inc:7:	.4byte TrainerHill_2F_hns_MapEvents
+data/maps/TrainerHill_2F_hns/header.inc:8:	.4byte TrainerHill_2F_hns_MapScripts
+data/maps/TrainerHill_2F_hns/events.inc:2:@ DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/TrainerHill_2F_hns/map.json
+data/maps/TrainerHill_2F_hns/events.inc:7:TrainerHill_2F_hns_MapWarps:
+data/maps/TrainerHill_2F_hns/events.inc:11:TrainerHill_2F_hns_MapEvents::
+data/maps/TrainerHill_2F_hns/events.inc:12:	map_events NULL, TrainerHill_2F_hns_MapWarps, NULL, NULL
+data/maps/TrainerHill_Elevator_hns/map.json:3:  "name": "TrainerHill_Elevator_hns",
+data/maps/TrainerHill_Elevator_hns/map.json:28:      "script": "TrainerHill_Elevator_hns_EventScript_Attendant",
+data/maps/TrainerHill_Elevator_hns/scripts.inc:3:TrainerHill_Elevator_hns_MapScripts::
+data/maps/TrainerHill_Elevator_hns/scripts.inc:4:	map_script MAP_SCRIPT_ON_FRAME_TABLE, TrainerHill_Elevator_hns_OnFrame
+data/maps/TrainerHill_Elevator_hns/scripts.inc:7:TrainerHill_Elevator_hns_OnFrame:
+data/maps/TrainerHill_Elevator_hns/scripts.inc:8:	map_script_2 VAR_TEMP_4, 0, TrainerHill_Elevator_hns_EventScript_EnterElevator
+data/maps/TrainerHill_Elevator_hns/scripts.inc:11:TrainerHill_Elevator_hns_EventScript_Attendant::
+data/maps/TrainerHill_Elevator_hns/scripts.inc:14:TrainerHill_Elevator_hns_EventScript_ExitToRoof::
+data/maps/TrainerHill_Elevator_hns/scripts.inc:15:	applymovement OBJ_EVENT_ID_PLAYER, TrainerHill_Elevator_hns_Movement_PlayerExitElevatorToRoof
+data/maps/TrainerHill_Elevator_hns/scripts.inc:22:TrainerHill_Elevator_hns_EventScript_EnterElevator::
+data/maps/TrainerHill_Elevator_hns/scripts.inc:23:	applymovement OBJ_EVENT_ID_PLAYER, TrainerHill_Elevator_hns_Movement_PlayerApproachAttendant
+data/maps/TrainerHill_Elevator_hns/scripts.inc:25:	applymovement LOCALID_ATTENDANT, TrainerHill_Elevator_hns_Movement_AttendantFacePlayer
+data/maps/TrainerHill_Elevator_hns/scripts.inc:28:	msgbox TrainerHill_Elevator_hns_Text_ReturnToReception, MSGBOX_YESNO
+data/maps/TrainerHill_Elevator_hns/scripts.inc:29:	goto_if_eq VAR_RESULT, NO, TrainerHill_Elevator_hns_EventScript_ExitToRoof
+data/maps/TrainerHill_Elevator_hns/scripts.inc:31:	applymovement LOCALID_ATTENDANT, TrainerHill_Elevator_hns_Movement_AttendantFaceDown
+data/maps/TrainerHill_Elevator_hns/scripts.inc:33:	applymovement OBJ_EVENT_ID_PLAYER, TrainerHill_Elevator_hns_Movement_PlayerMoveToCenterOfElevator
+data/maps/TrainerHill_Elevator_hns/scripts.inc:35:	call TrainerHill_Elevator_hns_EventScript_MoveElevator
+data/maps/TrainerHill_Elevator_hns/scripts.inc:37:	applymovement OBJ_EVENT_ID_PLAYER, TrainerHill_Elevator_hns_Movement_PlayerExitElevator
+data/maps/TrainerHill_Elevator_hns/scripts.inc:43:TrainerHill_Elevator_hns_EventScript_MoveElevator::
+data/maps/TrainerHill_Elevator_hns/scripts.inc:49:TrainerHill_Elevator_hns_Movement_PlayerMoveToCenterOfElevator:
+data/maps/TrainerHill_Elevator_hns/scripts.inc:56:TrainerHill_Elevator_hns_Movement_PlayerApproachAttendant:
+data/maps/TrainerHill_Elevator_hns/scripts.inc:61:TrainerHill_Elevator_hns_Movement_PlayerExitElevator:
+data/maps/TrainerHill_Elevator_hns/scripts.inc:67:TrainerHill_Elevator_hns_Movement_PlayerExitElevatorToRoof:
+data/maps/TrainerHill_Elevator_hns/scripts.inc:72:TrainerHill_Elevator_hns_Movement_AttendantFacePlayer:
+data/maps/TrainerHill_Elevator_hns/scripts.inc:76:TrainerHill_Elevator_hns_Movement_AttendantFaceDown:
+data/maps/TrainerHill_Elevator_hns/scripts.inc:80:TrainerHill_Elevator_hns_Text_ReturnToReception:
+data/maps/TrainerHill_Elevator_hns/header.inc:2:@ DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/TrainerHill_Elevator_hns/map.json
+data/maps/TrainerHill_Elevator_hns/header.inc:5:TrainerHill_Elevator_hns:
+data/maps/TrainerHill_Elevator_hns/header.inc:7:	.4byte TrainerHill_Elevator_hns_MapEvents
+data/maps/TrainerHill_Elevator_hns/header.inc:8:	.4byte TrainerHill_Elevator_hns_MapScripts
+data/maps/TrainerHill_Elevator_hns/events.inc:2:@ DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/TrainerHill_Elevator_hns/map.json
+data/maps/TrainerHill_Elevator_hns/events.inc:7:TrainerHill_Elevator_hns_ObjectEvents:
+data/maps/TrainerHill_Elevator_hns/events.inc:8:	object_event 1, OBJ_EVENT_GFX_WORKER_F_HNS, 0, 6, 3, MOVEMENT_TYPE_FACE_DOWN, 1, 1, TRAINER_TYPE_NONE, 0, TrainerHill_Elevator_hns_EventScript_Attendant, 0
+data/maps/TrainerHill_Elevator_hns/events.inc:10:TrainerHill_Elevator_hns_MapWarps:
+data/maps/TrainerHill_Elevator_hns/events.inc:14:TrainerHill_Elevator_hns_MapEvents::
+data/maps/TrainerHill_Elevator_hns/events.inc:15:	map_events TrainerHill_Elevator_hns_ObjectEvents, TrainerHill_Elevator_hns_MapWarps, NULL, NULL
+data/maps/TrainerHill_Entrance/map.json:3:  "name": "TrainerHill_Entrance",
+data/maps/TrainerHill_Entrance/map.json:29:      "script": "TrainerHill_Entrance_EventScript_Attendant",
+data/maps/TrainerHill_Entrance/map.json:43:      "script": "TrainerHill_Entrance_EventScript_Nurse",
+data/maps/TrainerHill_Entrance/map.json:56:      "script": "TrainerHill_Entrance_EventScript_Clerk",
+data/maps/TrainerHill_Entrance/map.json:70:      "script": "TrainerHill_Entrance_EventScript_Girl",
+data/maps/TrainerHill_Entrance/map.json:84:      "script": "TrainerHill_Entrance_EventScript_Man",
+data/maps/TrainerHill_Entrance/map.json:119:      "script": "TrainerHill_Entrance_EventScript_EntryTrigger"
+data/maps/TrainerHill_Entrance/map.json:129:      "script": "TrainerHill_Entrance_EventScript_Records"
+data/maps/TrainerHill_Entrance/scripts.inc:1:TrainerHill_Entrance_MapScripts::
+data/maps/TrainerHill_Entrance/scripts.inc:2:	map_script MAP_SCRIPT_ON_RESUME, TrainerHill_Entrance_OnResume
+data/maps/TrainerHill_Entrance/scripts.inc:3:	map_script MAP_SCRIPT_ON_RETURN_TO_FIELD, TrainerHill_Entrance_OnReturn
+data/maps/TrainerHill_Entrance/scripts.inc:4:	map_script MAP_SCRIPT_ON_TRANSITION, TrainerHill_Entrance_OnTransition
+data/maps/TrainerHill_Entrance/scripts.inc:5:	map_script MAP_SCRIPT_ON_LOAD, TrainerHill_Entrance_OnLoad
+data/maps/TrainerHill_Entrance/scripts.inc:6:	map_script MAP_SCRIPT_ON_FRAME_TABLE, TrainerHill_Entrance_OnFrame
+data/maps/TrainerHill_Entrance/scripts.inc:9:TrainerHill_Entrance_OnTransition:
+data/maps/TrainerHill_Entrance/scripts.inc:15:TrainerHill_Entrance_OnWarp:
+data/maps/TrainerHill_Entrance/scripts.inc:18:TrainerHill_Entrance_OnResume:
+data/maps/TrainerHill_Entrance/scripts.inc:19:	trainerhill_resumetimer
+data/maps/TrainerHill_Entrance/scripts.inc:21:	trainerhill_getusingereader
+data/maps/TrainerHill_Entrance/scripts.inc:22:	goto_if_eq VAR_RESULT, FALSE, TrainerHill_Entrance_EventScript_TryFaceAttendant  @ VAR_RESULT always FALSE here
+data/maps/TrainerHill_Entrance/scripts.inc:24:	applymovement LOCALID_PLAYER, TrainerHill_Entrance_Movement_PlayerFaceAttendant
+data/maps/TrainerHill_Entrance/scripts.inc:27:TrainerHill_Entrance_EventScript_TryFaceAttendant::
+data/maps/TrainerHill_Entrance/scripts.inc:28:	trainerhill_getwon
+data/maps/TrainerHill_Entrance/scripts.inc:29:	goto_if_eq VAR_RESULT, TRUE, TrainerHill_Entrance_EventScript_PlayerDontFaceAttendant
+data/maps/TrainerHill_Entrance/scripts.inc:30:	applymovement LOCALID_PLAYER, TrainerHill_Entrance_Movement_PlayerFaceAttendant
+data/maps/TrainerHill_Entrance/scripts.inc:33:TrainerHill_Entrance_EventScript_PlayerDontFaceAttendant::
+data/maps/TrainerHill_Entrance/scripts.inc:36:TrainerHill_Entrance_OnReturn:
+data/maps/TrainerHill_Entrance/scripts.inc:43:TrainerHill_Entrance_OnLoad:
+data/maps/TrainerHill_Entrance/scripts.inc:44:	call_if_eq VAR_TEMP_D, 17, TrainerHill_Entrance_EventScript_OpenCounterDoor
+data/maps/TrainerHill_Entrance/scripts.inc:47:TrainerHill_Entrance_EventScript_OpenCounterDoor::
+data/maps/TrainerHill_Entrance/scripts.inc:48:	setmetatile 17, 10, METATILE_TrainerHill_GreenFloorTile, FALSE
+data/maps/TrainerHill_Entrance/scripts.inc:51:TrainerHill_Entrance_OnFrame:
+data/maps/TrainerHill_Entrance/scripts.inc:52:	map_script_2 VAR_TEMP_0, 0, TrainerHill_Entrance_EventScript_ExitChallenge
+data/maps/TrainerHill_Entrance/scripts.inc:53:	map_script_2 VAR_TEMP_D, 17, TrainerHill_Entrance_EventScript_ExitElevator
+data/maps/TrainerHill_Entrance/scripts.inc:54:	map_script_2 VAR_TEMP_5, 1, TrainerHill_Entrance_EventScript_EntryTrigger
+data/maps/TrainerHill_Entrance/scripts.inc:55:	map_script_2 VAR_TEMP_1, 1, TrainerHill_EventScript_WarpToEntranceCounter
+data/maps/TrainerHill_Entrance/scripts.inc:58:TrainerHill_Entrance_EventScript_ExitElevator::
+data/maps/TrainerHill_Entrance/scripts.inc:60:	applymovement LOCALID_PLAYER, TrainerHill_Entrance_Movement_PlayerExitElevator
+data/maps/TrainerHill_Entrance/scripts.inc:62:	setmetatile 17, 10, METATILE_TrainerHill_CounterDoor, TRUE
+data/maps/TrainerHill_Entrance/scripts.inc:70:TrainerHill_Entrance_EventScript_ExitChallenge::
+data/maps/TrainerHill_Entrance/scripts.inc:72:	trainerhill_getstatus
+data/maps/TrainerHill_Entrance/scripts.inc:74:	case TRAINER_HILL_PLAYER_STATUS_LOST, TrainerHill_Entrance_EventScript_ExitChallengeLost
+data/maps/TrainerHill_Entrance/scripts.inc:75:	case TRAINER_HILL_PLAYER_STATUS_ECARD_SCANNED, TrainerHill_Entrance_EventScript_ExitChallengeECard
+data/maps/TrainerHill_Entrance/scripts.inc:76:	case TRAINER_HILL_PLAYER_STATUS_NORMAL, TrainerHill_Entrance_EventScript_EndExitChallenge
+data/maps/TrainerHill_Entrance/scripts.inc:78:TrainerHill_Entrance_EventScript_ExitChallengeLost::
+data/maps/TrainerHill_Entrance/scripts.inc:80:	applymovement LOCALID_PLAYER, TrainerHill_Entrance_Movement_PlayerFaceAttendant
+data/maps/TrainerHill_Entrance/scripts.inc:81:	msgbox TrainerHill_Entrance_Text_TooBadTremendousEffort, MSGBOX_DEFAULT
+data/maps/TrainerHill_Entrance/scripts.inc:82:	goto TrainerHill_Entrance_EventScript_PlayerExitChallenge
+data/maps/TrainerHill_Entrance/scripts.inc:84:TrainerHill_Entrance_EventScript_ExitChallengeECard::
+data/maps/TrainerHill_Entrance/scripts.inc:86:	applymovement LOCALID_PLAYER, TrainerHill_Entrance_Movement_PlayerFaceAttendant
+data/maps/TrainerHill_Entrance/scripts.inc:87:	msgbox TrainerHill_Entrance_Text_MovedReceptionHereForSwitch, MSGBOX_DEFAULT
+data/maps/TrainerHill_Entrance/scripts.inc:88:TrainerHill_Entrance_EventScript_PlayerExitChallenge::
+data/maps/TrainerHill_Entrance/scripts.inc:90:	applymovement LOCALID_PLAYER, TrainerHill_Entrance_Movement_PushPlayerBackFromCounter
+data/maps/TrainerHill_Entrance/scripts.inc:96:TrainerHill_Entrance_EventScript_EndExitChallenge::
+data/maps/TrainerHill_Entrance/scripts.inc:99:TrainerHill_Entrance_EventScript_Nurse::
+data/maps/TrainerHill_Entrance/scripts.inc:107:TrainerHill_Entrance_EventScript_Attendant::
+data/maps/TrainerHill_Entrance/scripts.inc:110:	trainerhill_inchallenge
+data/maps/TrainerHill_Entrance/scripts.inc:111:	goto_if_eq VAR_RESULT, FALSE, TrainerHill_Entrance_EventScript_ThanksForPlaying
+data/maps/TrainerHill_Entrance/scripts.inc:112:	msgbox TrainerHill_Entrance_Text_HopeYouGiveItYourBest, MSGBOX_DEFAULT
+data/maps/TrainerHill_Entrance/scripts.inc:113:	goto TrainerHill_Entrance_EventScript_AttendantEnd
+data/maps/TrainerHill_Entrance/scripts.inc:115:TrainerHill_Entrance_EventScript_ThanksForPlaying::
+data/maps/TrainerHill_Entrance/scripts.inc:116:	msgbox TrainerHill_Entrance_Text_ThankYouForPlaying, MSGBOX_DEFAULT
+data/maps/TrainerHill_Entrance/scripts.inc:117:TrainerHill_Entrance_EventScript_AttendantEnd::
+data/maps/TrainerHill_Entrance/scripts.inc:121:TrainerHill_Entrance_EventScript_EntryTrigger::
+data/maps/TrainerHill_Entrance/scripts.inc:123:	applymovement LOCALID_PLAYER, TrainerHill_Entrance_Movement_PlayerFaceAttendant
+data/maps/TrainerHill_Entrance/scripts.inc:124:	goto_if_unset FLAG_SYS_GAME_CLEAR, TrainerHill_Entrance_EventScript_Closed
+data/maps/TrainerHill_Entrance/scripts.inc:125:	msgbox TrainerHill_Entrance_Text_WelcomeToTrainerHill, MSGBOX_DEFAULT
+data/maps/TrainerHill_Entrance/scripts.inc:126:	trainerhill_getsaved
+data/maps/TrainerHill_Entrance/scripts.inc:127:	call_if_eq VAR_RESULT, FALSE, TrainerHill_Entrance_EventScript_SaveGame
+data/maps/TrainerHill_Entrance/scripts.inc:128:	trainerhill_allfloorsused
+data/maps/TrainerHill_Entrance/scripts.inc:129:	goto_if_eq VAR_RESULT, TRUE, TrainerHill_Entrance_EventScript_AllFloorsUsed
+data/maps/TrainerHill_Entrance/scripts.inc:130:	msgbox TrainerHill_Entrance_Text_TrainersUpToFloorX, MSGBOX_DEFAULT
+data/maps/TrainerHill_Entrance/scripts.inc:131:	goto TrainerHill_Entrance_EventScript_AskChallengeTrainers
+data/maps/TrainerHill_Entrance/scripts.inc:133:TrainerHill_Entrance_EventScript_AllFloorsUsed::
+data/maps/TrainerHill_Entrance/scripts.inc:134:	msgbox TrainerHill_Entrance_Text_TrainersInEveryRoom, MSGBOX_DEFAULT
+data/maps/TrainerHill_Entrance/scripts.inc:135:TrainerHill_Entrance_EventScript_AskChallengeTrainers::
+data/maps/TrainerHill_Entrance/scripts.inc:136:	message TrainerHill_Entrance_Text_LikeToChallengeTrainers
+data/maps/TrainerHill_Entrance/scripts.inc:140:	case 0, TrainerHill_Entrance_EventScript_ChooseChallenge
+data/maps/TrainerHill_Entrance/scripts.inc:141:	case 1, TrainerHill_Entrance_EventScript_CancelEntry
+data/maps/TrainerHill_Entrance/scripts.inc:142:	case 2, TrainerHill_Entrance_EventScript_Info
+data/maps/TrainerHill_Entrance/scripts.inc:143:	case MULTI_B_PRESSED, TrainerHill_Entrance_EventScript_CancelEntry
+data/maps/TrainerHill_Entrance/scripts.inc:146:TrainerHill_Entrance_EventScript_Info::
+data/maps/TrainerHill_Entrance/scripts.inc:147:	msgbox TrainerHill_Entrance_Text_ExplainTrainerHill, MSGBOX_DEFAULT
+data/maps/TrainerHill_Entrance/scripts.inc:148:	goto TrainerHill_Entrance_EventScript_AskChallengeTrainers
+data/maps/TrainerHill_Entrance/scripts.inc:151:TrainerHill_Entrance_EventScript_ChooseChallenge::
+data/maps/TrainerHill_Entrance/scripts.inc:154:	case 4, TrainerHill_Entrance_EventScript_CancelEntry
+data/maps/TrainerHill_Entrance/scripts.inc:155:	case MULTI_B_PRESSED, TrainerHill_Entrance_EventScript_CancelEntry
+data/maps/TrainerHill_Entrance/scripts.inc:156:	trainerhill_setmode VAR_RESULT
+data/maps/TrainerHill_Entrance/scripts.inc:161:	msgbox TrainerHill_Entrance_Text_TimeProgessGetSetGo, MSGBOX_DEFAULT
+data/maps/TrainerHill_Entrance/scripts.inc:162:	trainerhill_start
+data/maps/TrainerHill_Entrance/scripts.inc:166:TrainerHill_Entrance_EventScript_CancelEntry::
+data/maps/TrainerHill_Entrance/scripts.inc:168:	msgbox TrainerHill_Entrance_Text_PleaseVisitUsAgain, MSGBOX_DEFAULT
+data/maps/TrainerHill_Entrance/scripts.inc:170:	applymovement LOCALID_PLAYER, TrainerHill_Entrance_Movement_PushPlayerBackFromCounter
+data/maps/TrainerHill_Entrance/scripts.inc:175:TrainerHill_Entrance_EventScript_SaveGame::
+data/maps/TrainerHill_Entrance/scripts.inc:176:	msgbox TrainerHill_Entrance_Text_SaveGameBeforeEnter, MSGBOX_DEFAULT
+data/maps/TrainerHill_Entrance/scripts.inc:177:	trainerhill_setsaved
+data/maps/TrainerHill_Entrance/scripts.inc:180:	goto_if_eq VAR_RESULT, FALSE, TrainerHill_Entrance_EventScript_SaveFailed
+data/maps/TrainerHill_Entrance/scripts.inc:181:	trainerhill_setsaved
+data/maps/TrainerHill_Entrance/scripts.inc:184:TrainerHill_Entrance_EventScript_SaveFailed::
+data/maps/TrainerHill_Entrance/scripts.inc:185:	trainerhill_clearsaved
+data/maps/TrainerHill_Entrance/scripts.inc:186:	goto TrainerHill_Entrance_EventScript_CancelEntry
+data/maps/TrainerHill_Entrance/scripts.inc:189:TrainerHill_Entrance_EventScript_Closed::
+data/maps/TrainerHill_Entrance/scripts.inc:190:	msgbox TrainerHill_Entrance_Text_StillGettingReady, MSGBOX_DEFAULT
+data/maps/TrainerHill_Entrance/scripts.inc:192:	applymovement LOCALID_PLAYER, TrainerHill_Entrance_Movement_PushPlayerBackFromCounter
+data/maps/TrainerHill_Entrance/scripts.inc:197:TrainerHill_Entrance_Movement_PlayerFaceAttendant:
+data/maps/TrainerHill_Entrance/scripts.inc:201:TrainerHill_Entrance_Movement_PushPlayerBackFromCounter:
+data/maps/TrainerHill_Entrance/scripts.inc:206:TrainerHill_Entrance_Movement_FaceUp:
+data/maps/TrainerHill_Entrance/scripts.inc:210:TrainerHill_Entrance_Movement_PlayerExitElevator:
+data/maps/TrainerHill_Entrance/scripts.inc:215:TrainerHill_Entrance_EventScript_Records::
+data/maps/TrainerHill_Entrance/scripts.inc:219:	special ShowTrainerHillRecords
+data/maps/TrainerHill_Entrance/scripts.inc:224:TrainerHill_Entrance_EventScript_Man::
+data/maps/TrainerHill_Entrance/scripts.inc:225:	goto_if_unset FLAG_SYS_GAME_CLEAR, TrainerHill_Entrance_EventScript_ManTrainerHillClosed
+data/maps/TrainerHill_Entrance/scripts.inc:226:	msgbox TrainerHill_Entrance_Text_WhatSortOfTrainersAreAhead, MSGBOX_NPC
+data/maps/TrainerHill_Entrance/scripts.inc:229:TrainerHill_Entrance_EventScript_ManTrainerHillClosed::
+data/maps/TrainerHill_Entrance/scripts.inc:230:	msgbox TrainerHill_Entrance_Text_CantWaitToTestTheWaters, MSGBOX_NPC
+data/maps/TrainerHill_Entrance/scripts.inc:233:TrainerHill_Entrance_EventScript_Girl::
+data/maps/TrainerHill_Entrance/scripts.inc:234:	goto_if_unset FLAG_SYS_GAME_CLEAR, TrainerHill_Entrance_EventScript_GirlTrainerHillClosed
+data/maps/TrainerHill_Entrance/scripts.inc:235:	msgbox TrainerHill_Entrance_Text_FriendsTryingToReachTimeBoardTop, MSGBOX_NPC
+data/maps/TrainerHill_Entrance/scripts.inc:238:TrainerHill_Entrance_EventScript_GirlTrainerHillClosed::
+data/maps/TrainerHill_Entrance/scripts.inc:239:	msgbox TrainerHill_Entrance_Text_DoYouKnowWhenTheyOpen, MSGBOX_NPC
+data/maps/TrainerHill_Entrance/scripts.inc:242:TrainerHill_Entrance_EventScript_Clerk::
+data/maps/TrainerHill_Entrance/scripts.inc:247:	goto_if_set FLAG_SYS_GAME_CLEAR, TrainerHill_Entrance_EventScript_ExpandedPokemart
+data/maps/TrainerHill_Entrance/scripts.inc:248:	pokemart TrainerHill_Entrance_Pokemart_Basic
+data/maps/TrainerHill_Entrance/scripts.inc:254:TrainerHill_Entrance_Pokemart_Basic:
+data/maps/TrainerHill_Entrance/scripts.inc:268:TrainerHill_Entrance_EventScript_ExpandedPokemart::
+data/maps/TrainerHill_Entrance/scripts.inc:269:	pokemart TrainerHill_Entrance_Pokemart_Expanded
+data/maps/TrainerHill_Entrance/scripts.inc:275:TrainerHill_Entrance_Pokemart_Expanded:
+data/maps/TrainerHill_Entrance/scripts.inc:290:TrainerHill_Entrance_Text_StillGettingReady:
+data/maps/TrainerHill_Entrance/scripts.inc:297:TrainerHill_Entrance_Text_WelcomeToTrainerHill:
+data/maps/TrainerHill_Entrance/scripts.inc:303:TrainerHill_Entrance_Text_SaveGameBeforeEnter:
+data/maps/TrainerHill_Entrance/scripts.inc:308:TrainerHill_Entrance_Text_TrainersUpToFloorX:
+data/maps/TrainerHill_Entrance/scripts.inc:313:TrainerHill_Entrance_Text_TrainersInEveryRoom:
+data/maps/TrainerHill_Entrance/scripts.inc:319:TrainerHill_Entrance_Text_LikeToChallengeTrainers:
+data/maps/TrainerHill_Entrance/scripts.inc:323:TrainerHill_Entrance_Text_TimeProgessGetSetGo:
+data/maps/TrainerHill_Entrance/scripts.inc:330:TrainerHill_Entrance_Text_PleaseVisitUsAgain:
+data/maps/TrainerHill_Entrance/scripts.inc:333:TrainerHill_Entrance_Text_TooBadTremendousEffort:
+data/maps/TrainerHill_Entrance/scripts.inc:339:TrainerHill_Entrance_Text_HopeYouGiveItYourBest:
+data/maps/TrainerHill_Entrance/scripts.inc:342:TrainerHill_Entrance_Text_MovedReceptionHereForSwitch:
+data/maps/TrainerHill_Entrance/scripts.inc:349:TrainerHill_Entrance_Text_ThankYouForPlaying:
+data/maps/TrainerHill_Entrance/scripts.inc:352:TrainerHill_Entrance_Text_ExplainTrainerHill:
+data/maps/TrainerHill_Entrance/scripts.inc:366:TrainerHill_Entrance_Text_NeedAtLeastTwoPokemon:
+data/maps/TrainerHill_Entrance/scripts.inc:372:TrainerHill_Roof_Text_YouFinallyCameBravo:
+data/maps/TrainerHill_Entrance/scripts.inc:388:TrainerHill_Roof_Text_HaveTheMostMarvelousGift:
+data/maps/TrainerHill_Entrance/scripts.inc:392:TrainerHill_Roof_Text_FullUpBeBackLaterForThis:
+data/maps/TrainerHill_Entrance/scripts.inc:396:TrainerHill_Roof_Text_GotHereMarvelouslyQuickly:
+data/maps/TrainerHill_Entrance/scripts.inc:404:TrainerHill_Roof_Text_YouWerentVeryQuick:
+data/maps/TrainerHill_Entrance/scripts.inc:408:TrainerHill_Roof_Text_ArriveZippierNextTime:
+data/maps/TrainerHill_Entrance/scripts.inc:416:TrainerHill_Roof_Text_BuiltTrainerHillToFindPartner:
+data/maps/TrainerHill_Entrance/scripts.inc:422:TrainerHill_Entrance_Text_ChallengeTime:
+data/maps/TrainerHill_Entrance/scripts.inc:425:TrainerHill_Entrance_Text_WhatSortOfTrainersAreAhead:
+data/maps/TrainerHill_Entrance/scripts.inc:431:TrainerHill_Entrance_Text_CantWaitToTestTheWaters:
+data/maps/TrainerHill_Entrance/scripts.inc:438:TrainerHill_Entrance_Text_FriendsTryingToReachTimeBoardTop:
+data/maps/TrainerHill_Entrance/scripts.inc:443:TrainerHill_Entrance_Text_DoYouKnowWhenTheyOpen:
+data/maps/TrainerHill_Entrance/scripts.inc:449:TrainerHill_Elevator_Text_ReturnToReception:
+data/maps/TrainerHill_Entrance/header.inc:2:@ DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/TrainerHill_Entrance/map.json
+data/maps/TrainerHill_Entrance/header.inc:5:TrainerHill_Entrance:
+data/maps/TrainerHill_Entrance/header.inc:6:	.4byte TrainerHill_Entrance_Layout
+data/maps/TrainerHill_Entrance/header.inc:7:	.4byte TrainerHill_Entrance_MapEvents
+data/maps/TrainerHill_Entrance/header.inc:8:	.4byte TrainerHill_Entrance_MapScripts
+data/maps/TrainerHill_Entrance/events.inc:2:@ DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/TrainerHill_Entrance/map.json
+data/maps/TrainerHill_Entrance/events.inc:7:TrainerHill_Entrance_ObjectEvents:
+data/maps/TrainerHill_Entrance/events.inc:8:	object_event 1, OBJ_EVENT_GFX_TEALA, 11, 6, 3, MOVEMENT_TYPE_FACE_LEFT, 1, 1, TRAINER_TYPE_NONE, 0, TrainerHill_Entrance_EventScript_Attendant, 0
+data/maps/TrainerHill_Entrance/events.inc:9:	object_event 2, OBJ_EVENT_GFX_NURSE, 4, 9, 3, MOVEMENT_TYPE_FACE_DOWN, 1, 1, TRAINER_TYPE_NONE, 0, TrainerHill_Entrance_EventScript_Nurse, 0
+data/maps/TrainerHill_Entrance/events.inc:10:	object_event 3, OBJ_EVENT_GFX_MART_EMPLOYEE, 14, 9, 3, MOVEMENT_TYPE_FACE_DOWN, 1, 1, TRAINER_TYPE_NONE, 0, TrainerHill_Entrance_EventScript_Clerk, 0
+data/maps/TrainerHill_Entrance/events.inc:11:	object_event 4, OBJ_EVENT_GFX_GIRL_3, 5, 14, 3, MOVEMENT_TYPE_WANDER_AROUND, 1, 1, TRAINER_TYPE_NONE, 0, TrainerHill_Entrance_EventScript_Girl, 0
+data/maps/TrainerHill_Entrance/events.inc:12:	object_event 5, OBJ_EVENT_GFX_MAN_3, 14, 15, 3, MOVEMENT_TYPE_WANDER_AROUND, 1, 1, TRAINER_TYPE_NONE, 0, TrainerHill_Entrance_EventScript_Man, 0
+data/maps/TrainerHill_Entrance/events.inc:14:TrainerHill_Entrance_MapWarps:
+data/maps/TrainerHill_Entrance/events.inc:19:TrainerHill_Entrance_MapCoordEvents:
+data/maps/TrainerHill_Entrance/events.inc:20:	coord_event 9, 6, 3, VAR_TRAINER_HILL_IS_ACTIVE, 0, TrainerHill_Entrance_EventScript_EntryTrigger
+data/maps/TrainerHill_Entrance/events.inc:22:TrainerHill_Entrance_MapBGEvents:
+data/maps/TrainerHill_Entrance/events.inc:23:	bg_sign_event 8, 10, 0, BG_EVENT_PLAYER_FACING_NORTH, TrainerHill_Entrance_EventScript_Records
+data/maps/TrainerHill_Entrance/events.inc:25:TrainerHill_Entrance_MapEvents::
+data/maps/TrainerHill_Entrance/events.inc:26:	map_events TrainerHill_Entrance_ObjectEvents, TrainerHill_Entrance_MapWarps, TrainerHill_Entrance_MapCoordEvents, TrainerHill_Entrance_MapBGEvents
+data/maps/TrainerHill_1F_hns/map.json:3:  "name": "TrainerHill_1F_hns",
+data/maps/TrainerHill_1F_hns/scripts.inc:1:TrainerHill_1F_hns_MapScripts::
+data/maps/TrainerHill_1F_hns/scripts.inc:2:	map_script MAP_SCRIPT_ON_RESUME, TrainerHill_OnResume
+data/maps/TrainerHill_1F_hns/scripts.inc:3:	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, TrainerHill_OnWarp
+data/maps/TrainerHill_1F_hns/scripts.inc:4:	map_script MAP_SCRIPT_ON_FRAME_TABLE, TrainerHill_OnFrame
+data/maps/TrainerHill_1F_hns/scripts.inc:5:	map_script MAP_SCRIPT_ON_LOAD, TrainerHill_1F_hns_OnLoad
+data/maps/TrainerHill_1F_hns/scripts.inc:8:TrainerHill_1F_hns_OnLoad::
+data/maps/TrainerHill_1F_hns/header.inc:2:@ DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/TrainerHill_1F_hns/map.json
+data/maps/TrainerHill_1F_hns/header.inc:5:TrainerHill_1F_hns:
+data/maps/TrainerHill_1F_hns/header.inc:6:	.4byte TrainerHill_1F_hns_Layout
+data/maps/TrainerHill_1F_hns/header.inc:7:	.4byte TrainerHill_1F_hns_MapEvents
+data/maps/TrainerHill_1F_hns/header.inc:8:	.4byte TrainerHill_1F_hns_MapScripts
+data/maps/TrainerHill_1F_hns/events.inc:2:@ DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/TrainerHill_1F_hns/map.json
+data/maps/TrainerHill_1F_hns/events.inc:7:TrainerHill_1F_hns_MapWarps:
+data/maps/TrainerHill_1F_hns/events.inc:11:TrainerHill_1F_hns_MapEvents::
+data/maps/TrainerHill_1F_hns/events.inc:12:	map_events NULL, TrainerHill_1F_hns_MapWarps, NULL, NULL
+data/maps/TrainerHill_Entrance_hns/map.json:3:  "name": "TrainerHill_Entrance_hns",
+data/maps/TrainerHill_Entrance_hns/map.json:28:      "script": "TrainerHill_Entrance_hns_EventScript_Attendant",
+data/maps/TrainerHill_Entrance_hns/map.json:42:      "script": "TrainerHill_Entrance_hns_EventScript_Nurse",
+data/maps/TrainerHill_Entrance_hns/map.json:55:      "script": "TrainerHill_Entrance_hns_EventScript_Clerk",
+data/maps/TrainerHill_Entrance_hns/map.json:69:      "script": "TrainerHill_Entrance_hns_EventScript_Girl",
+data/maps/TrainerHill_Entrance_hns/map.json:83:      "script": "TrainerHill_Entrance_hns_EventScript_Man",
+data/maps/TrainerHill_Entrance_hns/map.json:96:      "script": "TrainerHill_Entrance_hns_EventScript_Clerk2",
+data/maps/TrainerHill_Entrance_hns/map.json:122:      "script": "TrainerHill_Entrance_hns_EventScript_Man2",
+data/maps/TrainerHill_Entrance_hns/map.json:157:      "script": "TrainerHill_Entrance_hns_EventScript_EntryTrigger"
+data/maps/TrainerHill_Entrance_hns/map.json:167:      "script": "TrainerHill_Entrance_hns_EventScript_Records"
+data/maps/TrainerHill_Entrance_hns/scripts.inc:1:TrainerHill_Entrance_hns_MapScripts::
+data/maps/TrainerHill_Entrance_hns/scripts.inc:2:	map_script MAP_SCRIPT_ON_RESUME, TrainerHill_Entrance_hns_OnResume
+data/maps/TrainerHill_Entrance_hns/scripts.inc:3:	map_script MAP_SCRIPT_ON_RETURN_TO_FIELD, TrainerHill_Entrance_hns_OnReturn
+data/maps/TrainerHill_Entrance_hns/scripts.inc:4:	map_script MAP_SCRIPT_ON_TRANSITION, TrainerHill_Entrance_hns_OnTransition
+data/maps/TrainerHill_Entrance_hns/scripts.inc:5:	map_script MAP_SCRIPT_ON_LOAD, TrainerHill_Entrance_hns_OnLoad
+data/maps/TrainerHill_Entrance_hns/scripts.inc:6:	map_script MAP_SCRIPT_ON_FRAME_TABLE, TrainerHill_Entrance_hns_OnFrame
+data/maps/TrainerHill_Entrance_hns/scripts.inc:9:TrainerHill_Entrance_hns_OnTransition:
+data/maps/TrainerHill_Entrance_hns/scripts.inc:17:TrainerHill_Entrance_hns_OnResume:
+data/maps/TrainerHill_Entrance_hns/scripts.inc:18:	trainerhill_resumetimer
+data/maps/TrainerHill_Entrance_hns/scripts.inc:20:	trainerhill_getusingereader
+data/maps/TrainerHill_Entrance_hns/scripts.inc:21:	goto_if_eq VAR_RESULT, FALSE, TrainerHill_Entrance_hns_EventScript_TryFaceAttendant
+data/maps/TrainerHill_Entrance_hns/scripts.inc:23:	applymovement OBJ_EVENT_ID_PLAYER, TrainerHill_Entrance_hns_Movement_PlayerFaceAttendant
+data/maps/TrainerHill_Entrance_hns/scripts.inc:26:TrainerHill_Entrance_hns_EventScript_TryFaceAttendant::
+data/maps/TrainerHill_Entrance_hns/scripts.inc:27:	trainerhill_getwon
+data/maps/TrainerHill_Entrance_hns/scripts.inc:28:	goto_if_eq VAR_RESULT, TRUE, TrainerHill_Entrance_hns_EventScript_PlayerDontFaceAttendant
+data/maps/TrainerHill_Entrance_hns/scripts.inc:29:	applymovement OBJ_EVENT_ID_PLAYER, TrainerHill_Entrance_hns_Movement_PlayerFaceAttendant
+data/maps/TrainerHill_Entrance_hns/scripts.inc:32:TrainerHill_Entrance_hns_EventScript_PlayerDontFaceAttendant::
+data/maps/TrainerHill_Entrance_hns/scripts.inc:35:TrainerHill_Entrance_hns_OnReturn:
+data/maps/TrainerHill_Entrance_hns/scripts.inc:42:TrainerHill_Entrance_hns_OnLoad:
+data/maps/TrainerHill_Entrance_hns/scripts.inc:43:	call_if_eq VAR_TEMP_D, 17, TrainerHill_Entrance_hns_EventScript_OpenCounterDoor
+data/maps/TrainerHill_Entrance_hns/scripts.inc:46:TrainerHill_Entrance_hns_EventScript_OpenCounterDoor::
+data/maps/TrainerHill_Entrance_hns/scripts.inc:47:	setmetatile 17, 10, METATILE_TrainerHill_GreenFloorTile, FALSE
+data/maps/TrainerHill_Entrance_hns/scripts.inc:50:TrainerHill_Entrance_hns_OnFrame:
+data/maps/TrainerHill_Entrance_hns/scripts.inc:51:	map_script_2 VAR_TEMP_0, 0, TrainerHill_Entrance_hns_EventScript_ExitChallenge
+data/maps/TrainerHill_Entrance_hns/scripts.inc:52:	map_script_2 VAR_TEMP_D, 17, TrainerHill_Entrance_hns_EventScript_ExitElevator
+data/maps/TrainerHill_Entrance_hns/scripts.inc:53:	map_script_2 VAR_TEMP_5, 1, TrainerHill_Entrance_hns_EventScript_EntryTrigger
+data/maps/TrainerHill_Entrance_hns/scripts.inc:54:	map_script_2 VAR_TEMP_1, 1, TrainerHill_Entrance_hns_EventScript_WarpToEntranceCounter
+data/maps/TrainerHill_Entrance_hns/scripts.inc:57:TrainerHill_Entrance_hns_EventScript_WarpToEntranceCounter::
+data/maps/TrainerHill_Entrance_hns/scripts.inc:63:TrainerHill_Entrance_hns_EventScript_ExitElevator::
+data/maps/TrainerHill_Entrance_hns/scripts.inc:65:	applymovement OBJ_EVENT_ID_PLAYER, TrainerHill_Entrance_hns_Movement_PlayerExitElevator
+data/maps/TrainerHill_Entrance_hns/scripts.inc:67:	setmetatile 17, 10, METATILE_TrainerHill_CounterDoor, TRUE
+data/maps/TrainerHill_Entrance_hns/scripts.inc:75:TrainerHill_Entrance_hns_EventScript_ExitChallenge::
+data/maps/TrainerHill_Entrance_hns/scripts.inc:77:	trainerhill_getstatus
+data/maps/TrainerHill_Entrance_hns/scripts.inc:79:	case TRAINER_HILL_PLAYER_STATUS_LOST, TrainerHill_Entrance_hns_EventScript_ExitChallengeLost
+data/maps/TrainerHill_Entrance_hns/scripts.inc:80:	case TRAINER_HILL_PLAYER_STATUS_ECARD_SCANNED, TrainerHill_Entrance_hns_EventScript_ExitChallengeECard
+data/maps/TrainerHill_Entrance_hns/scripts.inc:81:	case TRAINER_HILL_PLAYER_STATUS_NORMAL, TrainerHill_Entrance_hns_EventScript_EndExitChallenge
+data/maps/TrainerHill_Entrance_hns/scripts.inc:83:TrainerHill_Entrance_hns_EventScript_ExitChallengeLost::
+data/maps/TrainerHill_Entrance_hns/scripts.inc:85:	applymovement OBJ_EVENT_ID_PLAYER, TrainerHill_Entrance_hns_Movement_PlayerFaceAttendant
+data/maps/TrainerHill_Entrance_hns/scripts.inc:86:	msgbox TrainerHill_Entrance_hns_Text_TooBadTremendousEffort, MSGBOX_DEFAULT
+data/maps/TrainerHill_Entrance_hns/scripts.inc:87:	goto TrainerHill_Entrance_hns_EventScript_PlayerExitChallenge
+data/maps/TrainerHill_Entrance_hns/scripts.inc:89:TrainerHill_Entrance_hns_EventScript_ExitChallengeECard::
+data/maps/TrainerHill_Entrance_hns/scripts.inc:91:	applymovement OBJ_EVENT_ID_PLAYER, TrainerHill_Entrance_hns_Movement_PlayerFaceAttendant
+data/maps/TrainerHill_Entrance_hns/scripts.inc:92:	msgbox TrainerHill_Entrance_hns_Text_MovedReceptionHereForSwitch, MSGBOX_DEFAULT
+data/maps/TrainerHill_Entrance_hns/scripts.inc:93:TrainerHill_Entrance_hns_EventScript_PlayerExitChallenge::
+data/maps/TrainerHill_Entrance_hns/scripts.inc:95:	applymovement OBJ_EVENT_ID_PLAYER, TrainerHill_Entrance_hns_Movement_PushPlayerBackFromCounter
+data/maps/TrainerHill_Entrance_hns/scripts.inc:100:TrainerHill_Entrance_hns_EventScript_EndExitChallenge::
+data/maps/TrainerHill_Entrance_hns/scripts.inc:103:TrainerHill_Entrance_hns_EventScript_Nurse::
+data/maps/TrainerHill_Entrance_hns/scripts.inc:111:TrainerHill_Entrance_hns_EventScript_Attendant::
+data/maps/TrainerHill_Entrance_hns/scripts.inc:114:	trainerhill_inchallenge
+data/maps/TrainerHill_Entrance_hns/scripts.inc:115:	goto_if_eq VAR_RESULT, FALSE, TrainerHill_Entrance_hns_EventScript_ThanksForPlaying
+data/maps/TrainerHill_Entrance_hns/scripts.inc:116:	msgbox TrainerHill_Entrance_hns_Text_HopeYouGiveItYourBest, MSGBOX_DEFAULT
+data/maps/TrainerHill_Entrance_hns/scripts.inc:117:	goto TrainerHill_Entrance_hns_EventScript_AttendantEnd
+data/maps/TrainerHill_Entrance_hns/scripts.inc:119:TrainerHill_Entrance_hns_EventScript_ThanksForPlaying::
+data/maps/TrainerHill_Entrance_hns/scripts.inc:120:	msgbox TrainerHill_Entrance_hns_Text_ThankYouForPlaying, MSGBOX_DEFAULT
+data/maps/TrainerHill_Entrance_hns/scripts.inc:121:TrainerHill_Entrance_hns_EventScript_AttendantEnd::
+data/maps/TrainerHill_Entrance_hns/scripts.inc:125:TrainerHill_Entrance_hns_EventScript_EntryTrigger::
+data/maps/TrainerHill_Entrance_hns/scripts.inc:127:	applymovement OBJ_EVENT_ID_PLAYER, TrainerHill_Entrance_hns_Movement_PlayerFaceAttendant
+data/maps/TrainerHill_Entrance_hns/scripts.inc:128:	goto_if_unset FLAG_SYS_GAME_CLEAR, TrainerHill_Entrance_hns_EventScript_Closed
+data/maps/TrainerHill_Entrance_hns/scripts.inc:129:	msgbox TrainerHill_Entrance_hns_Text_WelcomeToTrainerHill, MSGBOX_DEFAULT
+data/maps/TrainerHill_Entrance_hns/scripts.inc:130:	trainerhill_getsaved
+data/maps/TrainerHill_Entrance_hns/scripts.inc:131:	call_if_eq VAR_RESULT, FALSE, TrainerHill_Entrance_hns_EventScript_SaveGame
+data/maps/TrainerHill_Entrance_hns/scripts.inc:132:	trainerhill_allfloorsused
+data/maps/TrainerHill_Entrance_hns/scripts.inc:133:	goto_if_eq VAR_RESULT, TRUE, TrainerHill_Entrance_hns_EventScript_AllFloorsUsed
+data/maps/TrainerHill_Entrance_hns/scripts.inc:134:	msgbox TrainerHill_Entrance_hns_Text_TrainersUpToFloorX, MSGBOX_DEFAULT
+data/maps/TrainerHill_Entrance_hns/scripts.inc:135:	goto TrainerHill_Entrance_hns_EventScript_AskChallengeTrainers
+data/maps/TrainerHill_Entrance_hns/scripts.inc:137:TrainerHill_Entrance_hns_EventScript_AllFloorsUsed::
+data/maps/TrainerHill_Entrance_hns/scripts.inc:138:	msgbox TrainerHill_Entrance_hns_Text_TrainersInEveryRoom, MSGBOX_DEFAULT
+data/maps/TrainerHill_Entrance_hns/scripts.inc:139:TrainerHill_Entrance_hns_EventScript_AskChallengeTrainers::
+data/maps/TrainerHill_Entrance_hns/scripts.inc:140:	message TrainerHill_Entrance_hns_Text_LikeToChallengeTrainers
+data/maps/TrainerHill_Entrance_hns/scripts.inc:144:	case 0, TrainerHill_Entrance_hns_EventScript_ChooseChallenge
+data/maps/TrainerHill_Entrance_hns/scripts.inc:145:	case 1, TrainerHill_Entrance_hns_EventScript_CancelEntry
+data/maps/TrainerHill_Entrance_hns/scripts.inc:146:	case 2, TrainerHill_Entrance_hns_EventScript_Info
+data/maps/TrainerHill_Entrance_hns/scripts.inc:147:	case MULTI_B_PRESSED, TrainerHill_Entrance_hns_EventScript_CancelEntry
+data/maps/TrainerHill_Entrance_hns/scripts.inc:150:TrainerHill_Entrance_hns_EventScript_Info::
+data/maps/TrainerHill_Entrance_hns/scripts.inc:151:	msgbox TrainerHill_Entrance_hns_Text_ExplainTrainerHill, MSGBOX_DEFAULT
+data/maps/TrainerHill_Entrance_hns/scripts.inc:152:	goto TrainerHill_Entrance_hns_EventScript_AskChallengeTrainers
+data/maps/TrainerHill_Entrance_hns/scripts.inc:155:TrainerHill_Entrance_hns_EventScript_ChooseChallenge::
+data/maps/TrainerHill_Entrance_hns/scripts.inc:158:	case 4, TrainerHill_Entrance_hns_EventScript_CancelEntry
+data/maps/TrainerHill_Entrance_hns/scripts.inc:159:	case MULTI_B_PRESSED, TrainerHill_Entrance_hns_EventScript_CancelEntry
+data/maps/TrainerHill_Entrance_hns/scripts.inc:160:	trainerhill_setmode VAR_RESULT
+data/maps/TrainerHill_Entrance_hns/scripts.inc:165:	msgbox TrainerHill_Entrance_hns_Text_TimeProgessGetSetGo, MSGBOX_DEFAULT
+data/maps/TrainerHill_Entrance_hns/scripts.inc:166:	trainerhill_start
+data/maps/TrainerHill_Entrance_hns/scripts.inc:170:TrainerHill_Entrance_hns_EventScript_CancelEntry::
+data/maps/TrainerHill_Entrance_hns/scripts.inc:172:	msgbox TrainerHill_Entrance_hns_Text_PleaseVisitUsAgain, MSGBOX_DEFAULT
+data/maps/TrainerHill_Entrance_hns/scripts.inc:174:	applymovement OBJ_EVENT_ID_PLAYER, TrainerHill_Entrance_hns_Movement_PushPlayerBackFromCounter
+data/maps/TrainerHill_Entrance_hns/scripts.inc:179:TrainerHill_Entrance_hns_EventScript_SaveGame::
+data/maps/TrainerHill_Entrance_hns/scripts.inc:180:	msgbox TrainerHill_Entrance_hns_Text_SaveGameBeforeEnter, MSGBOX_DEFAULT
+data/maps/TrainerHill_Entrance_hns/scripts.inc:181:	trainerhill_setsaved
+data/maps/TrainerHill_Entrance_hns/scripts.inc:184:	goto_if_eq VAR_RESULT, FALSE, TrainerHill_Entrance_hns_EventScript_SaveFailed
+data/maps/TrainerHill_Entrance_hns/scripts.inc:185:	trainerhill_setsaved
+data/maps/TrainerHill_Entrance_hns/scripts.inc:188:TrainerHill_Entrance_hns_EventScript_SaveFailed::
+data/maps/TrainerHill_Entrance_hns/scripts.inc:189:	trainerhill_clearsaved
+data/maps/TrainerHill_Entrance_hns/scripts.inc:190:	goto TrainerHill_Entrance_hns_EventScript_CancelEntry
+data/maps/TrainerHill_Entrance_hns/scripts.inc:193:TrainerHill_Entrance_hns_EventScript_Closed::
+data/maps/TrainerHill_Entrance_hns/scripts.inc:194:	msgbox TrainerHill_Entrance_hns_Text_StillGettingReady, MSGBOX_DEFAULT
+data/maps/TrainerHill_Entrance_hns/scripts.inc:196:	applymovement OBJ_EVENT_ID_PLAYER, TrainerHill_Entrance_hns_Movement_PushPlayerBackFromCounter
+data/maps/TrainerHill_Entrance_hns/scripts.inc:201:TrainerHill_Entrance_hns_Movement_PlayerFaceAttendant:
+data/maps/TrainerHill_Entrance_hns/scripts.inc:205:TrainerHill_Entrance_hns_Movement_PushPlayerBackFromCounter:
+data/maps/TrainerHill_Entrance_hns/scripts.inc:209:TrainerHill_Entrance_hns_Movement_PlayerExitElevator:
+data/maps/TrainerHill_Entrance_hns/scripts.inc:214:TrainerHill_Entrance_hns_EventScript_Records::
+data/maps/TrainerHill_Entrance_hns/scripts.inc:218:	special ShowTrainerHillRecords
+data/maps/TrainerHill_Entrance_hns/scripts.inc:223:TrainerHill_Entrance_hns_EventScript_Man::
+data/maps/TrainerHill_Entrance_hns/scripts.inc:224:	goto_if_unset FLAG_SYS_GAME_CLEAR, TrainerHill_Entrance_hns_EventScript_ManTrainerHillClosed
+data/maps/TrainerHill_Entrance_hns/scripts.inc:225:	msgbox TrainerHill_Entrance_hns_Text_WhatSortOfTrainersAreAhead, MSGBOX_NPC
+data/maps/TrainerHill_Entrance_hns/scripts.inc:228:TrainerHill_Entrance_hns_EventScript_ManTrainerHillClosed::
+data/maps/TrainerHill_Entrance_hns/scripts.inc:229:	msgbox TrainerHill_Entrance_hns_Text_CantWaitToTestTheWaters, MSGBOX_NPC
+data/maps/TrainerHill_Entrance_hns/scripts.inc:232:TrainerHill_Entrance_hns_EventScript_Man2::
+data/maps/TrainerHill_Entrance_hns/scripts.inc:233:	goto_if_unset FLAG_SYS_GAME_CLEAR, TrainerHill_Entrance_hns_EventScript_ManTrainerHillClosed2
+data/maps/TrainerHill_Entrance_hns/scripts.inc:234:	msgbox TrainerHill_Entrance_hns_Text_Money, MSGBOX_NPC
+data/maps/TrainerHill_Entrance_hns/scripts.inc:237:TrainerHill_Entrance_hns_EventScript_ManTrainerHillClosed2::
+data/maps/TrainerHill_Entrance_hns/scripts.inc:238:	msgbox TrainerHill_Entrance_hns_Text_HereToGetMoney, MSGBOX_NPC
+data/maps/TrainerHill_Entrance_hns/scripts.inc:241:TrainerHill_Entrance_hns_EventScript_Girl::
+data/maps/TrainerHill_Entrance_hns/scripts.inc:242:	goto_if_unset FLAG_SYS_GAME_CLEAR, TrainerHill_Entrance_hns_EventScript_GirlTrainerHillClosed
+data/maps/TrainerHill_Entrance_hns/scripts.inc:243:	msgbox TrainerHill_Entrance_hns_Text_FriendsTryingToReachTimeBoardTop, MSGBOX_NPC
+data/maps/TrainerHill_Entrance_hns/scripts.inc:246:TrainerHill_Entrance_hns_EventScript_GirlTrainerHillClosed::
+data/maps/TrainerHill_Entrance_hns/scripts.inc:247:	msgbox TrainerHill_Entrance_hns_Text_DoYouKnowWhenTheyOpen, MSGBOX_NPC
+data/maps/TrainerHill_Entrance_hns/scripts.inc:250:TrainerHill_Entrance_hns_EventScript_Clerk::
+data/maps/TrainerHill_Entrance_hns/scripts.inc:255:	pokemart TrainerHill_Entrance_hns_Pokemart_Basic
+data/maps/TrainerHill_Entrance_hns/scripts.inc:260:TrainerHill_Entrance_hns_EventScript_Clerk2::
+data/maps/TrainerHill_Entrance_hns/scripts.inc:271:TrainerHill_Entrance_hns_Pokemart_Basic:
+data/maps/TrainerHill_Entrance_hns/scripts.inc:283:TrainerHill_Entrance_hns_Text_HereToGetMoney:
+data/maps/TrainerHill_Entrance_hns/scripts.inc:290:TrainerHill_Entrance_hns_Text_Money:
+data/maps/TrainerHill_Entrance_hns/scripts.inc:298:TrainerHill_Entrance_hns_Text_StillGettingReady:
+data/maps/TrainerHill_Entrance_hns/scripts.inc:305:TrainerHill_Entrance_hns_Text_WelcomeToTrainerHill:
+data/maps/TrainerHill_Entrance_hns/scripts.inc:311:TrainerHill_Entrance_hns_Text_SaveGameBeforeEnter:
+data/maps/TrainerHill_Entrance_hns/scripts.inc:316:TrainerHill_Entrance_hns_Text_TrainersUpToFloorX:
+data/maps/TrainerHill_Entrance_hns/scripts.inc:321:TrainerHill_Entrance_hns_Text_TrainersInEveryRoom:
+data/maps/TrainerHill_Entrance_hns/scripts.inc:327:TrainerHill_Entrance_hns_Text_LikeToChallengeTrainers:
+data/maps/TrainerHill_Entrance_hns/scripts.inc:331:TrainerHill_Entrance_hns_Text_TimeProgessGetSetGo:
+data/maps/TrainerHill_Entrance_hns/scripts.inc:338:TrainerHill_Entrance_hns_Text_PleaseVisitUsAgain:
+data/maps/TrainerHill_Entrance_hns/scripts.inc:341:TrainerHill_Entrance_hns_Text_TooBadTremendousEffort:
+data/maps/TrainerHill_Entrance_hns/scripts.inc:347:TrainerHill_Entrance_hns_Text_HopeYouGiveItYourBest:
+data/maps/TrainerHill_Entrance_hns/scripts.inc:350:TrainerHill_Entrance_hns_Text_MovedReceptionHereForSwitch:
+data/maps/TrainerHill_Entrance_hns/scripts.inc:357:TrainerHill_Entrance_hns_Text_ThankYouForPlaying:
+data/maps/TrainerHill_Entrance_hns/scripts.inc:360:TrainerHill_Entrance_hns_Text_ExplainTrainerHill:
+data/maps/TrainerHill_Entrance_hns/scripts.inc:373:TrainerHill_Entrance_hns_Text_WhatSortOfTrainersAreAhead:
+data/maps/TrainerHill_Entrance_hns/scripts.inc:379:TrainerHill_Entrance_hns_Text_CantWaitToTestTheWaters:
+data/maps/TrainerHill_Entrance_hns/scripts.inc:386:TrainerHill_Entrance_hns_Text_FriendsTryingToReachTimeBoardTop:
+data/maps/TrainerHill_Entrance_hns/scripts.inc:391:TrainerHill_Entrance_hns_Text_DoYouKnowWhenTheyOpen:
+data/maps/TrainerHill_Entrance_hns/header.inc:2:@ DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/TrainerHill_Entrance_hns/map.json
+data/maps/TrainerHill_Entrance_hns/header.inc:5:TrainerHill_Entrance_hns:
+data/maps/TrainerHill_Entrance_hns/header.inc:6:	.4byte TrainerHill_Entrance_hns_Layout
+data/maps/TrainerHill_Entrance_hns/header.inc:7:	.4byte TrainerHill_Entrance_hns_MapEvents
+data/maps/TrainerHill_Entrance_hns/header.inc:8:	.4byte TrainerHill_Entrance_hns_MapScripts
+data/maps/TrainerHill_Entrance_hns/events.inc:2:@ DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/TrainerHill_Entrance_hns/map.json
+data/maps/TrainerHill_Entrance_hns/events.inc:7:TrainerHill_Entrance_hns_ObjectEvents:
+data/maps/TrainerHill_Entrance_hns/events.inc:8:	object_event 1, OBJ_EVENT_GFX_WORKER_F_HNS, 11, 6, 3, MOVEMENT_TYPE_FACE_LEFT, 1, 1, TRAINER_TYPE_NONE, 0, TrainerHill_Entrance_hns_EventScript_Attendant, 0
+data/maps/TrainerHill_Entrance_hns/events.inc:9:	object_event 2, OBJ_EVENT_GFX_NURSE_HNS, 4, 9, 3, MOVEMENT_TYPE_FACE_DOWN, 1, 1, TRAINER_TYPE_NONE, 0, TrainerHill_Entrance_hns_EventScript_Nurse, 0
+data/maps/TrainerHill_Entrance_hns/events.inc:10:	object_event 3, OBJ_EVENT_GFX_MART_EMPLOYEE_HNS, 14, 9, 3, MOVEMENT_TYPE_FACE_DOWN, 1, 1, TRAINER_TYPE_NONE, 0, TrainerHill_Entrance_hns_EventScript_Clerk, 0
+data/maps/TrainerHill_Entrance_hns/events.inc:11:	object_event 4, OBJ_EVENT_GFX_LASS_HNS, 5, 14, 3, MOVEMENT_TYPE_WANDER_AROUND, 1, 1, TRAINER_TYPE_NONE, 0, TrainerHill_Entrance_hns_EventScript_Girl, 0
+data/maps/TrainerHill_Entrance_hns/events.inc:12:	object_event 5, OBJ_EVENT_GFX_WORKER_M_HNS, 14, 15, 3, MOVEMENT_TYPE_WANDER_AROUND, 1, 1, TRAINER_TYPE_NONE, 0, TrainerHill_Entrance_hns_EventScript_Man, 0
+data/maps/TrainerHill_Entrance_hns/events.inc:13:	object_event 6, OBJ_EVENT_GFX_MART_EMPLOYEE_HNS, 12, 9, 0, MOVEMENT_TYPE_NONE, 0, 0, TRAINER_TYPE_NONE, 0, TrainerHill_Entrance_hns_EventScript_Clerk2, 0
+data/maps/TrainerHill_Entrance_hns/events.inc:15:	object_event 8, OBJ_EVENT_GFX_BLACK_BELT_HNS, 11, 13, 0, MOVEMENT_TYPE_WANDER_AROUND, 1, 1, TRAINER_TYPE_NONE, 0, TrainerHill_Entrance_hns_EventScript_Man2, 0
+data/maps/TrainerHill_Entrance_hns/events.inc:17:TrainerHill_Entrance_hns_MapWarps:
+data/maps/TrainerHill_Entrance_hns/events.inc:22:TrainerHill_Entrance_hns_MapCoordEvents:
+data/maps/TrainerHill_Entrance_hns/events.inc:23:	coord_event 9, 6, 3, VAR_TRAINER_HILL_IS_ACTIVE, 0, TrainerHill_Entrance_hns_EventScript_EntryTrigger
+data/maps/TrainerHill_Entrance_hns/events.inc:25:TrainerHill_Entrance_hns_MapBGEvents:
+data/maps/TrainerHill_Entrance_hns/events.inc:26:	bg_sign_event 8, 10, 0, BG_EVENT_PLAYER_FACING_NORTH, TrainerHill_Entrance_hns_EventScript_Records
+data/maps/TrainerHill_Entrance_hns/events.inc:29:TrainerHill_Entrance_hns_MapEvents::
+data/maps/TrainerHill_Entrance_hns/events.inc:30:	map_events TrainerHill_Entrance_hns_ObjectEvents, TrainerHill_Entrance_hns_MapWarps, TrainerHill_Entrance_hns_MapCoordEvents, TrainerHill_Entrance_hns_MapBGEvents
+data/maps/Route111/map.json:1125:      "script": "Route111_EventScript_TrainerHillSign"
+data/maps/Route111/scripts.inc:564:Route111_EventScript_TrainerHillSign::
+data/maps/Route111/scripts.inc:565:	msgbox Route111_Text_TrainerHillSign, MSGBOX_SIGN
+data/maps/Route111/scripts.inc:717:Route111_Text_TrainerHillSign:
+data/maps/Route111/events.inc:116:	bg_sign_event 24, 116, 0, BG_EVENT_PLAYER_FACING_ANY, Route111_EventScript_TrainerHillSign
+data/maps/TrainerHill_2F/map.json:3:  "name": "TrainerHill_2F",
+data/maps/TrainerHill_2F/scripts.inc:1:TrainerHill_2F_MapScripts::
+data/maps/TrainerHill_2F/scripts.inc:2:	map_script MAP_SCRIPT_ON_RESUME, TrainerHill_OnResume
+data/maps/TrainerHill_2F/scripts.inc:3:	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, TrainerHill_OnWarp
+data/maps/TrainerHill_2F/scripts.inc:4:	map_script MAP_SCRIPT_ON_FRAME_TABLE, TrainerHill_OnFrame
+data/maps/TrainerHill_2F/header.inc:2:@ DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/TrainerHill_2F/map.json
+data/maps/TrainerHill_2F/header.inc:5:TrainerHill_2F:
+data/maps/TrainerHill_2F/header.inc:6:	.4byte TrainerHill_2F_Layout
+data/maps/TrainerHill_2F/header.inc:7:	.4byte TrainerHill_2F_MapEvents
+data/maps/TrainerHill_2F/header.inc:8:	.4byte TrainerHill_2F_MapScripts
+data/maps/TrainerHill_2F/events.inc:2:@ DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/TrainerHill_2F/map.json
+data/maps/TrainerHill_2F/events.inc:7:TrainerHill_2F_MapWarps:
+data/maps/TrainerHill_2F/events.inc:11:TrainerHill_2F_MapEvents::
+data/maps/TrainerHill_2F/events.inc:12:	map_events NULL, TrainerHill_2F_MapWarps, NULL, NULL
+data/maps/TrainerHill_Roof/map.json:3:  "name": "TrainerHill_Roof",
+data/maps/TrainerHill_Roof/map.json:28:      "script": "TrainerHill_Roof_EventScript_Owner",
+data/maps/TrainerHill_Roof/scripts.inc:1:TrainerHill_Roof_MapScripts::
+data/maps/TrainerHill_Roof/scripts.inc:2:	map_script MAP_SCRIPT_ON_RESUME, TrainerHill_OnResume
+data/maps/TrainerHill_Roof/scripts.inc:3:	map_script MAP_SCRIPT_ON_FRAME_TABLE, TrainerHill_OnFrame
+data/maps/TrainerHill_Roof/scripts.inc:6:TrainerHill_Roof_EventScript_Owner::
+data/maps/TrainerHill_Roof/scripts.inc:7:	trainerhill_settrainerflags
+data/maps/TrainerHill_Roof/scripts.inc:10:	trainerhill_getownerstate
+data/maps/TrainerHill_Roof/scripts.inc:12:	case 0, TrainerHill_Roof_EventScript_Arrived
+data/maps/TrainerHill_Roof/scripts.inc:13:	case 1, TrainerHill_Roof_EventScript_GivePrize
+data/maps/TrainerHill_Roof/scripts.inc:14:	case 2, TrainerHill_Roof_EventScript_AlreadyReceivedPrize
+data/maps/TrainerHill_Roof/scripts.inc:15:TrainerHill_Roof_EventScript_Arrived::
+data/maps/TrainerHill_Roof/scripts.inc:16:	msgbox TrainerHill_Roof_Text_YouFinallyCameBravo, MSGBOX_DEFAULT
+data/maps/TrainerHill_Roof/scripts.inc:17:TrainerHill_Roof_EventScript_GivePrize::
+data/maps/TrainerHill_Roof/scripts.inc:18:	trainerhill_giveprize
+data/maps/TrainerHill_Roof/scripts.inc:20:	case 0, TrainerHill_Roof_EventScript_ReceivePrize
+data/maps/TrainerHill_Roof/scripts.inc:21:	case 1, TrainerHill_Roof_EventScript_NoRoomForPrize
+data/maps/TrainerHill_Roof/scripts.inc:22:	case 2, TrainerHill_Roof_EventScript_CheckFinalTime
+data/maps/TrainerHill_Roof/scripts.inc:23:TrainerHill_Roof_EventScript_ReceivePrize::
+data/maps/TrainerHill_Roof/scripts.inc:24:	msgbox TrainerHill_Roof_Text_HaveTheMostMarvelousGift, MSGBOX_DEFAULT
+data/maps/TrainerHill_Roof/scripts.inc:29:	goto TrainerHill_Roof_EventScript_CheckFinalTime
+data/maps/TrainerHill_Roof/scripts.inc:31:TrainerHill_Roof_EventScript_NoRoomForPrize::
+data/maps/TrainerHill_Roof/scripts.inc:32:	msgbox TrainerHill_Roof_Text_HaveTheMostMarvelousGift, MSGBOX_DEFAULT
+data/maps/TrainerHill_Roof/scripts.inc:34:	msgbox TrainerHill_Roof_Text_FullUpBeBackLaterForThis, MSGBOX_DEFAULT
+data/maps/TrainerHill_Roof/scripts.inc:35:	goto TrainerHill_Roof_EventScript_CheckFinalTime
+data/maps/TrainerHill_Roof/scripts.inc:37:TrainerHill_Roof_EventScript_CheckFinalTime::
+data/maps/TrainerHill_Roof/scripts.inc:38:	trainerhill_finaltime
+data/maps/TrainerHill_Roof/scripts.inc:40:	case 0, TrainerHill_Roof_EventScript_NewRecord
+data/maps/TrainerHill_Roof/scripts.inc:41:	case 1, TrainerHill_Roof_EventScript_NoNewRecord
+data/maps/TrainerHill_Roof/scripts.inc:42:	case 2, TrainerHill_Roof_EventScript_EndSpeakToOwner
+data/maps/TrainerHill_Roof/scripts.inc:43:TrainerHill_Roof_EventScript_NewRecord::
+data/maps/TrainerHill_Roof/scripts.inc:44:	msgbox TrainerHill_Roof_Text_GotHereMarvelouslyQuickly, MSGBOX_DEFAULT
+data/maps/TrainerHill_Roof/scripts.inc:45:	goto TrainerHill_Roof_EventScript_EndSpeakToOwner
+data/maps/TrainerHill_Roof/scripts.inc:48:TrainerHill_Roof_EventScript_NoNewRecord::
+data/maps/TrainerHill_Roof/scripts.inc:49:	msgbox TrainerHill_Roof_Text_YouWerentVeryQuick, MSGBOX_DEFAULT
+data/maps/TrainerHill_Roof/scripts.inc:50:	goto TrainerHill_Roof_EventScript_EndSpeakToOwner
+data/maps/TrainerHill_Roof/scripts.inc:53:TrainerHill_Roof_EventScript_EndSpeakToOwner::
+data/maps/TrainerHill_Roof/scripts.inc:54:	msgbox TrainerHill_Roof_Text_ArriveZippierNextTime, MSGBOX_DEFAULT
+data/maps/TrainerHill_Roof/scripts.inc:58:TrainerHill_Roof_EventScript_AlreadyReceivedPrize::
+data/maps/TrainerHill_Roof/scripts.inc:59:	msgbox TrainerHill_Roof_Text_ArriveZippierNextTime, MSGBOX_DEFAULT
+data/maps/TrainerHill_Roof/header.inc:2:@ DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/TrainerHill_Roof/map.json
+data/maps/TrainerHill_Roof/header.inc:5:TrainerHill_Roof:
+data/maps/TrainerHill_Roof/header.inc:6:	.4byte TrainerHill_Roof_Layout
+data/maps/TrainerHill_Roof/header.inc:7:	.4byte TrainerHill_Roof_MapEvents
+data/maps/TrainerHill_Roof/header.inc:8:	.4byte TrainerHill_Roof_MapScripts
+data/maps/TrainerHill_Roof/events.inc:2:@ DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/TrainerHill_Roof/map.json
+data/maps/TrainerHill_Roof/events.inc:7:TrainerHill_Roof_ObjectEvents:
+data/maps/TrainerHill_Roof/events.inc:8:	object_event 1, OBJ_EVENT_GFX_GENTLEMAN, 12, 7, 3, MOVEMENT_TYPE_FACE_DOWN, 1, 1, TRAINER_TYPE_NONE, 0, TrainerHill_Roof_EventScript_Owner, 0
+data/maps/TrainerHill_Roof/events.inc:10:TrainerHill_Roof_MapWarps:
+data/maps/TrainerHill_Roof/events.inc:14:TrainerHill_Roof_MapEvents::
+data/maps/TrainerHill_Roof/events.inc:15:	map_events TrainerHill_Roof_ObjectEvents, TrainerHill_Roof_MapWarps, NULL, NULL
+data/maps/TrainerTower_Lobby_Frlg/scripts.inc:210:	special ShowTrainerHillRecords
+data/maps/map_groups.json:407:    "Gate_Route40_TrainerHill_Courtyard_hns",
+data/maps/map_groups.json:607:    "TrainerHill_Courtyard_hns",
+data/maps/map_groups.json:608:    "TrainerHill_Entrance_hns",
+data/maps/map_groups.json:609:    "TrainerHill_1F_hns",
+data/maps/map_groups.json:610:    "TrainerHill_2F_hns",
+data/maps/map_groups.json:611:    "TrainerHill_3F_hns",
+data/maps/map_groups.json:612:    "TrainerHill_4F_hns",
+data/maps/map_groups.json:613:    "TrainerHill_Roof_hns",
+data/maps/map_groups.json:614:    "TrainerHill_Elevator_hns",
+data/maps/map_groups.json:1252:    "TrainerHill_Entrance",
+data/maps/map_groups.json:1253:    "TrainerHill_1F",
+data/maps/map_groups.json:1254:    "TrainerHill_2F",
+data/maps/map_groups.json:1255:    "TrainerHill_3F",
+data/maps/map_groups.json:1256:    "TrainerHill_4F",
+data/maps/map_groups.json:1257:    "TrainerHill_Roof",
+data/maps/map_groups.json:1280:    "TrainerHill_Elevator"
+data/maps/groups.inc:302:	.4byte Gate_Route40_TrainerHill_Courtyard_hns
+data/maps/groups.inc:502:	.4byte TrainerHill_Courtyard_hns
+data/maps/groups.inc:503:	.4byte TrainerHill_Entrance_hns
+data/maps/groups.inc:504:	.4byte TrainerHill_1F_hns
+data/maps/groups.inc:505:	.4byte TrainerHill_2F_hns
+data/maps/groups.inc:506:	.4byte TrainerHill_3F_hns
+data/maps/groups.inc:507:	.4byte TrainerHill_4F_hns
+data/maps/groups.inc:508:	.4byte TrainerHill_Roof_hns
+data/maps/groups.inc:509:	.4byte TrainerHill_Elevator_hns
+data/maps/connections.inc:257:	.include "data/maps/Gate_Route40_TrainerHill_Courtyard_hns/connections.inc"
+data/maps/connections.inc:441:	.include "data/maps/TrainerHill_Courtyard_hns/connections.inc"
+data/maps/connections.inc:442:	.include "data/maps/TrainerHill_Entrance_hns/connections.inc"
+data/maps/connections.inc:443:	.include "data/maps/TrainerHill_1F_hns/connections.inc"
+data/maps/connections.inc:444:	.include "data/maps/TrainerHill_2F_hns/connections.inc"
+data/maps/connections.inc:445:	.include "data/maps/TrainerHill_3F_hns/connections.inc"
+data/maps/connections.inc:446:	.include "data/maps/TrainerHill_4F_hns/connections.inc"
+data/maps/connections.inc:447:	.include "data/maps/TrainerHill_Roof_hns/connections.inc"
+data/maps/connections.inc:448:	.include "data/maps/TrainerHill_Elevator_hns/connections.inc"
+data/maps/events.inc:257:	.include "data/maps/Gate_Route40_TrainerHill_Courtyard_hns/events.inc"
+data/maps/events.inc:441:	.include "data/maps/TrainerHill_Courtyard_hns/events.inc"
+data/maps/events.inc:442:	.include "data/maps/TrainerHill_Entrance_hns/events.inc"
+data/maps/events.inc:443:	.include "data/maps/TrainerHill_1F_hns/events.inc"
+data/maps/events.inc:444:	.include "data/maps/TrainerHill_2F_hns/events.inc"
+data/maps/events.inc:445:	.include "data/maps/TrainerHill_3F_hns/events.inc"
+data/maps/events.inc:446:	.include "data/maps/TrainerHill_4F_hns/events.inc"
+data/maps/events.inc:447:	.include "data/maps/TrainerHill_Roof_hns/events.inc"
+data/maps/events.inc:448:	.include "data/maps/TrainerHill_Elevator_hns/events.inc"
+data/maps/TrainerHill_1F/map.json:3:  "name": "TrainerHill_1F",
+data/maps/TrainerHill_1F/scripts.inc:1:TrainerHill_1F_MapScripts::
+data/maps/TrainerHill_1F/scripts.inc:2:	map_script MAP_SCRIPT_ON_RESUME, TrainerHill_OnResume
+data/maps/TrainerHill_1F/scripts.inc:3:	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, TrainerHill_OnWarp
+data/maps/TrainerHill_1F/scripts.inc:4:	map_script MAP_SCRIPT_ON_FRAME_TABLE, TrainerHill_OnFrame
+data/maps/TrainerHill_1F/header.inc:2:@ DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/TrainerHill_1F/map.json
+data/maps/TrainerHill_1F/header.inc:5:TrainerHill_1F:
+data/maps/TrainerHill_1F/header.inc:6:	.4byte TrainerHill_1F_Layout
+data/maps/TrainerHill_1F/header.inc:7:	.4byte TrainerHill_1F_MapEvents
+data/maps/TrainerHill_1F/header.inc:8:	.4byte TrainerHill_1F_MapScripts
+data/maps/TrainerHill_1F/events.inc:2:@ DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/TrainerHill_1F/map.json
+data/maps/TrainerHill_1F/events.inc:7:TrainerHill_1F_MapWarps:
+data/maps/TrainerHill_1F/events.inc:11:TrainerHill_1F_MapEvents::
+data/maps/TrainerHill_1F/events.inc:12:	map_events NULL, TrainerHill_1F_MapWarps, NULL, NULL
+data/maps/TrainerHill_3F_hns/map.json:3:  "name": "TrainerHill_3F_hns",
+data/maps/TrainerHill_3F_hns/scripts.inc:1:TrainerHill_3F_hns_MapScripts::
+data/maps/TrainerHill_3F_hns/scripts.inc:2:	map_script MAP_SCRIPT_ON_RESUME, TrainerHill_OnResume
+data/maps/TrainerHill_3F_hns/scripts.inc:3:	map_script MAP_SCRIPT_ON_FRAME_TABLE, TrainerHill_OnFrame
+data/maps/TrainerHill_3F_hns/scripts.inc:4:	map_script MAP_SCRIPT_ON_LOAD, TrainerHill_3F_hns_OnLoad
+data/maps/TrainerHill_3F_hns/scripts.inc:7:TrainerHill_3F_hns_OnLoad::
+data/maps/TrainerHill_3F_hns/header.inc:2:@ DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/TrainerHill_3F_hns/map.json
+data/maps/TrainerHill_3F_hns/header.inc:5:TrainerHill_3F_hns:
+data/maps/TrainerHill_3F_hns/header.inc:6:	.4byte TrainerHill_3F_hns_Layout
+data/maps/TrainerHill_3F_hns/header.inc:7:	.4byte TrainerHill_3F_hns_MapEvents
+data/maps/TrainerHill_3F_hns/header.inc:8:	.4byte TrainerHill_3F_hns_MapScripts
+data/maps/TrainerHill_3F_hns/events.inc:2:@ DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/TrainerHill_3F_hns/map.json
+data/maps/TrainerHill_3F_hns/events.inc:7:TrainerHill_3F_hns_MapWarps:
+data/maps/TrainerHill_3F_hns/events.inc:11:TrainerHill_3F_hns_MapEvents::
+data/maps/TrainerHill_3F_hns/events.inc:12:	map_events NULL, TrainerHill_3F_hns_MapWarps, NULL, NULL
+data/maps/TrainerHill_Roof_hns/map.json:3:  "name": "TrainerHill_Roof_hns",
+data/maps/TrainerHill_Roof_hns/map.json:28:      "script": "TrainerHill_Roof_hns_EventScript_Owner",
+data/maps/TrainerHill_Roof_hns/scripts.inc:1:TrainerHill_Roof_hns_MapScripts::
+data/maps/TrainerHill_Roof_hns/scripts.inc:2:	map_script MAP_SCRIPT_ON_RESUME, TrainerHill_OnResume
+data/maps/TrainerHill_Roof_hns/scripts.inc:3:	map_script MAP_SCRIPT_ON_FRAME_TABLE, TrainerHill_OnFrame
+data/maps/TrainerHill_Roof_hns/scripts.inc:4:	map_script MAP_SCRIPT_ON_LOAD, TrainerHill_Roof_hns_OnLoad
+data/maps/TrainerHill_Roof_hns/scripts.inc:7:TrainerHill_Roof_hns_OnLoad::
+data/maps/TrainerHill_Roof_hns/scripts.inc:11:TrainerHill_Roof_hns_EventScript_Owner::
+data/maps/TrainerHill_Roof_hns/scripts.inc:12:	trainerhill_settrainerflags
+data/maps/TrainerHill_Roof_hns/scripts.inc:15:	trainerhill_getownerstate
+data/maps/TrainerHill_Roof_hns/scripts.inc:17:	case 0, TrainerHill_Roof_hns_EventScript_Arrived
+data/maps/TrainerHill_Roof_hns/scripts.inc:18:	case 1, TrainerHill_Roof_hns_EventScript_GivePrize
+data/maps/TrainerHill_Roof_hns/scripts.inc:19:	case 2, TrainerHill_Roof_hns_EventScript_AlreadyReceivedPrize
+data/maps/TrainerHill_Roof_hns/scripts.inc:20:TrainerHill_Roof_hns_EventScript_Arrived::
+data/maps/TrainerHill_Roof_hns/scripts.inc:21:	msgbox TrainerHill_Roof_hns_Text_YouFinallyCameBravo, MSGBOX_DEFAULT
+data/maps/TrainerHill_Roof_hns/scripts.inc:22:TrainerHill_Roof_hns_EventScript_GivePrize::
+data/maps/TrainerHill_Roof_hns/scripts.inc:23:	trainerhill_giveprize
+data/maps/TrainerHill_Roof_hns/scripts.inc:25:	case 0, TrainerHill_Roof_hns_EventScript_ReceivePrize
+data/maps/TrainerHill_Roof_hns/scripts.inc:26:	case 1, TrainerHill_Roof_hns_EventScript_NoRoomForPrize
+data/maps/TrainerHill_Roof_hns/scripts.inc:27:	case 2, TrainerHill_Roof_hns_EventScript_CheckFinalTime
+data/maps/TrainerHill_Roof_hns/scripts.inc:28:TrainerHill_Roof_hns_EventScript_ReceivePrize::
+data/maps/TrainerHill_Roof_hns/scripts.inc:29:	msgbox TrainerHill_Roof_hns_Text_HaveTheMostMarvelousGift, MSGBOX_DEFAULT
+data/maps/TrainerHill_Roof_hns/scripts.inc:34:	goto TrainerHill_Roof_hns_EventScript_CheckFinalTime
+data/maps/TrainerHill_Roof_hns/scripts.inc:36:TrainerHill_Roof_hns_EventScript_NoRoomForPrize::
+data/maps/TrainerHill_Roof_hns/scripts.inc:37:	msgbox TrainerHill_Roof_hns_Text_HaveTheMostMarvelousGift, MSGBOX_DEFAULT
+data/maps/TrainerHill_Roof_hns/scripts.inc:39:	msgbox TrainerHill_Roof_hns_Text_FullUpBeBackLaterForThis, MSGBOX_DEFAULT
+data/maps/TrainerHill_Roof_hns/scripts.inc:40:	goto TrainerHill_Roof_hns_EventScript_CheckFinalTime
+data/maps/TrainerHill_Roof_hns/scripts.inc:42:TrainerHill_Roof_hns_EventScript_CheckFinalTime::
+data/maps/TrainerHill_Roof_hns/scripts.inc:43:	trainerhill_finaltime
+data/maps/TrainerHill_Roof_hns/scripts.inc:45:	case 0, TrainerHill_Roof_hns_EventScript_NewRecord
+data/maps/TrainerHill_Roof_hns/scripts.inc:46:	case 1, TrainerHill_Roof_hns_EventScript_NoNewRecord
+data/maps/TrainerHill_Roof_hns/scripts.inc:47:	case 2, TrainerHill_Roof_hns_EventScript_EndSpeakToOwner
+data/maps/TrainerHill_Roof_hns/scripts.inc:48:TrainerHill_Roof_hns_EventScript_NewRecord::
+data/maps/TrainerHill_Roof_hns/scripts.inc:49:	msgbox TrainerHill_Roof_hns_Text_GotHereMarvelouslyQuickly, MSGBOX_DEFAULT
+data/maps/TrainerHill_Roof_hns/scripts.inc:50:	goto TrainerHill_Roof_hns_EventScript_EndSpeakToOwner
+data/maps/TrainerHill_Roof_hns/scripts.inc:53:TrainerHill_Roof_hns_EventScript_NoNewRecord::
+data/maps/TrainerHill_Roof_hns/scripts.inc:54:	msgbox TrainerHill_Roof_hns_Text_YouWerentVeryQuick, MSGBOX_DEFAULT
+data/maps/TrainerHill_Roof_hns/scripts.inc:55:	goto TrainerHill_Roof_hns_EventScript_EndSpeakToOwner
+data/maps/TrainerHill_Roof_hns/scripts.inc:58:TrainerHill_Roof_hns_EventScript_EndSpeakToOwner::
+data/maps/TrainerHill_Roof_hns/scripts.inc:59:	msgbox TrainerHill_Roof_hns_Text_ArriveZippierNextTime, MSGBOX_DEFAULT
+data/maps/TrainerHill_Roof_hns/scripts.inc:63:TrainerHill_Roof_hns_EventScript_AlreadyReceivedPrize::
+data/maps/TrainerHill_Roof_hns/scripts.inc:64:	msgbox TrainerHill_Roof_hns_Text_ArriveZippierNextTime, MSGBOX_DEFAULT
+data/maps/TrainerHill_Roof_hns/scripts.inc:68:TrainerHill_Roof_hns_Text_YouFinallyCameBravo:
+data/maps/TrainerHill_Roof_hns/scripts.inc:84:TrainerHill_Roof_hns_Text_HaveTheMostMarvelousGift:
+data/maps/TrainerHill_Roof_hns/scripts.inc:89:TrainerHill_Roof_hns_Text_FullUpBeBackLaterForThis:
+data/maps/TrainerHill_Roof_hns/scripts.inc:93:TrainerHill_Roof_hns_Text_GotHereMarvelouslyQuickly:
+data/maps/TrainerHill_Roof_hns/scripts.inc:101:TrainerHill_Roof_hns_Text_YouWerentVeryQuick:
+data/maps/TrainerHill_Roof_hns/scripts.inc:105:TrainerHill_Roof_hns_Text_ArriveZippierNextTime:
+data/maps/TrainerHill_Roof_hns/header.inc:2:@ DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/TrainerHill_Roof_hns/map.json
+data/maps/TrainerHill_Roof_hns/header.inc:5:TrainerHill_Roof_hns:
+data/maps/TrainerHill_Roof_hns/header.inc:6:	.4byte TrainerHill_Roof_hns_Layout
+data/maps/TrainerHill_Roof_hns/header.inc:7:	.4byte TrainerHill_Roof_hns_MapEvents
+data/maps/TrainerHill_Roof_hns/header.inc:8:	.4byte TrainerHill_Roof_hns_MapScripts
+data/maps/TrainerHill_Roof_hns/events.inc:2:@ DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/TrainerHill_Roof_hns/map.json
+data/maps/TrainerHill_Roof_hns/events.inc:7:TrainerHill_Roof_hns_ObjectEvents:
+data/maps/TrainerHill_Roof_hns/events.inc:8:	object_event 1, OBJ_EVENT_GFX_GENTLEMAN_HNS, 12, 7, 3, MOVEMENT_TYPE_FACE_DOWN, 1, 1, TRAINER_TYPE_NONE, 0, TrainerHill_Roof_hns_EventScript_Owner, 0
+data/maps/TrainerHill_Roof_hns/events.inc:10:TrainerHill_Roof_hns_MapWarps:
+data/maps/TrainerHill_Roof_hns/events.inc:14:TrainerHill_Roof_hns_MapEvents::
+data/maps/TrainerHill_Roof_hns/events.inc:15:	map_events TrainerHill_Roof_hns_ObjectEvents, TrainerHill_Roof_hns_MapWarps, NULL, NULL
+data/maps/TrainerHill_Courtyard_hns/map.json:3:  "name": "TrainerHill_Courtyard_hns",
+data/maps/TrainerHill_Courtyard_hns/map.json:33:      "script": "TrainerHill_Courtyard_EventScript_Youngster",
+data/maps/TrainerHill_Courtyard_hns/map.json:46:      "script": "TrainerHill_Courtyard_EventScript_Beauty",
+data/maps/TrainerHill_Courtyard_hns/map.json:59:      "script": "TrainerHill_Courtyard_EventScript_Sailor",
+data/maps/TrainerHill_Courtyard_hns/map.json:72:      "script": "TrainerHill_Courtyard_EventScript_RightMoveTutor",
+data/maps/TrainerHill_Courtyard_hns/map.json:85:      "script": "TrainerHill_Courtyard_EventScript_ElementalMoveTutor",
+data/maps/TrainerHill_Courtyard_hns/map.json:98:      "script": "TrainerHill_Courtyard_EventScript_LeftMoveTutor",
+data/maps/TrainerHill_Courtyard_hns/map.json:111:      "script": "TrainerHill_Courtyard_ExchangeServiceCorner_EventScript_HoldItemClerk",
+data/maps/TrainerHill_Courtyard_hns/map.json:124:      "script": "TrainerHill_Courtyard_ExchangeServiceCorner_EventScript_VitaminClerk",
+data/maps/TrainerHill_Courtyard_hns/map.json:439:      "script": "TrainerHill_Courtyard_EventScript_BattleTowerSign"
+data/maps/TrainerHill_Courtyard_hns/map.json:447:      "script": "TrainerHill_Courtyard_EventScript_Tent_Arena"
+data/maps/TrainerHill_Courtyard_hns/map.json:455:      "script": "TrainerHill_Courtyard_EventScript_Tent_Palace"
+data/maps/TrainerHill_Courtyard_hns/map.json:463:      "script": "TrainerHill_Courtyard_EventScript_Tent_Factory"
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:1:TrainerHill_Courtyard_hns_MapScripts::
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:2:map_script MAP_SCRIPT_ON_TRANSITION, TrainerHill_Courtyard_OnTransition
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:5:TrainerHill_Courtyard_OnTransition::
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:9:TrainerHill_Courtyard_EventScript_BattleTowerSign::
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:16:TrainerHill_Courtyard_EventScript_Tent_Factory::
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:23:TrainerHill_Courtyard_EventScript_Tent_Palace::
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:30:TrainerHill_Courtyard_EventScript_Tent_Arena::
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:37:TrainerHill_Courtyard_EventScript_Engineer::
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:45:TrainerHill_Courtyard_EventScript_Youngster::
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:53:TrainerHill_Courtyard_EventScript_Beauty::
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:61:TrainerHill_Courtyard_EventScript_Sailor::
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:108:TrainerHill_Courtyard_EventScript_LeftMoveTutor::
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:112:TrainerHill_Courtyard_EventScript_RightMoveTutor::
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:116:TrainerHill_Courtyard_EventScript_ElementalMoveTutor::
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:120:TrainerHill_Courtyard_ExchangeServiceCorner_EventScript_DecorClerk1::
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:123:	msgbox TrainerHill_Courtyard_ExchangeServiceCorner_Text_WelcomePleaseChoosePrize, MSGBOX_DEFAULT
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:129:TrainerHill_Courtyard_ExchangeServiceCorner_EventScript_DecorClerk2::
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:132:	msgbox TrainerHill_Courtyard_ExchangeServiceCorner_Text_WelcomePleaseChoosePrize, MSGBOX_DEFAULT
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:138:TrainerHill_Courtyard_ExchangeServiceCorner_EventScript_VitaminClerk::
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:141:	msgbox TrainerHill_Courtyard_ExchangeServiceCorner_Text_WelcomePleaseChoosePrize, MSGBOX_DEFAULT
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:147:TrainerHill_Courtyard_ExchangeServiceCorner_EventScript_HoldItemClerk::
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:150:	msgbox TrainerHill_Courtyard_ExchangeServiceCorner_Text_WelcomePleaseChoosePrize, MSGBOX_DEFAULT
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:156:TrainerHill_Courtyard_ExchangeServiceCorner_EventScript_HoldItemClerk2::
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:159:	msgbox TrainerHill_Courtyard_ExchangeServiceCorner_Text_WelcomePleaseChoosePrize, MSGBOX_DEFAULT
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:165:TrainerHill_Courtyard_ExchangeServiceCorner_EventScript_PowerClerk::
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:168:	msgbox TrainerHill_Courtyard_ExchangeServiceCorner_Text_WelcomePleaseChoosePrize, MSGBOX_DEFAULT
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:174:TrainerHill_Courtyard_ExchangeServiceCorner_EventScript_Man::
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:175:	msgbox TrainerHill_Courtyard_ExchangeServiceCorner_Text_GoGetYourOwnDoll, MSGBOX_NPC
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:178:TrainerHill_Courtyard_ExchangeServiceCorner_EventScript_Sailor::
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:179:	msgbox TrainerHill_Courtyard_ExchangeServiceCorner_Text_ItemsWillGetMonTougher, MSGBOX_NPC
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:182:TrainerHill_Courtyard_ExchangeServiceCorner_EventScript_PokefanF::
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:184:	msgbox TrainerHill_Courtyard_ExchangeServiceCorner_Text_GetYouAnythingYouWant, MSGBOX_DEFAULT
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:188:TrainerHill_Courtyard_ExchangeServiceCorner_EventScript_RichBoy::
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:189:	msgbox TrainerHill_Courtyard_ExchangeServiceCorner_Text_WishIHadAllDolls, MSGBOX_NPC
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:192:TrainerHill_Courtyard_ExchangeServiceCorner_EventScript_Girl::
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:193:	msgbox TrainerHill_Courtyard_ExchangeServiceCorner_Text_MoreBattlePointsForRecord, MSGBOX_NPC
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:196:TrainerHill_Courtyard_ExchangeServiceCorner_EventScript_OldWTMan::
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:197:	msgbox TrainerHill_Courtyard_ExchangeServiceCorner_EventScript_OldWTMan_Text, MSGBOX_NPC
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:200:TrainerHill_Courtyard_ExchangeServiceCorner_EventScript_OldWTMan_Text:
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:205:TrainerHill_Courtyard_ExchangeServiceCorner_Text_WelcomePleaseChoosePrize:
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:212:TrainerHill_Courtyard_ExchangeServiceCorner_Text_WishIHadAllDolls:
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:220:TrainerHill_Courtyard_ExchangeServiceCorner_Text_GetYouAnythingYouWant:
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:225:TrainerHill_Courtyard_ExchangeServiceCorner_Text_ItemsWillGetMonTougher:
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:231:TrainerHill_Courtyard_ExchangeServiceCorner_Text_GoGetYourOwnDoll:
+data/maps/TrainerHill_Courtyard_hns/scripts.inc:239:TrainerHill_Courtyard_ExchangeServiceCorner_Text_MoreBattlePointsForRecord:
+data/maps/TrainerHill_Courtyard_hns/header.inc:2:@ DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/TrainerHill_Courtyard_hns/map.json
+data/maps/TrainerHill_Courtyard_hns/header.inc:5:TrainerHill_Courtyard_hns:
+data/maps/TrainerHill_Courtyard_hns/header.inc:6:	.4byte TrainerHill_Courtyard_hns_Layout
+data/maps/TrainerHill_Courtyard_hns/header.inc:7:	.4byte TrainerHill_Courtyard_hns_MapEvents
+data/maps/TrainerHill_Courtyard_hns/header.inc:8:	.4byte TrainerHill_Courtyard_hns_MapScripts
+data/maps/TrainerHill_Courtyard_hns/header.inc:9:	.4byte TrainerHill_Courtyard_hns_MapConnections
+data/maps/TrainerHill_Courtyard_hns/events.inc:2:@ DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/TrainerHill_Courtyard_hns/map.json
+data/maps/TrainerHill_Courtyard_hns/events.inc:7:TrainerHill_Courtyard_hns_ObjectEvents:
+data/maps/TrainerHill_Courtyard_hns/events.inc:8:	object_event 1, OBJ_EVENT_GFX_YOUNGSTER_HNS, 29, 9, 0, MOVEMENT_TYPE_FACE_LEFT, 0, 0, TRAINER_TYPE_NONE, 0, TrainerHill_Courtyard_EventScript_Youngster, 0
+data/maps/TrainerHill_Courtyard_hns/events.inc:9:	object_event 2, OBJ_EVENT_GFX_BATTLE_GIRL_HNS, 28, 30, 0, MOVEMENT_TYPE_WANDER_AROUND, 0, 0, TRAINER_TYPE_NONE, 0, TrainerHill_Courtyard_EventScript_Beauty, 0
+data/maps/TrainerHill_Courtyard_hns/events.inc:10:	object_event 3, OBJ_EVENT_GFX_SAILOR_HNS, 23, 22, 0, MOVEMENT_TYPE_WANDER_AROUND, 0, 0, TRAINER_TYPE_NONE, 0, TrainerHill_Courtyard_EventScript_Sailor, 0
+data/maps/TrainerHill_Courtyard_hns/events.inc:11:	object_event 4, OBJ_EVENT_GFX_OLD_WOMAN_HNS, 10, 19, 0, MOVEMENT_TYPE_FACE_LEFT, 1, 1, TRAINER_TYPE_NONE, 0, TrainerHill_Courtyard_EventScript_RightMoveTutor, 0
+data/maps/TrainerHill_Courtyard_hns/events.inc:12:	object_event 5, OBJ_EVENT_GFX_OLD_MAN_HNS, 9, 18, 0, MOVEMENT_TYPE_FACE_DOWN, 0, 0, TRAINER_TYPE_NONE, 0, TrainerHill_Courtyard_EventScript_ElementalMoveTutor, 0
+data/maps/TrainerHill_Courtyard_hns/events.inc:13:	object_event 6, OBJ_EVENT_GFX_OLD_WOMAN_HNS, 8, 19, 0, MOVEMENT_TYPE_FACE_RIGHT, 1, 1, TRAINER_TYPE_NONE, 0, TrainerHill_Courtyard_EventScript_LeftMoveTutor, 0
+data/maps/TrainerHill_Courtyard_hns/events.inc:14:	object_event 7, OBJ_EVENT_GFX_MART_EMPLOYEE_HNS, 16, 29, 0, MOVEMENT_TYPE_FACE_DOWN, 0, 0, TRAINER_TYPE_NONE, 0, TrainerHill_Courtyard_ExchangeServiceCorner_EventScript_HoldItemClerk, 0
+data/maps/TrainerHill_Courtyard_hns/events.inc:15:	object_event 8, OBJ_EVENT_GFX_MART_EMPLOYEE_HNS, 15, 29, 0, MOVEMENT_TYPE_FACE_DOWN, 0, 0, TRAINER_TYPE_NONE, 0, TrainerHill_Courtyard_ExchangeServiceCorner_EventScript_VitaminClerk, 0
+data/maps/TrainerHill_Courtyard_hns/events.inc:38:TrainerHill_Courtyard_hns_MapWarps:
+data/maps/TrainerHill_Courtyard_hns/events.inc:44:TrainerHill_Courtyard_hns_MapBGEvents:
+data/maps/TrainerHill_Courtyard_hns/events.inc:45:	bg_sign_event 17, 29, 0, BG_EVENT_PLAYER_FACING_ANY, TrainerHill_Courtyard_EventScript_BattleTowerSign
+data/maps/TrainerHill_Courtyard_hns/events.inc:46:	bg_sign_event 25, 20, 0, BG_EVENT_PLAYER_FACING_ANY, TrainerHill_Courtyard_EventScript_Tent_Arena
+data/maps/TrainerHill_Courtyard_hns/events.inc:47:	bg_sign_event 22, 29, 0, BG_EVENT_PLAYER_FACING_ANY, TrainerHill_Courtyard_EventScript_Tent_Palace
+data/maps/TrainerHill_Courtyard_hns/events.inc:48:	bg_sign_event 32, 29, 0, BG_EVENT_PLAYER_FACING_ANY, TrainerHill_Courtyard_EventScript_Tent_Factory
+data/maps/TrainerHill_Courtyard_hns/events.inc:50:TrainerHill_Courtyard_hns_MapEvents::
+data/maps/TrainerHill_Courtyard_hns/events.inc:51:	map_events TrainerHill_Courtyard_hns_ObjectEvents, TrainerHill_Courtyard_hns_MapWarps, NULL, TrainerHill_Courtyard_hns_MapBGEvents
+data/maps/TrainerHill_Courtyard_hns/connections.inc:2:@ DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/TrainerHill_Courtyard_hns/map.json
+data/maps/TrainerHill_Courtyard_hns/connections.inc:5:TrainerHill_Courtyard_hns_MapConnectionsList:
+data/maps/TrainerHill_Courtyard_hns/connections.inc:8:TrainerHill_Courtyard_hns_MapConnections:
+data/maps/TrainerHill_Courtyard_hns/connections.inc:10:	.4byte TrainerHill_Courtyard_hns_MapConnectionsList
+data/maps/TrainerHill_3F/map.json:3:  "name": "TrainerHill_3F",
+data/maps/TrainerHill_3F/scripts.inc:1:TrainerHill_3F_MapScripts::
+data/maps/TrainerHill_3F/scripts.inc:2:	map_script MAP_SCRIPT_ON_RESUME, TrainerHill_OnResume
+data/maps/TrainerHill_3F/scripts.inc:3:	map_script MAP_SCRIPT_ON_FRAME_TABLE, TrainerHill_OnFrame
+data/maps/TrainerHill_3F/header.inc:2:@ DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/TrainerHill_3F/map.json
+data/maps/TrainerHill_3F/header.inc:5:TrainerHill_3F:
+data/maps/TrainerHill_3F/header.inc:6:	.4byte TrainerHill_3F_Layout
+data/maps/TrainerHill_3F/header.inc:7:	.4byte TrainerHill_3F_MapEvents
+data/maps/TrainerHill_3F/header.inc:8:	.4byte TrainerHill_3F_MapScripts
+data/maps/TrainerHill_3F/events.inc:2:@ DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/TrainerHill_3F/map.json
+data/maps/TrainerHill_3F/events.inc:7:TrainerHill_3F_MapWarps:
+data/maps/TrainerHill_3F/events.inc:11:TrainerHill_3F_MapEvents::
+data/maps/TrainerHill_3F/events.inc:12:	map_events NULL, TrainerHill_3F_MapWarps, NULL, NULL
+data/maps/headers.inc:257:	.include "data/maps/Gate_Route40_TrainerHill_Courtyard_hns/header.inc"
+data/maps/headers.inc:441:	.include "data/maps/TrainerHill_Courtyard_hns/header.inc"
+data/maps/headers.inc:442:	.include "data/maps/TrainerHill_Entrance_hns/header.inc"
+data/maps/headers.inc:443:	.include "data/maps/TrainerHill_1F_hns/header.inc"
+data/maps/headers.inc:444:	.include "data/maps/TrainerHill_2F_hns/header.inc"
+data/maps/headers.inc:445:	.include "data/maps/TrainerHill_3F_hns/header.inc"
+data/maps/headers.inc:446:	.include "data/maps/TrainerHill_4F_hns/header.inc"
+data/maps/headers.inc:447:	.include "data/maps/TrainerHill_Roof_hns/header.inc"
+data/maps/headers.inc:448:	.include "data/maps/TrainerHill_Elevator_hns/header.inc"
+data/scripts/cable_club_frlg.inc:549:	special ShowTrainerHillRecords
+data/scripts/field_poison.inc:36:	trainerhill_inchallenge
+data/scripts/field_poison.inc:37:	goto_if_eq VAR_RESULT, TRUE, TrainerHill_1F_EventScript_Lost
+data/scripts/pkmn_center_nurse.inc:43:	goto EventScript_PkmnCenterNurse_CheckTrainerHillAndUnionRoom
+data/scripts/pkmn_center_nurse.inc:80:EventScript_PkmnCenterNurse_CheckTrainerHillAndUnionRoom::
+data/scripts/pkmn_center_nurse.inc:81:	specialvar VAR_RESULT, PlayerNotAtTrainerHillEntrance
+data/scripts/pkmn_center_nurse.inc:132:	goto_if_eq VAR_RESULT, FALSE, EventScript_PkmnCenterNurse_CheckTrainerHillAndUnionRoom
+data/scripts/trainer_hill.inc:1:TrainerHill_OnResume:
+data/scripts/trainer_hill.inc:3:	trainerhill_resumetimer
+data/scripts/trainer_hill.inc:5:	goto_if_eq VAR_RESULT, B_OUTCOME_LOST, TrainerHill_1F_EventScript_Lost
+data/scripts/trainer_hill.inc:6:	goto_if_eq VAR_RESULT, B_OUTCOME_DREW, TrainerHill_1F_EventScript_Lost
+data/scripts/trainer_hill.inc:7:	goto_if_eq VAR_RESULT, B_OUTCOME_FORFEITED, TrainerHill_1F_EventScript_Lost
+data/scripts/trainer_hill.inc:10:TrainerHill_OnWarp:
+data/scripts/trainer_hill.inc:11:	map_script_2 VAR_TEMP_3, 0, TrainerHill_1F_EventScript_DummyOnWarp
+data/scripts/trainer_hill.inc:14:TrainerHill_1F_EventScript_DummyOnWarp::
+data/scripts/trainer_hill.inc:20:TrainerHill_OnFrame:
+data/scripts/trainer_hill.inc:21:	map_script_2 VAR_TEMP_2, 0, TrainerHill_1F_EventScript_DummyWarpToEntranceCounter
+data/scripts/trainer_hill.inc:22:	map_script_2 VAR_TEMP_1, 1, TrainerHill_EventScript_WarpToEntranceCounter
+data/scripts/trainer_hill.inc:25:EventScript_TrainerHillTimer::
+data/scripts/trainer_hill.inc:27:	trainerhill_gettime
+data/scripts/trainer_hill.inc:28:	msgbox TrainerHill_Entrance_Text_ChallengeTime, MSGBOX_DEFAULT
+data/scripts/trainer_hill.inc:32:TrainerHill_1F_EventScript_DummyWarpToEntranceCounter::
+data/scripts/trainer_hill.inc:34:	trainerhill_getusingereader
+data/scripts/trainer_hill.inc:35:	goto_if_eq VAR_RESULT, TRUE, TrainerHill_1F_EventScript_WarpSilentToEntranceCounter  @ VAR_RESULT always FALSE here
+data/scripts/trainer_hill.inc:39:TrainerHill_1F_EventScript_WarpSilentToEntranceCounter::
+data/scripts/trainer_hill.inc:48:TrainerHill_1F_EventScript_Lost::
+data/scripts/trainer_hill.inc:49:	trainerhill_settrainerflags
+data/scripts/trainer_hill.inc:50:	trainerhill_lost
+data/scripts/trainer_hill.inc:54:TrainerHill_EventScript_WarpToEntranceCounter::
+data/scripts/trainer_hill.inc:65:TrainerHill_1F_Movement_SetInvisible::
+data/scripts/trainer_hill.inc:70:TrainerHill_EventScript_TrainerBattle::
+data/scripts/trainer_hill.inc:72:	trainerhill_postbattletext
+data/specials.inc:533:	def_special CallTrainerHillFunction
+data/specials.inc:541:	def_special PlayerNotAtTrainerHillEntrance
+data/specials.inc:544:	def_special ShowTrainerHillRecords
+src/battle_controller_opponent.c:334:                trainerPicId = GetTrainerHillTrainerFrontSpriteId(TRAINER_BATTLE_PARAM.opponentA);
+src/battle_controller_opponent.c:336:                trainerPicId = GetTrainerHillTrainerFrontSpriteId(TRAINER_BATTLE_PARAM.opponentB);
+src/battle_controller_opponent.c:340:            trainerPicId = GetTrainerHillTrainerFrontSpriteId(TRAINER_BATTLE_PARAM.opponentA);
+src/battle_message.c:2999:        GetTrainerHillTrainerName(text, trainerId);
+src/battle_message.c:3113:        toCpy = gTrainerClasses[GetTrainerHillOpponentClass(trainerId)].name;
+src/battle_message.c:3399:                    CopyTrainerHillTrainerText(TRAINER_HILL_TEXT_PLAYER_WON, TRAINER_BATTLE_PARAM.opponentA);
+src/battle_message.c:3420:                    CopyTrainerHillTrainerText(TRAINER_HILL_TEXT_PLAYER_LOST, TRAINER_BATTLE_PARAM.opponentA);
+src/battle_message.c:3528:                    CopyTrainerHillTrainerText(TRAINER_HILL_TEXT_PLAYER_WON, TRAINER_BATTLE_PARAM.opponentB);
+src/battle_message.c:3549:                    CopyTrainerHillTrainerText(TRAINER_HILL_TEXT_PLAYER_LOST, TRAINER_BATTLE_PARAM.opponentB);
+src/battle_records.c:29:static void Task_CloseTrainerHillRecordsOnButton(u8 taskId);
+src/battle_records.c:31:static void Task_ExitTrainerHillRecords(u8 taskId);
+src/battle_records.c:32:static void RemoveTrainerHillRecordsWindow(u8 windowId);
+src/battle_records.c:33:static void CB2_ShowTrainerHillRecords(void);
+src/battle_records.c:38:static const u32 sTrainerHillWindowTileset[] = INCBIN_U32("graphics/trainer_hill/records_window.4bpp");
+src/battle_records.c:39:static const u16 sTrainerHillWindowPalette[] = INCBIN_U16("graphics/trainer_hill/records_window.gbapal");
+src/battle_records.c:40:static const u32 sTrainerHillWindowTilemap[] = INCBIN_U32("graphics/trainer_hill/records_window.bin");
+src/battle_records.c:42:static const struct BgTemplate sTrainerHillRecordsBgTemplates[] =
+src/battle_records.c:64:static const struct WindowTemplate sTrainerHillRecordsWindowTemplates[] =
+src/battle_records.c:360:static void Task_TrainerHillWaitForPaletteFade(u8 taskId)
+src/battle_records.c:363:        gTasks[taskId].func = Task_CloseTrainerHillRecordsOnButton;
+src/battle_records.c:366:static void Task_CloseTrainerHillRecordsOnButton(u8 taskId)
+src/battle_records.c:380:    gTasks[taskId].func = Task_ExitTrainerHillRecords;
+src/battle_records.c:383:static void Task_ExitTrainerHillRecords(u8 taskId)
+src/battle_records.c:389:        RemoveTrainerHillRecordsWindow(0);
+src/battle_records.c:395:static void RemoveTrainerHillRecordsWindow(u8 windowId)
+src/battle_records.c:457:static void LoadTrainerHillRecordsWindowGfx(u8 bgId)
+src/battle_records.c:459:    LoadBgTiles(bgId, sTrainerHillWindowTileset, sizeof(sTrainerHillWindowTileset), 0);
+src/battle_records.c:460:    CopyToBgTilemapBufferRect(bgId, sTrainerHillWindowTilemap, 0, 0, 0x20, 0x20);
+src/battle_records.c:461:    LoadPalette(sTrainerHillWindowPalette, BG_PLTT_ID(0), sizeof(sTrainerHillWindowPalette));
+src/battle_records.c:464:static void VblankCB_TrainerHillRecords(void)
+src/battle_records.c:471:static void MainCB2_TrainerHillRecords(void)
+src/battle_records.c:479:void ShowTrainerHillRecords(void)
+src/battle_records.c:482:    SetMainCallback2(CB2_ShowTrainerHillRecords);
+src/battle_records.c:485:static void CB2_ShowTrainerHillRecords(void)
+src/battle_records.c:501:        InitBgsFromTemplates(0, sTrainerHillRecordsBgTemplates, ARRAY_COUNT(sTrainerHillRecordsBgTemplates));
+src/battle_records.c:507:        LoadTrainerHillRecordsWindowGfx(3);
+src/battle_records.c:521:        InitWindows(sTrainerHillRecordsWindowTemplates);
+src/battle_records.c:531:        SetVBlankCallback(VblankCB_TrainerHillRecords);
+src/battle_records.c:535:            PrintOnTrainerHillRecordsWindow();
+src/battle_records.c:536:        CreateTask(Task_TrainerHillWaitForPaletteFade, 8);
+src/battle_records.c:537:        SetMainCallback2(MainCB2_TrainerHillRecords);
+src/battle_setup.c:539:static void DoBattlePyramidTrainerHillBattle(void)
+src/battle_setup.c:1550:    else if (InTrainerHill())
+src/battle_setup.c:1630:    else if (InTrainerHillChallenge())
+src/battle_setup.c:1652:    if (CurrentBattlePyramidLocation() != PYRAMID_LOCATION_NONE || InTrainerHillChallenge())
+src/battle_setup.c:1653:        DoBattlePyramidTrainerHillBattle();
+src/battle_setup.c:1755:        if (FlagGet(B_FLAG_NO_WHITEOUT) || CurrentBattlePyramidLocation() != PYRAMID_LOCATION_NONE || InTrainerHillChallenge())
+src/battle_setup.c:1762:        if (CurrentBattlePyramidLocation() != PYRAMID_LOCATION_NONE || InTrainerHillChallenge() || (!NoAliveMonsForPlayer()) || FlagGet(B_FLAG_NO_WHITEOUT))
+src/battle_setup.c:1771:        if (CurrentBattlePyramidLocation() == PYRAMID_LOCATION_NONE && !InTrainerHillChallenge())
+src/battle_setup.c:1819:    else if (InTrainerHillChallenge())
+src/battle_setup.c:1822:            CopyTrainerHillTrainerText(TRAINER_HILL_TEXT_INTRO, LocalIdToHillTrainerId(gSpecialVar_LastTalked));
+src/battle_setup.c:1824:            CopyTrainerHillTrainerText(TRAINER_HILL_TEXT_INTRO, LocalIdToHillTrainerId(gObjectEvents[gApproachingTrainers[gApproachingTrainerId].objectEventId].localId));
+src/battle_util2.c:21:        InitTrainerHillBattleStruct();
+src/battle_util2.c:58:        FreeTrainerHillBattleStruct();
+src/data/battle_frontier/trainer_hill.h:2:// See struct TrainerHillFloorMap for more info about each
+src/data/battle_frontier/trainer_hill.h:12:static const struct TrainerHillChallenge sChallenge_JPDefault = {
+src/data/battle_frontier/trainer_hill.h:20:static const struct TrainerHillFloor sFloors_JPDefault[] = {
+src/data/battle_frontier/trainer_hill.h:358:static const struct TrainerHillChallenge sChallenge_Normal =
+src/data/battle_frontier/trainer_hill.h:366:static const struct TrainerHillFloor sFloors_Normal[] =
+src/data/battle_frontier/trainer_hill.h:1485:static const struct TrainerHillChallenge sChallenge_Variety =
+src/data/battle_frontier/trainer_hill.h:1493:static const struct TrainerHillFloor sFloors_Variety[] = {
+src/data/battle_frontier/trainer_hill.h:2626:static const struct TrainerHillChallenge sChallenge_Unique =
+src/data/battle_frontier/trainer_hill.h:2634:static const struct TrainerHillFloor sFloors_Unique[] = {
+src/data/battle_frontier/trainer_hill.h:3745:static const struct TrainerHillChallenge sChallenge_Expert =
+src/data/battle_frontier/trainer_hill.h:3753:static const struct TrainerHillFloor sFloors_Expert[] = {
+src/data/battle_frontier/trainer_hill.h:4873:static const struct TrainerHillChallenge sChallenge_Normal =
+src/data/battle_frontier/trainer_hill.h:4881:static const struct TrainerHillFloor sFloors_Normal[] =
+src/data/battle_frontier/trainer_hill.h:5989:static const struct TrainerHillChallenge sChallenge_Variety =
+src/data/battle_frontier/trainer_hill.h:5997:static const struct TrainerHillFloor sFloors_Variety[] = {
+src/data/battle_frontier/trainer_hill.h:7111:static const struct TrainerHillChallenge sChallenge_Unique =
+src/data/battle_frontier/trainer_hill.h:7119:static const struct TrainerHillFloor sFloors_Unique[] = {
+src/data/battle_frontier/trainer_hill.h:8218:static const struct TrainerHillChallenge sChallenge_Expert =
+src/data/battle_frontier/trainer_hill.h:8226:static const struct TrainerHillFloor sFloors_Expert[] = {
+src/data/tilesets/graphics.h:1506:const u32 gTilesetTiles_TrainerHill[] = INCBIN_U32("data/tilesets/secondary/trainer_hill/tiles.4bpp.fastSmol");
+src/data/tilesets/graphics.h:1508:const u16 gTilesetPalettes_TrainerHill[][16] =
+src/data/tilesets/graphics.h:4821:const u32 gTilesetTiles_TrainerHill_Courtyard_Hns[] = INCBIN_U32("data/tilesets/secondary/trainer_hill_courtyard_hns/tiles.4bpp.fastSmol");
+src/data/tilesets/graphics.h:4823:const u16 gTilesetPalettes_TrainerHill_Courtyard_Hns[][16] =
+src/data/tilesets/headers.h:53:const struct Tileset gTileset_TrainerHill =
+src/data/tilesets/headers.h:57:    .tiles = gTilesetTiles_TrainerHill,
+src/data/tilesets/headers.h:58:    .palettes = gTilesetPalettes_TrainerHill,
+src/data/tilesets/headers.h:59:    .metatiles = gMetatiles_TrainerHill,
+src/data/tilesets/headers.h:60:    .metatileAttributes = gMetatileAttributes_TrainerHill,
+src/data/tilesets/headers.h:2515:const struct Tileset gTileset_TrainerHill_Courtyard_Hns =
+src/data/tilesets/headers.h:2519:    .tiles = gTilesetTiles_TrainerHill_Courtyard_Hns,
+src/data/tilesets/headers.h:2520:    .palettes = gTilesetPalettes_TrainerHill_Courtyard_Hns,
+src/data/tilesets/headers.h:2521:    .metatiles = gMetatiles_TrainerHill_Courtyard_Hns,
+src/data/tilesets/headers.h:2522:    .metatileAttributes = gMetatileAttributes_TrainerHill_Courtyard_Hns,
+src/data/tilesets/metatiles.h:13:const u16 gMetatiles_TrainerHill[] = INCBIN_U16("data/tilesets/secondary/trainer_hill/metatiles.bin");
+src/data/tilesets/metatiles.h:14:const u16 gMetatileAttributes_TrainerHill[] = INCBIN_U16("data/tilesets/secondary/trainer_hill/metatile_attributes.bin");
+src/data/tilesets/metatiles.h:676:const u16 gMetatiles_TrainerHill_Courtyard_Hns[] = INCBIN_U16("data/tilesets/secondary/trainer_hill_courtyard_hns/metatiles.bin");
+src/data/tilesets/metatiles.h:677:const u16 gMetatileAttributes_TrainerHill_Courtyard_Hns[] = INCBIN_U16("data/tilesets/secondary/trainer_hill_courtyard_hns/metatile_attributes.bin");
+src/ereader_helpers.c:19:STATIC_ASSERT(sizeof(struct TrainerHillChallenge) <= SECTOR_COUNTER_OFFSET, TrainerHillChallengeFreeSpace);
+src/ereader_helpers.c:53:static const struct TrainerHillTrainer sTrainerHillTrainerTemplates_JP[] = {
+src/ereader_helpers.c:376:static u8 GetTrainerHillUnkVal(void)
+src/ereader_helpers.c:379:    return (gSaveBlock1Ptr->trainerHill.unused + 1) % 256;
+src/ereader_helpers.c:385:static bool32 ValidateTrainerChecksum(struct EReaderTrainerHillTrainer *hillTrainer)
+src/ereader_helpers.c:394:bool8 ValidateTrainerHillData(struct EReaderTrainerHillSet *hillSet)
+src/ereader_helpers.c:412:    checksum = CalcByteArraySum((u8 *)hillSet->trainers, numTrainers * sizeof(struct EReaderTrainerHillTrainer));
+src/ereader_helpers.c:419:static bool32 ValidateTrainerHillChecksum(struct EReaderTrainerHillSet *hillSet)
+src/ereader_helpers.c:426:    checksum = CalcByteArraySum((u8 *)hillSet->trainers, sizeof(struct EReaderTrainerHillSet) - offsetof(struct EReaderTrainerHillSet, trainers));
+src/ereader_helpers.c:433:static bool32 TryWriteTrainerHill_Internal(struct EReaderTrainerHillSet *hillSet, struct TrainerHillChallenge *challenge)
+src/ereader_helpers.c:442:    challenge->unused1 = GetTrainerHillUnkVal();
+src/ereader_helpers.c:462:        challenge->floors[i / HILL_TRAINERS_PER_FLOOR].trainers[1] = sTrainerHillTrainerTemplates_JP[i / HILL_TRAINERS_PER_FLOOR];
+src/ereader_helpers.c:465:    challenge->checksum = CalcByteArraySum((u8 *)challenge->floors, NUM_TRAINER_HILL_FLOORS * sizeof(struct TrainerHillFloor));
+src/ereader_helpers.c:472:bool32 TryWriteTrainerHill(struct EReaderTrainerHillSet *hillSet)
+src/ereader_helpers.c:475:    bool32 result = TryWriteTrainerHill_Internal(hillSet, buffer);
+src/ereader_helpers.c:480:static bool32 TryReadTrainerHill_Internal(struct EReaderTrainerHillSet *dest, u8 *buffer)
+src/ereader_helpers.c:485:    memcpy(dest, buffer, sizeof(struct EReaderTrainerHillSet));
+src/ereader_helpers.c:486:    if (!ValidateTrainerHillChecksum(dest))
+src/ereader_helpers.c:492:static bool32 TryReadTrainerHill(struct EReaderTrainerHillSet *hillSet)
+src/ereader_helpers.c:495:    bool32 result = TryReadTrainerHill_Internal(hillSet, buffer);
+src/ereader_helpers.c:500:bool32 ReadTrainerHillAndValidate(void)
+src/ereader_helpers.c:502:    struct EReaderTrainerHillSet *hillSet = AllocZeroed(SECTOR_SIZE);
+src/ereader_helpers.c:503:    bool32 result = TryReadTrainerHill(hillSet);
+src/event_object_movement.c:1785:        else if (InTrainerHill())
+src/event_object_movement.c:3167:    else if (InTrainerHill())
+src/event_object_movement.c:3199:        else if (InTrainerHill())
+src/field_control_avatar.c:445:    if (InTrainerHill() == TRUE)
+src/field_control_avatar.c:446:        script = GetTrainerHillTrainerScript();
+src/field_control_avatar.c:564:    if (MetatileBehavior_IsTrainerHillTimer(metatileBehavior) == TRUE)
+src/field_control_avatar.c:565:        return EventScript_TrainerHillTimer;
+src/field_control_avatar.c:1117:    u8 trainerHillMapId = GetCurrentTrainerHillMapId();
+src/field_control_avatar.c:1119:    if (trainerHillMapId)
+src/field_control_avatar.c:1121:        if (trainerHillMapId == GetNumFloorsInTrainerHillChallenge())
+src/field_control_avatar.c:1126:                warpEvent = SetWarpDestinationTrainerHill4F();
+src/field_control_avatar.c:1128:        else if (trainerHillMapId == TRAINER_HILL_ROOF)
+src/field_control_avatar.c:1130:            warpEvent = SetWarpDestinationTrainerHillFinalFloor(warpEventId);
+src/field_door.c:132:static const u8 sDoorAnimTiles_TrainerHillLobbyElevator[] = INCBIN_U8("graphics/door_anims/trainer_hill_lobby_elevator.4bpp");
+src/field_door.c:134:static const u8 sDoorAnimTiles_TrainerHillRoofElevator[] = INCBIN_U8("graphics/door_anims/trainer_hill_roof_elevator.4bpp");
+src/field_door.c:357:static const u8 sDoorAnimPalettes_TrainerHillLobbyElevator[] = {7, 7, 7, 7, 7, 7, 7, 7};
+src/field_door.c:358:static const u8 sDoorAnimPalettes_TrainerHillRoofElevator[] = {9, 9, 7, 7, 7, 7, 7, 7};
+src/field_door.c:491:    {METATILE_TrainerHill_Door_Elevator_Lobby,              &gTileset_TrainerHill, DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_TrainerHillLobbyElevator, sDoorAnimPalettes_TrainerHillLobbyElevator},
+src/field_door.c:492:    {METATILE_TrainerHill_Door_Elevator_Roof,               &gTileset_TrainerHill, DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_TrainerHillRoofElevator, sDoorAnimPalettes_TrainerHillRoofElevator},
+src/field_door.c:603:    {METATILE_TrainerHill_Door_Elevator_Lobby,              &gTileset_TrainerHill, DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_TrainerHillLobbyElevator, sDoorAnimPalettes_TrainerHillLobbyElevator},
+src/field_door.c:604:    {METATILE_TrainerHill_Door_Elevator_Roof,               &gTileset_TrainerHill, DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_TrainerHillRoofElevator, sDoorAnimPalettes_TrainerHillRoofElevator},
+src/field_specials.c:2169:bool32 PlayerNotAtTrainerHillEntrance(void)
+src/landmark.c:60:static const struct Landmark Landmark_TrainerHill = {COMPOUND_STRING("TRAINER HILL"), FLAG_LANDMARK_TRAINER_HILL};
+src/landmark.c:154:    &Landmark_TrainerHill,
+src/load_save.c:107:    gTrainerHillVBlankCounter = NULL;
+src/new_game.c:293:    ResetTrainerHillResults();
+src/overworld.c:981:        else if (InTrainerHill())
+src/overworld.c:982:            LoadTrainerHillObjectEventTemplates();
+src/overworld.c:1019:    else if (InTrainerHill())
+src/overworld.c:1020:        InitTrainerHillMap();
+src/overworld.c:2208:    u8 trainerHillMapId;
+src/overworld.c:2218:    trainerHillMapId = GetCurrentTrainerHillMapId();
+src/overworld.c:2221:    else if (trainerHillMapId != 0 && trainerHillMapId != TRAINER_HILL_ENTRANCE)
+src/overworld.c:2222:        LoadTrainerHillFloorObjectEventScripts();
+src/overworld.c:2231:    else if (trainerHillMapId != 0)
+src/overworld.c:2232:        InitTrainerHillMap();
+src/overworld.c:2482:        TryLoadTrainerHillEReaderPalette();
+src/pokemon.c:7697:    else if (InTrainerHillChallenge())
+src/pokemon.c:7698:        return GetTrainerEncounterMusicIdInTrainerHill(trainerOpponentId);
+src/save.c:732:    u32 *backupVar = gTrainerHillVBlankCounter;
+src/save.c:734:    gTrainerHillVBlankCounter = NULL;
+src/save.c:785:    gTrainerHillVBlankCounter = backupVar;
+src/strings.c:1210:const u8 gText_TrainerHill1F[] = _("1F");
+src/strings.c:1211:const u8 gText_TrainerHill2F[] = _("2F");
+src/strings.c:1212:const u8 gText_TrainerHill3F[] = _("3F");
+src/strings.c:1213:const u8 gText_TrainerHill4F[] = _("4F");
+src/trainer_see.c:498:    if (InBattlePyramid_() || InTrainerHillChallenge())
+src/trainer_see.c:561:    if (InTrainerHill() == TRUE)
+src/trainer_see.c:563:        trainerBattlePtr = GetTrainerHillTrainerScript();
+src/trainer_see.c:587:    else if (InTrainerHill() == TRUE)
+src/ereader_screen.c:459:        data->status = ValidateTrainerHillData((struct EReaderTrainerHillSet *)data->buffer);
+src/ereader_screen.c:473:        if (TryWriteTrainerHill((struct EReaderTrainerHillSet *)data->buffer))
+src/field_poison.c:105:            if (CurrentBattlePyramidLocation() || InBattlePike() || InTrainerHillChallenge())
+src/field_poison.c:107:            if (CurrentBattlePyramidLocation() | InBattlePike() || InTrainerHillChallenge())
+src/field_screen_effect.c:315:    if (!OnTrainerHillEReaderChallengeFloor()) // always false
+src/fieldmap.c:158:void InitTrainerHillMap(void)
+src/fieldmap.c:161:    GenerateTrainerHillFloorLayout(sBackupMapData);
+src/main.c:185:    gTrainerHillVBlankCounter = NULL;
+src/main.c:366:    if (gTrainerHillVBlankCounter && *gTrainerHillVBlankCounter < 0xFFFFFFFF)
+src/main.c:367:        (*gTrainerHillVBlankCounter)++;
+src/main.c:444:void SetTrainerHillVBlankCounter(u32 *counter)
+src/main.c:446:    gTrainerHillVBlankCounter = counter;
+src/main.c:449:void ClearTrainerHillVBlankCounter(void)
+src/main.c:451:    gTrainerHillVBlankCounter = NULL;
+src/metatile_behavior.c:1454:bool8 MetatileBehavior_IsTrainerHillTimer(u8 metatileBehavior)
+src/trainer_hill.c:47:    struct TrainerHillChallenge challenge;
+src/trainer_hill.c:48:    struct TrainerHillFloor floors[NUM_TRAINER_HILL_FLOORS];
+src/trainer_hill.c:52:EWRAM_DATA u32 *gTrainerHillVBlankCounter = NULL;
+src/trainer_hill.c:55:static void TrainerHillStartChallenge(void);
+src/trainer_hill.c:59:static void TrainerHillResumeTimer(void);
+src/trainer_hill.c:60:static void TrainerHillSetPlayerLost(void);
+src/trainer_hill.c:61:static void TrainerHillGetChallengeStatus(void);
+src/trainer_hill.c:65:static void IsTrainerHillChallengeActive(void);
+src/trainer_hill.c:66:static void ShowTrainerHillPostBattleText(void);
+src/trainer_hill.c:72:static void TrainerHillSetMode(void);
+src/trainer_hill.c:75:static void TrainerHillDummy(void);
+src/trainer_hill.c:80:static void SetTrainerHillMonLevel(struct Pokemon *mon, u8 level);
+src/trainer_hill.c:324:static const struct TrainerHillChallenge *const sChallengeData[NUM_TRAINER_HILL_MODES] =
+src/trainer_hill.c:332:static const struct TrainerHillFloor *const sFloorData[NUM_TRAINER_HILL_MODES] =
+src/trainer_hill.c:343:    gText_TrainerHill1F,
+src/trainer_hill.c:344:    gText_TrainerHill2F,
+src/trainer_hill.c:345:    gText_TrainerHill3F,
+src/trainer_hill.c:346:    gText_TrainerHill4F,
+src/trainer_hill.c:351:    [TRAINER_HILL_FUNC_START]                 = TrainerHillStartChallenge,
+src/trainer_hill.c:355:    [TRAINER_HILL_FUNC_RESUME_TIMER]          = TrainerHillResumeTimer,
+src/trainer_hill.c:356:    [TRAINER_HILL_FUNC_SET_LOST]              = TrainerHillSetPlayerLost,
+src/trainer_hill.c:357:    [TRAINER_HILL_FUNC_GET_CHALLENGE_STATUS]  = TrainerHillGetChallengeStatus,
+src/trainer_hill.c:361:    [TRAINER_HILL_FUNC_IN_CHALLENGE]          = IsTrainerHillChallengeActive,
+src/trainer_hill.c:362:    [TRAINER_HILL_FUNC_POST_BATTLE_TEXT]      = ShowTrainerHillPostBattleText,
+src/trainer_hill.c:368:    [TRAINER_HILL_FUNC_SET_MODE]              = TrainerHillSetMode,
+src/trainer_hill.c:410:void CallTrainerHillFunction(void)
+src/trainer_hill.c:417:void ResetTrainerHillResults(void)
+src/trainer_hill.c:426:    gSaveBlock1Ptr->trainerHill.bestTime = 0;
+src/trainer_hill.c:428:        SetTimerValue(&gSaveBlock1Ptr->trainerHillTimes[i], HILL_MAX_TIME);
+src/trainer_hill.c:441:enum TrainerClassID GetTrainerHillOpponentClass(u16 trainerId)
+src/trainer_hill.c:448:void GetTrainerHillTrainerName(u8 *dst, u16 trainerId)
+src/trainer_hill.c:457:u8 GetTrainerHillTrainerFrontSpriteId(u16 trainerId)
+src/trainer_hill.c:469:void InitTrainerHillBattleStruct(void)
+src/trainer_hill.c:484:    SetTrainerHillVBlankCounter(&gSaveBlock1Ptr->trainerHill.timer);
+src/trainer_hill.c:489:void FreeTrainerHillBattleStruct(void)
+src/trainer_hill.c:506:    CpuCopy32(sChallengeData[gSaveBlock1Ptr->trainerHill.mode], &sHillData->challenge, sizeof(sHillData->challenge));
+src/trainer_hill.c:507:    CpuCopy32(sFloorData[gSaveBlock1Ptr->trainerHill.mode], &sHillData->floors, sizeof(sHillData->floors));
+src/trainer_hill.c:516:void CopyTrainerHillTrainerText(u8 which, u16 localId)
+src/trainer_hill.c:543:static void TrainerHillStartChallenge(void)
+src/trainer_hill.c:545:    TrainerHillDummy();
+src/trainer_hill.c:547:    if (!ReadTrainerHillAndValidate())
+src/trainer_hill.c:548:        gSaveBlock1Ptr->trainerHill.field_3D6E_0f = 1;
+src/trainer_hill.c:550:        gSaveBlock1Ptr->trainerHill.field_3D6E_0f = 0;
+src/trainer_hill.c:552:    gSaveBlock1Ptr->trainerHill.unk_3D6C = 0;
+src/trainer_hill.c:553:    SetTrainerHillVBlankCounter(&gSaveBlock1Ptr->trainerHill.timer);
+src/trainer_hill.c:554:    gSaveBlock1Ptr->trainerHill.timer = 0;
+src/trainer_hill.c:555:    gSaveBlock1Ptr->trainerHill.spokeToOwner = 0;
+src/trainer_hill.c:556:    gSaveBlock1Ptr->trainerHill.checkedFinalTime = 0;
+src/trainer_hill.c:557:    gSaveBlock1Ptr->trainerHill.maybeECardScanDuringChallenge = 0;
+src/trainer_hill.c:560:    gSaveBlock1Ptr->trainerHill.receivedPrize = 0;
+src/trainer_hill.c:567:    ClearTrainerHillVBlankCounter();
+src/trainer_hill.c:569:    if (gSaveBlock1Ptr->trainerHill.spokeToOwner)
+src/trainer_hill.c:571:    if (gSaveBlock1Ptr->trainerHill.receivedPrize && gSaveBlock1Ptr->trainerHill.checkedFinalTime)
+src/trainer_hill.c:574:    gSaveBlock1Ptr->trainerHill.spokeToOwner = TRUE;
+src/trainer_hill.c:583:    if (sHillData->challenge.numFloors != NUM_TRAINER_HILL_FLOORS || gSaveBlock1Ptr->trainerHill.receivedPrize)
+src/trainer_hill.c:590:        gSaveBlock1Ptr->trainerHill.receivedPrize = TRUE;
+src/trainer_hill.c:606:    if (gSaveBlock1Ptr->trainerHill.checkedFinalTime)
+src/trainer_hill.c:610:    else if (GetTimerValue(&gSaveBlock1Ptr->trainerHill.bestTime) > gSaveBlock1Ptr->trainerHill.timer)
+src/trainer_hill.c:612:        SetTimerValue(&gSaveBlock1Ptr->trainerHill.bestTime, gSaveBlock1Ptr->trainerHill.timer);
+src/trainer_hill.c:613:        gSaveBlock1Ptr->trainerHillTimes[gSaveBlock1Ptr->trainerHill.mode] = gSaveBlock1Ptr->trainerHill.bestTime;
+src/trainer_hill.c:621:    gSaveBlock1Ptr->trainerHill.checkedFinalTime = TRUE;
+src/trainer_hill.c:625:static void TrainerHillResumeTimer(void)
+src/trainer_hill.c:628:    if (!gSaveBlock1Ptr->trainerHill.spokeToOwner)
+src/trainer_hill.c:630:        if (gSaveBlock1Ptr->trainerHill.timer >= HILL_MAX_TIME)
+src/trainer_hill.c:631:            gSaveBlock1Ptr->trainerHill.timer = HILL_MAX_TIME;
+src/trainer_hill.c:633:            SetTrainerHillVBlankCounter(&gSaveBlock1Ptr->trainerHill.timer);
+src/trainer_hill.c:638:static void TrainerHillSetPlayerLost(void)
+src/trainer_hill.c:641:    gSaveBlock1Ptr->trainerHill.hasLost = TRUE;
+src/trainer_hill.c:645:static void TrainerHillGetChallengeStatus(void)
+src/trainer_hill.c:648:    if (gSaveBlock1Ptr->trainerHill.hasLost)
+src/trainer_hill.c:651:        gSaveBlock1Ptr->trainerHill.hasLost = FALSE;
+src/trainer_hill.c:654:    else if (gSaveBlock1Ptr->trainerHill.maybeECardScanDuringChallenge)
+src/trainer_hill.c:657:        gSaveBlock1Ptr->trainerHill.maybeECardScanDuringChallenge = 0;
+src/trainer_hill.c:673:    total = gSaveBlock1Ptr->trainerHill.timer;
+src/trainer_hill.c:717:bool8 InTrainerHillChallenge(void)
+src/trainer_hill.c:722:    else if (gSaveBlock1Ptr->trainerHill.spokeToOwner)
+src/trainer_hill.c:724:    else if (GetCurrentTrainerHillMapId() != 0)
+src/trainer_hill.c:733:static void IsTrainerHillChallengeActive(void)
+src/trainer_hill.c:735:    if (!InTrainerHillChallenge())
+src/trainer_hill.c:741:static void UNUSED TrainerHillDummy_Unused(void)
+src/trainer_hill.c:746:static void TrainerHillDummy(void)
+src/trainer_hill.c:751:void PrintOnTrainerHillRecordsWindow(void)
+src/trainer_hill.c:767:        total = GetTimerValue(&gSaveBlock1Ptr->trainerHillTimes[i]);
+src/trainer_hill.c:802:void LoadTrainerHillObjectEventTemplates(void)
+src/trainer_hill.c:807:    if (!LoadTrainerHillFloorObjectEventScripts())
+src/trainer_hill.c:828:        eventTemplates[i].script = TrainerHill_EventScript_TrainerBattle;
+src/trainer_hill.c:835:bool32 LoadTrainerHillFloorObjectEventScripts(void)
+src/trainer_hill.c:856:void GenerateTrainerHillFloorLayout(u16 *mapArg)
+src/trainer_hill.c:861:    u8 mapId = GetCurrentTrainerHillMapId();
+src/trainer_hill.c:906:bool32 InTrainerHill(void)
+src/trainer_hill.c:928:u8 GetCurrentTrainerHillMapId(void)
+src/trainer_hill.c:965:static bool32 UNUSED OnTrainerHillRoof(void)
+src/trainer_hill.c:981:const struct WarpEvent* SetWarpDestinationTrainerHill4F(void)
+src/trainer_hill.c:992:const struct WarpEvent* SetWarpDestinationTrainerHillFinalFloor(u8 warpEventId)
+src/trainer_hill.c:1000:    numFloors = GetNumFloorsInTrainerHillChallenge();
+src/trainer_hill.c:1050:const u8 *GetTrainerHillTrainerScript(void)
+src/trainer_hill.c:1052:    return TrainerHill_EventScript_TrainerBattle;
+src/trainer_hill.c:1055:static void ShowTrainerHillPostBattleText(void)
+src/trainer_hill.c:1057:    CopyTrainerHillTrainerText(TRAINER_HILL_TEXT_AFTER, gSpecialVar_LastTalked);
+src/trainer_hill.c:1061:static void CreateNPCTrainerHillParty(u16 trainerId, u8 firstMonId)
+src/trainer_hill.c:1079:        SetTrainerHillMonLevel(mon, level);
+src/trainer_hill.c:1088:    CreateNPCTrainerHillParty(TRAINER_BATTLE_PARAM.opponentA, 0);
+src/trainer_hill.c:1094:    CreateNPCTrainerHillParty(TRAINER_BATTLE_PARAM.opponentA, 0);
+src/trainer_hill.c:1095:    CreateNPCTrainerHillParty(TRAINER_BATTLE_PARAM.opponentB, PARTY_SIZE / 2);
+src/trainer_hill.c:1101:u64 GetTrainerHillAIFlags(void)
+src/trainer_hill.c:1106:u8 GetTrainerEncounterMusicIdInTrainerHill(u16 trainerId)
+src/trainer_hill.c:1125:static void SetTrainerHillMonLevel(struct Pokemon *mon, u8 level)
+src/trainer_hill.c:1135:u8 GetNumFloorsInTrainerHillChallenge(void)
+src/trainer_hill.c:1151:// Palette never loaded, OnTrainerHillEReaderChallengeFloor always FALSE
+src/trainer_hill.c:1152:void TryLoadTrainerHillEReaderPalette(void)
+src/trainer_hill.c:1154:    if (OnTrainerHillEReaderChallengeFloor() == TRUE)
+src/trainer_hill.c:1174:bool32 OnTrainerHillEReaderChallengeFloor(void)
+src/trainer_hill.c:1176:    if (!InTrainerHillChallenge() || GetCurrentTrainerHillMapId() == TRAINER_HILL_ENTRANCE)
+src/trainer_hill.c:1189:    if (gSaveBlock1Ptr->trainerHill.hasLost)
+src/trainer_hill.c:1196:static void TrainerHillSetMode(void)
+src/trainer_hill.c:1199:    gSaveBlock1Ptr->trainerHill.mode = gSpecialVar_0x8005;
+src/trainer_hill.c:1200:    gSaveBlock1Ptr->trainerHill.bestTime = gSaveBlock1Ptr->trainerHillTimes[gSpecialVar_0x8005];
+src/trainer_hill.c:1261:    if (gSaveBlock1Ptr->trainerHill.mode == HILL_MODE_EXPERT)
+src/trainer_hill.c:1281:    minutes = (signed)(gSaveBlock1Ptr->trainerHill.timer) / (60 * 60);
+src/trainer_tower.c:404:    SetTrainerHillVBlankCounter(&TRAINER_TOWER.timer);
+src/trainer_tower.c:708:    SetTrainerHillVBlankCounter(&TRAINER_TOWER.timer);
+src/trainer_tower.c:718:    ClearTrainerHillVBlankCounter();
+src/trainer_tower.c:787:            SetTrainerHillVBlankCounter(&TRAINER_TOWER.timer);
+src/trainer_tower.c:842:        ClearTrainerHillVBlankCounter();
+src/wild_encounter_ow.c:248:     || InTrainerHillChallenge())
+include/battle_records.h:10:void ShowTrainerHillRecords(void);
+include/constants/metatile_labels.h:986:// gTileset_TrainerHill
+include/constants/metatile_labels.h:987:#define METATILE_TrainerHill_CounterDoor          0x334
+include/constants/metatile_labels.h:988:#define METATILE_TrainerHill_Door_Elevator_Lobby  0x32C
+include/constants/metatile_labels.h:989:#define METATILE_TrainerHill_Door_Elevator_Roof   0x383
+include/constants/metatile_labels.h:990:#define METATILE_TrainerHill_GreenFloorTile       0x307
+include/constants/trainer_hill.h:50:// Values returned by TrainerHillGetChallengeStatus
+include/ereader_helpers.h:34:struct EReaderTrainerHillTrainer
+include/ereader_helpers.h:37:    struct TrainerHillTrainer trainer;
+include/ereader_helpers.h:38:    struct TrainerHillFloorMap map;
+include/ereader_helpers.h:42:struct EReaderTrainerHillSet
+include/ereader_helpers.h:48:    struct EReaderTrainerHillTrainer trainers[6];
+include/ereader_helpers.h:52:bool8 ValidateTrainerHillData(struct EReaderTrainerHillSet *hillSet);
+include/ereader_helpers.h:53:bool32 TryWriteTrainerHill(struct EReaderTrainerHillSet *hillSet);
+include/ereader_helpers.h:54:bool32 ReadTrainerHillAndValidate(void);
+include/event_scripts.h:574:extern const u8 EventScript_TrainerHillTimer[];
+include/event_scripts.h:627:extern const u8 TrainerHill_EventScript_TrainerBattle[];
+include/fieldmap.h:73:void InitTrainerHillMap(void);
+include/global.h:1041:struct TrainerHillSave
+include/global.h:1296:    /*0x3???*/ u32 trainerHillTimes[NUM_TRAINER_HILL_MODES];
+include/global.h:1308:    /*0x3???*/ struct TrainerHillSave trainerHill;
+include/main.h:67:void SetTrainerHillVBlankCounter(u32 *counter);
+include/main.h:68:void ClearTrainerHillVBlankCounter(void);
+include/metatile_behavior.h:152:bool8 MetatileBehavior_IsTrainerHillTimer(u8 metatileBehavior);
+include/tilesets.h:37:extern const struct Tileset gTileset_TrainerHill;
+include/tilesets.h:141:extern const struct Tileset gTileset_TrainerHill_Courtyard_Hns;
+include/strings.h:861:extern const u8 gText_TrainerHill1F[];
+include/strings.h:862:extern const u8 gText_TrainerHill2F[];
+include/strings.h:863:extern const u8 gText_TrainerHill3F[];
+include/strings.h:864:extern const u8 gText_TrainerHill4F[];
+include/trainer_hill.h:6:struct TrainerHillTrainer
+include/trainer_hill.h:18:struct TrainerHillFloorMap
+include/trainer_hill.h:27:struct TrainerHillFloor
+include/trainer_hill.h:31:    struct TrainerHillTrainer trainers[HILL_TRAINERS_PER_FLOOR];
+include/trainer_hill.h:32:    struct TrainerHillFloorMap map;
+include/trainer_hill.h:35:struct TrainerHillChallenge
+include/trainer_hill.h:41:    struct TrainerHillFloor floors[0]; // Floor data is assumed to follow, so this will be intentionally read out of bounds
+include/trainer_hill.h:44:extern u32 *gTrainerHillVBlankCounter;
+include/trainer_hill.h:46:void CallTrainerHillFunction(void);
+include/trainer_hill.h:47:void ResetTrainerHillResults(void);
+include/trainer_hill.h:48:enum TrainerClassID GetTrainerHillOpponentClass(u16 trainerId);
+include/trainer_hill.h:49:void GetTrainerHillTrainerName(u8 *dst, u16 trainerId);
+include/trainer_hill.h:50:u8 GetTrainerHillTrainerFrontSpriteId(u16 trainerId);
+include/trainer_hill.h:51:void InitTrainerHillBattleStruct(void);
+include/trainer_hill.h:52:void FreeTrainerHillBattleStruct(void);
+include/trainer_hill.h:53:void CopyTrainerHillTrainerText(u8 which, u16 trainerId);
+include/trainer_hill.h:54:bool8 InTrainerHillChallenge(void);
+include/trainer_hill.h:55:void PrintOnTrainerHillRecordsWindow(void);
+include/trainer_hill.h:56:void LoadTrainerHillObjectEventTemplates(void);
+include/trainer_hill.h:57:bool32 LoadTrainerHillFloorObjectEventScripts(void);
+include/trainer_hill.h:58:void GenerateTrainerHillFloorLayout(u16 *mapArg);
+include/trainer_hill.h:59:bool32 InTrainerHill(void);
+include/trainer_hill.h:60:u8 GetCurrentTrainerHillMapId(void);
+include/trainer_hill.h:61:const struct WarpEvent* SetWarpDestinationTrainerHill4F(void);
+include/trainer_hill.h:62:const struct WarpEvent* SetWarpDestinationTrainerHillFinalFloor(u8 warpEventId);
+include/trainer_hill.h:66:const u8 *GetTrainerHillTrainerScript(void);
+include/trainer_hill.h:69:u8 GetTrainerEncounterMusicIdInTrainerHill(u16 trainerId);
+include/trainer_hill.h:70:u8 GetNumFloorsInTrainerHillChallenge(void);
+include/trainer_hill.h:71:void TryLoadTrainerHillEReaderPalette(void);
+include/trainer_hill.h:72:bool32 OnTrainerHillEReaderChallengeFloor(void);
+asm/macros/trainer_hill.inc:2:	.macro trainerhill_start
+asm/macros/trainer_hill.inc:4:	special CallTrainerHillFunction
+asm/macros/trainer_hill.inc:8:	.macro trainerhill_getownerstate
+asm/macros/trainer_hill.inc:10:	special CallTrainerHillFunction
+asm/macros/trainer_hill.inc:14:	.macro trainerhill_giveprize
+asm/macros/trainer_hill.inc:16:	special CallTrainerHillFunction
+asm/macros/trainer_hill.inc:20:	.macro trainerhill_finaltime
+asm/macros/trainer_hill.inc:22:	special CallTrainerHillFunction
+asm/macros/trainer_hill.inc:26:	.macro trainerhill_resumetimer
+asm/macros/trainer_hill.inc:28:	special CallTrainerHillFunction
+asm/macros/trainer_hill.inc:31:	@ Set player lost the challenge (trainerHill.hasLost) to TRUE
+asm/macros/trainer_hill.inc:32:	.macro trainerhill_lost
+asm/macros/trainer_hill.inc:34:	special CallTrainerHillFunction
+asm/macros/trainer_hill.inc:38:	.macro trainerhill_getstatus
+asm/macros/trainer_hill.inc:40:	special CallTrainerHillFunction
+asm/macros/trainer_hill.inc:44:	.macro trainerhill_gettime
+asm/macros/trainer_hill.inc:46:	special CallTrainerHillFunction
+asm/macros/trainer_hill.inc:50:	.macro trainerhill_allfloorsused
+asm/macros/trainer_hill.inc:52:	special CallTrainerHillFunction
+asm/macros/trainer_hill.inc:56:	.macro trainerhill_getusingereader
+asm/macros/trainer_hill.inc:58:	special CallTrainerHillFunction
+asm/macros/trainer_hill.inc:62:	.macro trainerhill_inchallenge
+asm/macros/trainer_hill.inc:64:	special CallTrainerHillFunction
+asm/macros/trainer_hill.inc:68:	.macro trainerhill_postbattletext
+asm/macros/trainer_hill.inc:70:	special CallTrainerHillFunction
+asm/macros/trainer_hill.inc:74:	.macro trainerhill_settrainerflags
+asm/macros/trainer_hill.inc:76:	special CallTrainerHillFunction
+asm/macros/trainer_hill.inc:80:	.macro trainerhill_getsaved
+asm/macros/trainer_hill.inc:82:	special CallTrainerHillFunction
+asm/macros/trainer_hill.inc:86:	.macro trainerhill_setsaved
+asm/macros/trainer_hill.inc:88:	special CallTrainerHillFunction
+asm/macros/trainer_hill.inc:92:	.macro trainerhill_clearsaved
+asm/macros/trainer_hill.inc:94:	special CallTrainerHillFunction
+asm/macros/trainer_hill.inc:98:	.macro trainerhill_getwon
+asm/macros/trainer_hill.inc:100:	special CallTrainerHillFunction
+asm/macros/trainer_hill.inc:104:	.macro trainerhill_setmode mode:req
+asm/macros/trainer_hill.inc:107:	special CallTrainerHillFunction

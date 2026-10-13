@@ -391,7 +391,7 @@ static void HandleInputChooseAction(enum BattlerId battler)
             }
         }
     }
-    else if (JOY_NEW(START_BUTTON))
+    else if (JOY_NEW(START_BUTTON) || JOY_NEW(R_BUTTON))
     {
         SwapHpBarsWithHpText();
     }
@@ -910,7 +910,7 @@ void HandleInputChooseMove(enum BattlerId battler)
         gBattleStruct->descriptionSubmenu = TRUE;
         TryMoveSelectionDisplayMoveDescription(battler);
     }
-    else if (JOY_NEW(START_BUTTON))
+    else if (JOY_NEW(START_BUTTON) || JOY_NEW(R_BUTTON))
     {
         if (gBattleStruct->gimmick.usableGimmick[battler] != GIMMICK_NONE
             && !HasTrainerUsedGimmick(battler, gBattleStruct->gimmick.usableGimmick[battler])

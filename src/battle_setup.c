@@ -47,6 +47,7 @@
 #include "item.h"
 #include "script.h"
 #include "field_name_box.h"
+#include "wild_encounter_ow.h"
 #include "constants/battle_frontier.h"
 #include "constants/battle_setup.h"
 #include "constants/event_objects.h"
@@ -310,6 +311,7 @@ static void Task_BattleStart(u8 taskId)
             SetMainCallback2(CB2_InitBattle);
             RestartWildEncounterImmunitySteps();
             ClearPoisonStepCounter();
+            DespawnOWEOnBattleStart();
             DestroyTask(taskId);
         }
         break;
