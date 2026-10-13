@@ -1,15 +1,27 @@
 SinjohRuins_ArceusRoom_hns_MapScripts::
 	map_script 	MAP_SCRIPT_ON_TRANSITION, SinjohRuins_ArceusRoom_OnTransition
+	map_script  MAP_SCRIPT_ON_LOAD, SinjohRuins_ArceusRoom_OnLoad
 	.byte 0
 
 SinjohRuins_ArceusRoom_OnTransition::
 	call_if_ge VAR_SINJOH_STORYLINE, 11, SinjohRuins_ArceusRoom_MoveArceus
 	end
-	
+
 SinjohRuins_ArceusRoom_MoveArceus::
 	setobjectxyperm LOCALID_SINJOHRUINS_ARCEUSROOM_ARCEUS, 18, 18
 	return
 
+SinjohRuins_ArceusRoom_OnLoad::
+	goto_if_unset FLAG_HIDE_SINJOHRUINS_ARCEUSROOM_ARCEUS, SinjohRuins_ArceusRoom_HideCreationTrio
+	release
+	end
+
+SinjohRuins_ArceusRoom_HideCreationTrio::
+	setflag FLAG_HIDE_DIALGA
+	setflag FLAG_HIDE_PALKIA
+	setflag FLAG_HIDE_GIRATINA
+	release
+	end
 
 SinjohRuins_ArceusRoom_TriggerRight::
 	lock
@@ -307,6 +319,9 @@ SinjohRuins_ArceusRoom_EventScript_ArceusPhase2::
 	fadescreenswapbuffers FADE_TO_BLACK
 	removeobject LOCALID_SINJOHRUINS_ARCEUSROOM_ARCEUS
 	setflag FLAG_HIDE_SINJOHRUINS_ARCEUSROOM_ARCEUS
+	clearflag FLAG_HIDE_DIALGA
+	clearflag FLAG_HIDE_PALKIA
+	clearflag FLAG_HIDE_GIRATINA
 	special GivePartyMonSkyRibbon
 	fadescreenswapbuffers FADE_FROM_BLACK
 	release
@@ -378,3 +393,123 @@ SinjohRuins_ArceusRoom_Text_StevenCongrats:
 	.string "POKéMON deserve some rest.\p"
 	.string "I'll be at the village if you need me.\p"
 	.string "Fufufu, what could you need from me?$"
+
+SinjohRuins_ArceusRoom_EventScript_Dialga::
+	msgbox SinjohRuins_ArceusRoom_FossilText_Dialga, MSGBOX_YESNO
+	switch VAR_RESULT
+	case YES, SinjohRuins_ArceusRoom_EventScript_DialgaFight
+	case NO, SinjohRuins_ArceusRoom_EventScript_PlayerOrCreationTrioRan
+	case MULTI_B_PRESSED, SinjohRuins_ArceusRoom_EventScript_PlayerOrCreationTrioRan
+
+SinjohRuins_ArceusRoom_EventScript_Palkia::
+	msgbox SinjohRuins_ArceusRoom_FossilText_Palkia, MSGBOX_YESNO
+	switch VAR_RESULT
+	case YES, SinjohRuins_ArceusRoom_EventScript_PalkiaFight
+	case NO, SinjohRuins_ArceusRoom_EventScript_PlayerOrCreationTrioRan
+	case MULTI_B_PRESSED, SinjohRuins_ArceusRoom_EventScript_PlayerOrCreationTrioRan
+
+SinjohRuins_ArceusRoom_EventScript_Giratina::
+	msgbox SinjohRuins_ArceusRoom_FossilText_Giratina, MSGBOX_YESNO
+	switch VAR_RESULT
+	case YES, SinjohRuins_ArceusRoom_EventScript_GiratinaFight
+	case NO, SinjohRuins_ArceusRoom_EventScript_PlayerOrCreationTrioRan
+	case MULTI_B_PRESSED, SinjohRuins_ArceusRoom_EventScript_PlayerOrCreationTrioRan
+
+SinjohRuins_ArceusRoom_EventScript_DialgaFight::
+	lock
+	msgbox SinjohRuins_ArceusRoom_InteractText_Dialga, MSGBOX_AUTOCLOSE
+	delay 60
+	playmoncry SPECIES_DIALGA, CRY_MODE_ENCOUNTER
+	msgbox SinjohRuins_ArceusRoom_Text_Dialga
+	delay 20
+	waitmoncry
+	setwildbossbattle species=SPECIES_DIALGA, level=75, item=ITEM_ADAMANT_ORB, move1_1=MOVE_ROAR_OF_TIME, move1_2=MOVE_FLASH_CANNON, move1_3=MOVE_AURA_SPHERE move1_4=MOVE_EARTH_POWER
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SinjohRuins_ArceusRoom_EventScript_PlayerOrCreationTrioRan
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_SINJOHRUINS_ARCEUSROOM_DIALGA
+	setflag FLAG_HIDE_DIALGA
+	clearflag FLAG_HIDE_PALKIA
+	fadescreenswapbuffers FADE_FROM_BLACK
+	release
+	end
+
+SinjohRuins_ArceusRoom_EventScript_PalkiaFight::
+	lock
+	msgbox SinjohRuins_ArceusRoom_InteractText_Palkia, MSGBOX_AUTOCLOSE
+	delay 60
+	playmoncry SPECIES_PALKIA, CRY_MODE_ENCOUNTER
+	msgbox SinjohRuins_ArceusRoom_Text_Palkia
+	delay 20
+	waitmoncry
+	setwildbossbattle species=SPECIES_PALKIA, level=75, item=ITEM_LUSTROUS_ORB, move1_1=MOVE_SPACIAL_REND, move1_2=MOVE_HYDRO_PUMP, move1_3=MOVE_AURA_SPHERE move1_4=MOVE_EARTH_POWER
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SinjohRuins_ArceusRoom_EventScript_PlayerOrCreationTrioRan
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_SINJOHRUINS_ARCEUSROOM_PALKIA
+	setflag FLAG_HIDE_PALKIA
+	clearflag FLAG_HIDE_GIRATINA
+	fadescreenswapbuffers FADE_FROM_BLACK
+	release
+	end
+
+SinjohRuins_ArceusRoom_EventScript_GiratinaFight::
+	lock
+	msgbox SinjohRuins_ArceusRoom_InteractText_Giratina, MSGBOX_AUTOCLOSE
+	delay 60
+	playmoncry SPECIES_GIRATINA_ORIGIN, CRY_MODE_ENCOUNTER
+	msgbox SinjohRuins_ArceusRoom_Text_Giratina
+	delay 20
+	waitmoncry
+	setwildbossbattle species=SPECIES_GIRATINA_ORIGIN, level=75, item=ITEM_GRISEOUS_ORB, move1_1=MOVE_SHADOW_FORCE, move1_2=MOVE_SHADOW_CLAW, move1_3=MOVE_AURA_SPHERE move1_4=MOVE_EARTH_POWER
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SinjohRuins_ArceusRoom_EventScript_PlayerOrCreationTrioRan
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_SINJOHRUINS_ARCEUSROOM_GIRATINA
+	setflag FLAG_HIDE_GIRATINA
+	fadescreenswapbuffers FADE_FROM_BLACK
+	release
+	end
+
+SinjohRuins_ArceusRoom_EventScript_PlayerOrCreationTrioRan::
+	release
+	end
+
+SinjohRuins_ArceusRoom_FossilText_Dialga:
+	.string "A shard of Arceus, distorting\n"
+	.string "time around it.\p"
+	.string "Touch the stone?$"
+
+SinjohRuins_ArceusRoom_FossilText_Palkia:
+	.string "A shard of Arceus, distorting\n"
+	.string "space around it.\p"
+	.string "Touch the stone?$"
+
+SinjohRuins_ArceusRoom_FossilText_Giratina:
+	.string "A shard of Arceus, distorting\n"
+	.string "existence around it.\p"
+	.string "Touch the stone?$"
+
+SinjohRuins_ArceusRoom_InteractText_Dialga:
+	.string "You reach out across time.$"
+
+SinjohRuins_ArceusRoom_InteractText_Palkia:
+	.string "You reach out across space.$"
+
+SinjohRuins_ArceusRoom_InteractText_Giratina:
+	.string "You reach into the void.$"
+
+SinjohRuins_ArceusRoom_Text_Dialga:
+	.string "Gugyugubah!$"
+
+SinjohRuins_ArceusRoom_Text_Palkia:
+	.string "Gagyagyaah!$"
+
+SinjohRuins_ArceusRoom_Text_Giratina:
+	.string "...Bishaan!$"

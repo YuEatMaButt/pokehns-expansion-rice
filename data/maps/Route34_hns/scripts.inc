@@ -7,7 +7,7 @@ Route34_OnTransition:
 	specialvar VAR_RESULT, GetDaycareState
 	call_if_eq VAR_RESULT, DAYCARE_EGG_WAITING, Route34_MapScript_EggReady
 	callnative SetTimeBasedEncounters
-	end	
+	end
 
 Route34_MapScript_EggReady::
 	setobjectxyperm LOCALID_ROUTE34_DAYCAREMAN, 30, 34
@@ -122,6 +122,41 @@ Route34_EventScript_Item_Embargo::
     finditem ITEM_TM_EMBARGO
     end
 
+Route34_AbandonedHouse_EventScript_Door::
+	lock
+	goto_if_set FLAG_UNLOCKED_ROUTE34_ABANDONEDHOUSE, Route34_AbandonedHouse_EventScript_DoorAlreadyOpened
+	checkitem ITEM_HOUSE_KEY
+	goto_if_eq VAR_RESULT, TRUE, Route34_AbandonedHouse_EventScript_OpenDoor
+	msgbox Route34_AbandonedHouse_Text_DoorsLocked, MSGBOX_DEFAULT
+	release
+	end
+
+Route34_AbandonedHouse_EventScript_OpenDoor::
+	msgbox Route34_AbandonedHouse_Text_KeyOpenedDoor, MSGBOX_DEFAULT
+	setflag FLAG_UNLOCKED_ROUTE34_ABANDONEDHOUSE
+	setmetatile 23, 50, 0x03D, FALSE
+	playse SE_BANG
+	special DrawWholeMapView
+	waitse
+	release
+	end
+
+Route34_AbandonedHouse_EventScript_DoorAlreadyOpened::
+	msgbox Route34_AbandonedHouse_Text_KeyOpenedDoor2, MSGBOX_DEFAULT
+	setmetatile 23, 50, 0x03D, FALSE
+	release
+	end
+
+Route34_AbandonedHouse_Text_DoorsLocked:
+    .string "The door's locked…$"
+
+Route34_AbandonedHouse_Text_KeyOpenedDoor:
+    .string "The HOUSE KEY opened the door.$"
+
+Route34_AbandonedHouse_Text_KeyOpenedDoor2:
+	.string "The door seems to have locked\n"
+	.string "itself once again.\p"
+    .string "The HOUSE KEY opened the door.$"
 
 Route34_Text_YoungsterSamuel_Seen:
 	.string "Hey! I'm looking for MANKEY!$"

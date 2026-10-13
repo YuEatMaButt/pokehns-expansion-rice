@@ -134,8 +134,8 @@ static inline bool32 GroupSetsIntersect(struct RandomizerGroupSet* originalCache
         && originalCache->minGroup <= targetCache->maxGroup;
 }
 
-// TRUE when the Gen 1-3 scope is off, or when the species belongs to a
-// Gen 1-3 family. Also used to scope the One Type Challenge starter pool.
+// TRUE when the Gen 1-4 scope is off, or when the species belongs to a
+// Gen 1-4 family. Also used to scope the One Type Challenge starter pool.
 bool32 IsSpeciesInGenScope(u16 species);
 
 #if RANDOMIZER_DYNAMIC_SPECIES

@@ -43,6 +43,6 @@ CliffEdgeGate_EventScript_CaveSign::
 CliffEdgeGate_Text_SignOpen:
 	.string "Everything Is Thrilling!\n"
 	.string "Explore to Find Wild POKéMON!\l"
-	.string "Warden BAOBA's SAFARI ZONE\l"
+	.string "WARDEN BAOBA's SAFARI ZONE\l"
 	.string "Up and Running!$"
 

@@ -31,8 +31,9 @@ static const struct BPShopEntry sBPPowerShopEntries[] = {
 static const struct BPShopEntry sBPHoldItemShopEntries[] = {
     { ITEM_LEFTOVERS,     48 },
     { ITEM_WHITE_HERB,    48 },
-    { ITEM_QUICK_CLAW,    48 },
+    { ITEM_POWER_HERB,    48 },
     { ITEM_MENTAL_HERB,   48 },
+    { ITEM_QUICK_CLAW,    48 },
     { ITEM_BRIGHT_POWDER, 64 },
     { ITEM_CHOICE_BAND,   64 },
     { ITEM_KINGS_ROCK,    64 },
@@ -64,8 +65,10 @@ static const struct BPShopEntry sBPHoldItemShopEntries2[] = {
     { ITEM_WIDE_LENS,    64 },
     { ITEM_ZOOM_LENS,    64 },
     { ITEM_MACHO_BRACE,    64 },
-    { ITEM_WHITE_HERB,    64 },
-    { ITEM_MENTAL_HERB,    64 },
+    { ITEM_HEAT_ROCK,     64 },
+    { ITEM_DAMP_ROCK,     64 },
+    { ITEM_SMOOTH_ROCK,     64 },
+    { ITEM_ICY_ROCK,     64 },
     { ITEM_NONE,           0 },
 };
 
