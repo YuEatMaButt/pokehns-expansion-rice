@@ -517,7 +517,7 @@ static const u8 *const sChoices_OffRandom[] = {
 
 static const u8 *const sChoices_GenScope[] = {
     COMPOUND_STRING("GEN 1-9"),
-    COMPOUND_STRING("GEN 1-3"),
+    COMPOUND_STRING("GEN 1-4"),
 };
 
 static const u8 *const sChoices_OffChaos[] = {
@@ -734,7 +734,7 @@ static const u8 *const sDesc_RandomLegendaries[] = {
 };
 static const u8 *const sDesc_RandomGenScope[] = {
     COMPOUND_STRING("Randomize into {PKMN} from every\ngeneration."),
-    COMPOUND_STRING("Only GEN 1-3 {PKMN} and their\ncross-gen evolutions."),
+    COMPOUND_STRING("Only GEN 1-4 {PKMN} and their\ncross-gen evolutions."),
 };
 static const u8 *const sDesc_RandomType[] = {
     COMPOUND_STRING("{PKMN} types stay the same as in\nthe base game."),
@@ -1994,7 +1994,7 @@ static void Task_ConfirmSaveYes(u8 taskId)
         // it here would quietly drop the default the next time the randomizer is
         // switched back on. It is inert while the randomizer is off, and it is
         // not part of the master-toggle derivation on load.
-        cs->tx_Random_GenScope         = RANDOMIZER_DEFAULT_GEN_SCOPE_1_3;
+        cs->tx_Random_GenScope         = RANDOMIZER_DEFAULT_GEN_SCOPE_1_4;
         cs->tx_Random_Type             = 0;
         cs->tx_Random_Moves            = 0;
         cs->tx_Random_Abilities        = 0;

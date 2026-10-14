@@ -4436,6 +4436,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_V_SHAKE_H_SLIDE,
         .palette = gMonPalette_Probopass,
         .shinyPalette = gMonShinyPalette_Probopass,
+        .shinyPaletteModern = gMonShinyPaletteModern_Probopass,
         .iconSprite = gMonIcon_Probopass,
         .iconPalIndex = 0,
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
@@ -4448,7 +4449,8 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             TRACKS_FOOT,
             sAnimTable_Following,
             gOverworldPalette_Probopass,
-            gShinyOverworldPalette_Probopass
+            gShinyOverworldPalette_Probopass,
+            gShinyModernOverworldPalette_Probopass
         )
         .levelUpLearnset = sProbopassLevelUpLearnset,
         .teachableLearnset = sProbopassTeachableLearnset,

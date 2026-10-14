@@ -67,7 +67,6 @@ Alola_Melemele_BattleDugtrio_3:
 	release
 	end
 
-
 Alola_Akala_Cave_FindItem1::
 	finditem ITEM_CARBOS, 1
 	end

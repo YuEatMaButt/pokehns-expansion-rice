@@ -396,6 +396,10 @@ VermilionCity_EventScript_DiglettsCaveSign::
 	msgbox VermilionCity_Text_DiglettsCaveSign, MSGBOX_SIGN
 	end
 
+VermilionCity_EventScript_Truck::
+	msgbox VermilionCity_Text_Truck, MSGBOX_SIGN
+	end
+
 VermilionCity_Text_Sign:
 	.string "VERMILION CITY\p"
 	.string "The Port of Exquisite Sunsets$"
@@ -416,6 +420,18 @@ VermilionCity_Text_DiglettsCaveSign:
 VermilionCity_Text_PortSign:
 	.string "VERMILION PORT\n"
 	.string "ENTRANCE$"
+
+VermilionCity_Text_Truck:
+	.string "There's something under the\n"
+	.string "truck.\p"
+	.string "You find two pieces of paper:\n"
+	.string "One is a poorly drawn {PKMN}\l"
+	.string "that looks similar to MEW.\p"
+	.string "Scribbled next to it is a name:\n"
+	.string "MEWTHREE.\p"
+	.string "The other is another drawing\n"
+	.string "that vaguely resembles MARILL.\p"
+	.string "It is labeled PIKABLU.$"
 
 VermilionCity_EventScript_TriggerStevenLeft::
 	lock

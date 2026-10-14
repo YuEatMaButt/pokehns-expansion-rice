@@ -1,0 +1,73 @@
+{
+  "id": "MAP_LAKE_OF_RAGE_LOW_TIDE_CAVE_HNS",
+  "name": "LakeOfRageLowTide_Cave_hns",
+  "layout": "LAYOUT_LAKE_OF_RAGE_LOW_TIDE_CAVE_HNS",
+  "music": "MUS_DP_LAKE_CAVERNS",
+  "region_map_section": "MAPSEC_LAKE_OF_RAGE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": false,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [
+    {
+      "local_id": "LOCALID_LAKEOFRAGE_UXIE",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_UXIE",
+      "x": 7,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LakeOfRageLowTide_Cave_EventScript_Uxie",
+      "flag": "FLAG_HIDE_UXIE"
+    },
+    {
+      "local_id": "LOCALID_LAKEOFRAGE_MESPRIT",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MESPRIT",
+      "x": 3,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LakeOfRageLowTide_Cave_EventScript_Mesprit",
+      "flag": "FLAG_HIDE_MESPRIT"
+    },
+    {
+      "local_id": "LOCALID_LAKEOFRAGE_AZELF",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_AZELF",
+      "x": 11,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LakeOfRageLowTide_Cave_EventScript_Azelf",
+      "flag": "FLAG_HIDE_AZELF"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 7,
+      "y": 12,
+      "elevation": 0,
+      "dest_map": "MAP_LAKE_OF_RAGE_LOW_TIDE_HNS",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [],
+  "game_version": "hns",
+  "region": "REGION_JOHTO"
+}

@@ -171,7 +171,7 @@ bool32 SetRandomizerSeed(u32 newSeed)
 }
 
 // Gen scope filter. When tx_Random_GenScope is set, the randomizer may only roll
-// species belonging to a Gen 1-3 family: anything with a Gen 1-3 National Dex
+// species belonging to a Gen 1-4 family: anything with a Gen 1-4 National Dex
 // number, plus every form and every evolution reachable from one. That picks up
 // the cross-gen evolutions (Sylveon, Weavile, Magnezone, Mamoswine, Annihilape,
 // Clodsire...), the cross-gen pre-evolutions (Munchlax, Happiny, Mantyke...) and
@@ -260,7 +260,7 @@ static void BuildGenScopeMask(void)
     for (i = 1; i < RANDOMIZER_SPECIES_COUNT; i++)
     {
         u32 natDexNum = gSpeciesInfo[i].natDexNum;
-        if (natDexNum != NATIONAL_DEX_NONE && natDexNum <= NATIONAL_DEX_DEOXYS)
+        if (natDexNum != NATIONAL_DEX_NONE && natDexNum <= NATIONAL_DEX_ARCEUS)
         {
             MarkGenScopeFamily(i, 0);
         }
@@ -327,7 +327,7 @@ bool32 IsSpeciesInGenScope(u16 species)
 
 // Whether a species can take part in randomization at all. Gates the species
 // being *replaced*, so it deliberately ignores the gen scope: a Noivern in a
-// trainer party still gets randomized when the pool is restricted to Gen 1-3.
+// trainer party still gets randomized when the pool is restricted to Gen 1-4.
 static bool32 IsSpeciesValidForRandomizer(u16 species)
 {
     if (species == SPECIES_NONE)

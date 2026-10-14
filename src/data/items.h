@@ -3391,7 +3391,7 @@ const struct ItemInfo gItemsInfo[] =
             "A piece of a\n"
             "prehistoric Poké-\n"
             "mon's head."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_KEY_ITEMS,
         .sortType = ITEM_TYPE_FOSSIL,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -3408,7 +3408,7 @@ const struct ItemInfo gItemsInfo[] =
             "A piece of a\n"
             "prehistoric Poké-\n"
             "mon's collar."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_KEY_ITEMS,
         .sortType = ITEM_TYPE_FOSSIL,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -9869,7 +9869,10 @@ const struct ItemInfo gItemsInfo[] =
         .price = 100,
     #endif
         .holdEffect = HOLD_EFFECT_DOUBLE_PRIZE,
-        .description = sLuckIncenseDesc,
+        .description = COMPOUND_STRING(
+            "Doubles money in\n"
+            "battle if held by\n"
+            "{PKMN} in the party."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -14576,12 +14579,15 @@ const struct ItemInfo gItemsInfo[] =
         .iconPalette = gItemIconPalette_OldKey,
     },
 
-    [ITEM_KEY_TO_ROOM_1] =
+    [ITEM_HOUSE_KEY] =
     {
-        .name = ITEM_NAME("KEY TO ROOM 1"),
-        .pluralName = ITEM_PLURAL_NAME("Keys to Room 1"),
+        .name = ITEM_NAME("HOUSE KEY"),
+        .pluralName = ITEM_PLURAL_NAME("House Keys"),
         .price = 0,
-        .description = sKeyToRoomDesc,
+        .description = COMPOUND_STRING(
+            "The number '34' is\n"
+            "etched into this\n"
+            "key."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
@@ -14589,7 +14595,7 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_KeyToRoom1,
         .iconPalette = gItemIconPalette_Key,
     },
-
+    
     [ITEM_KEY_TO_ROOM_2] =
     {
         .name = ITEM_NAME("KEY TO ROOM 2"),
