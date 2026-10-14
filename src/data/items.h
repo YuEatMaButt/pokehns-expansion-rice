@@ -3391,7 +3391,7 @@ const struct ItemInfo gItemsInfo[] =
             "A piece of a\n"
             "prehistoric Poké-\n"
             "mon's head."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_KEY_ITEMS,
         .sortType = ITEM_TYPE_FOSSIL,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -3408,7 +3408,7 @@ const struct ItemInfo gItemsInfo[] =
             "A piece of a\n"
             "prehistoric Poké-\n"
             "mon's collar."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_KEY_ITEMS,
         .sortType = ITEM_TYPE_FOSSIL,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,

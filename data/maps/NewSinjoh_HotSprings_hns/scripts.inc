@@ -5,6 +5,10 @@ NewSinjoh_HotSprings_EventScript_Item_MaxRevive::
     finditem ITEM_MAX_REVIVE
     end
 
+NewSinjoh_HotSprings_EventScript_Item_SkullFossil::
+	finditem ITEM_SKULL_FOSSIL
+	end
+
 NewSinjoh_HotSprings_EventScript_Item_LavaCookie::
     finditem ITEM_LAVA_COOKIE
     end

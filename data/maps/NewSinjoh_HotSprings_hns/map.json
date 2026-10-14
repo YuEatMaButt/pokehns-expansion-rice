@@ -81,6 +81,19 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL_HNS",
+      "x": 35,
+      "y": 39,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NewSinjoh_HotSprings_EventScript_Item_SkullFossil",
+      "flag": "FLAG_ITEM_NSHOTSPRINGS_SKULLFOSSIL"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL_HNS",
       "x": 4,
       "y": 39,
       "elevation": 0,

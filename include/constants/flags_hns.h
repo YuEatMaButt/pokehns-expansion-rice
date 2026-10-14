@@ -842,16 +842,22 @@
 #define FLAG_HIDE_VERMILION_STEVEN                  0x2FC
 #define FLAG_MOM_HAS_GIFT                           0x2FD
 #define FLAG_PEWTER_NPC_TRADE_COMPLETED             0x2FE
-#define FLAG_POWERPLANT_NPC_TRADE_COMPLETED          0x2FF
-#define FLAG_FUCHSIA_SAFARI_NPC_TRADE_COMPLETED      0x300
-#define FLAG_PEWTER_GYM_NPC_TRADE_COMPLETED          0x301
-#define FLAG_OLIVINE_GYM_NPC_TRADE_COMPLETED         0x302
+#define FLAG_POWERPLANT_NPC_TRADE_COMPLETED         0x2FF
+#define FLAG_FUCHSIA_SAFARI_NPC_TRADE_COMPLETED     0x300
+#define FLAG_PEWTER_GYM_NPC_TRADE_COMPLETED         0x301
+#define FLAG_OLIVINE_GYM_NPC_TRADE_COMPLETED        0x302
 #define FLAG_ENABLE_CONDITION                       0x303
-#define FLAG_UNUSED_36                              0x304
-#define FLAG_UNUSED_37                              0x305
-#define FLAG_UNUSED_38                              0x306
-#define FLAG_UNUSED_39                              0x307
-#define HNS_UNUSED_COUNT                            40
+#define HNS_UNUSED_COUNT                            36
+
+// HNS Gen4 Expansion items
+#define HNS_ITEMS_G4_START                          0x304
+
+#define FLAG_ITEM_NSHOTSPRINGS_SKULLFOSSIL          0x304
+#define FLAG_ITEM_NSSNOWSWEPT_ARMORFOSSIL           0x305
+#define FLAG_ITEM_NEWSINJOH_ROTOMCATALOG            0x306
+#define FLAG_ITEM_ALOLA_GRACIDEA                    0x307
+
+#define HNS_ITEMS_G4_COUNT                          4
 
 #define HNS_CONTENT_FLAGS_END                       0x308
 
