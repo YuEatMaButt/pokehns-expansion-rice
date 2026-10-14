@@ -2,7 +2,6 @@ enum
 {
     PAGE_LC_TITLE,
     PAGE_LC_DIRECTOR,
-    PAGE_LC_CONTRIBUTORS,
     PAGE_HNS_TITLE,
     PAGE_HNS_DIRECTOR,
     PAGE_HNS_DEVS,
@@ -78,7 +77,6 @@ static const u8 sCreditsText_LeadDeveloper[]                   = _("Lead Develop
 static const u8 sCreditsText_LilDill[]                         = _("LIL DILL");
 static const u8 sCreditsText_Assets[]                          = _("Assets Sourced");
 static const u8 sCreditsText_Developers[]                      = _("Developers");
-static const u8 sCreditsText_Contributors[]                    = _("Contributors");
 static const u8 sCreditsText_InfiniteBacon42[]                 = _("InfiniteBacon42");
 static const u8 sCreditsText_Exclsior[]                        = _("Exclsior");
 static const u8 sCreditsText_TixoRebel[]                       = _("TixoRebel");
@@ -133,8 +131,6 @@ static const u8 sCreditsText_Beliot419[]                       = _("Beliot419");
 static const u8 sCreditsText_shiningstar5022[]                 = _("shiningstar5022");
 static const u8 sCreditsText_Nettorizo[]                       = _("Nettorizo");
 static const u8 sCreditsText_Stellaria[]                       = _("Stellaria");
-static const u8 sCreditsText_Apple40Slicer[]                   = _("Apple40Slicer");
-static const u8 sCreditsText_Cyberwo1ff[]                      = _("Cyberwo1ff");
 
 static const u8 sCreditsText_Engine[]                          = _("Engine");
 static const u8 sCreditsText_Pret[]                            = _("pokeemerald - Pret");
@@ -464,7 +460,6 @@ static const struct CreditsEntry sCreditsEntry_LilDill                          
 
 static const struct CreditsEntry sCreditsEntry_LeadDeveloper    = {8, TRUE, sCreditsText_LeadDeveloper};
 static const struct CreditsEntry sCreditsEntry_Developers    = {8, TRUE, sCreditsText_Developers};
-static const struct CreditsEntry sCreditsEntry_Contributors    = {8, TRUE, sCreditsText_Contributors};
 
 //Programmers
 static const struct CreditsEntry sCreditsEntry_InfiniteBacon42 = {11, FALSE, sCreditsText_InfiniteBacon42};
@@ -492,8 +487,6 @@ static const struct CreditsEntry sCreditsEntry_Beliot419                        
 static const struct CreditsEntry sCreditsEntry_shiningstar5022                  = {11, FALSE, sCreditsText_shiningstar5022};
 static const struct CreditsEntry sCreditsEntry_Nettorizo                        = {11, FALSE, sCreditsText_Nettorizo};
 static const struct CreditsEntry sCreditsEntry_Stellaria                        = {11, FALSE, sCreditsText_Stellaria};
-static const struct CreditsEntry sCreditsEntry_Apple40Slicer                    = {11, FALSE, sCreditsText_Apple40Slicer};
-static const struct CreditsEntry sCreditsEntry_Cyberwo1ff                       = {11, FALSE, sCreditsText_Cyberwo1ff};
 // Engine
 static const struct CreditsEntry sCreditsEntry_Engine                           = {8,  TRUE, sCreditsText_Engine};
 static const struct CreditsEntry sCreditsEntry_Pret                             = {11, FALSE, sCreditsText_Pret};
@@ -734,13 +727,6 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
         &sCreditsEntry_LeadDeveloper,
         &sCreditsEntry_Nettorizo,
         _,
-        _,
-    },
-    [PAGE_LC_CONTRIBUTORS] = {
-        _,
-        &sCreditsEntry_Contributors,
-        &sCreditsEntry_Apple40Slicer,
-        &sCreditsEntry_Cyberwo1ff,
         _,
     },
     [PAGE_HNS_TITLE] = {
