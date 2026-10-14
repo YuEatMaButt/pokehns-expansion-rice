@@ -8190,6 +8190,10 @@ u16 GetBattleBGM(void)
             if (!(gBattleTypeFlags & (BATTLE_TYPE_FRONTIER | BATTLE_TYPE_TRAINER_HILL))
                 && TRAINER_BATTLE_PARAM.opponentA == TRAINER_CYNTHIA_HNS)
                 return MUS_DP_VS_CHAMPION;
+            // Leaf is a FRLG guest, so she gets the FRLG champion theme.
+            if (!(gBattleTypeFlags & (BATTLE_TYPE_FRONTIER | BATTLE_TYPE_TRAINER_HILL))
+                && TRAINER_BATTLE_PARAM.opponentA == TRAINER_LEAF_HNS)
+                return MUS_RG_VS_CHAMPION;
         #endif
             return MUS_HG_VS_CHAMPION;
         case TRAINER_CLASS_CHAMPION_HNS:

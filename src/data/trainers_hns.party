@@ -16069,3 +16069,77 @@ Jolly Nature
 - Earthquake  
 - Swords Dance
 - Poison Jab
+
+=== TRAINER_LEAF_HNS ===
+Name: LEAF
+Class: Pkmn Trainer 1 Hns
+Pic: Leaf
+Gender: Female
+Music: Hg Champion
+Double Battle: No
+AI: Smart Trainer / Prediction
+Items: Full Restore / Full Restore
+Mugshot: Pink
+
+Eevee-Starter @ Eviolite
+Ability: Adaptability
+Level: 95
+EVs: 6 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Adamant Nature
+- Double Edge
+- Shadow Ball
+- Toxic
+- Curse
+
+Clefable @ Leftovers
+Ability: Magic Guard
+Level: 86
+EVs: 252 HP / 0 Atk / 252 Def / 0 SpA / 6 SpD / 0 Spe
+Bold Nature
+- Calm Mind
+- Moonblast
+- Flamethrower
+- Soft Boiled
+
+Beedrill @ Focus Sash
+Ability: Sniper
+Level: 87 
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 6 SpD / 252 Spe
+Jolly Nature
+- Fury Attack
+- U Turn
+- Poison Jab
+- Assurance
+
+Ninetales @ Heat Rock
+Ability: Drought
+Level: 86
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 6 SpD / 252 Spe
+Timid Nature
+- Weather Ball
+- Encore
+- Healing Wish
+- Will-O-Wisp
+
+Exeggutor @ Quick Claw
+Ability: Chlorophyll
+Level: 87   
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 6 SpD / 252 Spe
+Modest Nature
+- Solar Beam
+- Psychic
+- Sludge Bomb
+- Light Screen
+
+Kingdra @ Scope Lens
+Ability: Sniper
+Level: 86  
+EVs: 4 HP / 0 Atk / 0 Def / 252 SpA / 0 SpD / 252 Spe
+Modest Nature
+- Draco Meteor
+- Surf
+- Ice Beam
+- Flash Cannon
+
+
+
