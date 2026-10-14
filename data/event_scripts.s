@@ -2395,7 +2395,7 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/UlaUla_Forest_hns/scripts.inc"
 	.include "data/maps/UlaUla_Cave_2_hns/scripts.inc"
 	.include "data/maps/Akala_Cave_hns/scripts.inc"
-	.include "data/maps/NationalPark_Meadow_Hns/scripts.inc"
+	.include "data/maps/NationalPark_Meadow_hns/scripts.inc"
 	.include "data/maps/AbandonedHouse_Main_hns/scripts.inc"
 	.include "data/maps/AbandonedHouse_TVRoom_hns/scripts.inc"
 	.include "data/maps/AbandonedHouse_Bedroom_hns/scripts.inc"
