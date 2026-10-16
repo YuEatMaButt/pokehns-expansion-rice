@@ -16141,5 +16141,76 @@ Modest Nature
 - Ice Beam
 - Flash Cannon
 
+=== TRAINER_BRENDAN_HNS ===
+Name: BRENDAN
+Class: Pkmn Trainer 1 Hns
+Pic: Brendan
+Gender: Male
+Music: Hg Champion
+Double Battle: No
+AI: Smart Trainer / Prediction
+Items: Full Restore / Full Restore
+Mugshot: Light Blue
+
+Slaking @ Eject Button
+Ability: Truant
+Level: 85
+EVs: 0 HP / 252 Atk / 0 Def / 6 SpA / 0 SpD / 252 Spe
+Naive Nature
+- Giga Impact
+- Pursuit
+- Earthquake
+- Aerial Ace
+
+Swampert @ Leftovers
+Ability: Torrent
+Level: 87
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 6 SpD / 252 Spe
+Jolly Nature
+- Waterfall
+- Earthquake
+- Ice Punch
+- Toxic
+
+Ludicolo @ Rocky Helmet
+Ability: Swift Swim
+Level: 86
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 6 SpD / 252 Spe
+Modest Nature
+- Rain Dance
+- Surf
+- Energy Ball
+- Ice Beam
+
+Aggron @ Focus Sash
+Ability: Rock Head
+Level: 86
+EVs: 0 HP / 252 Atk / 6 Def / 0 SpA / 0 SpD / 252 Spe
+Adamant Nature
+- Metal Burst
+- Earthquake
+- Head Smash
+- Heavy Slam
+
+Typhlosion @ Expert Belt
+Ability: Blaze
+Level: 87   
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 6 SpD / 252 Spe
+Timid Nature
+- Flamethrower
+- Shadow Ball
+- Thunder Punch
+- Earthquake
+
+Latios @ Soul Dew
+Ability: Levitate
+Level: 88  
+EVs: 0 HP / 6 Atk / 0 Def / 252 SpA / 0 SpD / 252 Spe
+Naive Nature
+- Luster Purge
+- Dragon Pulse
+- Shadow Ball
+- Reflect
+
 
 

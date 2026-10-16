@@ -676,8 +676,9 @@
 #define TRAINER_ERIKA_POSTOBC_HNS             652
 #define TRAINER_CYNTHIA_HNS                   653
 #define TRAINER_LEAF_HNS                      654
+#define TRAINER_BRENDAN_HNS                   655
 
-#define TRAINERS_COUNT_HNS                       655
+#define TRAINERS_COUNT_HNS                       656
 #define MAX_TRAINERS_COUNT_HNS                   864
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_HNS_H
