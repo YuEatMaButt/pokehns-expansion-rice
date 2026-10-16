@@ -339,8 +339,13 @@ DATA_ASM_OBJS := $(patsubst $(DATA_ASM_SUBDIR)/%.s,$(DATA_ASM_BUILDDIR)/%.o,$(DA
 MID_SRCS := $(wildcard $(MID_SUBDIR)/*.mid)
 MID_OBJS := $(patsubst $(MID_SUBDIR)/%.mid,$(MID_BUILDDIR)/%.o,$(MID_SRCS))
 
+ifeq ($(BUILD_NAME),hns)
+GBS_SRCS :=
+GBS_OBJS :=
+else
 GBS_SRCS := $(wildcard $(GBS_SUBDIR)/*.s) $(wildcard $(GBS_SUBDIR)/*/*.s)
 GBS_OBJS := $(patsubst $(GBS_SUBDIR)/%.s,$(GBS_BUILDDIR)/%.o,$(GBS_SRCS))
+endif
 
 OBJS     := $(C_OBJS) $(C_ASM_OBJS) $(ASM_OBJS) $(DATA_ASM_OBJS) $(MID_OBJS) $(GBS_OBJS)
 OBJS_REL := $(patsubst $(OBJ_DIR)/%,%,$(OBJS))

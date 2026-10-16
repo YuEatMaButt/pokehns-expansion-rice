@@ -820,6 +820,10 @@ gSongTable::
 	.align 2
 dummy_song_header:
 	.byte 0, 0, 0, 0
+#ifdef POKEMON_HNS
+gGBSSongTable::
+        .4byte 0xFFFFFFFF
+#else
 gGBSSongTable:: @ "gbs_hg_" tracks are new tracks that were transcribed from HGSS instead of being from Crystal.
 	
 	@song_gbs SE_SELECT, gbs_sfx_readtext_Header, 2, 2
@@ -1179,3 +1183,4 @@ gGBSSongTable:: @ "gbs_hg_" tracks are new tracks that were transcribed from HGS
 
 
 	.4byte 0xFFFFFFFF
+#endif
