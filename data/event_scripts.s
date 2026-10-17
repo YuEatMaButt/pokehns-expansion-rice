@@ -1864,6 +1864,22 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 .if IS_HNS
 
 @ HnS scripts
+    .include "data/scripts/trainers_one_island_hns.inc"
+    .include "data/text/trainers_one_island_hns.inc"
+     .include "data/scripts/seagallop.inc"
+    .include "data/text/seagallop_one_island_hns.inc"
+    .include "data/scripts/pkmn_center_nurse_frlg.inc"
+    .include "data/scripts/cable_club_frlg.inc"
+    .include "data/scripts/item_ball_scripts_frlg.inc"
+   .include "data/maps/OneIsland_hns/scripts.inc"
+    .include "data/maps/OneIsland_KindleRoad_hns/scripts.inc"
+    .include "data/maps/OneIsland_TreasureBeach_hns/scripts.inc"
+    .include "data/maps/OneIsland_Harbor_hns/scripts.inc"
+    .include "data/maps/OneIsland_House1_hns/scripts.inc"
+    .include "data/maps/OneIsland_House2_hns/scripts.inc"
+    .include "data/maps/OneIsland_KindleRoad_EmberSpa_hns/scripts.inc"
+    .include "data/maps/OneIsland_PokemonCenter_1F_hns/scripts.inc"
+    .include "data/maps/OneIsland_PokemonCenter_2F_hns/scripts.inc"
 	.include "data/maps/TestMap2_hns/scripts.inc"
 
 	.include "data/maps/TestMap1_hns/scripts.inc"

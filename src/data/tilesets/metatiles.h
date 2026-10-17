@@ -408,6 +408,32 @@ const u16 gMetatileAttributes_HallOfFame[] = INCBIN_U16("data/tilesets/secondary
 
 #elif IS_HNS
 
+/* FRLG tilesets required by selected HnS maps. */
+const u16 gMetatiles_Building_Frlg[] = INCBIN_U16("data/tilesets/primary/building_frlg/metatiles.bin");
+
+const u16 gMetatileAttributes_Building_Frlg[] = INCBIN_U16("data/tilesets/primary/building_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_General_Frlg[] = INCBIN_U16("data/tilesets/primary/general_frlg/metatiles.bin");
+
+const u16 gMetatileAttributes_General_Frlg[] = INCBIN_U16("data/tilesets/primary/general_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_PokemonCenter_Frlg[] = INCBIN_U16("data/tilesets/secondary/pokemon_center_frlg/metatiles.bin");
+
+const u16 gMetatileAttributes_PokemonCenter_Frlg[] = INCBIN_U16("data/tilesets/secondary/pokemon_center_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_GenericBuilding2[] = INCBIN_U16("data/tilesets/secondary/generic_building_2_frlg/metatiles.bin");
+
+const u16 gMetatileAttributes_GenericBuilding2[] = INCBIN_U16("data/tilesets/secondary/generic_building_2_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_MtEmber[] = INCBIN_U16("data/tilesets/secondary/mt_ember_frlg/metatiles.bin");
+
+const u16 gMetatileAttributes_MtEmber[] = INCBIN_U16("data/tilesets/secondary/mt_ember_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_SeviiIslands123[] = INCBIN_U16("data/tilesets/secondary/sevii_islands_123_frlg/metatiles.bin");
+
+const u16 gMetatileAttributes_SeviiIslands123[] = INCBIN_U16("data/tilesets/secondary/sevii_islands_123_frlg/metatile_attributes.bin");
+
+
 
 const u16 gMetatiles_General_Hns[] = INCBIN_U16("data/tilesets/primary/general_hns/metatiles.bin");
 const u16 gMetatileAttributes_General_Hns[] = INCBIN_U16("data/tilesets/primary/general_hns/metatile_attributes.bin");
