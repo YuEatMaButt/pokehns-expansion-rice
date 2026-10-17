@@ -21,6 +21,7 @@
     "gMapGroup_IndoorSaffron_Hns",
     "gMapGroup_IndoorFuchsia_Hns",
     "gMapGroup_IndoorCinnabar_Hns",
+    "gMapGroup_IndoorOneIsland_Hns",
     "gMapGroup_IndoorIndigo_Hns",
     "gMapGroup_IndoorJohtoRoutes_Hns",
     "gMapGroup_IndoorKantoRoutes_Hns",
@@ -178,7 +179,10 @@
     "Route26_hns",
     "Route26North_hns",
     "Route27_hns",
-    "Route28_hns"
+    "Route28_hns",
+    "OneIsland_hns",
+    "OneIsland_KindleRoad_hns",
+    "OneIsland_TreasureBeach_hns"
   ],
   "gMapGroup_IndoorNewBark_Hns": [
     "NewBarkTown_Lab_hns",
@@ -1813,5 +1817,13 @@
   ],
   "gMapGroup_IndoorSevenIslandRoute_Frlg": [
     "SevenIsland_SevaultCanyon_House_Frlg"
+  ],
+  "gMapGroup_IndoorOneIsland_Hns": [
+    "OneIsland_Harbor_hns",
+    "OneIsland_House1_hns",
+    "OneIsland_House2_hns",
+    "OneIsland_KindleRoad_EmberSpa_hns",
+    "OneIsland_PokemonCenter_1F_hns",
+    "OneIsland_PokemonCenter_2F_hns"
   ]
 }
