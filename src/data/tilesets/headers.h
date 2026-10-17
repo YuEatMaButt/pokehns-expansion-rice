@@ -1542,6 +1542,74 @@ const struct Tileset gTileset_HallOfFame =
 
 #elif IS_HNS
 
+/* FRLG tilesets required by selected HnS maps. */
+const struct Tileset gTileset_BuildingFrlg =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_Building_Frlg,
+    .palettes = gTilesetPalettes_Building_Frlg,
+    .metatiles = gMetatiles_Building_Frlg,
+    .metatileAttributes = gMetatileAttributes_Building_Frlg,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_General_Frlg =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_General_Frlg,
+    .palettes = gTilesetPalettes_General_Frlg,
+    .metatiles = gMetatiles_General_Frlg,
+    .metatileAttributes = gMetatileAttributes_General_Frlg,
+    .callback = InitTilesetAnim_General_Frlg,
+};
+
+const struct Tileset gTileset_PokemonCenterFrlg =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_PokemonCenter_Frlg,
+    .palettes = gTilesetPalettes_PokemonCenter_Frlg,
+    .metatiles = gMetatiles_PokemonCenter_Frlg,
+    .metatileAttributes = gMetatileAttributes_PokemonCenter_Frlg,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_GenericBuilding2 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_GenericBuilding2,
+    .palettes = gTilesetPalettes_GenericBuilding2,
+    .metatiles = gMetatiles_GenericBuilding2,
+    .metatileAttributes = gMetatileAttributes_GenericBuilding2,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_MtEmber =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_MtEmber,
+    .palettes = gTilesetPalettes_MtEmber,
+    .metatiles = gMetatiles_MtEmber,
+    .metatileAttributes = gMetatileAttributes_MtEmber,
+    .callback = InitTilesetAnim_MtEmber,
+};
+
+const struct Tileset gTileset_SeviiIslands123 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SeviiIslands123,
+    .palettes = gTilesetPalettes_SeviiIslands123,
+    .metatiles = gMetatiles_SeviiIslands123,
+    .metatileAttributes = gMetatileAttributes_SeviiIslands123,
+    .callback = NULL,
+};
+
+
 
 // HnS tilesets
 const struct Tileset gTileset_General_Hns =
