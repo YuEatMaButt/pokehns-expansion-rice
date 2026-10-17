@@ -1,5 +1,5 @@
 {
-  "id": "MAP_ONE_ISLAND_KINDLE_ROAD_EMBER_SPA_HNS",
+  "id": "MAP_ONE_ISLAND_KINDLE_ROAD_EMBER_SPA_hns",
   "name": "OneIsland_KindleRoad_EmberSpa_hns",
   "layout": "LAYOUT_ONE_ISLAND_KINDLE_ROAD_EMBER_SPA_HNS",
   "music": "MUS_RG_FUCHSIA",
@@ -15,10 +15,10 @@
   "connections": null,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_1",
+      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_HNS",
       "x": 11,
       "y": 13,
-      "elevation": 3,
+      "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
       "movement_range_y": 1,
@@ -28,10 +28,10 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_BALDING_MAN",
+      "graphics_id": "OBJ_EVENT_GFX_BALDING_MAN_HNS",
       "x": 15,
       "y": 11,
-      "elevation": 3,
+      "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_RIGHT",
       "movement_range_x": 1,
       "movement_range_y": 1,
@@ -44,7 +44,7 @@
       "graphics_id": "OBJ_EVENT_GFX_BLACKBELT",
       "x": 6,
       "y": 8,
-      "elevation": 3,
+      "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
       "movement_range_x": 2,
       "movement_range_y": 1,
@@ -54,10 +54,10 @@
       "flag": "FLAG_HIDE_POSTGAME_GOSSIPERS"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN_FRLG",
+      "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN_HNS",
       "x": 20,
       "y": 7,
-      "elevation": 3,
+      "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
       "movement_range_y": 1,
@@ -67,10 +67,10 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_1",
+      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_HNS",
       "x": 10,
       "y": 5,
-      "elevation": 3,
+      "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
       "movement_range_y": 1,
@@ -80,10 +80,10 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_BALDING_MAN",
+      "graphics_id": "OBJ_EVENT_GFX_BALDING_MAN_HNS",
       "x": 11,
       "y": 20,
-      "elevation": 3,
+      "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
       "movement_range_x": 1,
       "movement_range_y": 1,
@@ -97,8 +97,8 @@
     {
       "x": 13,
       "y": 36,
-      "elevation": 3,
-      "dest_map": "MAP_ONE_ISLAND_KINDLE_ROAD",
+      "elevation": 0,
+      "dest_map": "MAP_ONE_ISLAND_KINDLE_ROAD_hns",
       "dest_warp_id": "2"
     }
   ],
@@ -107,7 +107,7 @@
       "type": "trigger",
       "x": 13,
       "y": 13,
-      "elevation": 3,
+      "elevation": 0,
       "var": "VAR_TEMP_1",
       "var_value": "0",
       "script": "OneIsland_KindleRoad_EmberSpa_EventScript_SpaHeal"
