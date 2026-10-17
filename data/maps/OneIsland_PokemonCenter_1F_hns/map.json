@@ -1,5 +1,5 @@
 {
-  "id": "MAP_ONE_ISLAND_POKEMON_CENTER_1F_HNS",
+  "id": "MAP_ONE_ISLAND_POKEMON_CENTER_1F_hns",
   "name": "OneIsland_PokemonCenter_1F_hns",
   "game_version": "hns",
   "layout": "LAYOUT_ONE_ISLAND_POKEMON_CENTER_1F_HNS",
@@ -20,10 +20,10 @@
     {
       "local_id": "LOCALID_ONE_ISLAND_NURSE",
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_NURSE_FRLG",
+      "graphics_id": "OBJ_EVENT_GFX_NURSE_HNS",
       "x": 5,
       "y": 2,
-      "elevation": 3,
+      "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
       "movement_range_y": 1,
@@ -35,10 +35,10 @@
     {
       "local_id": "LOCALID_ONE_ISLAND_POKEMON_CENTER_BILL",
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_BILL",
+      "graphics_id": "OBJ_EVENT_GFX_BILL_HNS",
       "x": 14,
       "y": 6,
-      "elevation": 3,
+      "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 1,
       "movement_range_y": 1,
@@ -53,7 +53,7 @@
       "graphics_id": "OBJ_EVENT_GFX_CELIO",
       "x": 15,
       "y": 6,
-      "elevation": 3,
+      "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 1,
       "movement_range_y": 1,
@@ -64,10 +64,10 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY_FRLG",
+      "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY_HNS",
       "x": 6,
       "y": 8,
-      "elevation": 3,
+      "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 1,
       "movement_range_y": 1,
@@ -78,10 +78,10 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_HIKER_FRLG",
+      "graphics_id": "OBJ_EVENT_GFX_HIKER_HNS",
       "x": 3,
       "y": 7,
-      "elevation": 3,
+      "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
       "movement_range_y": 1,
@@ -92,10 +92,10 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_BATTLE_GIRL",
+      "graphics_id": "OBJ_EVENT_GFX_BATTLE_GIRL_HNS",
       "x": 7,
       "y": 4,
-      "elevation": 3,
+      "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 1,
       "movement_range_y": 1,
@@ -109,15 +109,15 @@
     {
       "x": 9,
       "y": 9,
-      "elevation": 3,
-      "dest_map": "MAP_ONE_ISLAND",
+      "elevation": 0,
+      "dest_map": "MAP_ONE_ISLAND_HNS",
       "dest_warp_id": "0"
     },
     {
       "x": 1,
       "y": 5,
-      "elevation": 4,
-      "dest_map": "MAP_ONE_ISLAND_POKEMON_CENTER_2F",
+      "elevation": 0,
+      "dest_map": "MAP_ONE_ISLAND_POKEMON_CENTER_2F_hns",
       "dest_warp_id": "0"
     }
   ],
@@ -126,7 +126,7 @@
       "type": "trigger",
       "x": 12,
       "y": 6,
-      "elevation": 3,
+      "elevation": 0,
       "var": "VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F",
       "var_value": "2",
       "script": "OneIsland_PokemonCenter_1F_EventScript_LeaveOneIslandTriggerTop"
@@ -135,7 +135,7 @@
       "type": "trigger",
       "x": 12,
       "y": 7,
-      "elevation": 3,
+      "elevation": 0,
       "var": "VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F",
       "var_value": "2",
       "script": "OneIsland_PokemonCenter_1F_EventScript_LeaveOneIslandTriggerMidTop"
@@ -144,7 +144,7 @@
       "type": "trigger",
       "x": 12,
       "y": 8,
-      "elevation": 3,
+      "elevation": 0,
       "var": "VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F",
       "var_value": "2",
       "script": "OneIsland_PokemonCenter_1F_EventScript_LeaveOneIslandTriggerMidBottom"
@@ -153,7 +153,7 @@
       "type": "trigger",
       "x": 12,
       "y": 9,
-      "elevation": 3,
+      "elevation": 0,
       "var": "VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F",
       "var_value": "2",
       "script": "OneIsland_PokemonCenter_1F_EventScript_LeaveOneIslandTriggerBottom"
