@@ -45,7 +45,8 @@ VermilionPort_EventScript_Sailor_AfterKanto::
 	case 2, VermilionPort_EventScript_ChoseBirthIsland
 	case 3, VermilionPort_EventScript_ChoseFarawayIsland
 	case 4, VermilionPort_EventScript_ChoseBattleFrontier
-	case 5, VermilionPort_EventScript_Sailor_Refused
+	case 5, VermilionPort_EventScript_ChoseOneIsland
+	case 6, VermilionPort_EventScript_Sailor_Refused
 	case MULTI_B_PRESSED, VermilionPort_EventScript_Sailor_Refused
 	release
 	end
@@ -106,6 +107,15 @@ VermilionPort_EventScript_ChoseBattleFrontier::
 	waitstate
 	release
 	end	
+
+VermilionPort_EventScript_ChoseOneIsland::
+	closemessage
+	delay 20
+	call VermilionPort_EventScript_EnterShip
+	warpsilent MAP_ONE_ISLAND_HARBOR_HNS, 8, 9
+	waitstate
+	release
+	end
 
 VermilionPort_EventScript_Sailor_MaidenVoyage::
 	msgbox VermilionPort_Text_FlashTicket, MSGBOX_DEFAULT
