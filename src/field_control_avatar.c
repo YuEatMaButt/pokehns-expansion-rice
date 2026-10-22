@@ -446,6 +446,8 @@ static const u8 *GetInteractedObjectEventScript(struct MapPosition *position, u8
         script = GetTrainerHillTrainerScript();
     else if (PlayerHasFollowerNPC() && objectEventId == GetFollowerNPCObjectId())
         script = GetFollowerNPCScriptPointer();
+    else if (IsOverworldWildEncounter(&gObjectEvents[objectEventId], OWE_GENERATED))
+        return NULL;
     else if (IsOverworldWildEncounter(&gObjectEvents[objectEventId], OWE_ANY))
         script = GetOverworlWildEncounterScript(objectEventId);
     else
