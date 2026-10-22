@@ -10550,14 +10550,14 @@ enum Direction DetermineObjectEventDirectionFromObject(struct ObjectEvent *objec
     s32 delta_y = objectTwo->currentCoords.y - objectOne->currentCoords.y;
 
     if (delta_x < 0)
-        return DIR_EAST;
-    else if (delta_x > 0)
         return DIR_WEST;
+    else if (delta_x > 0)
+        return DIR_EAST;
 
     if (delta_y < 0)
-        return DIR_SOUTH;
-    else if (delta_y > 0)
         return DIR_NORTH;
+    else if (delta_y > 0)
+        return DIR_SOUTH;
 
     return DIR_NORTH;
 }

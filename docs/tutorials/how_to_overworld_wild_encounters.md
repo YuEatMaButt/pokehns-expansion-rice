@@ -71,7 +71,7 @@ InteractWithOverworldWildEncounter::
 ## Repel and Lure Behaviours
 Repels will prevent the spawning of generated OWEs that are a lower level than the player's lead Pokemon. Lower level generated OWEs that have already been spawned will be immediately despawned when a repel is used. Existing generated OWEs can also be despawned if the player switches a higher level Pokemon to the front of the party if a repel is already active.
 
-Lures increasse the frequency of generated OWE spawning.
+Lures increase the frequency of generated OWE spawning.
 
 ## OWE Behaviour Types
 The behaviors that these OWEs have is set up to be customizable for each individual species. By default, every species is set to `OWE_IGNORE_PLAYER`. To add a different behavior to a species, find their species struct in their `gen_X_families.h` file in the `src/data/pokemon/species_info` folder and add a `.overworldEncounterBehavior = <BEHAVIOR>` to it. `<BEHAVIOR>` should be replaced with the behavior you want them to use. For example, if I wanted to add the `OWE_FLEE_PLAYER_NORMAL` behavior to Mudkip I would open `gen_3_families.h`, find the struct for `SPECIES_MUDKIP`, and add `.overworldEncounterBehavior = OWE_FLEE_PLAYER_NORMAL` to the end of it like so:

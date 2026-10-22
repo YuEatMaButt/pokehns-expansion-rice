@@ -312,9 +312,12 @@ void UpdateOverworldWildEncounter(void)
         .trainerType = TRAINER_TYPE_OW_WILD_ENCOUNTER,
     };
     u32 objectEventId = GetObjectEventIdByLocalId(infoOWE.localId);
-    struct ObjectEvent *owe = &gObjectEvents[objectEventId];
-    if (ShouldDespawnGeneratedForNewOWE(owe))
-        RemoveObjectEvent(owe);
+    if (objectEventId < OBJECT_EVENTS_COUNT)
+    {
+        struct ObjectEvent *owe = &gObjectEvents[objectEventId];
+        if (ShouldDespawnGeneratedForNewOWE(owe))
+            RemoveObjectEvent(owe);
+    }
     objectEventId = SpawnSpecialObjectEvent(&objectEventTemplate);
 
     assertf(objectEventId < OBJECT_EVENTS_COUNT, "could not spawn generated overworld encounter. too many object events exist")
@@ -323,7 +326,7 @@ void UpdateOverworldWildEncounter(void)
         return;
     }
 
-    owe = &gObjectEvents[objectEventId];
+    struct ObjectEvent *owe = &gObjectEvents[objectEventId];
     owe->disableCoveringGroundEffects = TRUE;
     owe->sOverworldEncounterLevel = infoOWE.noDespawn ? (infoOWE.level | OWE_NO_DESPAWN_FLAG) : infoOWE.level;
     owe->sOverworldEncounterCategory = infoOWE.category;
@@ -415,14 +418,18 @@ void SetOverworldObjectSpecies(struct ScriptContext *ctx)
 {
     u32 varId = ScriptReadHalfword(ctx);
     u32 localId = VarGet(ScriptReadHalfword(ctx));
-    struct ObjectEvent *object = &gObjectEvents[GetObjectEventIdByLocalId(localId)];
     u16 speciesId = SPECIES_NONE;
+    u32 objectEventId = GetObjectEventIdByLocalId(localId);
 
     Script_RequestEffects(SCREFF_V1);
     Script_RequestWriteVar(varId);
 
-    switch (object->graphicsId)
+    if (objectEventId < OBJECT_EVENTS_COUNT)
     {
+        struct ObjectEvent *object = &gObjectEvents[objectEventId];
+
+        switch (object->graphicsId)
+        {
     case OBJ_EVENT_GFX_RAYQUAZA_STILL:
     case OBJ_EVENT_GFX_RAYQUAZA:
         speciesId = SPECIES_RAYQUAZA;
@@ -797,10 +804,11 @@ void SetOverworldObjectSpecies(struct ScriptContext *ctx)
         speciesId = SPECIES_CELEBI;
         break;
 
-    default:
-        if (IS_OW_MON_OBJ(object))
-            speciesId = OW_SPECIES(object);
-        break;
+        default:
+            if (IS_OW_MON_OBJ(object))
+                speciesId = OW_SPECIES(object);
+            break;
+        }
     }
 
     assertf(speciesId != SPECIES_NONE, "species was not found for specified object. localid: %d", localId);
@@ -938,7 +946,6 @@ static bool32 StartWildBattleWithOWE_CheckBattleFrontier(u32 headerId)
         if (gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_WILD_MONS
          || gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_WILD_MONS_HNS)
         {
-            TryGenerateBattlePikeWildMon(FALSE);
             BattleSetup_StartBattlePikeWildBattle();
             return TRUE;
         }
@@ -2031,7 +2038,7 @@ static void Task_OWEApproachForBattle(u8 taskId)
             MoveCoords(OWE->movementDirection, &x, &y);
             collidingObject = GetObjectObjectCollidesWith(OWE, x, y, FALSE);
 
-            if (collidingObject == GetObjectEventIdByLocalId(followerMon->localId) && followerMon != NULL && !followerMon->invisible)
+            if (followerMon != NULL && collidingObject == GetObjectEventIdByLocalId(followerMon->localId) && !followerMon->invisible)
             {
                 ClearObjectEventMovement(followerMon, &gSprites[followerMon->spriteId]);
                 gSprites[followerMon->spriteId].animCmdIndex = 0;
