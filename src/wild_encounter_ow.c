@@ -241,8 +241,10 @@ void UpdateOverworldWildEncounter(void)
      || FlagGet(WE_OWE_FLAG_DISABLED)
      || FlagGet(OW_FLAG_NO_ENCOUNTER)
      || FlagGet(DN_FLAG_SEARCHING)
-     || (gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_WILD_MONS && !WE_OWE_BATTLE_PIKE)
-     || (gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR && !WE_OWE_BATTLE_PYRAMID)
+     || ((gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_WILD_MONS
+       || gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_WILD_MONS_HNS) && !WE_OWE_BATTLE_PIKE)
+     || ((gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR
+       || gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR_HNS) && !WE_OWE_BATTLE_PYRAMID)
      || InTrainerHillChallenge())
     {
         if (sOWESpawnCountdown != OWE_NO_ENCOUNTER_SET)
@@ -815,7 +817,8 @@ static bool32 CreateEnemyPartyOWE(struct InfoOWE *info, s32 x, s32 y)
 
     if (headerId == HEADER_NONE)
     {
-        if (gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_WILD_MONS)
+        if (gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_WILD_MONS
+         || gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_WILD_MONS_HNS)
         {
             headerId = GetBattlePikeWildMonHeaderId();
             timeOfDay = GetTimeOfDayForEncounters(headerId, WILD_AREA_LAND);
@@ -826,16 +829,17 @@ static bool32 CreateEnemyPartyOWE(struct InfoOWE *info, s32 x, s32 y)
             
             return TRUE;
         }
-        if (gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR)
+        if (gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR
+         || gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR_HNS)
         {
             headerId = gSaveBlock2Ptr->frontier.curChallengeBattleNum;
             timeOfDay = GetTimeOfDayForEncounters(headerId, WILD_AREA_LAND);
             if (TryGenerateWildMon(gBattlePyramidWildMonHeaders[headerId].encounterTypes[timeOfDay].landMonsInfo, WILD_AREA_LAND, 0) != TRUE)
                 return FALSE;
 
-            u32 id = GetMonData(&gEnemyParty[0], MON_DATA_SPECIES);
+            u32 level = GetMonData(&gEnemyParty[0], MON_DATA_LEVEL);
             GenerateBattlePyramidWildMon(SPECIES_NONE);
-            SetMonData(&gEnemyParty[0], MON_DATA_LEVEL, &id);
+            SetMonData(&gEnemyParty[0], MON_DATA_LEVEL, &level);
             return TRUE;
         }
 
@@ -931,13 +935,15 @@ static bool32 StartWildBattleWithOWE_CheckBattleFrontier(u32 headerId)
 {
     if (headerId == HEADER_NONE)
     {
-        if (gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_WILD_MONS)
+        if (gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_WILD_MONS
+         || gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_WILD_MONS_HNS)
         {
             TryGenerateBattlePikeWildMon(FALSE);
             BattleSetup_StartBattlePikeWildBattle();
             return TRUE;
         }
-        if (gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR)
+        if (gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR
+         || gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR_HNS)
         {
             u32 id = GetMonData(&gEnemyParty[0], MON_DATA_LEVEL);
             u16 species = GetMonData(&gEnemyParty[0], MON_DATA_SPECIES);
@@ -1068,13 +1074,15 @@ static bool32 CheckCurrentWildMonHeaderForOWE(bool32 shouldSpawnWaterMons)
 
     if (headerId == HEADER_NONE)
     {
-        if (gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_WILD_MONS)
+        if (gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_WILD_MONS
+         || gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_WILD_MONS_HNS)
         {
             headerId = GetBattlePikeWildMonHeaderId();
             timeOfDay = GetTimeOfDayForEncounters(headerId, WILD_AREA_LAND);
             return gBattlePikeWildMonHeaders[headerId].encounterTypes[timeOfDay].landMonsInfo != NULL;
         }
-        if (gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR)
+        if (gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR
+         || gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR_HNS)
         {
             headerId = gSaveBlock2Ptr->frontier.curChallengeBattleNum;
             timeOfDay = GetTimeOfDayForEncounters(headerId, WILD_AREA_LAND);
@@ -1208,7 +1216,9 @@ static bool32 TrySelectTileForOWE(s32* outX, s32* outY)
         isEncounterTile = TRUE;
 
     if (gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_WILD_MONS
-     || gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR)
+     || gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_WILD_MONS_HNS
+     || gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR
+     || gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR_HNS)
         isEncounterTile = TRUE;
 
     if (isEncounterTile && !MapGridGetCollisionAt(x, y))
@@ -1482,10 +1492,7 @@ bool32 TryAndDespawnOldestGeneratedOWE_ToFreeObject(u8 *objectEventId)
         return FALSE;
     
     *objectEventId = RemoveOldestGeneratedOWE();
-    if (*objectEventId == OBJECT_EVENTS_COUNT)
-        return TRUE;
-    
-    return FALSE;
+    return *objectEventId != OBJECT_EVENTS_COUNT;
 }
 
 void DespawnOWEOnBattleStart(void)
@@ -1968,7 +1975,7 @@ void OWEApproachForBattle(struct ScriptContext *ctx)
     }
     
     u32 taskId = CreateTask(Task_OWEApproachForBattle, 2);
-    if (FindTaskIdByFunc(Task_OWEApproachForBattle) == TASK_NONE)
+    if (taskId == TASK_NONE)
     {
         FreezeObjectEvent(owe);
         return;
@@ -1988,7 +1995,7 @@ static void Task_OWEApproachForBattle(u8 taskId)
         struct ObjectEvent *player = &gObjectEvents[gPlayerAvatar.objectEventId];
         struct ObjectEvent *followerMon = GetFollowerObject();
         bool32 oweNextToPlayer = IsOWENextToPlayer(OWE);
-        bool32 oweNextToFollowerMon = IsOWENextToObject(OWE, followerMon);
+        bool32 oweNextToFollowerMon = followerMon != NULL && IsOWENextToObject(OWE, followerMon);
 
         if (oweNextToPlayer || oweNextToFollowerMon)
         {

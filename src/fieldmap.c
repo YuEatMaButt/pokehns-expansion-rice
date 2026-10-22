@@ -1100,13 +1100,15 @@ void LoadMapTilesetPalettes(struct MapLayout const *mapLayout)
 
 bool32 AreCoordsInsideMap(u8 mapGroup, u8 mapNum, s16 x, s16 y)
 {
-    const struct MapLayout *layout = Overworld_GetMapHeaderByGroupAndId(mapGroup, mapNum)->mapLayout;
+    const struct MapHeader *mapHeader = Overworld_GetMapHeaderByGroupAndId(mapGroup, mapNum);
+    const struct MapLayout *layout = mapHeader->mapLayout;
     s32 width = layout->width;
     s32 height = layout->height;
     x -= MAP_OFFSET;
     y -= MAP_OFFSET;
 
-    if (gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR)
+    if (mapHeader->mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR
+     || mapHeader->mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR_HNS)
     {
         width *= PYRAMID_FLOOR_SQUARES_WIDE;
         height *= PYRAMID_FLOOR_SQUARES_HIGH;

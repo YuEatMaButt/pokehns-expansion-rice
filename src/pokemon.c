@@ -3216,7 +3216,7 @@ static const u32 sCompressedStatuses[] =
 // - The maximum HP.
 // - The maximum form countdown.
 
-// The following STATIC_ASSERT will prevent developers from compiling the game if the value of the constant on the left does not fit within the number of bits defined in PokemonSubstruct0 (currently located in include/Pokémon.h).
+// The following STATIC_ASSERT will prevent developers from compiling the game if the value of the constant on the left does not fit within the number of bits defined in PokemonSubstruct0 (currently located in include/pokemon.h).
 
 // To successfully compile, developers will need to do one of the following:
 // 1) Decrease the size of the constant.

@@ -1812,8 +1812,13 @@ static bool8 GetAvailableObjectEventId(u16 localId, u8 mapNum, u8 mapGroup, u8 *
         if (gObjectEvents[i].localId == localId && gObjectEvents[i].mapNum == mapNum && gObjectEvents[i].mapGroup == mapGroup)
             return TRUE;
     }
-    if (i >= OBJECT_EVENTS_COUNT && !IS_LOCALID_GENERATED_OWE(localId))
-        return TryAndDespawnOldestGeneratedOWE_ToFreeObject(objectEventId);
+    if (i >= OBJECT_EVENTS_COUNT)
+    {
+        if (IS_LOCALID_GENERATED_OWE(localId))
+            return TRUE;
+
+        return !TryAndDespawnOldestGeneratedOWE_ToFreeObject(objectEventId);
+    }
     *objectEventId = i;
     for (; i < OBJECT_EVENTS_COUNT; i++)
     {
@@ -2074,7 +2079,6 @@ u8 TrySpawnObjectEventTemplate(const struct ObjectEventTemplate *objectEventTemp
     if (subspriteTables)
         SetSubspriteTables(&gSprites[gObjectEvents[objectEventId].spriteId], subspriteTables);
 
-    OnOverworldWildEncounterSpawn(&gObjectEvents[objectEventId]);
 #if IS_HNS
     // Whirlpool sprites render below the player's surf sprite
     if (graphicsId == OBJ_EVENT_GFX_WHIRLPOOL_HNS)

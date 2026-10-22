@@ -86,7 +86,7 @@ The behaviors that these OWEs have is set up to be customizable for each individ
         .baseHP        = 70,
 ```
 
-The behaviors themselves are defined in `src/data/pokemon/wild_encounter_overworld_behavior.h`. These are the customizable parameters:
+The behaviors themselves are defined in `src/data/pokemon/wild_encounter_ow_behavior.h`. These are the customizable parameters:
 - `movementType` is the movement type you want the object event to have. More on these in the next section.
 - `viewDistance` is the number of tiles away the mon is able to notice the player in the cardinal directions (similar to the sight distance of trainers).
 - `viewWidth` is the total width of the area in which the mon will notice the player. For example, if `viewWidth` is set to `3`, the mon will be able to detect the player if they are within 1 tile of either side of the line of sight.
