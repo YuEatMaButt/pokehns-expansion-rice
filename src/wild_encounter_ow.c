@@ -375,7 +375,7 @@ void StartWildBattleWithOWE(struct ScriptContext *ctx)
 
     Script_RequestEffects(SCREFF_V1 | SCREFF_HARDWARE);
 
-    assertf(objEventId < OBJECT_EVENTS_COUNT && IsOverworldWildEncounter(owe, OWE_ANY), "cannot start overworld wild enocunter as the selected object is invalid.\nlocalId: %d", localId)
+    assertf(objEventId < OBJECT_EVENTS_COUNT && IsOverworldWildEncounter(owe, OWE_ANY), "cannot start overworld wild encounter as the selected object is invalid.\nlocalId: %d", localId)
     {
         UnlockPlayerFieldControls();
         UnfreezeObjectEvents();
@@ -1173,12 +1173,11 @@ static u32 GetNextOWESpawnSlot(void)
 static u32 GetSpeciesByOWESpawnSlot(u32 spawnSlot)
 {
     u32 objEventId = GetObjectEventIdByLocalId(GetLocalIdByOWESpawnSlot(spawnSlot));
-    struct ObjectEvent *owe = &gObjectEvents[objEventId];
 
     if (objEventId >= OBJECT_EVENTS_COUNT)
         return SPECIES_NONE;
 
-    return OW_SPECIES(owe);
+    return OW_SPECIES(&gObjectEvents[objEventId]);
 }
 
 static bool32 TrySelectTileForOWE(s32* outX, s32* outY)
@@ -1241,7 +1240,7 @@ static bool32 TrySelectTileForOWE(s32* outX, s32* outY)
         *outX = x;
         *outY = y;
 
-        if (GetObjectEventIdByPosition(x, y, 0) == OBJECT_EVENTS_COUNT)
+        if (GetObjectEventIdByPosition(x, y, MapGridGetElevationAt(x, y)) == OBJECT_EVENTS_COUNT)
             return TRUE;
     }
 
@@ -1512,7 +1511,11 @@ bool32 TryAndDespawnOldestGeneratedOWE_ToFreeObject(u8 *objectEventId)
 
 void DespawnOWEOnBattleStart(void)
 {
-    struct ObjectEvent *owe = &gObjectEvents[GetObjectEventIdByLocalId(gSpecialVar_LastTalked)];
+    u32 objectEventId = GetObjectEventIdByLocalId(gSpecialVar_LastTalked);
+    if (objectEventId >= OBJECT_EVENTS_COUNT)
+        return;
+
+    struct ObjectEvent *owe = &gObjectEvents[objectEventId];
     if (!IsOverworldWildEncounter(owe, OWE_ANY))
         return;
 

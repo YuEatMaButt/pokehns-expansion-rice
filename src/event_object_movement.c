@@ -2167,7 +2167,16 @@ static u32 LoadDynamicFollowerPaletteFromGraphicsId(u16 graphicsId, struct Sprit
     bool32 female = graphicsId & OBJ_EVENT_MON_FEMALE;
     u8 paletteNum = LoadDynamicFollowerPalette(species, shiny, female);
     if (template)
-        template->paletteTag = GetGraphicsIdForMon(species, shiny, female);
+    {
+        template->paletteTag = species + OBJ_EVENT_MON + (shiny ? OBJ_EVENT_MON_SHINY : 0);
+#if P_GENDER_DIFFERENCES
+        if (female && ((shiny && gSpeciesInfo[species].overworldShinyPaletteFemale != NULL)
+         || (!shiny && gSpeciesInfo[species].overworldPaletteFemale != NULL)))
+        {
+            template->paletteTag += OBJ_EVENT_MON_FEMALE;
+        }
+#endif
+    }
 
     return paletteNum;
 }
@@ -3256,7 +3265,7 @@ static void RemoveObjectEventIfOutsideView(struct ObjectEvent *objectEvent)
      && objectEvent->initialCoords.y >= top && objectEvent->initialCoords.y <= bottom)
         return;
 
-    // Overworld Wild Ecnounters need to be set as offscreen in order to determine whether
+    // Overworld Wild Encounters need to be set as offscreen in order to determine whether
     // their despawn animation should play.
     objectEvent->offScreen = TRUE;
     RemoveObjectEvent(objectEvent);

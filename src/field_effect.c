@@ -918,6 +918,9 @@ void FieldEffectScript_LoadFadedPalette(u8 **script)
 void FieldEffect_LoadFadedPalette(struct SpritePalette *palette, enum ColorMapType colorMap)
 {
     u32 paletteSlot = LoadSpritePalette(palette);
+    if (paletteSlot == 0xFF)
+        return;
+
     SetPaletteColorMapType(paletteSlot + 16, colorMap);
     UpdateSpritePaletteWithWeather(paletteSlot, TRUE);
 }
