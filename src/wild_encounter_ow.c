@@ -952,12 +952,12 @@ static bool32 StartWildBattleWithOWE_CheckBattleFrontier(u32 headerId)
         if (gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR
          || gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR_HNS)
         {
-            u32 id = GetMonData(&gEnemyParty[0], MON_DATA_LEVEL);
+            u32 level = GetMonData(&gEnemyParty[0], MON_DATA_LEVEL);
             u16 species = GetMonData(&gEnemyParty[0], MON_DATA_SPECIES);
-            SetMonData(&gEnemyParty[0], MON_DATA_SPECIES, &id);
             if (!BATTLE_PYRAMID_RANDOM_ENCOUNTERS)
                 species = SPECIES_NONE;
             GenerateBattlePyramidWildMon(species);
+            SetMonData(&gEnemyParty[0], MON_DATA_LEVEL, &level);
             BattleSetup_StartWildBattle();
             return TRUE;
         }
@@ -1110,12 +1110,16 @@ static bool32 CheckCurrentWildMonHeaderForOWE(bool32 shouldSpawnWaterMons)
 
 static u32 GetOldestActiveOWESlot(bool32 forceRemove)
 {
-    struct ObjectEvent *slotMon, *oldest = &gObjectEvents[GetObjectEventIdByLocalId(LOCALID_OW_ENCOUNTER_END)];
+    struct ObjectEvent *slotMon, *oldest = NULL;
     u32 spawnSlot;
 
     for (spawnSlot = 0; spawnSlot < OWE_SPAWNS_MAX; spawnSlot++)
     {
-        slotMon = &gObjectEvents[GetObjectEventIdByLocalId(GetLocalIdByOWESpawnSlot(spawnSlot))];
+        u32 objectEventId = GetObjectEventIdByLocalId(GetLocalIdByOWESpawnSlot(spawnSlot));
+        if (objectEventId >= OBJECT_EVENTS_COUNT)
+            continue;
+
+        slotMon = &gObjectEvents[objectEventId];
         if (OW_SPECIES(slotMon) != SPECIES_NONE && (!HasOWENoDespawnFlag(slotMon) || forceRemove == TRUE))
         {
             oldest = slotMon;
@@ -1128,7 +1132,11 @@ static u32 GetOldestActiveOWESlot(bool32 forceRemove)
 
     for (u32 i = spawnSlot; i < OWE_SPAWNS_MAX; i++)
     {
-        slotMon = &gObjectEvents[GetObjectEventIdByLocalId(GetLocalIdByOWESpawnSlot(i))];
+        u32 objectEventId = GetObjectEventIdByLocalId(GetLocalIdByOWESpawnSlot(i));
+        if (objectEventId >= OBJECT_EVENTS_COUNT)
+            continue;
+
+        slotMon = &gObjectEvents[objectEventId];
         if (OW_SPECIES(slotMon) != SPECIES_NONE && (!HasOWENoDespawnFlag(slotMon) || forceRemove == TRUE))
         {
             if (slotMon->sOverworldEncounterAge > oldest->sOverworldEncounterAge)

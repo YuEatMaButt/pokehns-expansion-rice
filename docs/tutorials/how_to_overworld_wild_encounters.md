@@ -21,7 +21,7 @@ Assuming the following `graphicsId` have `.trainerType` set to `TRAINER_TYPE_OW_
 
 As level and species are potentially taken from the Wild Encounter Header, there is an `assertf` to let developers know when an invalid value is used. If the resultant level is invalid, it will be set to `MIN_LEVEL` (1). If the species is invalid, a replacement object will be created using `OBJ_EVENT_GFX_BOY_1`, this will not be an OWE of any kind.
 
-No matter how much of a Manual OWE is defined, it is considered a high priority OWE, and treated as a regular object event in all ways other than ones outlined above. They will always spawn, regardless of level or abilties of player Pokémon. However, they cannot be special spawns.
+No matter how much of a Manual OWE is defined, it is considered a high priority OWE, and treated as a regular object event in all ways other than ones outlined above. They will always spawn, regardless of level or abilities of player Pokémon. However, they cannot be special spawns.
 
 > When a manual OWE is removed, for whatever reason, it's flag is also set. Because of this, we recommend giving them temporary flags so they can be reset on leaving the map.
 
@@ -44,7 +44,7 @@ There are three configs that can be used to restrict the despawning of Generated
 None of these three configs can prevent the forceful despawning of OWEs to free up limited resources, as is explained in the next section.
 
 ## High Priority and Low Priority OWEs
-Low Priority OWEs may not be spawned or even be destroyed in certain situations. There are checks to prevent these from spawning if it would fail, including for the number of event objects, palettes and object tiles. There are also similar checks, when spawning object events other than Low Priotity OWEs. These checks will despawn the oldest of Low Priority OWEs when other objects event are attempting to be spawned and Low Priority OWEs are using these resources. Low Priority OWEs may also be destroyed by NPC object events colliding with them due to their movements or the OWE being in the way of a trainer interaction. High priority OWEs are treated as regular objects and will not be destroyed in the ways outlined above, but may cause the destruction of Generated OWEs and will not face spawning restrictions.
+Low Priority OWEs may not be spawned or even be destroyed in certain situations. There are checks to prevent these from spawning if it would fail, including for the number of event objects, palettes and object tiles. There are also similar checks, when spawning object events other than Low Priority OWEs. These checks will despawn the oldest of Low Priority OWEs when other objects event are attempting to be spawned and Low Priority OWEs are using these resources. Low Priority OWEs may also be destroyed by NPC object events colliding with them due to their movements or the OWE being in the way of a trainer interaction. High priority OWEs are treated as regular objects and will not be destroyed in the ways outlined above, but may cause the destruction of Generated OWEs and will not face spawning restrictions.
 These despawn conditions will overwrite the restrictive despawns mentioned above.
 
 ## Encountering an OWE
@@ -86,7 +86,7 @@ The behaviors that these OWEs have is set up to be customizable for each individ
         .baseHP        = 70,
 ```
 
-The behaviors themselves are defined in `src/data/pokemon/wild_encounter_ow_behavior.h`. These are the customizable parameters:
+The behaviors themselves are defined in `src/data/pokemon/wild_encounter_ow_behavior.c`. These are the customizable parameters:
 - `movementType` is the movement type you want the object event to have. More on these in the next section.
 - `viewDistance` is the number of tiles away the mon is able to notice the player in the cardinal directions (similar to the sight distance of trainers).
 - `viewWidth` is the total width of the area in which the mon will notice the player. For example, if `viewWidth` is set to `3`, the mon will be able to detect the player if they are within 1 tile of either side of the line of sight.

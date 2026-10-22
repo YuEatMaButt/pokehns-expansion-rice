@@ -3341,7 +3341,6 @@ static void SpawnObjectEventOnReturnToField(u8 objectEventId, s16 x, s16 y)
 
         ResetObjectEventFldEffData(objectEvent);
         SetObjectSubpriorityByElevation(objectEvent->previousElevation, sprite, 1);
-        RestoreSavedOWEBehaviorState(objectEvent, sprite);
 #if IS_HNS
         if (objectEvent->graphicsId == OBJ_EVENT_GFX_WHIRLPOOL_HNS)
         {
