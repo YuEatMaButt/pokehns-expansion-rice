@@ -3447,9 +3447,9 @@
 #define FLAG_UNUSED_0x907                                       0
 #define FLAG_UNUSED_0x908                                       0
 #define FLAG_UNUSED_0x909                                       0
-#define FLAG_UNUSED_0x90A                                       0
-#define FLAG_UNUSED_0x90B                                       0
-#define FLAG_UNUSED_0x90C                                       0
+#define FLAG_DEXNAV_SEARCHING      0x90A
+#define FLAG_DEXNAV_GET            0x90B
+#define FLAG_DEXNAV_DETECTOR_MODE  0x90C
 #define FLAG_UNUSED_0x90D                                       0
 #define FLAG_UNUSED_0x90E                                       0
 #define FLAG_UNUSED_0x90F                                       0

@@ -126,6 +126,10 @@ CherryGroveCity_EventScript_GentTour::
 	clearflag FLAG_HIDE_CHERRYGROVE_GUIDE_GENT_HOUSE
 	setflag FLAG_HIDE_GUIDE_GENT_CHERRYGROVE
 	setvar VAR_CHERRYGROVE_CITY_STATE, 1
+	goto_if_set FLAG_DEXNAV_GET, CherryGroveCity_EventScript_GentTour_DexNavDone
+	setflag FLAG_DEXNAV_GET
+	msgbox CherrygroveCity_Text_DexNavUnlocked, MSGBOX_DEFAULT
+CherryGroveCity_EventScript_GentTour_DexNavDone::
 	fadedefaultbgm
 	release
 	end
@@ -318,6 +322,11 @@ CherrygroveCity_Text_GuideGentMap:
 	.string "Oh, and if you're ever lost, check\n"
 	.string "the MAP on your POKéGEAR!\p"
 	.string "I wish you luck on your journey!$"
+
+CherrygroveCity_Text_DexNavUnlocked:
+	.string "The DEX NAV is now available!\p"
+	.string "You can access it from the\n"
+	.string "START menu.$"
 
 CherrygroveCity_Text_GuideGentDecline:
 	.string "Oh… It's something I enjoy\n"
