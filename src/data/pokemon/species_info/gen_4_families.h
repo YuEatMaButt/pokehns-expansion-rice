@@ -6,7 +6,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_TURTWIG
     [SPECIES_TURTWIG] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 55,
         .baseAttack    = 68,
         .baseDefense   = 64,
@@ -76,7 +75,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_GROTLE] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 75,
         .baseAttack    = 89,
         .baseDefense   = 85,
@@ -146,7 +144,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_TORTERRA] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 95,
         .baseAttack    = 109,
         .baseDefense   = 105,
@@ -223,7 +220,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_CHIMCHAR
     [SPECIES_CHIMCHAR] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 44,
         .baseAttack    = 58,
         .baseDefense   = 44,
@@ -297,7 +293,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_MONFERNO] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 64,
         .baseAttack    = 78,
         .baseDefense   = 52,
@@ -370,7 +365,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_INFERNAPE] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 76,
         .baseAttack    = 104,
         .baseDefense   = 71,
@@ -448,7 +442,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_PIPLUP
     [SPECIES_PIPLUP] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 53,
         .baseAttack    = 51,
         .baseDefense   = 53,
@@ -522,7 +515,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_PRINPLUP] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 64,
         .baseAttack    = 66,
         .baseDefense   = 68,
@@ -601,7 +593,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_EMPOLEON] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 84,
         .baseAttack    = 86,
         .baseDefense   = 88,
@@ -681,7 +672,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_STARLY
     [SPECIES_STARLY] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 40,
         .baseAttack    = 55,
         .baseDefense   = 30,
@@ -771,7 +761,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_STARAVIA] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 55,
         .baseAttack    = 75,
         .baseDefense   = 50,
@@ -852,7 +841,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_STARAPTOR] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 85,
         .baseAttack    = 120,
         .baseDefense   = 70,
@@ -1011,7 +999,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_BIDOOF
     [SPECIES_BIDOOF] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 59,
         .baseAttack    = 45,
         .baseDefense   = 40,
@@ -1098,7 +1085,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_BIBAREL] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 79,
         .baseAttack    = 85,
         .baseDefense   = 60,
@@ -1181,7 +1167,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_KRICKETOT
     [SPECIES_KRICKETOT] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 37,
         .baseAttack    = 25,
         .baseDefense   = 41,
@@ -1278,7 +1263,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_KRICKETUNE] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 77,
         .baseAttack    = 85,
         .baseDefense   = 51,
@@ -1366,7 +1350,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_SHINX
     [SPECIES_SHINX] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 45,
         .baseAttack    = 65,
         .baseDefense   = 34,
@@ -1449,7 +1432,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_LUXIO] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 60,
         .baseAttack    = 85,
         .baseDefense   = 49,
@@ -1530,7 +1512,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_LUXRAY] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 80,
         .baseAttack    = 120,
         .baseDefense   = 79,
@@ -1902,7 +1883,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_BURMY
     [SPECIES_BURMY_PLANT] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 40,
         .baseAttack    = 29,
         .baseDefense   = 45,
@@ -1972,7 +1952,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_BURMY_SANDY] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 40,
         .baseAttack    = 29,
         .baseDefense   = 45,
@@ -2043,7 +2022,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_BURMY_TRASH] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 40,
         .baseAttack    = 29,
         .baseDefense   = 45,
@@ -2114,7 +2092,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_WORMADAM_PLANT] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 60,
         .baseAttack    = 59,
         .baseDefense   = 85,
@@ -2182,7 +2159,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_WORMADAM_SANDY] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 60,
         .baseAttack    = 79,
         .baseDefense   = 105,
@@ -2250,7 +2226,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_WORMADAM_TRASH] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 60,
         .baseAttack    = 69,
         .baseDefense   = 95,
@@ -2377,7 +2352,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         )                                                                   \
         .levelUpLearnset = sMothimLevelUpLearnset,                          \
         .teachableLearnset = sMothimTeachableLearnset,                      \
-        .dexNotRequired = TRUE,                                             \
         .formSpeciesIdTable = sMothimFormSpeciesIdTable,                    \
         .randomizerMode = rzMode                                            \
     }
@@ -2390,7 +2364,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_COMBEE
     [SPECIES_COMBEE] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 30,
         .baseAttack    = 30,
         .baseDefense   = 42,
@@ -2477,7 +2450,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_VESPIQUEN] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 70,
         .baseAttack    = 80,
         .baseDefense   = 102,
@@ -2556,7 +2528,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_PACHIRISU
     [SPECIES_PACHIRISU] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 60,
         .baseAttack    = 45,
         .baseDefense   = 70,
@@ -2644,7 +2615,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_BUIZEL
     [SPECIES_BUIZEL] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 55,
         .baseAttack    = 65,
         .baseDefense   = 35,
@@ -2725,7 +2695,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_FLOATZEL] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 85,
         .baseAttack    = 105,
         .baseDefense   = 55,
@@ -2809,7 +2778,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_CHERUBI
     [SPECIES_CHERUBI] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 45,
         .baseAttack    = 35,
         .baseDefense   = 45,
@@ -2887,7 +2855,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_CHERRIM_OVERCAST] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 70,
         .baseAttack    = 60,
         .baseDefense   = 70,
@@ -2961,7 +2928,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_CHERRIM_SUNSHINE] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 70,
         .baseAttack    = 60,
         .baseDefense   = 70,
@@ -3038,7 +3004,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_SHELLOS
     [SPECIES_SHELLOS_WEST] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 76,
         .baseAttack    = 48,
         .baseDefense   = 48,
@@ -3106,7 +3071,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_SHELLOS_EAST] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 76,
         .baseAttack    = 48,
         .baseDefense   = 48,
@@ -3174,7 +3138,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_GASTRODON_WEST] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 111,
         .baseAttack    = 83,
         .baseDefense   = 68,
@@ -3240,7 +3203,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_GASTRODON_EAST] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 111,
         .baseAttack    = 83,
         .baseDefense   = 68,
@@ -3456,7 +3418,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_BUNEARY
     [SPECIES_BUNEARY] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 55,
         .baseAttack    = 66,
         .baseDefense   = 44,
@@ -3525,7 +3486,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_LOPUNNY] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 65,
         .baseAttack    = 76,
         .baseDefense   = 84,
@@ -3673,7 +3633,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_GLAMEOW
     [SPECIES_GLAMEOW] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 49,
         .baseAttack    = 55,
         .baseDefense   = 42,
@@ -3743,7 +3702,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_PURUGLY] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 71,
         .baseAttack    = 82,
         .baseDefense   = 64,
@@ -3817,7 +3775,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_STUNKY
     [SPECIES_STUNKY] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 63,
         .baseAttack    = 63,
         .baseDefense   = 47,
@@ -3889,7 +3846,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_SKUNTANK] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 103,
         .baseAttack    = 93,
         .baseDefense   = 67,
@@ -4112,7 +4068,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_CHATOT
     [SPECIES_CHATOT] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 76,
         .baseAttack    = 65,
         .baseDefense   = 45,
@@ -4270,7 +4225,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_GIBLE
     [SPECIES_GIBLE] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 58,
         .baseAttack    = 70,
         .baseDefense   = 45,
@@ -4353,7 +4307,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_GABITE] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 68,
         .baseAttack    = 90,
         .baseDefense   = 65,
@@ -4434,7 +4387,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_GARCHOMP] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 108,
         .baseAttack    = 130,
         .baseDefense   = 95,
@@ -4491,6 +4443,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .backAnimId = BACK_ANIM_V_SHAKE_LOW,
         .palette = gMonPalette_Garchomp,
         .shinyPalette = gMonShinyPalette_Garchomp,
+        .shinyPaletteModern = gMonShinyPaletteModern_Garchomp,
         .iconSprite = gMonIcon_Garchomp,
         .iconPalIndex = 0,
 #if P_GENDER_DIFFERENCES
@@ -4507,7 +4460,8 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             TRACKS_FOOT,
             sAnimTable_Following,
             gOverworldPalette_Garchomp,
-            gShinyOverworldPalette_Garchomp
+            gShinyOverworldPalette_Garchomp,
+            gShinyModernOverworldPalette_Garchomp
         )
         OVERWORLD_FEMALE(
             sPicTable_GarchompF,
@@ -4669,7 +4623,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_RIOLU
     [SPECIES_RIOLU] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 40,
         .baseAttack    = 70,
         .baseDefense   = 40,
@@ -4740,7 +4693,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_LUCARIO] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 70,
         .baseAttack    = 110,
         .baseDefense   = 70,
@@ -4951,7 +4903,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_HIPPOPOTAS
     [SPECIES_HIPPOPOTAS] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 68,
         .baseAttack    = 72,
         .baseDefense   = 78,
@@ -5036,7 +4987,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_HIPPOWDON] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 108,
         .baseAttack    = 112,
         .baseDefense   = 118,
@@ -5117,7 +5067,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_SKORUPI
     [SPECIES_SKORUPI] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 40,
         .baseAttack    = 50,
         .baseDefense   = 90,
@@ -5201,7 +5150,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_DRAPION] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 70,
         .baseAttack    = 90,
         .baseDefense   = 110,
@@ -5278,7 +5226,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_CROAGUNK
     [SPECIES_CROAGUNK] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 48,
         .baseAttack    = 61,
         .baseDefense   = 40,
@@ -5363,7 +5310,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_TOXICROAK] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 83,
         .baseAttack    = 106,
         .baseDefense   = 65,
@@ -5449,7 +5395,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_CARNIVINE
     [SPECIES_CARNIVINE] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 74,
         .baseAttack    = 100,
         .baseDefense   = 72,
@@ -5531,7 +5476,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_FINNEON
     [SPECIES_FINNEON] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 49,
         .baseAttack    = 49,
         .baseDefense   = 56,
@@ -5619,7 +5563,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_LUMINEON] =
     {
-        .dexNotRequired = TRUE,
         .baseHP        = 69,
         .baseAttack    = 69,
         .baseDefense   = 76,

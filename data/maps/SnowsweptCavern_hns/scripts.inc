@@ -199,6 +199,10 @@ Snowswept_Cavern_Movement_Boulder:
     walk_fast_down
     step_end
 
+Snowswept_EventScript_Item_ArmorFossil::
+    finditem ITEM_ARMOR_FOSSIL
+    end
+
 Snowswept_EventScript_Item_IcyRock::
     finditem ITEM_ICY_ROCK
     end

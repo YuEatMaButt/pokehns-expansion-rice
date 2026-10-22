@@ -732,7 +732,7 @@ static u8 GetHnSTrainerStars(struct TrainerCard *trainerCard)
         stars++;
     if (trainerCard->caughtAllHoenn)
         stars++;
-    if (FlagGet(TRAINER_FLAGS_START + TRAINER_RED_HNS))
+    if ((FlagGet(TRAINER_FLAGS_START + TRAINER_RED_HNS) || FlagGet(TRAINER_FLAGS_START + TRAINER_RED_POSTOBC_HNS)))
         stars++;
     if (FlagGet(FLAG_IS_KANTO_CHAMPION))
         stars++;

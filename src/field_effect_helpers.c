@@ -424,7 +424,11 @@ void UpdateShadowFieldEffect(struct Sprite *sprite)
 #define sLocalId     data[3] >> 8 // Upper 8 bits
 #define sMapGroup    data[4]
 #define sCurrentMap  data[5]
+#define sIsExtra     data[6] // Long grass only; set on the padding sprites (see FldEff_LongGrass)
 #define sObjectMoved data[7]
+
+// Width of one long grass field effect sprite, in pixels.
+#define LONG_GRASS_EFFECT_WIDTH 16
 
 u32 FldEff_TallGrass(void)
 {
@@ -546,13 +550,70 @@ u8 FindTallGrassFieldEffectSpriteId(u8 localId, u8 mapNum, u8 mapGroup, s16 x, s
     return MAX_SPRITES;
 }
 
-u32 FldEff_LongGrass(void)
+// How far an object's drawn art reaches past its own 16px tile, on whichever
+// side reaches furthest.
+//
+// The frame size can't answer this. Every follower reports a flat 32x32 (a few
+// legendaries 64x64) whatever the species, but the art inside ranges from
+// filling the frame to sitting comfortably inside a single tile - Snorlax
+// overhangs by 6px, Caterpie by none - so going by frame size alone pads a
+// Caterpie as though it were a Snorlax. The pics are compressed in ROM, so the
+// only place the real extent is legible is the tiles already decoded into VRAM.
+//
+// Only the tile columns outside the object's own tile are read, and whole tiles
+// that are blank are skipped, so the common case (a small follower, empty outer
+// columns) costs a handful of reads. VRAM must be read 16- or 32-bit, hence u32.
+static s16 GetSpriteArtOverhang(const struct Sprite *sprite, s16 width, s16 height)
 {
-    u8 spriteId;
-    s16 x = gFieldEffectArguments[0];
-    s16 y = gFieldEffectArguments[1];
-    SetSpritePosToOffsetMapCoords(&x, &y, 8, 8);
-    spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_LONG_GRASS], x, y, 0);
+    const u32 *tiles = (const u32 *)(OBJ_VRAM0 + sprite->oam.tileNum * TILE_SIZE_4BPP);
+    s16 cols = width / 8;
+    s16 rows = height / 8;
+    s16 ownStart = (width - LONG_GRASS_EFFECT_WIDTH) / 2;
+    s16 ownEnd = ownStart + LONG_GRASS_EFFECT_WIDTH;
+    s16 overhang = 0;
+    s16 col, row, line, px;
+
+    for (col = 0; col < cols; col++)
+    {
+        // Columns overlapping the object's own tile can't contribute an overhang.
+        if (col * 8 >= ownStart && (col + 1) * 8 <= ownEnd)
+            continue;
+
+        for (row = 0; row < rows; row++)
+        {
+            const u32 *tile = &tiles[(row * cols + col) * (TILE_SIZE_4BPP / 4)];
+
+            for (line = 0; line < TILE_SIZE_4BPP / 4; line++)
+            {
+                if (tile[line] == 0) // whole 8px row transparent
+                    continue;
+
+                for (px = 0; px < 8; px++)
+                {
+                    s16 x, reach;
+
+                    if (((tile[line] >> (px * 4)) & 0xF) == 0)
+                        continue;
+
+                    x = col * 8 + px;
+                    reach = (x < ownStart) ? ownStart - x : x + 1 - ownEnd;
+
+                    if (reach > overhang)
+                        overhang = reach;
+                }
+            }
+        }
+    }
+    return overhang;
+}
+
+// Creates one long grass sprite, drawn xOffset pixels from the object's tile.
+// The padding sprites keep the object's own tile in sX/sY so that they track and
+// expire with it exactly like the centre one does.
+static void CreateLongGrassSprite(s16 x, s16 y, s16 xOffset, bool8 isExtra)
+{
+    u8 spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_LONG_GRASS], x + xOffset, y, 0);
+
     if (spriteId != MAX_SPRITES)
     {
         struct Sprite *sprite = &gSprites[spriteId];
@@ -564,9 +625,52 @@ u32 FldEff_LongGrass(void)
         sprite->sMapNum = gFieldEffectArguments[4]; // Also sLocalId
         sprite->sMapGroup = gFieldEffectArguments[5];
         sprite->sCurrentMap = gFieldEffectArguments[6];
+        sprite->sIsExtra = isExtra;
 
         if (gFieldEffectArguments[7])
             SeekSpriteAnim(sprite, 6); // Skip to end of anim
+    }
+}
+
+u32 FldEff_LongGrass(void)
+{
+    u8 objectEventId;
+    s16 tileX = gFieldEffectArguments[0];
+    s16 tileY = gFieldEffectArguments[1];
+    s16 x = tileX;
+    s16 y = tileY;
+    s16 overhang = 0;
+
+    SetSpritePosToOffsetMapCoords(&x, &y, 8, 8);
+    CreateLongGrassSprite(x, y, 0, FALSE);
+
+    // Long grass no longer pushes an object's lower half behind the middle bg
+    // layer, so this sprite is the only thing covering it. One sprite is 16px
+    // wide, so anything wider (followers are 32px, some 64px) would hang out of
+    // the grass on both sides. Pad the effect out by exactly how far the object
+    // overhangs its own tile - no further, or small followers sit in a patch of
+    // grass much wider than they are. Only onto neighbouring tiles that are long
+    // grass themselves, or it spills onto whatever the object stands next to.
+    if (!TryGetObjectEventIdByLocalIdAndMap(gFieldEffectArguments[4] >> 8,
+                                            gFieldEffectArguments[4],
+                                            gFieldEffectArguments[5],
+                                            &objectEventId))
+    {
+        const struct ObjectEvent *objEvent = &gObjectEvents[objectEventId];
+        const struct ObjectEventGraphicsInfo *info = GetObjectEventGraphicsInfo(objEvent->graphicsId);
+
+        if (info->width > LONG_GRASS_EFFECT_WIDTH)
+            overhang = GetSpriteArtOverhang(&gSprites[objEvent->spriteId], info->width, info->height);
+    }
+
+    for (; overhang > 0; overhang -= LONG_GRASS_EFFECT_WIDTH)
+    {
+        s16 tiles = (overhang + LONG_GRASS_EFFECT_WIDTH - 1) / LONG_GRASS_EFFECT_WIDTH;
+
+        if (MetatileBehavior_IsLongGrass(MapGridGetMetatileBehaviorAt(tileX - tiles, tileY)))
+            CreateLongGrassSprite(x, y, -overhang, TRUE);
+        if (MetatileBehavior_IsLongGrass(MapGridGetMetatileBehaviorAt(tileX + tiles, tileY)))
+            CreateLongGrassSprite(x, y, overhang, TRUE);
     }
     return 0;
 }
@@ -593,7 +697,13 @@ void UpdateLongGrassFieldEffect(struct Sprite *sprite)
      || !MetatileBehavior_IsLongGrass(metatileBehavior)
      || (sprite->sObjectMoved && sprite->animEnded))
     {
-        FieldEffectStop(sprite, FLDEFF_LONG_GRASS);
+        // Only the centre sprite owns this effect's slot in the active list, so
+        // the padding sprites clean themselves up without releasing it. Tiles and
+        // palette are refcounted, so whichever goes last frees them.
+        if (sprite->sIsExtra)
+            FieldEffectFreeGraphicsResources(sprite);
+        else
+            FieldEffectStop(sprite, FLDEFF_LONG_GRASS);
     }
     else
     {
@@ -615,7 +725,9 @@ void UpdateLongGrassFieldEffect(struct Sprite *sprite)
 #undef sLocalId
 #undef sMapGroup
 #undef sCurrentMap
+#undef sIsExtra
 #undef sObjectMoved
+#undef LONG_GRASS_EFFECT_WIDTH
 
 // Effectively unused as it's not possible in vanilla to jump onto long grass (no adjacent ledges, and can't ride the Acro Bike in it).
 // The graphics for this effect do not visually correspond to long grass either. Perhaps these graphics were its original design?

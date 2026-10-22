@@ -261,6 +261,13 @@
       "elevation": 0,
       "dest_map": "MAP_LAKE_OF_RAGE_HOUSE1_HNS",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 6,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_LAKE_OF_RAGE_LOW_TIDE_CAVE_HNS",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

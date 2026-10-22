@@ -31,7 +31,7 @@
   ],
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PARAS",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_TURTWIG",
       "x": 16,
       "y": 14,
       "elevation": 0,
@@ -44,7 +44,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_GIRAFARIG",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PACHIRISU",
       "x": 9,
       "y": 2,
       "elevation": 0,
@@ -57,7 +57,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_HAUNTER",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_STARLY",
       "x": 20,
       "y": 16,
       "elevation": 0,
@@ -70,7 +70,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PIDGEOTTO",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CHATOT",
       "x": 13,
       "y": 21,
       "elevation": 0,
@@ -83,7 +83,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_TANGELA",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CHERUBI",
       "x": 15,
       "y": 10,
       "elevation": 0,
@@ -96,7 +96,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ABRA",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SHINX",
       "x": 33,
       "y": 6,
       "elevation": 0,
@@ -109,7 +109,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MURKROW",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_STARAVIA",
       "x": 4,
       "y": 4,
       "elevation": 0,
@@ -122,7 +122,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MR_MIME",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_BUNEARY",
       "x": 23,
       "y": 2,
       "elevation": 0,

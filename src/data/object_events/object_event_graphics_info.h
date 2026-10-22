@@ -7483,6 +7483,8 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_NurseChansey_hns =
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AlolaOak_hns = {TAG_NONE, OBJ_EVENT_PAL_TAG_ALOLA_OAK_HNS, OBJ_EVENT_PAL_TAG_NONE, 256, 16, 32, 5, SHADOW_SIZE_M, FALSE, FALSE, TRACKS_FOOT, &gObjectEventBaseOam_16x32, sOamTables_16x32, sAnimTable_Standard, sPicTable_AlolaOak_hns, gDummySpriteAffineAnimTable};
 
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Cynthia = {TAG_NONE, OBJ_EVENT_PAL_TAG_CYNTHIA, OBJ_EVENT_PAL_TAG_NONE, 512, 16, 32, 5, SHADOW_SIZE_M, FALSE, FALSE, TRACKS_FOOT, &gObjectEventBaseOam_16x32, sOamTables_16x32, sAnimTable_Standard, sPicTable_Cynthia, gDummySpriteAffineAnimTable};
+
 // HnS protagonist graphics info — Gold
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GoldNormal_hns = {
     .tileTag = TAG_NONE,

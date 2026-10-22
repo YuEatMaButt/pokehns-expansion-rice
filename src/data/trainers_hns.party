@@ -15679,13 +15679,13 @@ IVs: 0 Atk
 - Snore  
 - Rest  
 
-Slowbro  
-Ability: Oblivious  
+Bronzong  
+Ability: Heatproof  
 Level: 77  
-- Fire Punch  
-- Curse  
-- Earthquake  
-- Zen Headbutt  
+- Gravity  
+- Reflect  
+- Payback  
+- Psychic  
 
 Xatu  
 Ability: Magic Bounce  
@@ -15742,14 +15742,13 @@ IVs: 0 Atk
 - Earth Power  
 - Noble Roar  
 
-Venomoth @ Bright Powder  
-Ability: Shield Dust  
-Level: 77  
-IVs: 0 Atk  
-- Venoshock  
-- Bug Buzz  
-- Double Team  
-- Disable  
+Toxicroak  
+Ability: Dry Skin  
+Level: 77   
+- Swagger  
+- X-Scissor  
+- Cross Chop  
+- Gunk Shot  
 
 Crobat  
 Ability: Inner Focus  
@@ -15770,19 +15769,9 @@ AI: Smart Trainer / Prediction
 Mugshot: Orange
 Items: Full Restore / Full Restore
 
-Steelix @ Assault Vest  
-Ability: Rock Head  
-Level: 74 
-EVs: 252 SpD  
-Sassy Nature  
-- Heavy Slam  
-- Earthquake  
-- Crunch  
-- Aqua Tail  
-
 Tauros-Paldea-Blaze  
 Ability: Intimidate  
-Level: 75 
+Level: 74 
 - Raging Bull  
 - Close Combat  
 - Rock Slide  
@@ -15790,7 +15779,7 @@ Level: 75
 
 Heracross @ Loaded Dice  
 Ability: Moxie  
-Level: 76 
+Level: 75 
 - Pin Missile  
 - Close Combat  
 - Earthquake  
@@ -15798,11 +15787,19 @@ Level: 76
 
 Hariyama @ Sitrus Berry  
 Ability: Thick Fat  
-Level: 77  
+Level: 76  
 - Fake Out  
 - Belly Drum  
 - Cross Chop  
 - Body Slam  
+
+Lucario @ Life Orb  
+Ability: Inner Focus  
+Level: 77  
+- Close Combat  
+- Iron Tail  
+- Counter  
+- Extremespeed  
 
 Hitmontop @ Expert Belt  
 Ability: Technician  
@@ -15848,13 +15845,13 @@ Level: 75
 - Icicle Crash  
 - Low Kick  
 
-Persian-Alola @ Charcoal  
-Ability: Fur Coat  
+Spiritomb @ Black Glasses  
+Ability: Infiltrator  
 Level: 76 
-- Fake Out  
-- Dark Pulse  
-- Nasty Plot  
-- Burning Jealousy  
+- Curse  
+- Confuse Ray  
+- Pain Split  
+- Sucker Punch  
 
 Honchkrow  
 Ability: Moxie  
@@ -15924,13 +15921,13 @@ IVs: 0 Atk
 - Moonlight  
 - Super Fang  
 
-Aerodactyl @ Scope Lens  
-Ability: Rock Head  
+Garchomp @ Sitrus Berry  
+Ability: Rough Skin  
 Level: 79
-- Rock Slide  
+- Outrage  
+- Stone Edge  
 - Earthquake  
-- Sky Attack  
-- Dragon Dance  
+- Swords Dance  
 
 Dragonite @ Leftovers  
 Ability: Multiscale  
@@ -16001,4 +15998,219 @@ Tera Type: Fighting
 - Wild Charge  
 - Bulk Up  
 - Throat Chop
+
+=== TRAINER_CYNTHIA_HNS ===
+Name: CYNTHIA
+Class: Pkmn Trainer 1 Hns
+Pic: Cynthia
+Gender: Female
+Music: Hg Champion
+Double Battle: No
+AI: Smart Trainer / Prediction
+Items: Full Restore / Full Restore
+Mugshot: Black
+
+Spiritomb @ Sitrus Berry
+Ability: Pressure
+Level: 84
+EVs: 252 HP / 6 Atk / 0 Def / 252 SpA / 0 SpD / 0 Spe
+Quiet Nature
+- Dark Pulse
+- Shadow Ball
+- Will-O-Wisp
+- Sucker Punch
+
+Roserade @ Life Orb
+Ability: Poison Point
+Level: 85
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 6 SpD / 252 Spe
+Timid Nature
+- Dazzling Gleam
+- Sludge Bomb 
+- Shadow Ball 
+- Energy Ball
+
+Togekiss @ Leftovers 
+Ability: Serene Grace
+Level: 86 
+EVs: 6 HP / 0 Atk / 0 Def / 252 SpA / 0 SpD / 252 Spe
+Timid Nature
+- Air Slash 
+- Aura Sphere 
+- Moonblast
+- Thunder Wave
+
+Lucario @ Focus Sash
+Ability: Inner Focus
+Level: 86   
+EVs: 6 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Jolly Nature
+- Close Combat  
+- Meteor Mash
+- Extreme Speed
+- Earthquake
+
+Milotic @ Flame Orb 
+Ability: Marvel Scale
+Level: 84
+EVs: 252 HP / 0 Atk / 252 Def / 6 SpA / 0 SpD / 0 Spe
+Bold Nature
+- Scald  
+- Ice Beam
+- Mirror Coat
+- Recover
+
+Garchomp @ Yache Berry  
+Ability: Rough Skin
+Level: 88  
+EVs: 6 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Jolly Nature
+- Dragon Claw
+- Earthquake  
+- Swords Dance
+- Poison Jab
+
+=== TRAINER_LEAF_HNS ===
+Name: LEAF
+Class: Pkmn Trainer 1 Hns
+Pic: Leaf
+Gender: Female
+Music: Hg Champion
+Double Battle: No
+AI: Smart Trainer / Prediction
+Items: Full Restore / Full Restore
+Mugshot: Pink
+
+Eevee-Starter @ Eviolite
+Ability: Adaptability
+Level: 95
+EVs: 6 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Adamant Nature
+- Double Edge
+- Shadow Ball
+- Toxic
+- Curse
+
+Clefable @ Leftovers
+Ability: Magic Guard
+Level: 86
+EVs: 252 HP / 0 Atk / 252 Def / 0 SpA / 6 SpD / 0 Spe
+Bold Nature
+- Calm Mind
+- Moonblast
+- Flamethrower
+- Soft Boiled
+
+Beedrill @ Focus Sash
+Ability: Sniper
+Level: 87 
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 6 SpD / 252 Spe
+Jolly Nature
+- Fury Attack
+- U Turn
+- Poison Jab
+- Assurance
+
+Ninetales @ Heat Rock
+Ability: Drought
+Level: 86
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 6 SpD / 252 Spe
+Timid Nature
+- Weather Ball
+- Encore
+- Healing Wish
+- Will-O-Wisp
+
+Exeggutor @ Quick Claw
+Ability: Chlorophyll
+Level: 87   
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 6 SpD / 252 Spe
+Modest Nature
+- Solar Beam
+- Psychic
+- Sludge Bomb
+- Light Screen
+
+Kingdra @ Scope Lens
+Ability: Sniper
+Level: 86  
+EVs: 4 HP / 0 Atk / 0 Def / 252 SpA / 0 SpD / 252 Spe
+Modest Nature
+- Draco Meteor
+- Surf
+- Ice Beam
+- Flash Cannon
+
+=== TRAINER_BRENDAN_HNS ===
+Name: BRENDAN
+Class: Pkmn Trainer 1 Hns
+Pic: Brendan
+Gender: Male
+Music: Hg Champion
+Double Battle: No
+AI: Smart Trainer / Prediction
+Items: Full Restore / Full Restore
+Mugshot: Light Blue
+
+Slaking @ Eject Button
+Ability: Truant
+Level: 85
+EVs: 0 HP / 252 Atk / 0 Def / 6 SpA / 0 SpD / 252 Spe
+Naive Nature
+- Giga Impact
+- Pursuit
+- Earthquake
+- Aerial Ace
+
+Swampert @ Leftovers
+Ability: Torrent
+Level: 87
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 6 SpD / 252 Spe
+Jolly Nature
+- Waterfall
+- Earthquake
+- Ice Punch
+- Toxic
+
+Ludicolo @ Rocky Helmet
+Ability: Swift Swim
+Level: 86
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 6 SpD / 252 Spe
+Modest Nature
+- Rain Dance
+- Surf
+- Energy Ball
+- Ice Beam
+
+Aggron @ Focus Sash
+Ability: Rock Head
+Level: 86
+EVs: 0 HP / 252 Atk / 6 Def / 0 SpA / 0 SpD / 252 Spe
+Adamant Nature
+- Metal Burst
+- Earthquake
+- Head Smash
+- Heavy Slam
+
+Typhlosion @ Expert Belt
+Ability: Blaze
+Level: 87   
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 6 SpD / 252 Spe
+Timid Nature
+- Flamethrower
+- Shadow Ball
+- Thunder Punch
+- Earthquake
+
+Latios @ Soul Dew
+Ability: Levitate
+Level: 88  
+EVs: 0 HP / 6 Atk / 0 Def / 252 SpA / 0 SpD / 252 Spe
+Naive Nature
+- Luster Purge
+- Dragon Pulse
+- Shadow Ball
+- Reflect
+
+
 

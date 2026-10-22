@@ -39,7 +39,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_YANMA",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_COMBEE",
       "x": 4,
       "y": 15,
       "elevation": 0,
@@ -52,7 +52,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_YANMA",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_VESPIQUEN",
       "x": 1,
       "y": 13,
       "elevation": 0,
@@ -65,7 +65,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SCYTHER",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CARNIVINE",
       "x": 1,
       "y": 7,
       "elevation": 0,
@@ -78,7 +78,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MILTANK",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CHANSEY",
       "x": 26,
       "y": 26,
       "elevation": 0,
@@ -104,7 +104,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PINSIR",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_KRICKETOT",
       "x": 22,
       "y": 2,
       "elevation": 0,

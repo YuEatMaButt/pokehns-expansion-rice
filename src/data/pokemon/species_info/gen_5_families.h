@@ -8951,6 +8951,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
 #if P_FAMILY_FRILLISH
     [SPECIES_FRILLISH] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 55,
         .baseAttack    = 40,
         .baseDefense   = 50,
@@ -9040,6 +9041,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
 
     [SPECIES_JELLICENT] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 100,
         .baseAttack    = 60,
         .baseDefense   = 70,
@@ -10140,6 +10142,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
 #if P_FAMILY_LITWICK
     [SPECIES_LITWICK] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 50,
         .baseAttack    = 30,
         .baseDefense   = 55,
@@ -10215,6 +10218,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
 
     [SPECIES_LAMPENT] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 60,
         .baseAttack    = 40,
         .baseDefense   = 60,
@@ -10289,6 +10293,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
 
     [SPECIES_CHANDELURE] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 60,
         .baseAttack    = 55,
         .baseDefense   = 90,
