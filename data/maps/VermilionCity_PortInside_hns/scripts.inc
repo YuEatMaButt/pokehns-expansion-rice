@@ -112,7 +112,7 @@ VermilionPort_EventScript_ChoseOneIsland::
 	closemessage
 	delay 20
 	call VermilionPort_EventScript_EnterShip
-	warpsilent MAP_ONE_ISLAND_HARBOR_HNS, 8, 9
+	warpsilent MAP_ONE_ISLAND_HARBOR_HNS, 8, 8
 	waitstate
 	release
 	end
