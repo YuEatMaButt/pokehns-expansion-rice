@@ -165,7 +165,7 @@ static enum SpawnDespawnTypeOWE GetOWESpawnDespawnAnimType(u32 metatileBehavior)
 static void PlayOWECry(struct ObjectEvent *owe);
 static struct ObjectEvent *GetRandomOWEObjectEvent(void);
 static bool32 OWE_ShouldPlayOWEFleeSound(struct ObjectEvent *owe);
-static bool32 CheckRestrictedOWEMovementAtCoords(struct ObjectEvent *owe, s32 xNew, s32 yNew, enum Direction newDirection, enum Direction collisionDirection);
+static bool32 CheckRestrictedOWEMovementAtCoords(struct ObjectEvent *owe, s32 xNew, s32 yNew, enum Direction collisionDirection);
 static bool32 CheckRestrictedOWEMovementMetatile(s32 xCurrent, s32 yCurrent, s32 xNew, s32 yNew);
 static bool32 CheckRestrictedOWEMovementMap(struct ObjectEvent *owe, s32 xNew, s32 yNew);
 static bool32 CanOWEReachPlayer(struct ObjectEvent *owe);
@@ -1078,6 +1078,8 @@ static bool32 CheckCurrentWildMonHeaderForOWE(bool32 shouldSpawnWaterMons)
 {
     u32 headerId = GetCurrentMapWildMonHeaderId();
     enum TimeOfDay timeOfDay;
+    const struct WildPokemonInfo *landMonsInfo;
+    const struct WildPokemonInfo *waterMonsInfo;
 
     if (headerId == HEADER_NONE)
     {
@@ -1098,14 +1100,15 @@ static bool32 CheckCurrentWildMonHeaderForOWE(bool32 shouldSpawnWaterMons)
         return FALSE;
     }
 
-    if (shouldSpawnWaterMons)
-    {
-        timeOfDay = GetTimeOfDayForEncounters(headerId, WILD_AREA_WATER);
-        return gWildMonHeaders[headerId].encounterTypes[timeOfDay].waterMonsInfo != NULL;
-    }
-
     timeOfDay = GetTimeOfDayForEncounters(headerId, WILD_AREA_LAND);
-    return gWildMonHeaders[headerId].encounterTypes[timeOfDay].landMonsInfo != NULL;
+    landMonsInfo = gWildMonHeaders[headerId].encounterTypes[timeOfDay].landMonsInfo;
+    timeOfDay = GetTimeOfDayForEncounters(headerId, WILD_AREA_WATER);
+    waterMonsInfo = gWildMonHeaders[headerId].encounterTypes[timeOfDay].waterMonsInfo;
+
+    if (shouldSpawnWaterMons)
+        return waterMonsInfo != NULL || landMonsInfo != NULL;
+
+    return landMonsInfo != NULL || waterMonsInfo != NULL;
 }
 
 static u32 GetOldestActiveOWESlot(bool32 forceRemove)
@@ -1726,7 +1729,7 @@ bool32 CheckRestrictedOWEMovement(struct ObjectEvent *owe, enum Direction direct
     return FALSE;
 }
 
-static bool32 CheckRestrictedOWEMovementAtCoords(struct ObjectEvent *owe, s32 xNew, s32 yNew, enum Direction newDirection, enum Direction collisionDirection)
+static bool32 CheckRestrictedOWEMovementAtCoords(struct ObjectEvent *owe, s32 xNew, s32 yNew, enum Direction collisionDirection)
 {
     if (CheckRestrictedOWEMovementMetatile(owe->currentCoords.x, owe->currentCoords.y, xNew, yNew))
         return FALSE;
@@ -1951,26 +1954,26 @@ static enum Direction CheckOWEPathToPlayerFromCollision(struct ObjectEvent *owe,
     s16 y = owe->currentCoords.y;
 
     MoveCoords(newDirection, &x, &y);
-    if (CheckRestrictedOWEMovementAtCoords(owe, x, y, newDirection, newDirection))
+    if (CheckRestrictedOWEMovementAtCoords(owe, x, y, newDirection))
     {
         if (owe->movementType == MOVEMENT_TYPE_FLEE_PLAYER_OWE)
             return GetOppositeDirection(newDirection);
 
         MoveCoords(owe->movementDirection, &x, &y);
-        if (CheckRestrictedOWEMovementAtCoords(owe, x, y, newDirection, owe->movementDirection))
+        if (CheckRestrictedOWEMovementAtCoords(owe, x, y, owe->movementDirection))
             return newDirection;
     }
 
     x = owe->currentCoords.x;
     y = owe->currentCoords.y;
     MoveCoords(GetOppositeDirection(newDirection), &x, &y);
-    if (CheckRestrictedOWEMovementAtCoords(owe, x, y, newDirection, newDirection))
+    if (CheckRestrictedOWEMovementAtCoords(owe, x, y, newDirection))
     {
         if (owe->movementType == MOVEMENT_TYPE_FLEE_PLAYER_OWE)
             return newDirection;
 
         MoveCoords(owe->movementDirection, &x, &y);
-        if (CheckRestrictedOWEMovementAtCoords(owe, x, y, newDirection, owe->movementDirection))
+        if (CheckRestrictedOWEMovementAtCoords(owe, x, y, owe->movementDirection))
             return GetOppositeDirection(newDirection);
     }
 
