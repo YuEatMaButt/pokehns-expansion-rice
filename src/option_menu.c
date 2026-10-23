@@ -322,8 +322,8 @@ static const u8 *const sDesc_MatchCall[] = {
     COMPOUND_STRING("You will not receive calls.\nSpecial events will still occur."),
 };
 static const u8 *const sDesc_EncounterMode[] = {
-    COMPOUND_STRING("Encounter visible wild Pokémon on the map.\nNormal grass and water encounters are disabled."),
-    COMPOUND_STRING("Use normal grass and water encounters.\nGenerated overworld wild Pokémon are disabled."),
+    COMPOUND_STRING("Wild {PKMN} spawn in the overworld."),
+    COMPOUND_STRING("Vanilla wild encounters."),
 };
 
 static const u8 *const sDesc_FrameType[] = {
