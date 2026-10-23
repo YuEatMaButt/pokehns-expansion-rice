@@ -234,10 +234,11 @@ void UpdateOverworldWildEncounter(void)
 
     bool32 shouldSpawnWaterMons = ShouldSpawnWaterOWE();
     
-    if (ArePlayerFieldControlsLocked() || FlagGet(DN_FLAG_SEARCHING) || !CheckCurrentWildMonHeaderForOWE(shouldSpawnWaterMons))
+    if (ArePlayerFieldControlsLocked() || FlagGet(DN_FLAG_SEARCHING))
         return;
 
     if (!WE_OW_ENCOUNTERS
+     || gSaveBlock3Ptr->challengeSettings.overworldEncounterMode
      || FlagGet(WE_OWE_FLAG_DISABLED)
      || FlagGet(OW_FLAG_NO_ENCOUNTER)
      || FlagGet(DN_FLAG_SEARCHING)
@@ -254,7 +255,11 @@ void UpdateOverworldWildEncounter(void)
         }
         return;
     }
-    else if (sOWESpawnCountdown == OWE_NO_ENCOUNTER_SET)
+
+    if (!CheckCurrentWildMonHeaderForOWE(shouldSpawnWaterMons))
+        return;
+
+    if (sOWESpawnCountdown == OWE_NO_ENCOUNTER_SET)
     {
         SetMinimumOWESpawnTimer();
     }

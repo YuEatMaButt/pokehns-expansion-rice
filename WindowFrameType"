@@ -1,0 +1,8 @@
+[35minclude/global.h[m[36m:[m[32m685[m[36m:[m    /*0x14*/ u16 [1;31moptionsTextSpeed[m:3; // OPTIONS_TEXT_SPEED_[SLOW/MID/FAST]
+[35msrc/new_game.c[m[36m:[m[32m109[m[36m:[m    gSaveBlock2Ptr->[1;31moptionsTextSpeed[m = OPTIONS_TEXT_SPEED_FAST;
+[35msrc/option_menu.c[m[36m:[m[32m1066[m[36m:[m    gSaveBlock2Ptr->[1;31moptionsTextSpeed[m        = *GetSelectionPtr(TAB_MAIN, ITEM_MAIN_TEXTSPEED);
+[35msrc/option_menu.c[m[36m:[m[32m1178[m[36m:[m        *GetSelectionPtr(TAB_MAIN, ITEM_MAIN_TEXTSPEED)    = gSaveBlock2Ptr->[1;31moptionsTextSpeed[m;
+[35msrc/recorded_battle.c[m[36m:[m[32m358[m[36m:[m    battleSave->textSpeed = gSaveBlock2Ptr->[1;31moptionsTextSpeed[m;
+[35msrc/text.c[m[36m:[m[32m329[m[36m:[m    if (gSaveBlock2Ptr->[1;31moptionsTextSpeed[m > OPTIONS_TEXT_SPEED_INSTANT)
+[35msrc/text.c[m[36m:[m[32m330[m[36m:[m        gSaveBlock2Ptr->[1;31moptionsTextSpeed[m = OPTIONS_TEXT_SPEED_FAST;
+[35msrc/text.c[m[36m:[m[32m335[m[36m:[m    return gSaveBlock2Ptr->[1;31moptionsTextSpeed[m;

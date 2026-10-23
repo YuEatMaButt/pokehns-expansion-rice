@@ -952,6 +952,10 @@ static bool32 ShouldDisableRandomEncounters(void)
     if (FlagGet(OW_FLAG_NO_ENCOUNTER))
         return TRUE;
 
+    // Vanilla mode enables standard grass and water encounters.
+    if (gSaveBlock3Ptr->challengeSettings.overworldEncounterMode)
+        return FALSE;
+
     if (!WE_VANILLA_RANDOM && WE_OW_ENCOUNTERS)
     {
         if ((gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_WILD_MONS

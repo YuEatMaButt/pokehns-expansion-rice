@@ -51,6 +51,7 @@ enum {
     ITEM_MAIN_FASTER_JOY,
     ITEM_MAIN_UNIT_TYPE,
     ITEM_MAIN_MATCHCALL,
+    ITEM_MAIN_ENCOUNTER_MODE,
     ITEM_MAIN_FRAMETYPE,
     ITEM_MAIN_COUNT,
 };
@@ -204,6 +205,11 @@ static const u8 *const sChoices_OnOff[] = {
     COMPOUND_STRING("OFF"),
 };
 
+static const u8 *const sChoices_EncounterMode[] = {
+    COMPOUND_STRING("OVERWORLD"),
+    COMPOUND_STRING("VANILLA"),
+};
+
 static const u8 *const sChoices_ShiftSet[] = {
     COMPOUND_STRING("SHIFT"),
     COMPOUND_STRING("SET"),
@@ -315,6 +321,11 @@ static const u8 *const sDesc_MatchCall[] = {
     COMPOUND_STRING("TRAINERs will be able to call you,\noffering rematches and info."),
     COMPOUND_STRING("You will not receive calls.\nSpecial events will still occur."),
 };
+static const u8 *const sDesc_EncounterMode[] = {
+    COMPOUND_STRING("Encounter visible wild Pokémon on the map.\nNormal grass and water encounters are disabled."),
+    COMPOUND_STRING("Use normal grass and water encounters.\nGenerated overworld wild Pokémon are disabled."),
+};
+
 static const u8 *const sDesc_FrameType[] = {
     COMPOUND_STRING("Choose the frame surrounding the\nwindows."),
 };
@@ -441,6 +452,12 @@ static const struct OptionMenuItem sTabItems_Main[] = {
         .descriptions = sDesc_MatchCall,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
+    },
+    [ITEM_MAIN_ENCOUNTER_MODE] = {
+        .name         = COMPOUND_STRING("WILD ENCOUNTERS"),
+        .descriptions = sDesc_EncounterMode,
+        .numChoices   = 2,
+        .choiceNames  = sChoices_EncounterMode,
     },
     [ITEM_MAIN_FRAMETYPE] = {
         .name         = COMPOUND_STRING("FRAME"),
@@ -1084,6 +1101,7 @@ static void Task_Save(u8 taskId)
         FlagClear(FLAG_EVEN_FASTER_JOY);
     cs->unitSystem         = *GetSelectionPtr(TAB_MAIN, ITEM_MAIN_UNIT_TYPE);
     cs->disableMatchCall   = *GetSelectionPtr(TAB_MAIN, ITEM_MAIN_MATCHCALL);
+    cs->overworldEncounterMode = *GetSelectionPtr(TAB_MAIN, ITEM_MAIN_ENCOUNTER_MODE);
 
     cs->fastIntro          = *GetSelectionPtr(TAB_BATTLE, ITEM_BATTLE_FAST_INTRO);
     cs->fastBattle         = *GetSelectionPtr(TAB_BATTLE, ITEM_BATTLE_FAST_BATTLES);
@@ -1192,6 +1210,7 @@ void CB2_InitOptionMenu(void)
         *GetSelectionPtr(TAB_MAIN, ITEM_MAIN_FASTER_JOY)     = cs->evenFasterJoy;
         *GetSelectionPtr(TAB_MAIN, ITEM_MAIN_UNIT_TYPE)      = cs->unitSystem;
         *GetSelectionPtr(TAB_MAIN, ITEM_MAIN_MATCHCALL)    = cs->disableMatchCall;
+        *GetSelectionPtr(TAB_MAIN, ITEM_MAIN_ENCOUNTER_MODE) = cs->overworldEncounterMode;
 
         *GetSelectionPtr(TAB_BATTLE, ITEM_BATTLE_FAST_INTRO)      = cs->fastIntro;
         *GetSelectionPtr(TAB_BATTLE, ITEM_BATTLE_FAST_BATTLES)    = cs->fastBattle;
