@@ -338,6 +338,7 @@ struct ChallengeSettings
     u8 tx_Features_FrontierBans:1;
     u8 tx_Difficulty_EscapeRopeDig:1;
     u8 tx_Features_ShinyChance:4;
+    u8 overworldEncounterMode:1; // 0 = overworld encounters, 1 = vanilla
 };
 
 struct SaveBlock3
