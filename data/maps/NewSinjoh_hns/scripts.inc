@@ -146,7 +146,11 @@ NewSinjoh_Pokemart_TravelShop:
 	.2byte ITEM_REVIVAL_HERB
 	.2byte ITEM_HEAL_POWDER
 	.2byte ITEM_ELIXER
+	.2byte ITEM_REPEL
+	.2byte ITEM_SUPER_REPEL
 	.2byte ITEM_MAX_REPEL
+	.2byte ITEM_LURE
+	.2byte ITEM_SUPER_LURE
 	.2byte ITEM_MAX_LURE
 	.2byte ITEM_GREAT_BALL
 	.2byte ITEM_ULTRA_BALL
@@ -267,7 +271,13 @@ NewSinjoh_Text_SpringsSage:
 NewSinjoh_Text_SpringsSageAfter:
 	.string "Things have been better since\n"
 	.string "the legendary POKéMON were quelled.\p"
-	.string "Balance has returned to SINJOH.$"
+	.string "Balance has returned to SINJOH.\p"
+	.string "However, I've heard rumors that\n"
+	.string "other legendary POKéMON from SINJOH\l"
+	.string "may now reside in JOHTO.\p"
+	.string "A tumultuous lake, a secret field\n"
+	.string "of flowers... I wonder if you'll\l"
+	.string "find where they're hiding?$"
 
 NewSinjoh_EventScript_Sage2::
 	msgbox NewSinjoh_Text_Sage2, MSGBOX_NPC

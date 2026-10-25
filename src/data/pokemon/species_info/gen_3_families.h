@@ -4436,6 +4436,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backAnimId = BACK_ANIM_V_SHAKE_H_SLIDE,
         .palette = gMonPalette_Probopass,
         .shinyPalette = gMonShinyPalette_Probopass,
+        .shinyPaletteModern = gMonShinyPaletteModern_Probopass,
         .iconSprite = gMonIcon_Probopass,
         .iconPalIndex = 0,
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
@@ -4448,7 +4449,8 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             TRACKS_FOOT,
             sAnimTable_Following,
             gOverworldPalette_Probopass,
-            gShinyOverworldPalette_Probopass
+            gShinyOverworldPalette_Probopass,
+            gShinyModernOverworldPalette_Probopass
         )
         .levelUpLearnset = sProbopassLevelUpLearnset,
         .teachableLearnset = sProbopassTeachableLearnset,
@@ -12498,6 +12500,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .expYield = 211,
     #endif
         .evYield_SpDefense = 3,
+        .itemRare = ITEM_SOUL_DEW,
         .genderRatio = MON_FEMALE,
         .eggCycles = 120,
         .friendship = 90,
@@ -12658,6 +12661,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .expYield = 211,
     #endif
         .evYield_SpAttack = 3,
+        .itemRare = ITEM_SOUL_DEW,
         .genderRatio = MON_MALE,
         .eggCycles = 120,
         .friendship = 90,

@@ -31,8 +31,9 @@ static const struct BPShopEntry sBPPowerShopEntries[] = {
 static const struct BPShopEntry sBPHoldItemShopEntries[] = {
     { ITEM_LEFTOVERS,     48 },
     { ITEM_WHITE_HERB,    48 },
-    { ITEM_QUICK_CLAW,    48 },
+    { ITEM_POWER_HERB,    48 },
     { ITEM_MENTAL_HERB,   48 },
+    { ITEM_QUICK_CLAW,    48 },
     { ITEM_BRIGHT_POWDER, 64 },
     { ITEM_CHOICE_BAND,   64 },
     { ITEM_KINGS_ROCK,    64 },
@@ -64,8 +65,10 @@ static const struct BPShopEntry sBPHoldItemShopEntries2[] = {
     { ITEM_WIDE_LENS,    64 },
     { ITEM_ZOOM_LENS,    64 },
     { ITEM_MACHO_BRACE,    64 },
-    { ITEM_WHITE_HERB,    64 },
-    { ITEM_MENTAL_HERB,    64 },
+    { ITEM_HEAT_ROCK,     64 },
+    { ITEM_DAMP_ROCK,     64 },
+    { ITEM_SMOOTH_ROCK,     64 },
+    { ITEM_ICY_ROCK,     64 },
     { ITEM_NONE,           0 },
 };
 
@@ -110,10 +113,15 @@ static const struct BPShopEntry sBPDecor2ShopEntries[] = {
 static const struct BPShopEntry sBPPokeBallShopEntries[] = {
     { ITEM_NET_BALL,     1 },
     { ITEM_DIVE_BALL,    1 },
+    { ITEM_DUSK_BALL,    1 },
     { ITEM_NEST_BALL,    1 },
     { ITEM_REPEAT_BALL,  1 },
+    { ITEM_QUICK_BALL,   1 },
     { ITEM_TIMER_BALL,   1 },
+    { ITEM_DREAM_BALL,   1 },
+    { ITEM_HEAL_BALL,    1 },
     { ITEM_LUXURY_BALL,  1 },
+    { ITEM_CHERISH_BALL, 3 },
     { ITEM_NONE,         0 },
 };
 

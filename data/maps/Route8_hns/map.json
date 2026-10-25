@@ -262,8 +262,8 @@
     },
     {
       "type": "hidden_item",
-      "x": 0,
-      "y": 0,
+      "x": 38,
+      "y": 24,
       "elevation": 0,
       "item": "ITEM_FAIRY_GEM",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE8_FAIRY_GEM"

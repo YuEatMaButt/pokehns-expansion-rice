@@ -2221,6 +2221,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
 #if P_FAMILY_CHARCADET
     [SPECIES_CHARCADET] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 40,
         .baseAttack    = 50,
         .baseDefense   = 40,
@@ -2289,6 +2290,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
 
     [SPECIES_ARMAROUGE] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 85,
         .baseAttack    = 60,
         .baseDefense   = 100,
@@ -2352,6 +2354,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
 
     [SPECIES_CERULEDGE] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 75,
         .baseAttack    = 125,
         .baseDefense   = 80,
@@ -2362,6 +2365,8 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .catchRate = 25,
         .expYield = 263,
         .evYield_Attack = 2,
+        .itemCommon = ITEM_MALICIOUS_ARMOR,
+        .itemRare = ITEM_AUSPICIOUS_ARMOR,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 35,
         .friendship = 20,
@@ -4761,6 +4766,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
 #if P_FAMILY_GREAVARD
     [SPECIES_GREAVARD] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 50,
         .baseAttack    = 61,
         .baseDefense   = 60,
@@ -4826,6 +4832,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
 
     [SPECIES_HOUNDSTONE] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 72,
         .baseAttack    = 101,
         .baseDefense   = 100,

@@ -411,8 +411,8 @@ static void PickOneTypeChallengeStarters(void)
         if (GetSpeciesBit(hasPreEvolution, i))
             continue;
     #if RANDOMIZER_AVAILABLE
-        // Honour the randomizer's Gen 1-3 scope even when nothing else is
-        // being randomized, so a Gen 1-3 game doesn't hand out a Gen 6 starter.
+        // Honour the randomizer's Gen 1-4 scope even when nothing else is
+        // being randomized, so a Gen 1-4 game doesn't hand out a Gen 6 starter.
         if (!IsSpeciesInGenScope(i))
             continue;
     #endif

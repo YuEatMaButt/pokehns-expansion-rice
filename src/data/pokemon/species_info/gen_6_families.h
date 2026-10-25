@@ -5585,6 +5585,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
 #if P_FAMILY_PHANTUMP
     [SPECIES_PHANTUMP] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 43,
         .baseAttack    = 70,
         .baseDefense   = 48,
@@ -5656,6 +5657,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
 
     [SPECIES_TREVENANT] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 85,
         .baseAttack    = 110,
         .baseDefense   = 76,
@@ -5728,6 +5730,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
 #if P_FAMILY_PUMPKABOO
     [SPECIES_PUMPKABOO_AVERAGE] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 49,
         .baseAttack    = 66,
         .baseDefense   = 70,
@@ -5796,6 +5799,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
 
     [SPECIES_PUMPKABOO_SMALL] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 44,
         .baseAttack    = 66,
         .baseDefense   = 70,
@@ -5863,6 +5867,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
 
     [SPECIES_PUMPKABOO_LARGE] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 54,
         .baseAttack    = 66,
         .baseDefense   = 70,
@@ -5930,6 +5935,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
 
     [SPECIES_PUMPKABOO_SUPER] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 59,
         .baseAttack    = 66,
         .baseDefense   = 70,
@@ -5999,6 +6005,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
 
     [SPECIES_GOURGEIST_AVERAGE] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 65,
         .baseAttack    = 90,
         .baseDefense   = 122,
@@ -6064,6 +6071,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
 
     [SPECIES_GOURGEIST_SMALL] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 55,
         .baseAttack    = 85,
         .baseDefense   = 122,
@@ -6129,6 +6137,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
 
     [SPECIES_GOURGEIST_LARGE] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 75,
         .baseAttack    = 95,
         .baseDefense   = 122,
@@ -6194,6 +6203,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
 
     [SPECIES_GOURGEIST_SUPER] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 85,
         .baseAttack    = 100,
         .baseDefense   = 122,

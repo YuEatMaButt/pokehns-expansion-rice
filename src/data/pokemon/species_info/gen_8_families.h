@@ -4009,6 +4009,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
 #if P_FAMILY_SINISTEA
     [SPECIES_SINISTEA_PHONY] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 40,
         .baseAttack    = 45,
         .baseDefense   = 45,
@@ -4019,6 +4020,8 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .catchRate = 120,
         .expYield = 62,
         .evYield_SpAttack = 1,
+        .itemCommon = ITEM_CRACKED_POT,
+        .itemRare = ITEM_CRACKED_POT,
         .genderRatio = MON_GENDERLESS,
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
@@ -4076,6 +4079,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
 
     [SPECIES_SINISTEA_ANTIQUE] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 40,
         .baseAttack    = 45,
         .baseDefense   = 45,
@@ -4086,6 +4090,8 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .catchRate = 120,
         .expYield = 62,
         .evYield_SpAttack = 1,
+        .itemCommon = ITEM_CHIPPED_POT,
+        .itemRare = ITEM_CHIPPED_POT,
         .genderRatio = MON_GENDERLESS,
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
@@ -4144,6 +4150,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
 
     [SPECIES_POLTEAGEIST_PHONY] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 60,
         .baseAttack    = 65,
         .baseDefense   = 65,
@@ -4209,6 +4216,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
 
     [SPECIES_POLTEAGEIST_ANTIQUE] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 60,
         .baseAttack    = 65,
         .baseDefense   = 65,
@@ -6653,6 +6661,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
 #if P_FAMILY_DREEPY
     [SPECIES_DREEPY] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 28,
         .baseAttack    = 60,
         .baseDefense   = 30,
@@ -6719,6 +6728,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
 
     [SPECIES_DRAKLOAK] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 68,
         .baseAttack    = 80,
         .baseDefense   = 50,
@@ -6783,6 +6793,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
 
     [SPECIES_DRAGAPULT] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 88,
         .baseAttack    = 120,
         .baseDefense   = 75,

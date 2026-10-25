@@ -67,7 +67,6 @@ Alola_Ulaula_BattleNinetales_3:
 	release
 	end
 
-
 Alola_Ulaula_Cave_FindItem1::
 	finditem ITEM_ICE_STONE, 1
 	end

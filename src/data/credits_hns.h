@@ -1,5 +1,8 @@
 enum
 {
+    PAGE_LC_TITLE,
+    PAGE_LC_DIRECTOR,
+    PAGE_LC_CONTRIBUTORS,
     PAGE_HNS_TITLE,
     PAGE_HNS_DIRECTOR,
     PAGE_HNS_DEVS,
@@ -69,11 +72,13 @@ enum
 // Category headers
 
 static const u8 sCreditsText_EmptyString[]                     = _("");
+static const u8 sCreditsText_PkmnLC[]                          = _("POKéMON LUCENT CRYSTAL");
 static const u8 sCreditsText_PkmnHnS[]                         = _("POKéMON HEART & SOUL");
 static const u8 sCreditsText_LeadDeveloper[]                   = _("Lead Developer");
 static const u8 sCreditsText_LilDill[]                         = _("LIL DILL");
 static const u8 sCreditsText_Assets[]                          = _("Assets Sourced");
 static const u8 sCreditsText_Developers[]                      = _("Developers");
+static const u8 sCreditsText_Contributors[]                    = _("Contributors");
 static const u8 sCreditsText_InfiniteBacon42[]                 = _("InfiniteBacon42");
 static const u8 sCreditsText_Exclsior[]                        = _("Exclsior");
 static const u8 sCreditsText_TixoRebel[]                       = _("TixoRebel");
@@ -127,6 +132,9 @@ static const u8 sCreditsText_TamamushiErika[]                  = _("Tamamushi Er
 static const u8 sCreditsText_Beliot419[]                       = _("Beliot419");
 static const u8 sCreditsText_shiningstar5022[]                 = _("shiningstar5022");
 static const u8 sCreditsText_Nettorizo[]                       = _("Nettorizo");
+static const u8 sCreditsText_Stellaria[]                       = _("Stellaria");
+static const u8 sCreditsText_Apple40Slicer[]                   = _("Apple40Slicer");
+static const u8 sCreditsText_Cyberwo1ff[]                      = _("Cyberwo1ff");
 
 static const u8 sCreditsText_Engine[]                          = _("Engine");
 static const u8 sCreditsText_Pret[]                            = _("pokeemerald - Pret");
@@ -446,6 +454,7 @@ static const u8 sCreditsText_ShellieDow[]                     = _("Shellie Dow")
 static const u8 sCreditsText_ErikJohnson[]                    = _("Erik Johnson");
 
 // Title and header
+static const struct CreditsEntry sCreditsEntry_PkmnLC                           = {7,  TRUE, sCreditsText_PkmnLC};
 static const struct CreditsEntry sCreditsEntry_PkmnHnS                           = {7,  TRUE, sCreditsText_PkmnHnS};
 static const struct CreditsEntry sCreditsEntry_Credits                          = {11,  TRUE, sCreditsText_Credits};
 
@@ -455,6 +464,7 @@ static const struct CreditsEntry sCreditsEntry_LilDill                          
 
 static const struct CreditsEntry sCreditsEntry_LeadDeveloper    = {8, TRUE, sCreditsText_LeadDeveloper};
 static const struct CreditsEntry sCreditsEntry_Developers    = {8, TRUE, sCreditsText_Developers};
+static const struct CreditsEntry sCreditsEntry_Contributors    = {8, TRUE, sCreditsText_Contributors};
 
 //Programmers
 static const struct CreditsEntry sCreditsEntry_InfiniteBacon42 = {11, FALSE, sCreditsText_InfiniteBacon42};
@@ -481,6 +491,9 @@ static const struct CreditsEntry sCreditsEntry_TamamushiErika                   
 static const struct CreditsEntry sCreditsEntry_Beliot419                        = {11, FALSE, sCreditsText_Beliot419};
 static const struct CreditsEntry sCreditsEntry_shiningstar5022                  = {11, FALSE, sCreditsText_shiningstar5022};
 static const struct CreditsEntry sCreditsEntry_Nettorizo                        = {11, FALSE, sCreditsText_Nettorizo};
+static const struct CreditsEntry sCreditsEntry_Stellaria                        = {11, FALSE, sCreditsText_Stellaria};
+static const struct CreditsEntry sCreditsEntry_Apple40Slicer                    = {11, FALSE, sCreditsText_Apple40Slicer};
+static const struct CreditsEntry sCreditsEntry_Cyberwo1ff                       = {11, FALSE, sCreditsText_Cyberwo1ff};
 // Engine
 static const struct CreditsEntry sCreditsEntry_Engine                           = {8,  TRUE, sCreditsText_Engine};
 static const struct CreditsEntry sCreditsEntry_Pret                             = {11, FALSE, sCreditsText_Pret};
@@ -709,6 +722,27 @@ static const struct CreditsEntry sCreditsEntry_ErikJohnson                      
 #define _ &sCreditsEntry_EmptyString
 static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][ENTRIES_PER_PAGE] =
 {
+    [PAGE_LC_TITLE] = {
+        _,
+        &sCreditsEntry_PkmnLC,
+        &sCreditsEntry_Credits,
+        _,
+        _,
+    },
+    [PAGE_LC_DIRECTOR] = {
+        _,
+        &sCreditsEntry_LeadDeveloper,
+        &sCreditsEntry_Nettorizo,
+        _,
+        _,
+    },
+    [PAGE_LC_CONTRIBUTORS] = {
+        _,
+        &sCreditsEntry_Contributors,
+        &sCreditsEntry_Apple40Slicer,
+        &sCreditsEntry_Cyberwo1ff,
+        _,
+    },
     [PAGE_HNS_TITLE] = {
         _,
         &sCreditsEntry_PkmnHnS,
@@ -763,7 +797,7 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
         &sCreditsEntry_Sprites,
         &sCreditsEntry_Beliot419,
         &sCreditsEntry_shiningstar5022,
-        &sCreditsEntry_Nettorizo,
+        &sCreditsEntry_Stellaria,
     },
     [PAGE_HNS_TILESETS_1] = {
         &sCreditsEntry_Assets,

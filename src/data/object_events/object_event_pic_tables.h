@@ -4478,6 +4478,18 @@ static const struct SpriteFrameImage sPicTable_NurseChansey_hns[] = {
     overworld_frame(gObjectEventPic_NurseChansey_hns, 2, 4, 8),
 };
 
+static const struct SpriteFrameImage sPicTable_Cynthia[] = {
+    overworld_frame(gObjectEventPic_Cynthia, 2, 4, 0),
+    overworld_frame(gObjectEventPic_Cynthia, 2, 4, 1),
+    overworld_frame(gObjectEventPic_Cynthia, 2, 4, 2),
+    overworld_frame(gObjectEventPic_Cynthia, 2, 4, 3),
+    overworld_frame(gObjectEventPic_Cynthia, 2, 4, 4),
+    overworld_frame(gObjectEventPic_Cynthia, 2, 4, 5),
+    overworld_frame(gObjectEventPic_Cynthia, 2, 4, 6),
+    overworld_frame(gObjectEventPic_Cynthia, 2, 4, 7),
+    overworld_frame(gObjectEventPic_Cynthia, 2, 4, 8),
+};
+
 // HnS protagonist pic tables
 static const struct SpriteFrameImage sPicTable_GoldNormal_hns[] = {
     overworld_ascending_frames(gObjectEventPic_GoldNormalRunning_hns, 2, 4),

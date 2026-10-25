@@ -34,7 +34,7 @@ const struct HelpWindow gHelpWindowInfo[] =
         .desc = COMPOUND_STRING("Attempting to link incorrectly may result\n"
                                 "in permanent damage to your save file.\n"
                                 "Only link with another player if:\n"
-                                "You are both playing Heart & Soul.\n"
+                                "You are both playing Lucent Crystal.\n"
                                 "You are both on the same version.\n"
                                 "You both have the same challenge settings.\n"
                                 "You are NOT using any randomizer settings."

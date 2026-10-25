@@ -90,11 +90,20 @@ GoldenrodDeptStore_EventScript_VendingMachine::
 	message GoldenrodDeptStore_Text_WhichDrinkWouldYouLike
 	waitmessage
 	showmoneybox 0, 0
+	setvar VAR_TEMP_3, 0
 	goto GoldenrodDeptStore_EventScript_ChooseDrink
 	end
 
 GoldenrodDeptStore_EventScript_ChooseDrink::
-	multichoice 16, 0, MULTI_VENDING_MACHINE, FALSE
+	switch VAR_TEMP_3
+	case 0, GoldenrodDeptStore_EventScript_ChooseDrink_FreshWater
+	case 1, GoldenrodDeptStore_EventScript_ChooseDrink_SodaPop
+	case 2, GoldenrodDeptStore_EventScript_ChooseDrink_Lemonade
+	goto GoldenrodDeptStore_EventScript_ExitVendingMachine
+	end
+
+GoldenrodDeptStore_EventScript_ChooseDrink_FreshWater::
+	multichoicedefault 16, 0, MULTI_VENDING_MACHINE, 0, FALSE
 	copyvar VAR_TEMP_1, VAR_RESULT
 	switch VAR_TEMP_1
 	case 0, GoldenrodDeptStore_EventScript_FreshWater
@@ -104,18 +113,41 @@ GoldenrodDeptStore_EventScript_ChooseDrink::
 	goto GoldenrodDeptStore_EventScript_ExitVendingMachine
 	end
 
+GoldenrodDeptStore_EventScript_ChooseDrink_SodaPop::
+	multichoicedefault 16, 0, MULTI_VENDING_MACHINE, 1, FALSE
+	copyvar VAR_TEMP_1, VAR_RESULT
+	switch VAR_TEMP_1
+	case 0, GoldenrodDeptStore_EventScript_FreshWater
+	case 1, GoldenrodDeptStore_EventScript_SodaPop
+	case 2, GoldenrodDeptStore_EventScript_Lemonade
+	goto GoldenrodDeptStore_EventScript_ExitVendingMachine
+	end
+
+GoldenrodDeptStore_EventScript_ChooseDrink_Lemonade::
+	multichoicedefault 16, 0, MULTI_VENDING_MACHINE, 2, FALSE
+	copyvar VAR_TEMP_1, VAR_RESULT
+	switch VAR_TEMP_1
+	case 0, GoldenrodDeptStore_EventScript_FreshWater
+	case 1, GoldenrodDeptStore_EventScript_SodaPop
+	case 2, GoldenrodDeptStore_EventScript_Lemonade
+	goto GoldenrodDeptStore_EventScript_ExitVendingMachine
+	end
+
 GoldenrodDeptStore_EventScript_FreshWater::
-	setvar VAR_TEMP_0, ITEM_FRESH_WATER
+	setvar VAR_TEMP_2, ITEM_FRESH_WATER
+	setvar VAR_TEMP_3, 0
 	goto GoldenrodDeptStore_EventScript_TryBuyDrink
 	end
 
 GoldenrodDeptStore_EventScript_SodaPop::
-	setvar VAR_TEMP_0, ITEM_SODA_POP
+	setvar VAR_TEMP_2, ITEM_SODA_POP
+	setvar VAR_TEMP_3, 1
 	goto GoldenrodDeptStore_EventScript_TryBuyDrink
 	end
 
 GoldenrodDeptStore_EventScript_Lemonade::
-	setvar VAR_TEMP_0, ITEM_LEMONADE
+	setvar VAR_TEMP_2, ITEM_LEMONADE
+	setvar VAR_TEMP_3, 2
 	goto GoldenrodDeptStore_EventScript_TryBuyDrink
 	end
 
@@ -147,38 +179,38 @@ GoldenrodDeptStore_EventScript_TryBuyDrink::
 	call_if_eq VAR_TEMP_1, 0, GoldenrodDeptStore_EventScript_CheckMoneyFreshWater
 	call_if_eq VAR_TEMP_1, 1, GoldenrodDeptStore_EventScript_CheckMoneySodaPop
 	call_if_eq VAR_TEMP_1, 2, GoldenrodDeptStore_EventScript_CheckMoneyLemonade
-	goto_if_eq VAR_RESULT, FALSE, GoldenrodDeptStore_EventScript_NotEnoughMoney
-	checkitemspace VAR_TEMP_0
+	goto_if_eq VAR_RESULT, FALSE, GoldenrodDeptStore_EventScript_NotEnoughMoneyForDrink
+	checkitemspace VAR_TEMP_2
 	goto_if_eq VAR_RESULT, FALSE, GoldenrodDeptStore_EventScript_NoRoomForDrink
 	call_if_eq VAR_TEMP_1, 0, GoldenrodDeptStore_EventScript_RemoveMoneyFreshWater
 	call_if_eq VAR_TEMP_1, 1, GoldenrodDeptStore_EventScript_RemoveMoneySodaPop
 	call_if_eq VAR_TEMP_1, 2, GoldenrodDeptStore_EventScript_RemoveMoneyLemonade
 	updatemoneybox
-	bufferitemname STR_VAR_1, VAR_TEMP_0
+	bufferitemname STR_VAR_1, VAR_TEMP_2
 	playse SE_VEND
-	msgbox GoldenrodDeptStore_Text_DrinkClankedDown, MSGBOX_DEFAULT
-	additem VAR_TEMP_0
-	bufferitemname STR_VAR_2, VAR_TEMP_0
+	msgbox GoldenrodDeptStore_Text_CanOfDrinkDroppedDown, MSGBOX_DEFAULT
+	additem VAR_TEMP_2
+	bufferitemname STR_VAR_2, VAR_TEMP_2
 	bufferstdstring STR_VAR_3, STDSTRING_MEDICINE
 	msgbox gText_PutItemInPocket, MSGBOX_DEFAULT
-	random 64
+	random 16  @ 1/16 chance of an additional drink dropping
 	goto_if_ne VAR_RESULT, 0, GoldenrodDeptStore_EventScript_ChooseNewDrink
-	checkitemspace VAR_TEMP_0
+	checkitemspace VAR_TEMP_2
 	goto_if_eq VAR_RESULT, FALSE, GoldenrodDeptStore_EventScript_NoRoomForDrink
 	playse SE_VEND
-	msgbox GoldenrodDeptStore_Text_ExtraDrinkClankedDown, MSGBOX_DEFAULT
-	additem VAR_TEMP_0
-	bufferitemname STR_VAR_2, VAR_TEMP_0
+	msgbox GoldenrodDeptStore_Text_ExtraCanOfDrinkDroppedDown, MSGBOX_DEFAULT
+	additem VAR_TEMP_2
+	bufferitemname STR_VAR_2, VAR_TEMP_2
 	bufferstdstring STR_VAR_3, STDSTRING_MEDICINE
 	msgbox gText_PutItemInPocket, MSGBOX_DEFAULT
-	random 64
+	random 32  @ 1/32 * the prev 1/16 chance of a third additional drink dropping,
 	goto_if_ne VAR_RESULT, 0, GoldenrodDeptStore_EventScript_ChooseNewDrink
-	checkitemspace VAR_TEMP_0
+	checkitemspace VAR_TEMP_2
 	goto_if_eq VAR_RESULT, 0, GoldenrodDeptStore_EventScript_NoRoomForDrink
 	playse SE_VEND
-	msgbox GoldenrodDeptStore_Text_ExtraDrinkClankedDown, MSGBOX_DEFAULT
-	additem VAR_TEMP_0
-	bufferitemname STR_VAR_2, VAR_TEMP_0
+	msgbox GoldenrodDeptStore_Text_ExtraCanOfDrinkDroppedDown, MSGBOX_DEFAULT
+	additem VAR_TEMP_2
+	bufferitemname STR_VAR_2, VAR_TEMP_2
 	bufferstdstring STR_VAR_3, STDSTRING_MEDICINE
 	msgbox gText_PutItemInPocket, MSGBOX_DEFAULT
 	goto GoldenrodDeptStore_EventScript_ChooseNewDrink
@@ -190,7 +222,7 @@ GoldenrodDeptStore_EventScript_ChooseNewDrink::
 	goto GoldenrodDeptStore_EventScript_ChooseDrink
 	end
 
-GoldenrodDeptStore_EventScript_NotEnoughMoney::
+GoldenrodDeptStore_EventScript_NotEnoughMoneyForDrink::
 	msgbox GoldenrodDeptStore_Text_NotEnoughMoney, MSGBOX_DEFAULT
 	goto GoldenrodDeptStore_EventScript_ExitVendingMachine
 	end
@@ -209,11 +241,11 @@ GoldenrodDeptStore_Text_WhichDrinkWouldYouLike:
 	.string "It's a VENDING MACHINE.\n"
 	.string "Which drink would you like?$"
 
-GoldenrodDeptStore_Text_DrinkClankedDown:
+GoldenrodDeptStore_Text_CanOfDrinkDroppedDown:
 	.string "Clang!\p"
 	.string "A can of {STR_VAR_1} dropped down.$"
 
-GoldenrodDeptStore_Text_ExtraDrinkClankedDown:
+GoldenrodDeptStore_Text_ExtraCanOfDrinkDroppedDown:
 	.string "Clang!\p"
 	.string "Score! An extra can of {STR_VAR_1}\n"
 	.string "dropped down!$"
