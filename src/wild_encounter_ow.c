@@ -1052,6 +1052,12 @@ void TryTriggerOverworldWildEncounter(struct ObjectEvent *obstacle, struct Objec
         return;
 
     struct ObjectEvent *wildMon = playerFollowerIsColliderOWE ? obstacle : collider;
+
+    // Do not start an encounter in the middle of an OWE movement step.
+    // Let the movement finish so the encounter lock cannot interrupt it.
+    if (wildMon->singleMovementActive)
+        return;
+
     enum CategoryOWE category = GetOWECategory(wildMon);
     if (category < ROAMER_COUNT
      && !IsRoamerAt(category, gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum))
