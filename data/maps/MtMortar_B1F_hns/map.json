@@ -172,6 +172,13 @@
       "elevation": 0,
       "dest_map": "MAP_MT_MORTAR_1F_SOUTH_HNS",
       "dest_warp_id": "8"
+    },
+    {
+      "x": 38,
+      "y": 47,
+      "elevation": 0,
+      "dest_map": "MAP_MT_MORTAR_B2F_HNS",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

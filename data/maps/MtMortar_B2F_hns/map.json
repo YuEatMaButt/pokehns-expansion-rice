@@ -1,0 +1,45 @@
+{
+  "id": "MAP_MT_MORTAR_B2F_HNS",
+  "name": "MtMortar_B2F_hns",
+  "layout": "LAYOUT_MT_MORTAR_B2F_HNS",
+  "music": "MUS_HG_UNION_CAVE",
+  "region_map_section": "MAPSEC_MT_MORTAR",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [
+    {
+      "local_id": "MtMortar_B2F_Heatran",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_HEATRAN",
+      "x": 7,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MtMortar_B2F_BattleHeatran",
+      "flag": "FLAG_HIDE_HEATRAN"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 13,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_MT_MORTAR_B1F_HNS",
+      "dest_warp_id": "2"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [],
+  "game_version": "hns",
+  "region": "REGION_JOHTO"
+}

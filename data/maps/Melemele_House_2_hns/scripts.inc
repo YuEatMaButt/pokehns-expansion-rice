@@ -3,6 +3,7 @@ Melemele_House_2_hns_MapScripts::
 
 
 Alola_Pokemart_EventScript_Clerk::
+	goto_if_set FLAG_DEFEATED_SAMSON_OAK, Alola_Pokemart_EventScript_Clerk2
 	lock
 	faceplayer
 	message gText_HowMayIServeYou
@@ -12,12 +13,31 @@ Alola_Pokemart_EventScript_Clerk::
 	release
 	end
 
+Alola_Pokemart_EventScript_Clerk2::
+	lock
+	faceplayer
+	message gText_HowMayIServeYou
+	waitmessage
+	pokemart Alola_Pokemart_Pokemart2
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
 
 	.align 2
 Alola_Pokemart_Pokemart:
 	.2byte ITEM_BIG_MALASADA
 	.2byte ITEM_FRIEND_BALL
 	.2byte ITEM_NET_BALL
+	.2byte ITEM_WAVE_INCENSE
+	.2byte ITEM_LEMONADE
+	.2byte ITEM_NONE
+
+	.align 2
+Alola_Pokemart_Pokemart2:
+	.2byte ITEM_BIG_MALASADA
+	.2byte ITEM_FRIEND_BALL
+	.2byte ITEM_NET_BALL
+	.2byte ITEM_BEAST_BALL
 	.2byte ITEM_WAVE_INCENSE
 	.2byte ITEM_LEMONADE
 	.2byte ITEM_NONE

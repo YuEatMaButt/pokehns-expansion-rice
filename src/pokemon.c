@@ -1365,6 +1365,71 @@ static const enum NationalDexOrder sObtainableToNationalOrder[OBTAINABLE_DEX_COU
     OBTAINABLE_TO_NATIONAL(RAYQUAZA),
     OBTAINABLE_TO_NATIONAL(JIRACHI),
     OBTAINABLE_TO_NATIONAL(DEOXYS),
+    // Sinnoh
+    OBTAINABLE_TO_NATIONAL(TURTWIG),
+    OBTAINABLE_TO_NATIONAL(GROTLE),
+    OBTAINABLE_TO_NATIONAL(TORTERRA),
+    OBTAINABLE_TO_NATIONAL(CHIMCHAR),
+    OBTAINABLE_TO_NATIONAL(MONFERNO),
+    OBTAINABLE_TO_NATIONAL(INFERNAPE),
+    OBTAINABLE_TO_NATIONAL(PIPLUP),
+    OBTAINABLE_TO_NATIONAL(PRINPLUP),
+    OBTAINABLE_TO_NATIONAL(EMPOLEON),
+    OBTAINABLE_TO_NATIONAL(STARLY),
+    OBTAINABLE_TO_NATIONAL(STARAVIA),
+    OBTAINABLE_TO_NATIONAL(STARAPTOR),
+    OBTAINABLE_TO_NATIONAL(BIDOOF),
+    OBTAINABLE_TO_NATIONAL(BIBAREL),
+    OBTAINABLE_TO_NATIONAL(KRICKETOT),
+    OBTAINABLE_TO_NATIONAL(KRICKETUNE),
+    OBTAINABLE_TO_NATIONAL(SHINX),
+    OBTAINABLE_TO_NATIONAL(LUXIO),
+    OBTAINABLE_TO_NATIONAL(LUXRAY),
+    OBTAINABLE_TO_NATIONAL(BURMY),
+    OBTAINABLE_TO_NATIONAL(WORMADAM),
+    OBTAINABLE_TO_NATIONAL(MOTHIM),
+    OBTAINABLE_TO_NATIONAL(COMBEE),
+    OBTAINABLE_TO_NATIONAL(VESPIQUEN),
+    OBTAINABLE_TO_NATIONAL(PACHIRISU),
+    OBTAINABLE_TO_NATIONAL(BUIZEL),
+    OBTAINABLE_TO_NATIONAL(FLOATZEL),
+    OBTAINABLE_TO_NATIONAL(CHERUBI),
+    OBTAINABLE_TO_NATIONAL(CHERRIM),
+    OBTAINABLE_TO_NATIONAL(SHELLOS),
+    OBTAINABLE_TO_NATIONAL(GASTRODON),
+    OBTAINABLE_TO_NATIONAL(BUNEARY),
+    OBTAINABLE_TO_NATIONAL(LOPUNNY),
+    OBTAINABLE_TO_NATIONAL(GLAMEOW),
+    OBTAINABLE_TO_NATIONAL(PURUGLY),
+    OBTAINABLE_TO_NATIONAL(STUNKY),
+    OBTAINABLE_TO_NATIONAL(SKUNTANK),
+    OBTAINABLE_TO_NATIONAL(CHATOT),
+    OBTAINABLE_TO_NATIONAL(GIBLE),
+    OBTAINABLE_TO_NATIONAL(GABITE),
+    OBTAINABLE_TO_NATIONAL(GARCHOMP),
+    OBTAINABLE_TO_NATIONAL(RIOLU),
+    OBTAINABLE_TO_NATIONAL(LUCARIO),
+    OBTAINABLE_TO_NATIONAL(HIPPOPOTAS),
+    OBTAINABLE_TO_NATIONAL(HIPPOWDON),
+    OBTAINABLE_TO_NATIONAL(SKORUPI),
+    OBTAINABLE_TO_NATIONAL(DRAPION),
+    OBTAINABLE_TO_NATIONAL(CROAGUNK),
+    OBTAINABLE_TO_NATIONAL(TOXICROAK),
+    OBTAINABLE_TO_NATIONAL(CARNIVINE),
+    OBTAINABLE_TO_NATIONAL(FINNEON),
+    OBTAINABLE_TO_NATIONAL(LUMINEON),
+    // Post-Game Sinnoh
+    OBTAINABLE_TO_NATIONAL(CRANIDOS),
+    OBTAINABLE_TO_NATIONAL(RAMPARDOS),
+    OBTAINABLE_TO_NATIONAL(SHIELDON),
+    OBTAINABLE_TO_NATIONAL(BASTIODON),
+    OBTAINABLE_TO_NATIONAL(BRONZOR),
+    OBTAINABLE_TO_NATIONAL(BRONZONG),
+    OBTAINABLE_TO_NATIONAL(SNOVER),
+    OBTAINABLE_TO_NATIONAL(ABOMASNOW),
+    OBTAINABLE_TO_NATIONAL(DRIFLOON),
+    OBTAINABLE_TO_NATIONAL(DRIFBLIM),
+    OBTAINABLE_TO_NATIONAL(SPIRITOMB),
     // Alolan Regional Forms
     OBTAINABLE_TO_NATIONAL(RATTATA_ALOLA),
     OBTAINABLE_TO_NATIONAL(RATICATE_ALOLA),
@@ -1426,11 +1491,46 @@ static const enum NationalDexOrder sObtainableToNationalOrder[OBTAINABLE_DEX_COU
     OBTAINABLE_TO_NATIONAL(REGIELEKI),
     OBTAINABLE_TO_NATIONAL(REGIDRAGO),
     OBTAINABLE_TO_NATIONAL(REGIGIGAS),
+    OBTAINABLE_TO_NATIONAL(ROTOM),
+    OBTAINABLE_TO_NATIONAL(UXIE),
+    OBTAINABLE_TO_NATIONAL(MESPRIT),
+    OBTAINABLE_TO_NATIONAL(AZELF),
+    OBTAINABLE_TO_NATIONAL(DIALGA),
+    OBTAINABLE_TO_NATIONAL(PALKIA),
+    OBTAINABLE_TO_NATIONAL(HEATRAN),
+    OBTAINABLE_TO_NATIONAL(GIRATINA),
+    OBTAINABLE_TO_NATIONAL(CRESSELIA),
+    OBTAINABLE_TO_NATIONAL(PHIONE),
+    OBTAINABLE_TO_NATIONAL(MANAPHY),
+    OBTAINABLE_TO_NATIONAL(DARKRAI),
+    OBTAINABLE_TO_NATIONAL(SHAYMIN),
     OBTAINABLE_TO_NATIONAL(ARCEUS),
     OBTAINABLE_TO_NATIONAL(TAPU_KOKO),
     OBTAINABLE_TO_NATIONAL(TAPU_LELE),
     OBTAINABLE_TO_NATIONAL(TAPU_BULU),
     OBTAINABLE_TO_NATIONAL(TAPU_FINI),
+    OBTAINABLE_TO_NATIONAL(FRILLISH),
+    OBTAINABLE_TO_NATIONAL(JELLICENT),
+    OBTAINABLE_TO_NATIONAL(LITWICK),
+    OBTAINABLE_TO_NATIONAL(LAMPENT),
+    OBTAINABLE_TO_NATIONAL(CHANDELURE),
+    OBTAINABLE_TO_NATIONAL(PHANTUMP),
+    OBTAINABLE_TO_NATIONAL(TREVENANT),
+    OBTAINABLE_TO_NATIONAL(PUMPKABOO),
+    OBTAINABLE_TO_NATIONAL(GOURGEIST),
+    OBTAINABLE_TO_NATIONAL(SANDYGAST),
+    OBTAINABLE_TO_NATIONAL(PALOSSAND),
+    OBTAINABLE_TO_NATIONAL(MIMIKYU),
+    OBTAINABLE_TO_NATIONAL(SINISTEA),
+    OBTAINABLE_TO_NATIONAL(POLTEAGEIST),
+    OBTAINABLE_TO_NATIONAL(DREEPY),
+    OBTAINABLE_TO_NATIONAL(DRAKLOAK),
+    OBTAINABLE_TO_NATIONAL(DRAGAPULT),
+    OBTAINABLE_TO_NATIONAL(CHARCADET),
+    OBTAINABLE_TO_NATIONAL(ARMAROUGE),
+    OBTAINABLE_TO_NATIONAL(CERULEDGE),
+    OBTAINABLE_TO_NATIONAL(GREAVARD),
+    OBTAINABLE_TO_NATIONAL(HOUNDSTONE),
     OBTAINABLE_TO_NATIONAL(NOIBAT),
     OBTAINABLE_TO_NATIONAL(NOIVERN),
 };
@@ -3228,6 +3328,42 @@ void CreateMonWithIVs(struct Pokemon *mon, u16 species, u8 level, u32 personalit
     CalculateMonStats(mon);
 }
 
+bool32 ComputePlayerShinyOdds(u32 personality, u32 value)
+{
+    if (P_FLAG_FORCE_NO_SHINY != 0 && FlagGet(P_FLAG_FORCE_NO_SHINY))
+        return FALSE;
+    
+    if (P_FLAG_FORCE_SHINY != 0 && FlagGet(P_FLAG_FORCE_SHINY))
+        return TRUE;
+    
+    if (P_ONLY_OBTAINABLE_SHINIES && (CurrentBattlePyramidLocation() != PYRAMID_LOCATION_NONE || (B_FLAG_NO_CATCHING != 0 && FlagGet(B_FLAG_NO_CATCHING))))
+        return FALSE;
+    
+    if (P_NO_SHINIES_WITHOUT_POKEBALLS && !HasAtLeastOnePokeBall())
+        return FALSE;
+
+    u32 totalRerolls = 0;
+    
+    if (CheckBagHasItem(ITEM_SHINY_CHARM, 1))
+        totalRerolls += I_SHINY_CHARM_ADDITIONAL_ROLLS;
+
+    if (LURE_STEP_COUNT != 0)
+        totalRerolls += 1;
+
+    totalRerolls += CalculateChainFishingShinyRolls();
+
+    if (gDexNavSpecies)
+        totalRerolls += CalculateDexNavShinyRolls();
+
+    while (GET_SHINY_VALUE(value, personality) >= GetShinyOdds() && totalRerolls > 0)
+    {
+        personality = Random32();
+        totalRerolls--;
+    }
+
+    return GET_SHINY_VALUE(value, personality) < GetShinyOdds();
+}
+
 void SetBoxMonIVs(struct BoxPokemon *mon, u8 fixedIV)
 {
     u32 i, value;
@@ -3320,42 +3456,7 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u32 personal
     else // Player is the OT
     {
         value = READ_OTID_FROM_SAVE;
-        if (P_FLAG_FORCE_NO_SHINY != 0 && FlagGet(P_FLAG_FORCE_NO_SHINY))
-        {
-            isShiny = FALSE;
-        }
-        else if (P_FLAG_FORCE_SHINY != 0 && FlagGet(P_FLAG_FORCE_SHINY))
-        {
-            isShiny = TRUE;
-        }
-        else if (P_ONLY_OBTAINABLE_SHINIES && (CurrentBattlePyramidLocation() != PYRAMID_LOCATION_NONE || (B_FLAG_NO_CATCHING != 0 && FlagGet(B_FLAG_NO_CATCHING))))
-        {
-            isShiny = FALSE;
-        }
-        else if (P_NO_SHINIES_WITHOUT_POKEBALLS && !HasAtLeastOnePokeBall())
-        {
-            isShiny = FALSE;
-        }
-        else
-        {
-            u32 totalRerolls = 0;
-            if (CheckBagHasItem(ITEM_SHINY_CHARM, 1))
-                totalRerolls += I_SHINY_CHARM_ADDITIONAL_ROLLS;
-            if (LURE_STEP_COUNT != 0)
-                totalRerolls += 1;
-            totalRerolls += CalculateChainFishingShinyRolls();
-            if (gDexNavSpecies)
-                totalRerolls += CalculateDexNavShinyRolls();
-
-            u32 shinyPersonality = personality;
-            while (GET_SHINY_VALUE(value, shinyPersonality) >= GetShinyOdds() && totalRerolls > 0)
-            {
-                shinyPersonality = Random32();
-                totalRerolls--;
-            }
-
-            isShiny = GET_SHINY_VALUE(value, shinyPersonality) < GetShinyOdds();
-        }
+        isShiny = ComputePlayerShinyOdds(personality, value);
     }
 
     SetBoxMonData(boxMon, MON_DATA_PERSONALITY, &personality);
@@ -3402,6 +3503,20 @@ static bool32 IsValidGender(u32 gender)
     }
 }
 
+static void CleanIncompatibleGenderSpecies(u16 species, u8 *gender)
+{
+    switch (gSpeciesInfo[species].genderRatio)
+    {
+    case MON_MALE:
+    case MON_FEMALE:
+    case MON_GENDERLESS:
+        *gender = MON_GENDER_RANDOM;
+        return;
+    }
+    if (*gender == MON_GENDERLESS)
+        *gender = MON_GENDER_RANDOM;
+}
+
 u32 GetMonPersonality(u16 species, u8 gender, u8 nature, u8 unownLetter)
 {
     u32 personality, actualLetter;
@@ -3421,14 +3536,14 @@ u32 GetMonPersonality(u16 species, u8 gender, u8 nature, u8 unownLetter)
         unownLetter = RANDOM_UNOWN_LETTER;
     }
 
-    //gender outside valid gender ratios for species is not asserted because it could be triggered by cute charm
+    CleanIncompatibleGenderSpecies(species, &gender);
     do
     {
         personality = Random32();
         actualLetter = GET_UNOWN_LETTER(personality);
     }
     while ((nature != GetNatureFromPersonality(personality) && nature != NATURE_RANDOM)
-            || (gender != GetGenderFromSpeciesAndPersonality(species, personality) && gender != MON_GENDER_RANDOM)
+            || (gender != MON_GENDER_RANDOM && gender != GetGenderFromSpeciesAndPersonality(species, personality))
             || ((actualLetter != unownLetter - 1) && unownLetter > 0));
     return personality;
 }
@@ -8072,6 +8187,18 @@ u16 GetBattleBGM(void)
             if (!(gBattleTypeFlags & (BATTLE_TYPE_FRONTIER | BATTLE_TYPE_TRAINER_HILL))
              && TRAINER_BATTLE_PARAM.opponentA == TRAINER_STEVEN_HNS)
                 return MUS_VS_CHAMPION;
+            // Cynthia is a Platinum guest, so she gets the Platinum champion theme.
+            if (!(gBattleTypeFlags & (BATTLE_TYPE_FRONTIER | BATTLE_TYPE_TRAINER_HILL))
+                && TRAINER_BATTLE_PARAM.opponentA == TRAINER_CYNTHIA_HNS)
+                return MUS_DP_VS_CHAMPION;
+            // Leaf is a FRLG guest, so she gets the FRLG champion theme.
+            if (!(gBattleTypeFlags & (BATTLE_TYPE_FRONTIER | BATTLE_TYPE_TRAINER_HILL))
+                && TRAINER_BATTLE_PARAM.opponentA == TRAINER_LEAF_HNS)
+                return MUS_RG_VS_CHAMPION;
+            // Brendan is a SPECIAL guest, so he gets a special theme.
+            if (!(gBattleTypeFlags & (BATTLE_TYPE_FRONTIER | BATTLE_TYPE_TRAINER_HILL))
+                && TRAINER_BATTLE_PARAM.opponentA == TRAINER_BRENDAN_HNS)
+                return MUS_VS_FRONTIER_BRAIN;               
         #endif
             return MUS_HG_VS_CHAMPION;
         case TRAINER_CLASS_CHAMPION_HNS:

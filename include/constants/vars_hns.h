@@ -169,8 +169,8 @@
 #define VAR_UNUSED_HNS_0x40F5                            0x40F5 // Emerald VAR_SCOTT_BF_CALL_STEP_COUNTER - gated on FLAG_ENABLE_SCOTT_BATTLE_FRONTIER_CALL
 #define VAR_UNUSED_HNS_0x40F6                            0x40F6 // Emerald VAR_RIVAL_RAYQUAZA_CALL_STEP_COUNTER - gated on FLAG_ENABLE_RIVAL_MATCH_CALL
 
-#define VAR_UNUSED_HNS_0x40F7                            0x40F7 // Emerald VAR_UNUSED_0x40F7 - no references in any build
-#define VAR_UNUSED_HNS_0x40F8                            0x40F8 // Emerald VAR_UNUSED_0x40F8 - no references in any build
+#define VAR_DEXNAV_SPECIES                            0x40F7
+#define VAR_DEXNAV_STEP_COUNTER                            0x40F8
 #define VAR_UNUSED_HNS_0x40F9                            0x40F9 // Emerald VAR_UNUSED_0x40F9 - no references in any build
 #define VAR_UNUSED_HNS_0x40FA                            0x40FA // Emerald VAR_UNUSED_0x40FA - no references in any build
 #define VAR_UNUSED_HNS_0x40FB                            0x40FB // Emerald VAR_UNUSED_0x40FB - no references in any build

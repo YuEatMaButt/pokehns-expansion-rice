@@ -133,8 +133,8 @@ VioletCity_TrainerSchool_Text_Youngster1:
 	.string "HAUNTER evolve at LVL 42.\p"
 	.string "Some items, like the METAL\n"
 	.string "COAT, have also been found to\p"
-	.string "evolve certain POKéMON\n"
-	.string "while holding and leveling up.$"
+	.string "evolve certain POKéMON when\n"
+	.string "used as an item.$"
 
 VioletCity_TrainerSchool_Text_GameboyKid1:
 	.string "Notable POKéMON available in an\n"

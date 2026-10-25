@@ -439,7 +439,23 @@ const struct RideablePokemon gSurfablePokemon[] =
         .trainerPose = 0,
     },
     {
+        .species = SPECIES_PIPLUP,
+        .trainerPose = 0,
+    },
+    {
+        .species = SPECIES_PRINPLUP,
+        .trainerPose = 0,
+    },
+    {
+        .species = SPECIES_EMPOLEON,
+        .trainerPose = 0,
+    },
+    {
         .species = SPECIES_BIBAREL,
+        .trainerPose = 0,
+    },
+    {
+        .species = SPECIES_RAMPARDOS,
         .trainerPose = 0,
     },
     {
@@ -464,6 +480,10 @@ const struct RideablePokemon gSurfablePokemon[] =
     },
     {
         .species = SPECIES_GASTRODON_WEST,
+        .trainerPose = 0,
+    },
+    {
+        .species = SPECIES_GARCHOMP,
         .trainerPose = 0,
     },
     {
@@ -495,7 +515,35 @@ const struct RideablePokemon gSurfablePokemon[] =
         .trainerPose = 0,
     },
     {
+        .species = SPECIES_PALKIA,
+        .trainerPose = 0,
+    },
+    {
+        .species = SPECIES_PHIONE,
+        .trainerPose = 0,
+    },
+    {
+        .species = SPECIES_MANAPHY,
+        .trainerPose = 0,
+    },
+    {
         .species = SPECIES_ARCEUS,
+        .trainerPose = 0,
+    },
+    {
+        .species = SPECIES_FRILLISH,
+        .trainerPose = 0,
+    },
+    {
+        .species = SPECIES_JELLICENT,
+        .trainerPose = 0,
+    },
+    {
+        .species = SPECIES_DRAKLOAK,
+        .trainerPose = 0,
+    },
+    {
+        .species = SPECIES_DRAGAPULT,
         .trainerPose = 0,
     },
 // Regional Form Surfables

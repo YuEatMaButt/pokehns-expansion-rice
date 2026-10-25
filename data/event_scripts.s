@@ -1858,6 +1858,7 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/scripts/dexnav.inc"
 	.include "data/scripts/battle_frontier.inc"
 	.include "data/scripts/apricorn_tree.inc"
+	.include "data/scripts/wild_encounter.inc"
 	
 
 .if IS_HNS
@@ -2411,5 +2412,13 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/UlaUla_Forest_hns/scripts.inc"
 	.include "data/maps/UlaUla_Cave_2_hns/scripts.inc"
 	.include "data/maps/Akala_Cave_hns/scripts.inc"
+	.include "data/maps/NationalPark_Meadow_hns/scripts.inc"
+	.include "data/maps/AbandonedHouse_Main_hns/scripts.inc"
+	.include "data/maps/AbandonedHouse_TVRoom_hns/scripts.inc"
+	.include "data/maps/AbandonedHouse_Bedroom_hns/scripts.inc"
+	.include "data/maps/AbandonedHouse_Dream_hns/scripts.inc"
+	.include "data/maps/AbandonedHouse_Nightmare_hns/scripts.inc"
+	.include "data/maps/LakeOfRageLowTide_Cave_hns/scripts.inc"
+	.include "data/maps/MtMortar_B2F_hns/scripts.inc"
 
 .endif

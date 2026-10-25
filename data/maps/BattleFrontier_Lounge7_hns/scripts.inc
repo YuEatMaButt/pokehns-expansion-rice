@@ -35,10 +35,11 @@ BattleFrontier_Lounge7_EventScript_ChooseLeftTutorMove_hns::
 	case 4, BattleFrontier_Lounge7_EventScript_MegaKick_hns
 	case 5, BattleFrontier_Lounge7_EventScript_BodySlam_hns
 	case 6, BattleFrontier_Lounge7_EventScript_RockSlide_hns
-	case 7, BattleFrontier_Lounge7_EventScript_Counter_hns
-	case 8, BattleFrontier_Lounge7_EventScript_ThunderWave_hns
-	case 9, BattleFrontier_Lounge7_EventScript_SwordsDance_hns
-	case 10, BattleFrontier_Lounge7_EventScript_ExitTutorMoveSelect_hns_hns
+	case 7, BattleFrontier_Lounge7_EventScript_IronHead_hns
+	case 8, BattleFrontier_Lounge7_EventScript_Counter_hns
+	case 9, BattleFrontier_Lounge7_EventScript_ThunderWave_hns
+	case 10, BattleFrontier_Lounge7_EventScript_SwordsDance_hns
+	case 11, BattleFrontier_Lounge7_EventScript_ExitTutorMoveSelect_hns_hns
 	case MULTI_B_PRESSED, BattleFrontier_Lounge7_EventScript_ExitTutorMoveSelect_hns_hns
 	end
 
@@ -59,10 +60,11 @@ BattleFrontier_Lounge7_EventScript_ChooseNewLeftTutorMove_hns::
 	case 4, BattleFrontier_Lounge7_EventScript_MegaKick_hns
 	case 5, BattleFrontier_Lounge7_EventScript_BodySlam_hns
 	case 6, BattleFrontier_Lounge7_EventScript_RockSlide_hns
-	case 7, BattleFrontier_Lounge7_EventScript_Counter_hns
-	case 8, BattleFrontier_Lounge7_EventScript_ThunderWave_hns
-	case 9, BattleFrontier_Lounge7_EventScript_SwordsDance_hns
-	case 10, BattleFrontier_Lounge7_EventScript_ExitTutorMoveSelect_hns_hns
+	case 7, BattleFrontier_Lounge7_EventScript_IronHead_hns
+	case 8, BattleFrontier_Lounge7_EventScript_Counter_hns
+	case 9, BattleFrontier_Lounge7_EventScript_ThunderWave_hns
+	case 10, BattleFrontier_Lounge7_EventScript_SwordsDance_hns
+	case 11, BattleFrontier_Lounge7_EventScript_ExitTutorMoveSelect_hns_hns
 	case MULTI_B_PRESSED, BattleFrontier_Lounge7_EventScript_ExitTutorMoveSelect_hns_hns
 	end
 
@@ -105,6 +107,12 @@ BattleFrontier_Lounge7_EventScript_BodySlam_hns::
 BattleFrontier_Lounge7_EventScript_RockSlide_hns::
 	setvar VAR_0x8008, 48
 	setvar VAR_0x8005, MOVE_ROCK_SLIDE
+	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection_hns
+	end
+
+BattleFrontier_Lounge7_EventScript_IronHead_hns::
+	setvar VAR_0x8008, 48
+	setvar VAR_0x8005, MOVE_IRON_HEAD
 	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection_hns
 	end
 
@@ -159,10 +167,11 @@ BattleFrontier_Lounge7_EventScript_ChooseRightTutorMove_hns::
 	case 4, BattleFrontier_Lounge7_EventScript_IcyWind_hns
 	case 5, BattleFrontier_Lounge7_EventScript_Endure_hns
 	case 6, BattleFrontier_Lounge7_EventScript_PsychUp_hns
-	case 7, BattleFrontier_Lounge7_EventScript_IcePunch_hns
-	case 8, BattleFrontier_Lounge7_EventScript_ThunderPunch_hns
-	case 9, BattleFrontier_Lounge7_EventScript_FirePunch_hns
-	case 10, BattleFrontier_Lounge7_EventScript_ExitTutorMoveSelect_hns_hns
+	case 7, BattleFrontier_Lounge7_EventScript_EarthPower_hns
+	case 8, BattleFrontier_Lounge7_EventScript_IcePunch_hns
+	case 9, BattleFrontier_Lounge7_EventScript_ThunderPunch_hns
+	case 10, BattleFrontier_Lounge7_EventScript_FirePunch_hns
+	case 11, BattleFrontier_Lounge7_EventScript_ExitTutorMoveSelect_hns_hns
 	case MULTI_B_PRESSED, BattleFrontier_Lounge7_EventScript_ExitTutorMoveSelect_hns_hns
 	end
 
@@ -183,10 +192,11 @@ BattleFrontier_Lounge7_EventScript_ChooseNewRightTutorMove_hns::
 	case 4, BattleFrontier_Lounge7_EventScript_IcyWind_hns
 	case 5, BattleFrontier_Lounge7_EventScript_Endure_hns
 	case 6, BattleFrontier_Lounge7_EventScript_PsychUp_hns
-	case 7, BattleFrontier_Lounge7_EventScript_IcePunch_hns
-	case 8, BattleFrontier_Lounge7_EventScript_ThunderPunch_hns
-	case 9, BattleFrontier_Lounge7_EventScript_FirePunch_hns
-	case 10, BattleFrontier_Lounge7_EventScript_ExitTutorMoveSelect_hns_hns
+	case 7, BattleFrontier_Lounge7_EventScript_EarthPower_hns
+	case 8, BattleFrontier_Lounge7_EventScript_IcePunch_hns
+	case 9, BattleFrontier_Lounge7_EventScript_ThunderPunch_hns
+	case 10, BattleFrontier_Lounge7_EventScript_FirePunch_hns
+	case 11, BattleFrontier_Lounge7_EventScript_ExitTutorMoveSelect_hns_hns
 	case MULTI_B_PRESSED, BattleFrontier_Lounge7_EventScript_ExitTutorMoveSelect_hns_hns
 	end
 
@@ -229,6 +239,12 @@ BattleFrontier_Lounge7_EventScript_Endure_hns::
 BattleFrontier_Lounge7_EventScript_PsychUp_hns::
 	setvar VAR_0x8008, 48
 	setvar VAR_0x8005, MOVE_PSYCH_UP
+	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection_hns
+	end
+
+BattleFrontier_Lounge7_EventScript_EarthPower_hns::
+	setvar VAR_0x8008, 48
+	setvar VAR_0x8005, MOVE_EARTH_POWER
 	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection_hns
 	end
 

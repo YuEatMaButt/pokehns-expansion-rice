@@ -290,7 +290,7 @@ struct ChallengeSettings
     u8 tx_Random_Items:1;
     u8 tx_Random_Static:1;
     u8 tx_Random_Starter:1;
-    u8 tx_Random_GenScope:1; // 0 = all gens, 1 = Gen 1-3 families only
+    u8 tx_Random_GenScope:1; // 0 = all gens, 1 = Gen 1-4 families only
     // Challenges
     u8 tx_Challenges_EvoLimit:2;
     u8 tx_Challenges_Nuzlocke:1;
@@ -338,6 +338,7 @@ struct ChallengeSettings
     u8 tx_Features_FrontierBans:1;
     u8 tx_Difficulty_EscapeRopeDig:1;
     u8 tx_Features_ShinyChance:4;
+    u8 overworldEncounterMode:1; // 0 = overworld encounters, 1 = vanilla
 };
 
 struct SaveBlock3

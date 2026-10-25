@@ -4253,6 +4253,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
 #if P_FAMILY_SANDYGAST
     [SPECIES_SANDYGAST] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 55,
         .baseAttack    = 55,
         .baseDefense   = 80,
@@ -4319,6 +4320,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
 
     [SPECIES_PALOSSAND] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 85,
         .baseAttack    = 75,
         .baseDefense   = 110,
@@ -4993,6 +4995,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
 #if P_FAMILY_MIMIKYU
     [SPECIES_MIMIKYU_DISGUISED] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 55,
         .baseAttack    = 90,
         .baseDefense   = 80,
@@ -5056,6 +5059,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
 
     [SPECIES_MIMIKYU_BUSTED] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 55,
         .baseAttack    = 90,
         .baseDefense   = 80,
@@ -5111,6 +5115,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
 
     [SPECIES_MIMIKYU_TOTEM_DISGUISED] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 55,
         .baseAttack    = 90,
         .baseDefense   = 80,
@@ -5177,6 +5182,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
 
     [SPECIES_MIMIKYU_BUSTED_TOTEM] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 55,
         .baseAttack    = 90,
         .baseDefense   = 80,
