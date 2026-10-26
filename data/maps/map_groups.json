@@ -22,6 +22,8 @@
     "gMapGroup_IndoorFuchsia_Hns",
     "gMapGroup_IndoorCinnabar_Hns",
     "gMapGroup_IndoorOneIsland_Hns",
+    "gMapGroup_IndoorTwoIsland_Hns",
+    "gMapGroup_IndoorTwoIslandRoute_Hns",
     "gMapGroup_IndoorIndigo_Hns",
     "gMapGroup_IndoorJohtoRoutes_Hns",
     "gMapGroup_IndoorKantoRoutes_Hns",
@@ -182,7 +184,9 @@
     "Route28_hns",
     "OneIsland_hns",
     "OneIsland_KindleRoad_hns",
-    "OneIsland_TreasureBeach_hns"
+    "OneIsland_TreasureBeach_hns",
+    "TwoIsland_hns",
+    "TwoIsland_CapeBrink_hns"
   ],
   "gMapGroup_IndoorNewBark_Hns": [
     "NewBarkTown_Lab_hns",
@@ -1833,5 +1837,15 @@
     "OneIsland_KindleRoad_EmberSpa_hns",
     "OneIsland_PokemonCenter_1F_hns",
     "OneIsland_PokemonCenter_2F_hns"
+  ],
+  "gMapGroup_IndoorTwoIsland_Hns": [
+    "TwoIsland_JoyfulGameCorner_hns",
+    "TwoIsland_House_hns",
+    "TwoIsland_PokemonCenter_1F_hns",
+    "TwoIsland_PokemonCenter_2F_hns",
+    "TwoIsland_Harbor_hns"
+  ],
+  "gMapGroup_IndoorTwoIslandRoute_Hns": [
+    "TwoIsland_CapeBrink_House_hns"
   ]
 }
