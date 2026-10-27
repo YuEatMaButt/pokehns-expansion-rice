@@ -19,7 +19,7 @@
   "object_events": [
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_SEAGALLOP",
+      "graphics_id": "OBJ_EVENT_GFX_SS_AQUA_HNS",
       "x": 8,
       "y": 9,
       "elevation": 0,
@@ -33,7 +33,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_SAILOR_FRLG",
+      "graphics_id": "OBJ_EVENT_GFX_SAILOR_HNS",
       "x": 8,
       "y": 6,
       "elevation": 3,
@@ -50,7 +50,7 @@
     {
       "x": 8,
       "y": 2,
-      "elevation": 3,
+      "elevation": 0,
       "dest_map": "MAP_TWO_ISLAND_HNS",
       "dest_warp_id": "3"
     }
