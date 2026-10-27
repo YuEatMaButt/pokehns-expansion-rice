@@ -16414,17 +16414,15 @@
     },
     {
       "id": "LAYOUT_TWO_ISLAND_HARBOR_HNS",
-      "name": "TwoIslandHarborHns_Layout",
+      "name": "TwoIslandHarbor_hns_Layout",
       "width": 17,
       "height": 13,
-      "primary_tileset": "gTileset_General_Frlg",
+      "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_IslandHarbor",
-      "border_filepath": "data/layouts/Island_Harbor_Frlg/border.bin",
-      "blockdata_filepath": "data/layouts/Island_Harbor_Frlg/map.bin",
-      "border_height": 2,
-      "border_width": 2,
+      "border_filepath": "data/layouts/IslandHarbor_hns/border.bin",
+      "blockdata_filepath": "data/layouts/IslandHarbor_hns/map.bin",
       "game_version": "hns",
-      "layout_version": "frlg"
+      "layout_version": "emerald"
     },
     {
       "id": "LAYOUT_TWO_ISLAND_HOUSE_HNS",
