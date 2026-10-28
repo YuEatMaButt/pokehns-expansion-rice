@@ -2429,4 +2429,18 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/LakeOfRageLowTide_Cave_hns/scripts.inc"
 	.include "data/maps/MtMortar_B2F_hns/scripts.inc"
 
+    .include "data/maps/ThreeIsland_BerryForest_hns/scripts.inc"
+    .include "data/maps/ThreeIsland_BondBridge_hns/scripts.inc"
+    .include "data/maps/ThreeIsland_DunsparceTunnel_hns/scripts.inc"
+    .include "data/maps/ThreeIsland_Harbor_hns/scripts.inc"
+    .include "data/maps/ThreeIsland_House1_hns/scripts.inc"
+    .include "data/maps/ThreeIsland_House2_hns/scripts.inc"
+    .include "data/maps/ThreeIsland_House3_hns/scripts.inc"
+    .include "data/maps/ThreeIsland_House4_hns/scripts.inc"
+    .include "data/maps/ThreeIsland_House5_hns/scripts.inc"
+    .include "data/maps/ThreeIsland_Mart_hns/scripts.inc"
+    .include "data/maps/ThreeIsland_PokemonCenter_1F_hns/scripts.inc"
+    .include "data/maps/ThreeIsland_PokemonCenter_2F_hns/scripts.inc"
+    .include "data/maps/ThreeIsland_Port_hns/scripts.inc"
+    .include "data/maps/ThreeIsland_hns/scripts.inc"
 .endif
