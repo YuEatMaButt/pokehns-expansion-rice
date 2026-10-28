@@ -754,4 +754,24 @@ const u16 gMetatileAttributes_ArceusRoom_Hns[] = INCBIN_U16("data/tilesets/secon
 const u16 gMetatiles_MtEmber_Hns[] = INCBIN_U16("data/tilesets/secondary/mt_ember_hns/metatiles.bin");
 const u16 gMetatileAttributes_MtEmber_Hns[] = INCBIN_U16("data/tilesets/secondary/mt_ember_hns/metatile_attributes.bin");
 
+
+
+/* FRLG tilesets required by selected HnS maps. */
+const u16 gMetatiles_Mart[] = INCBIN_U16("data/tilesets/secondary/mart_frlg/metatiles.bin");
+
+const u16 gMetatileAttributes_Mart[] = INCBIN_U16("data/tilesets/secondary/mart_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_Cave_Frlg[] = INCBIN_U16("data/tilesets/secondary/cave_frlg/metatiles.bin");
+
+const u16 gMetatileAttributes_Cave_Frlg[] = INCBIN_U16("data/tilesets/secondary/cave_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_BerryForest[] = INCBIN_U16("data/tilesets/secondary/berry_forest_frlg/metatiles.bin");
+
+const u16 gMetatileAttributes_BerryForest[] = INCBIN_U16("data/tilesets/secondary/berry_forest_frlg/metatile_attributes.bin");
+
 #endif // IS_FRLG || IS_HNS
+
+
+// Three Island HnS harbor metatiles.
+const u16 gMetatiles_ThreeIslandHarbor_Hns[] = INCBIN_U16("data/tilesets/secondary/three_island_harbor_hns/metatiles.bin");
+const u16 gMetatileAttributes_ThreeIslandHarbor_Hns[] = INCBIN_U16("data/tilesets/secondary/three_island_harbor_hns/metatile_attributes.bin");

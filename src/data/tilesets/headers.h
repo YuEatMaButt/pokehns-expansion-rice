@@ -2779,4 +2779,53 @@ const struct Tileset gTileset_MtEmber_Hns =
     .metatileAttributes = gMetatileAttributes_MtEmber_Hns,
     .callback = InitTilesetAnim_MtEmber_Hns,
 };
+
+
+/* FRLG tilesets required by selected HnS maps. */
+const struct Tileset gTileset_Mart =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Mart,
+    .palettes = gTilesetPalettes_Mart,
+    .metatiles = gMetatiles_Mart,
+    .metatileAttributes = gMetatileAttributes_Mart,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_Cave_Frlg =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Cave_Frlg,
+    .palettes = gTilesetPalettes_Cave_Frlg,
+    .metatiles = gMetatiles_Cave_Frlg,
+    .metatileAttributes = gMetatileAttributes_Cave_Frlg,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_BerryForest =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_BerryForest,
+    .palettes = gTilesetPalettes_BerryForest,
+    .metatiles = gMetatiles_BerryForest,
+    .metatileAttributes = gMetatileAttributes_BerryForest,
+    .callback = NULL,
+};
+
 #endif // IS_FRLG || IS_HNS
+
+
+// Three Island HnS harbor tileset.
+const struct Tileset gTileset_ThreeIslandHarbor_Hns =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_ThreeIslandHarbor_Hns,
+    .palettes = gTilesetPalettes_ThreeIslandHarbor_Hns,
+    .metatiles = gMetatiles_ThreeIslandHarbor_Hns,
+    .metatileAttributes = gMetatileAttributes_ThreeIslandHarbor_Hns,
+    .callback = NULL,
+};

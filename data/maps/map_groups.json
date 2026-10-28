@@ -23,6 +23,7 @@
     "gMapGroup_IndoorCinnabar_Hns",
     "gMapGroup_IndoorOneIsland_Hns",
     "gMapGroup_IndoorTwoIsland_Hns",
+    "gMapGroup_IndoorThreeIsland_Hns",
     "gMapGroup_IndoorTwoIslandRoute_Hns",
     "gMapGroup_IndoorIndigo_Hns",
     "gMapGroup_IndoorJohtoRoutes_Hns",
@@ -186,7 +187,12 @@
     "OneIsland_KindleRoad_hns",
     "OneIsland_TreasureBeach_hns",
     "TwoIsland_hns",
-    "TwoIsland_CapeBrink_hns"
+    "TwoIsland_CapeBrink_hns",
+    "ThreeIsland_BerryForest_hns",
+    "ThreeIsland_BondBridge_hns",
+    "ThreeIsland_DunsparceTunnel_hns",
+    "ThreeIsland_Port_hns",
+    "ThreeIsland_hns"
   ],
   "gMapGroup_IndoorNewBark_Hns": [
     "NewBarkTown_Lab_hns",
@@ -1839,5 +1845,16 @@
   ],
   "gMapGroup_IndoorSevenIslandRoute_Frlg": [
     "SevenIsland_SevaultCanyon_House_Frlg"
+  ],
+  "gMapGroup_IndoorThreeIsland_Hns": [
+    "ThreeIsland_Harbor_hns",
+    "ThreeIsland_House1_hns",
+    "ThreeIsland_House2_hns",
+    "ThreeIsland_House3_hns",
+    "ThreeIsland_House4_hns",
+    "ThreeIsland_House5_hns",
+    "ThreeIsland_Mart_hns",
+    "ThreeIsland_PokemonCenter_1F_hns",
+    "ThreeIsland_PokemonCenter_2F_hns"
   ]
 }
