@@ -1729,6 +1729,22 @@
       "width": 1,
       "height": 1,
       "in_hns": true
+    },
+    {
+      "id": "MAPSEC_ROUTE_27",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_NEW_BARK_TOWN",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_ROUTE_29",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_OLIVINE_CITY",
+            "in_hns": true
     }
   ],
   "hns_map_sections": [
