@@ -2817,6 +2817,52 @@ const struct Tileset gTileset_BerryForest =
 
 #endif // IS_FRLG || IS_HNS
 
+#if IS_HNS
+const struct Tileset gTileset_SeafoamIslands =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SeafoamIslands,
+    .palettes = gTilesetPalettes_SeafoamIslands,
+    .metatiles = gMetatiles_SeafoamIslands,
+    .metatileAttributes = gMetatileAttributes_SeafoamIslands,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_SafariZoneBuilding =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SafariZoneBuilding,
+    .palettes = gTilesetPalettes_SafariZoneBuilding,
+    .metatiles = gMetatiles_SafariZoneBuilding,
+    .metatileAttributes = gMetatileAttributes_SafariZoneBuilding,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_FanClubDaycare =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_FanClubDaycare,
+    .palettes = gTilesetPalettes_FanClubDaycare,
+    .metatiles = gMetatiles_FanClubDaycare,
+    .metatileAttributes = gMetatileAttributes_FanClubDaycare,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_SeviiIslands45 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SeviiIslands45,
+    .palettes = gTilesetPalettes_SeviiIslands45,
+    .metatiles = gMetatiles_SeviiIslands45,
+    .metatileAttributes = gMetatileAttributes_SeviiIslands45,
+    .callback = NULL,
+};
+#endif
+
 
 // Three Island HnS harbor tileset.
 const struct Tileset gTileset_ThreeIslandHarbor_Hns =

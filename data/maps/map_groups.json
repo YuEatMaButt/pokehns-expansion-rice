@@ -24,6 +24,7 @@
     "gMapGroup_IndoorOneIsland_Hns",
     "gMapGroup_IndoorTwoIsland_Hns",
     "gMapGroup_IndoorThreeIsland_Hns",
+    "gMapGroup_IndoorFourIsland_Hns",
     "gMapGroup_IndoorTwoIslandRoute_Hns",
     "gMapGroup_IndoorIndigo_Hns",
     "gMapGroup_IndoorJohtoRoutes_Hns",
@@ -188,6 +189,7 @@
     "OneIsland_TreasureBeach_hns",
     "TwoIsland_hns",
     "TwoIsland_CapeBrink_hns",
+    "FourIsland_hns",
     "ThreeIsland_BerryForest_hns",
     "ThreeIsland_BondBridge_hns",
     "ThreeIsland_DunsparceTunnel_hns",
@@ -414,6 +416,16 @@
   "gMapGroup_IndoorTwoIslandRoute_Hns": [
     "TwoIsland_CapeBrink_House_hns"
   ],
+  "gMapGroup_IndoorFourIsland_Hns": [
+    "FourIsland_Harbor_hns",
+    "FourIsland_House1_hns",
+    "FourIsland_House2_hns",
+    "FourIsland_PokemonCenter_1F_hns",
+    "FourIsland_PokemonCenter_2F_hns",
+    "FourIsland_LoreleisHouse_hns",
+    "FourIsland_Mart_hns",
+    "FourIsland_PokemonDayCare_hns"
+  ],
   "gMapGroup_IndoorIndigo_Hns": [
     "IndigoPlateau_PokemonCenter_hns",
     "PokemonLeague_WillsRoom_hns",
@@ -581,7 +593,11 @@
     "RuinsOfAlph_WordsRoom2_hns",
     "RuinsOfAlph_WordsRoom3_hns",
     "RuinsOfAlph_WordsRoom4_hns",
-    "Route19_Cave_hns"
+    "Route19_Cave_hns",
+    "FourIsland_IcefallCave_1F_hns",
+    "FourIsland_IcefallCave_B1F_hns",
+    "FourIsland_IcefallCave_Back_hns",
+    "FourIsland_IcefallCave_Entrance_hns"
   ],
   "gMapGrouop_OutdoorAlola_Hns": [
     "PoniIsle_hns",

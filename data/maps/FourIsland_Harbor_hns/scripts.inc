@@ -1,11 +1,11 @@
-ThreeIsland_Harbor_Frlg_MapScripts::
+FourIsland_Harbor_hns_MapScripts::
 	.byte 0
 
-ThreeIsland_Harbor_EventScript_Sailor::
+FourIsland_Harbor_EventScript_Sailor::
 	lock
 	faceplayer
 	message Text_WhereDoYouWantToSail
 	waitmessage
-	setvar VAR_0x8004, SEAGALLOP_THREE_ISLAND
+	setvar VAR_0x8004, SEAGALLOP_FOUR_ISLAND
 	goto EventScript_ChooseDestFromIsland
 	end
