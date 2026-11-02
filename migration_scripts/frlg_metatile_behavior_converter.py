@@ -1,33 +1,19 @@
-import os
 import struct
-import glob
+from collections import Counter
+from pathlib import Path
 
-# 1. Update these tables to fit your project:
-# FRLG_BEHAVIORS, EMERALD_BEHAVIORS and FRLG_TO_EMERALD
-
-# 2. Change the ATTRIBUTES_PATH
-# Example:
-# .
-# |-- <script folder>
-#     |-- frlg_metatile_behavior_converter.py
-#     |-- frlg_tilesets
-#         |-- primary
-#             |-- building
-#                 |-- metatile_attributes.bin
-#             |-- ...
-#         |-- secondary
-#             |-- cave
-#                 |-- metatile_attributes.bin
-#             |-- ...
-#
-# in this case:
-#  ATTRIBUTES_PATH = "frlg_tilesets/**/**/metatile_attributes.bin"
-
-# 3. Run the script in the script folder:
-# python frlg_metatile_behavior_converter.py
-
-# CHANGE THIS
-ATTRIBUTES_PATH = "path/to/metatile_attributes.bin"
+REPO_ROOT = Path(__file__).resolve().parents[1]
+# These are the FRLG tilesets included by the current HNS build.
+# Do not include unrelated legacy FRLG assets, which may use a different format.
+# This edits files in place and is not safe to run repeatedly on converted data.
+FRLG_ATTRIBUTE_FILES = (
+    REPO_ROOT / "data" / "tilesets" / "primary" / "building_frlg" / "metatile_attributes.bin",
+    REPO_ROOT / "data" / "tilesets" / "primary" / "general_frlg" / "metatile_attributes.bin",
+    REPO_ROOT / "data" / "tilesets" / "secondary" / "pokemon_center_frlg" / "metatile_attributes.bin",
+    REPO_ROOT / "data" / "tilesets" / "secondary" / "generic_building_2_frlg" / "metatile_attributes.bin",
+    REPO_ROOT / "data" / "tilesets" / "secondary" / "mt_ember_frlg" / "metatile_attributes.bin",
+    REPO_ROOT / "data" / "tilesets" / "secondary" / "sevii_islands_123_frlg" / "metatile_attributes.bin",
+)
 
 
 FRLG_BEHAVIORS = {
@@ -387,6 +373,8 @@ EMERALD_BEHAVIORS = {
     'MB_ROCK_CLIMB': 239,
 }
 
+EMERALD_BEHAVIOR_NAMES = {value: name for name, value in EMERALD_BEHAVIORS.items()}
+
 FRLG_TO_EMERALD = {
     'MB_FRLG_NORMAL': 'MB_NORMAL',
     'MB_FRLG_UNUSED_01': 'MB_SECRET_BASE_WALL',
@@ -504,16 +492,17 @@ FRLG_TO_EMERALD = {
 BEHAVIOR_MASK = 0x000001ff
 
 
-def process_metatile_attribute_data(old_data):
+def process_metatile_attribute_data(old_data, unmapped_behaviors=None):
     new_data = []
-    ctr = 0
-    result = {}
+    report_unmapped_behaviors = unmapped_behaviors is None
+    if report_unmapped_behaviors:
+        unmapped_behaviors = Counter()
 
     for value in old_data:
         frlg_behavior = value & BEHAVIOR_MASK
 
         if frlg_behavior not in FRLG_BEHAVIORS:
-            print(f'Unknown behavior: {frlg_behavior}. Keeping same value.')
+            unmapped_behaviors[frlg_behavior] += 1
             emerald_behavior = frlg_behavior
         else:
             emerald_behavior = EMERALD_BEHAVIORS[FRLG_TO_EMERALD[FRLG_BEHAVIORS[frlg_behavior]]]
@@ -521,23 +510,61 @@ def process_metatile_attribute_data(old_data):
         new_value = emerald_behavior | (value & ~BEHAVIOR_MASK)
         new_data.append(new_value)
 
+    if report_unmapped_behaviors:
+        report_unmapped_behavior_values(unmapped_behaviors)
+
     return new_data
+
+
+def report_unmapped_behavior_values(behavior_counts):
+    for behavior, count in sorted(behavior_counts.items()):
+        emerald_name = EMERALD_BEHAVIOR_NAMES.get(behavior)
+        if emerald_name is not None:
+            print(
+                f"Preserved {count} occurrence(s) of behavior {behavior} "
+                f"(0x{behavior:02X}, {emerald_name}); it has no FRLG mapping."
+            )
+        else:
+            print(
+                f"WARNING: Unknown behavior {behavior} (0x{behavior:02X}); "
+                f"kept unchanged ({count} occurrence(s))."
+            )
+
 
 def read_attribute_bin(file_path):
     with open(file_path, "rb") as f:
         data = f.read()
-        return list(struct.unpack("<" + "I" * (len(data) // 4), data))
+    if len(data) % 4:
+        raise ValueError(
+            f"{file_path}: expected 32-bit metatile attributes, "
+            f"but file size is {len(data)} bytes (not divisible by 4)"
+        )
+    return list(struct.unpack("<" + "I" * (len(data) // 4), data))
 
 def write_attribute_bin(file_path, new_data):
     with open(file_path, "wb") as f:
         f.write(struct.pack("<" + "I" * len(new_data), *new_data))
 
 def process_metatile_attribute_files():
-    for file in glob.glob(ATTRIBUTES_PATH):
-        print(f"Processing {file}...")
+    missing_files = [file for file in FRLG_ATTRIBUTE_FILES if not file.is_file()]
+    if missing_files:
+        missing_paths = "\n".join(str(file) for file in missing_files)
+        raise FileNotFoundError(f"Required HNS FRLG metatile attribute files not found:\n{missing_paths}")
+
+    unmapped_behaviors = Counter()
+    converted_files = []
+    for file in FRLG_ATTRIBUTE_FILES:
+        print(f"Reading {file}...")
         old_data = read_attribute_bin(file)
-        new_data = process_metatile_attribute_data(old_data)
+        new_data = process_metatile_attribute_data(old_data, unmapped_behaviors)
+        converted_files.append((file, new_data))
+
+    for file, new_data in converted_files:
+        print(f"Writing {file}...")
         write_attribute_bin(file, new_data)
+
+    report_unmapped_behavior_values(unmapped_behaviors)
+
 
 if __name__ == "__main__":
     process_metatile_attribute_files()
