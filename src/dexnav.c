@@ -1,4 +1,5 @@
 #include "global.h"
+#include "randomizer.h"
 #include "battle_main.h"
 #include "battle_setup.h"
 #include "bg.h"
@@ -1483,6 +1484,52 @@ static u8 DexNavGeneratePotential(u8 searchLevel)
     return 0;   // No potential
 }
 
+static u16 sDexNavRandomizedLand[LAND_WILD_COUNT];
+static u16 sDexNavRandomizedWater[WATER_WILD_COUNT];
+static u16 sDexNavRandomizedHidden[HIDDEN_WILD_COUNT];
+static bool8 sDexNavRandomizedCacheValid;
+static u8 sDexNavRandomizedMapNum;
+static u8 sDexNavRandomizedMapGroup;
+
+static u16 DexNavRandomizeWildSpecies(u16 species, enum WildPokemonArea area, u8 slot)
+{
+#if RANDOMIZER_AVAILABLE == TRUE
+    u16 *cache = NULL;
+
+    if (!sDexNavRandomizedCacheValid
+        || sDexNavRandomizedMapNum != gSaveBlock1Ptr->location.mapNum
+        || sDexNavRandomizedMapGroup != gSaveBlock1Ptr->location.mapGroup)
+    {
+        sDexNavRandomizedCacheValid = TRUE;
+        sDexNavRandomizedMapNum = gSaveBlock1Ptr->location.mapNum;
+        sDexNavRandomizedMapGroup = gSaveBlock1Ptr->location.mapGroup;
+    }
+
+    switch (area)
+    {
+    case WILD_AREA_LAND:
+        cache = sDexNavRandomizedLand;
+        break;
+    case WILD_AREA_WATER:
+        cache = sDexNavRandomizedWater;
+        break;
+    case WILD_AREA_HIDDEN:
+        cache = sDexNavRandomizedHidden;
+        break;
+    default:
+        return species;
+    }
+
+    if (cache[slot] == SPECIES_NONE)
+        cache[slot] = RandomizeWildEncounter(species, gSaveBlock1Ptr->location.mapNum,
+                                             gSaveBlock1Ptr->location.mapGroup, area, slot);
+
+    return cache[slot];
+#else
+    return species;
+#endif
+}
+
 static u8 GetEncounterLevelFromMapData(u16 species, enum EncounterType environment)
 {
     u32 headerId = GetCurrentMapWildMonHeaderId();
@@ -1505,7 +1552,7 @@ static u8 GetEncounterLevelFromMapData(u16 species, enum EncounterType environme
 
         for (i = 0; i < LAND_WILD_COUNT; i++)
         {
-            if (landMonsInfo->wildPokemon[i].species == species)
+            if (DexNavRandomizeWildSpecies(landMonsInfo->wildPokemon[i].species, WILD_AREA_LAND, i) == species)
             {
                 min = (min < landMonsInfo->wildPokemon[i].minLevel) ? min : landMonsInfo->wildPokemon[i].minLevel;
                 max = (max > landMonsInfo->wildPokemon[i].maxLevel) ? max : landMonsInfo->wildPokemon[i].maxLevel;
@@ -1521,7 +1568,7 @@ static u8 GetEncounterLevelFromMapData(u16 species, enum EncounterType environme
 
         for (i = 0; i < WATER_WILD_COUNT; i++)
         {
-            if (waterMonsInfo->wildPokemon[i].species == species)
+            if (DexNavRandomizeWildSpecies(waterMonsInfo->wildPokemon[i].species, WILD_AREA_WATER, i) == species)
             {
                 min = (min < waterMonsInfo->wildPokemon[i].minLevel) ? min : waterMonsInfo->wildPokemon[i].minLevel;
                 max = (max > waterMonsInfo->wildPokemon[i].maxLevel) ? max : waterMonsInfo->wildPokemon[i].maxLevel;
@@ -1537,7 +1584,7 @@ static u8 GetEncounterLevelFromMapData(u16 species, enum EncounterType environme
 
         for (i = 0; i < HIDDEN_WILD_COUNT; i++)
         {
-            if (hiddenMonsInfo->wildPokemon[i].species == species)
+            if (DexNavRandomizeWildSpecies(hiddenMonsInfo->wildPokemon[i].species, WILD_AREA_HIDDEN, i) == species)
             {
                 min = (min < hiddenMonsInfo->wildPokemon[i].minLevel) ? min : hiddenMonsInfo->wildPokemon[i].minLevel;
                 max = (max > hiddenMonsInfo->wildPokemon[i].maxLevel) ? max : hiddenMonsInfo->wildPokemon[i].maxLevel;
@@ -1716,7 +1763,7 @@ static bool8 CapturedAllLandMons(u32 headerId)
     {
         for (i = 0; i < LAND_WILD_COUNT; ++i)
         {
-            species = landMonsInfo->wildPokemon[i].species;
+            species = DexNavRandomizeWildSpecies(landMonsInfo->wildPokemon[i].species, WILD_AREA_LAND, i);
             if (species != SPECIES_NONE)
             {
                 if (!GetSetPokedexFlag(SpeciesToNationalPokedexNum(species), FLAG_GET_CAUGHT))
@@ -1751,7 +1798,7 @@ static bool8 CapturedAllWaterMons(u32 headerId)
     {
         for (i = 0; i < WATER_WILD_COUNT; ++i)
         {
-            species = waterMonsInfo->wildPokemon[i].species;
+            species = DexNavRandomizeWildSpecies(waterMonsInfo->wildPokemon[i].species, WILD_AREA_WATER, i);
             if (species != SPECIES_NONE)
             {
                 count++;
@@ -1784,7 +1831,7 @@ static bool8 CapturedAllHiddenMons(u32 headerId)
     {
         for (i = 0; i < HIDDEN_WILD_COUNT; ++i)
         {
-            species = hiddenMonsInfo->wildPokemon[i].species;
+            species = DexNavRandomizeWildSpecies(hiddenMonsInfo->wildPokemon[i].species, WILD_AREA_HIDDEN, i);
             if (species != SPECIES_NONE)
             {
                 count++;
@@ -1915,6 +1962,13 @@ static bool8 SpeciesInArray(u16 species, u8 section)
 // get unique wild encounters on current map
 static void DexNavLoadEncounterData(void)
 {
+    memset(sDexNavRandomizedLand, 0, sizeof(sDexNavRandomizedLand));
+    memset(sDexNavRandomizedWater, 0, sizeof(sDexNavRandomizedWater));
+    memset(sDexNavRandomizedHidden, 0, sizeof(sDexNavRandomizedHidden));
+    sDexNavRandomizedCacheValid = TRUE;
+    sDexNavRandomizedMapNum = gSaveBlock1Ptr->location.mapNum;
+    sDexNavRandomizedMapGroup = gSaveBlock1Ptr->location.mapGroup;
+
     u8 grassIndex = 0;
     u8 waterIndex = 0;
     u8 hiddenIndex = 0;
@@ -1943,9 +1997,9 @@ static void DexNavLoadEncounterData(void)
     {
         for (i = 0; i < LAND_WILD_COUNT; i++)
         {
-            species = landMonsInfo->wildPokemon[i].species;
+            species = DexNavRandomizeWildSpecies(landMonsInfo->wildPokemon[i].species, WILD_AREA_LAND, i);
             if (species != SPECIES_NONE && !SpeciesInArray(species, 0))
-                sDexNavUiDataPtr->landSpecies[grassIndex++] = landMonsInfo->wildPokemon[i].species;
+                sDexNavUiDataPtr->landSpecies[grassIndex++] = species;
         }
     }
 
@@ -1954,9 +2008,9 @@ static void DexNavLoadEncounterData(void)
     {
         for (i = 0; i < WATER_WILD_COUNT; i++)
         {
-            species = waterMonsInfo->wildPokemon[i].species;
+            species = DexNavRandomizeWildSpecies(waterMonsInfo->wildPokemon[i].species, WILD_AREA_WATER, i);
             if (species != SPECIES_NONE && !SpeciesInArray(species, 1))
-                sDexNavUiDataPtr->waterSpecies[waterIndex++] = waterMonsInfo->wildPokemon[i].species;
+                sDexNavUiDataPtr->waterSpecies[waterIndex++] = species;
         }
     }
 
@@ -1965,9 +2019,9 @@ static void DexNavLoadEncounterData(void)
     {
         for (i = 0; i < HIDDEN_WILD_COUNT; i++)
         {
-            species = hiddenMonsInfo->wildPokemon[i].species;
+            species = DexNavRandomizeWildSpecies(hiddenMonsInfo->wildPokemon[i].species, WILD_AREA_HIDDEN, i);
             if (species != SPECIES_NONE && !SpeciesInArray(species, 2))
-                sDexNavUiDataPtr->hiddenSpecies[hiddenIndex++] = hiddenMonsInfo->wildPokemon[i].species;
+                sDexNavUiDataPtr->hiddenSpecies[hiddenIndex++] = species;
         }
     }
 }
@@ -2533,13 +2587,14 @@ bool32 TryFindHiddenPokemon(void)
                 index = ChooseHiddenMonIndex();
                 if (index == 0xFF)
                     return FALSE;//no hidden info
-                species = hiddenMonsInfo->wildPokemon[index].species;
+                species = DexNavRandomizeWildSpecies(hiddenMonsInfo->wildPokemon[index].species, WILD_AREA_HIDDEN, index);
                 isHiddenMon = TRUE;
                 environment = ENCOUNTER_TYPE_HIDDEN;
             }
             else
             {
-                species = gWildMonHeaders[headerId].encounterTypes[timeOfDay].landMonsInfo->wildPokemon[ChooseWildMonIndex_Land()].species;
+                index = ChooseWildMonIndex_Land();
+                species = DexNavRandomizeWildSpecies(gWildMonHeaders[headerId].encounterTypes[timeOfDay].landMonsInfo->wildPokemon[index].species, WILD_AREA_LAND, index);
                 environment = ENCOUNTER_TYPE_LAND;
             }
             break;
@@ -2551,13 +2606,14 @@ bool32 TryFindHiddenPokemon(void)
                     index = ChooseHiddenMonIndex();
                     if (index == 0xFF)
                         return FALSE;//no hidden info
-                    species = hiddenMonsInfo->wildPokemon[index].species;
+                    species = DexNavRandomizeWildSpecies(hiddenMonsInfo->wildPokemon[index].species, WILD_AREA_HIDDEN, index);
                     isHiddenMon = TRUE;
                     environment = ENCOUNTER_TYPE_HIDDEN;
                 }
                 else
                 {
-                    species = gWildMonHeaders[headerId].encounterTypes[timeOfDay].waterMonsInfo->wildPokemon[ChooseWildMonIndex_Water()].species;
+                    index = ChooseWildMonIndex_Water();
+                    species = DexNavRandomizeWildSpecies(gWildMonHeaders[headerId].encounterTypes[timeOfDay].waterMonsInfo->wildPokemon[index].species, WILD_AREA_WATER, index);
                     environment = ENCOUNTER_TYPE_WATER;
 
                 }
