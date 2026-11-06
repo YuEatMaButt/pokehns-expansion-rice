@@ -1748,7 +1748,143 @@
     },
     {
       "id": "MAPSEC_OLIVINE_CITY",
-            "in_hns": true
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_ROUTE_35",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_ROUTE_31",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_MAHOGANY_TOWN",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_ROUTE_34",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_ECRUTEAK_CITY",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_GOLDENROD_CITY",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_ROUTE_42",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_CIANWOOD_CITY",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_LAKE_OF_RAGE",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_ROUTE_30",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_ROUTE_43",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_VIOLET_CITY",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_BLACKTHORN_CITY",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_ROUTE_48",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_ROUTE_39",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_AZALEA_TOWN",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_ROUTE_36",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_ROUTE_37",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_RUINS_OF_ALPH",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_ROUTE_46",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_ROUTE_47",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_CHERRYGROVE_CITY",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_SAFARI_ZONE_GATE",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_ROUTE_38",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_ILEX_FOREST",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_ROUTE_32",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_ROUTE_40",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_ROUTE_33",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_ROUTE_41",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_ROUTE_45",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_ROUTE_44",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_ROUTE_26",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_ROUTE_28",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_MT_SILVER",
+      "in_hns": true
     }
   ],
   "hns_map_sections": [

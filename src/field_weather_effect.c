@@ -5,6 +5,7 @@
 #include "field_weather.h"
 #include "overworld.h"
 #include "random.h"
+#include "rtc.h"
 #include "script.h"
 #include "constants/region_map_sections.h"
 #include "constants/weather.h"
@@ -1259,7 +1260,7 @@ static void UpdateThunderSound(void)
 }
 
 //------------------------------------------------------------------------------
-// WEATHER_FOG_HORIZONTAL and WEATHER_UNDERWATER
+// WEATHER_FOG_HORIZONTAL
 //------------------------------------------------------------------------------
 
 static const u16 sUnusedData[] = {0, 6, 6, 12, 18, 42, 300, 300};
@@ -2620,8 +2621,57 @@ static const u8 sDefaultDynamicWeathers[] =
     WEATHER_VOLCANIC_ASH,
     WEATHER_RAIN_THUNDERSTORM,
     WEATHER_DROUGHT,
+    WEATHER_DOWNPOUR,
+    WEATHER_SHADE,
 };
 
+static const u8 sDynamicWeathers_Johto[] =
+{
+    WEATHER_SUNNY,
+    WEATHER_RAIN,
+    WEATHER_RAIN_THUNDERSTORM,
+    WEATHER_SHADE,
+    WEATHER_DOWNPOUR,
+};
+
+static const u8 sDynamicWeathers_JCoast[] =
+{
+    WEATHER_SUNNY,
+    WEATHER_RAIN,
+    WEATHER_RAIN_THUNDERSTORM,
+    WEATHER_SHADE,
+    WEATHER_DOWNPOUR,
+    WEATHER_DROUGHT,
+};
+
+static const u8 sDynamicWeathers_Mountains[] =
+{
+    WEATHER_SUNNY,
+    WEATHER_RAIN,
+    WEATHER_SHADE,
+    WEATHER_SNOW,
+};
+
+static const u8 sDynamicWeathers_Kanto[] =
+{
+    WEATHER_SUNNY,
+    WEATHER_RAIN,
+    WEATHER_RAIN_THUNDERSTORM,
+    WEATHER_SHADE,
+    WEATHER_DOWNPOUR,
+    WEATHER_DROUGHT,
+    WEATHER_SNOW,
+};
+
+static const u8 sDynamicWeathers_KCoast[] =
+{
+    WEATHER_SUNNY,
+    WEATHER_RAIN,
+    WEATHER_RAIN_THUNDERSTORM,
+    WEATHER_SHADE,
+    WEATHER_DOWNPOUR,
+    WEATHER_DROUGHT,
+};
 /*static const u8 sDynamicWeathers_DewfordTown[] =
 {
     WEATHER_SUNNY,
@@ -2631,8 +2681,80 @@ static const u8 sDefaultDynamicWeathers[] =
 
 static const struct DynamicWeatherPool sDynamicWeatherPools[] =
 {
-    /*{ MAPSEC_DEWFORD_TOWN, DYNAMIC_WEATHER_POOL(sDynamicWeathers_DewfordTown) },*/
+    { MAPSEC_ROUTE_27, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Johto) },
+    { MAPSEC_NEW_BARK_TOWN, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Johto) },
+    { MAPSEC_ROUTE_29, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Johto) },
+    { MAPSEC_CHERRYGROVE_CITY, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Johto) },
+    { MAPSEC_ROUTE_30, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Johto) },
+    { MAPSEC_ROUTE_31, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Johto) },
+    { MAPSEC_VIOLET_CITY, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Johto) },
+    { MAPSEC_ROUTE_32, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Johto) },
+    { MAPSEC_ROUTE_33, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Johto) },
+    { MAPSEC_AZALEA_TOWN, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Johto) },
+    { MAPSEC_ROUTE_34, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Johto) },
+    { MAPSEC_GOLDENROD_CITY, DYNAMIC_WEATHER_POOL(sDynamicWeathers_JCoast) },
+    { MAPSEC_ROUTE_35, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Johto) },
+    { MAPSEC_NATIONAL_PARK, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Johto) },
+    { MAPSEC_ROUTE_36, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Johto) },
+    { MAPSEC_ROUTE_37, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Johto) },
+    { MAPSEC_ECRUTEAK_CITY, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Johto) },
+    { MAPSEC_ROUTE_38, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Johto) },
+    { MAPSEC_ROUTE_42, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Johto) },
+    { MAPSEC_MAHOGANY_TOWN, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Johto) },
+    { MAPSEC_ROUTE_43, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Johto) },
+    { MAPSEC_ROUTE_44, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Johto) },
+
+    { MAPSEC_ROUTE_39, DYNAMIC_WEATHER_POOL(sDynamicWeathers_JCoast) },
+    { MAPSEC_OLIVINE_CITY, DYNAMIC_WEATHER_POOL(sDynamicWeathers_JCoast) },
+    { MAPSEC_ROUTE_40, DYNAMIC_WEATHER_POOL(sDynamicWeathers_JCoast) },
+    { MAPSEC_ROUTE_41, DYNAMIC_WEATHER_POOL(sDynamicWeathers_JCoast) },
+    { MAPSEC_CIANWOOD_CITY, DYNAMIC_WEATHER_POOL(sDynamicWeathers_JCoast) },
+    { MAPSEC_ROUTE_47, DYNAMIC_WEATHER_POOL(sDynamicWeathers_JCoast) },
+    { MAPSEC_ROUTE_48, DYNAMIC_WEATHER_POOL(sDynamicWeathers_JCoast) },
+
+    { MAPSEC_BLACKTHORN_CITY, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Mountains) },
+    { MAPSEC_ROUTE_45, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Mountains) },
+    { MAPSEC_ROUTE_46, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Mountains) },
+    { MAPSEC_ROUTE_26, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Mountains) },
+    { MAPSEC_ROUTE_28, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Mountains) },
+    { MAPSEC_ROUTE_22, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Mountains) },
+    { MAPSEC_VIRIDIAN_CITY, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Mountains) },
+    { MAPSEC_ROUTE_2, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Mountains) },
+    { MAPSEC_PEWTER_CITY, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Mountains) },
+    { MAPSEC_ROUTE_3, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Mountains) },
+    { MAPSEC_ROUTE_4, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Mountains) },
+    { MAPSEC_ROUTE_1, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Mountains) },
+
+    { MAPSEC_CERULEAN_CITY, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Kanto) },
+    { MAPSEC_ROUTE_24, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Kanto) },
+    { MAPSEC_ROUTE_25, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Kanto) },
+    { MAPSEC_ROUTE_9, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Kanto) },
+    { MAPSEC_ROUTE_10, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Kanto) },
+    { MAPSEC_LAVENDER_TOWN, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Kanto) },
+    { MAPSEC_ROUTE_8, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Kanto) },
+    { MAPSEC_SAFFRON_CITY, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Kanto) },
+    { MAPSEC_ROUTE_6, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Kanto) },
+    { MAPSEC_ROUTE_7, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Kanto) },
+    { MAPSEC_CELADON_CITY, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Kanto) },
+    { MAPSEC_ROUTE_5, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Kanto) },
+
+    { MAPSEC_PALLET_TOWN, DYNAMIC_WEATHER_POOL(sDynamicWeathers_KCoast) },
+    { MAPSEC_ROUTE_21, DYNAMIC_WEATHER_POOL(sDynamicWeathers_KCoast) },
+    { MAPSEC_CINNABAR_ISLAND, DYNAMIC_WEATHER_POOL(sDynamicWeathers_KCoast) },
+    { MAPSEC_ROUTE_20, DYNAMIC_WEATHER_POOL(sDynamicWeathers_KCoast) },
+    { MAPSEC_ROUTE_19, DYNAMIC_WEATHER_POOL(sDynamicWeathers_KCoast) },
+    { MAPSEC_FUCHSIA_CITY, DYNAMIC_WEATHER_POOL(sDynamicWeathers_KCoast) },
+    { MAPSEC_ROUTE_18, DYNAMIC_WEATHER_POOL(sDynamicWeathers_KCoast) },
+    { MAPSEC_ROUTE_17, DYNAMIC_WEATHER_POOL(sDynamicWeathers_KCoast) },
+    { MAPSEC_ROUTE_16, DYNAMIC_WEATHER_POOL(sDynamicWeathers_KCoast) },
+    { MAPSEC_ROUTE_15, DYNAMIC_WEATHER_POOL(sDynamicWeathers_KCoast) },
+    { MAPSEC_ROUTE_14, DYNAMIC_WEATHER_POOL(sDynamicWeathers_KCoast) },
+    { MAPSEC_ROUTE_13, DYNAMIC_WEATHER_POOL(sDynamicWeathers_KCoast) },
+    { MAPSEC_ROUTE_12, DYNAMIC_WEATHER_POOL(sDynamicWeathers_KCoast) },
+    { MAPSEC_ROUTE_11, DYNAMIC_WEATHER_POOL(sDynamicWeathers_KCoast) },
+    { MAPSEC_VERMILION_CITY, DYNAMIC_WEATHER_POOL(sDynamicWeathers_KCoast) },
 };
+
 
 static const u8 *GetDynamicWeatherPool(u8 *count)
 {
@@ -2655,20 +2777,21 @@ static u8 GetDynamicWeather(void)
 {
     u8 count;
     const u8 *weathers = GetDynamicWeatherPool(&count);
+    struct SiiRtcInfo rtc;
+    u32 seed;
     rng_value_t localRngState;
-    const u32 hashPieces[] =
-    {
-        gSaveBlock1Ptr->dailySeed,
-        gSaveBlock1Ptr->location.mapGroup,
-        gSaveBlock1Ptr->location.mapNum,
-        gMapHeader.mapLayoutId,
-        gMapHeader.regionMapSectionId,
-    };
 
     if (count == 0)
         return WEATHER_NONE;
 
-    localRngState = LocalRandomSeed(Crc32B((const u8 *)hashPieces, sizeof(hashPieces)));
+    RtcGetInfo(&rtc);
+    seed = RtcGetDayCount(&rtc);
+    seed = seed * 31 + gSaveBlock1Ptr->location.mapGroup;
+    seed = seed * 31 + gSaveBlock1Ptr->location.mapNum;
+    seed = seed * 31 + gMapHeader.mapLayoutId;
+    seed = seed * 31 + gMapHeader.regionMapSectionId;
+
+    localRngState = LocalRandomSeed(seed);
     return weathers[LocalRandom32(&localRngState) % count];
 }
 
@@ -2686,7 +2809,6 @@ static u8 TranslateWeatherNum(u8 weather)
     case WEATHER_VOLCANIC_ASH:       return WEATHER_VOLCANIC_ASH;
     case WEATHER_SANDSTORM:          return WEATHER_SANDSTORM;
     case WEATHER_FOG_DIAGONAL:       return WEATHER_FOG_DIAGONAL;
-    case WEATHER_UNDERWATER:         return WEATHER_UNDERWATER;
     case WEATHER_SHADE:              return WEATHER_SHADE;
     case WEATHER_DROUGHT:            return WEATHER_DROUGHT;
     case WEATHER_DOWNPOUR:           return WEATHER_DOWNPOUR;

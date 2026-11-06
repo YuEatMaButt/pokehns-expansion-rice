@@ -401,6 +401,26 @@
   "gMapGroup_IndoorCinnabar_Hns": [
     "CinnabarIsland_PokemonCenter_hns"
   ],
+  "gMapGroup_SeviiDungeons_Hns": [
+    "FiveIsland_LostCave_Entrance_hns",
+    "FiveIsland_LostCave_Room1_hns",
+    "FiveIsland_LostCave_Room2_hns",
+    "FiveIsland_LostCave_Room3_hns",
+    "FiveIsland_LostCave_Room4_hns",
+    "FiveIsland_LostCave_Room5_hns",
+    "FiveIsland_LostCave_Room6_hns",
+    "FiveIsland_LostCave_Room7_hns",
+    "FiveIsland_LostCave_Room8_hns",
+    "FiveIsland_LostCave_Room9_hns",
+    "FiveIsland_LostCave_Room10_hns",
+    "FiveIsland_LostCave_Room11_hns",
+    "FiveIsland_LostCave_Room12_hns",
+    "FiveIsland_LostCave_Room13_hns",
+    "FiveIsland_LostCave_Room14_hns",
+    "FiveIsland_Meadow_hns",
+    "FiveIsland_MemorialPillar_hns",
+    "FiveIsland_WaterLabyrinth_hns"
+  ],
   "gMapGroup_IndoorOneIsland_Hns": [
     "OneIsland_Harbor_hns",
     "OneIsland_House1_hns",
@@ -416,8 +436,16 @@
     "TwoIsland_PokemonCenter_2F_hns",
     "TwoIsland_Harbor_hns"
   ],
-  "gMapGroup_IndoorTwoIslandRoute_Hns": [
-    "TwoIsland_CapeBrink_House_hns"
+  "gMapGroup_IndoorThreeIsland_Hns": [
+    "ThreeIsland_Harbor_hns",
+    "ThreeIsland_House1_hns",
+    "ThreeIsland_House2_hns",
+    "ThreeIsland_House3_hns",
+    "ThreeIsland_House4_hns",
+    "ThreeIsland_House5_hns",
+    "ThreeIsland_Mart_hns",
+    "ThreeIsland_PokemonCenter_1F_hns",
+    "ThreeIsland_PokemonCenter_2F_hns"
   ],
   "gMapGroup_IndoorFourIsland_Hns": [
     "FourIsland_Harbor_hns",
@@ -428,6 +456,9 @@
     "FourIsland_LoreleisHouse_hns",
     "FourIsland_Mart_hns",
     "FourIsland_PokemonDayCare_hns"
+  ],
+  "gMapGroup_IndoorTwoIslandRoute_Hns": [
+    "TwoIsland_CapeBrink_House_hns"
   ],
   "gMapGroup_IndoorFiveIsland_Hns": [
     "FiveIsland_Harbor_hns",
@@ -618,26 +649,6 @@
     "FourIsland_IcefallCave_B1F_hns",
     "FourIsland_IcefallCave_Back_hns",
     "FourIsland_IcefallCave_Entrance_hns"
-  ],
-  "gMapGroup_SeviiDungeons_Hns": [
-    "FiveIsland_LostCave_Entrance_hns",
-    "FiveIsland_LostCave_Room1_hns",
-    "FiveIsland_LostCave_Room2_hns",
-    "FiveIsland_LostCave_Room3_hns",
-    "FiveIsland_LostCave_Room4_hns",
-    "FiveIsland_LostCave_Room5_hns",
-    "FiveIsland_LostCave_Room6_hns",
-    "FiveIsland_LostCave_Room7_hns",
-    "FiveIsland_LostCave_Room8_hns",
-    "FiveIsland_LostCave_Room9_hns",
-    "FiveIsland_LostCave_Room10_hns",
-    "FiveIsland_LostCave_Room11_hns",
-    "FiveIsland_LostCave_Room12_hns",
-    "FiveIsland_LostCave_Room13_hns",
-    "FiveIsland_LostCave_Room14_hns",
-    "FiveIsland_Meadow_hns",
-    "FiveIsland_MemorialPillar_hns",
-    "FiveIsland_WaterLabyrinth_hns"
   ],
   "gMapGrouop_OutdoorAlola_Hns": [
     "PoniIsle_hns",
@@ -1901,16 +1912,5 @@
   ],
   "gMapGroup_IndoorSevenIslandRoute_Frlg": [
     "SevenIsland_SevaultCanyon_House_Frlg"
-  ],
-  "gMapGroup_IndoorThreeIsland_Hns": [
-    "ThreeIsland_Harbor_hns",
-    "ThreeIsland_House1_hns",
-    "ThreeIsland_House2_hns",
-    "ThreeIsland_House3_hns",
-    "ThreeIsland_House4_hns",
-    "ThreeIsland_House5_hns",
-    "ThreeIsland_Mart_hns",
-    "ThreeIsland_PokemonCenter_1F_hns",
-    "ThreeIsland_PokemonCenter_2F_hns"
   ]
 }
