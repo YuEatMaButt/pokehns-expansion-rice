@@ -409,6 +409,22 @@ const u16 gMetatileAttributes_HallOfFame[] = INCBIN_U16("data/tilesets/secondary
 #elif IS_HNS
 
 /* FRLG tilesets required by selected HnS maps. */
+
+const u16 gMetatiles_NavelRock_Frlg_Hns[] = INCBIN_U16("data/tilesets/secondary/navel_rock_frlg/metatiles.bin");
+
+const u16 gMetatileAttributes_NavelRock_Frlg_Hns[] = INCBIN_U16("data/tilesets/secondary/navel_rock_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_SeviiIslands67_Hns[] = INCBIN_U16("data/tilesets/secondary/sevii_islands_67_frlg/metatiles.bin");
+
+const u16 gMetatileAttributes_SeviiIslands67_Hns[] = INCBIN_U16("data/tilesets/secondary/sevii_islands_67_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_IslandHarbor_Frlg_Hns[] = INCBIN_U16("data/tilesets/secondary/island_harbor_frlg/metatiles.bin");
+
+const u16 gMetatileAttributes_IslandHarbor_Frlg_Hns[] = INCBIN_U16("data/tilesets/secondary/island_harbor_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_RockTunnel_Hns[] = INCBIN_U16("data/tilesets/secondary/rock_tunnel_frlg/metatiles.bin");
+
+const u16 gMetatileAttributes_RockTunnel_Hns[] = INCBIN_U16("data/tilesets/secondary/rock_tunnel_frlg/metatile_attributes.bin");
 const u16 gMetatiles_Building_Frlg[] = INCBIN_U16("data/tilesets/primary/building_frlg/metatiles.bin");
 
 const u16 gMetatileAttributes_Building_Frlg[] = INCBIN_U16("data/tilesets/primary/building_frlg/metatile_attributes.bin");

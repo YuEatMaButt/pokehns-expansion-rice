@@ -1611,6 +1611,57 @@ const struct Tileset gTileset_SeviiIslands123 =
 
 
 
+/* FRLG secondary tilesets used by HnS maps. */
+const struct Tileset gTileset_SeviiIslands67 = {
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SeviiIslands67_Hns,
+    .palettes = gTilesetPalettes_SeviiIslands67_Hns,
+    .metatiles = gMetatiles_SeviiIslands67_Hns,
+    .metatileAttributes = gMetatileAttributes_SeviiIslands67_Hns,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_IslandHarbor_Frlg = {
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_IslandHarbor_Frlg_Hns,
+    .palettes = gTilesetPalettes_IslandHarbor_Frlg_Hns,
+    .metatiles = gMetatiles_IslandHarbor_Frlg_Hns,
+    .metatileAttributes = gMetatileAttributes_IslandHarbor_Frlg_Hns,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_NavelRock_Frlg = {
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_NavelRock_Frlg_Hns,
+    .palettes = gTilesetPalettes_NavelRock_Frlg_Hns,
+    .metatiles = gMetatiles_NavelRock_Frlg_Hns,
+    .metatileAttributes = gMetatileAttributes_NavelRock_Frlg_Hns,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_ViridianForest = {
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_ViridianForest_Hns,
+    .palettes = gTilesetPalettes_ViridianForest_Hns,
+    .metatiles = gMetatiles_ViridianForest_Hns,
+    .metatileAttributes = gMetatileAttributes_ViridianForest_Hns,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_RockTunnel = {
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_RockTunnel_Hns,
+    .palettes = gTilesetPalettes_RockTunnel_Hns,
+    .metatiles = gMetatiles_RockTunnel_Hns,
+    .metatileAttributes = gMetatileAttributes_RockTunnel_Hns,
+    .callback = NULL,
+};
+
 // HnS tilesets
 const struct Tileset gTileset_General_Hns =
 {
