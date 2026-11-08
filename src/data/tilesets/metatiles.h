@@ -414,6 +414,10 @@ const u16 gMetatiles_NavelRock_Frlg_Hns[] = INCBIN_U16("data/tilesets/secondary/
 
 const u16 gMetatileAttributes_NavelRock_Frlg_Hns[] = INCBIN_U16("data/tilesets/secondary/navel_rock_frlg/metatile_attributes.bin");
 
+const u16 gMetatiles_DiglettsCave_Hns[] = INCBIN_U16("data/tilesets/secondary/digletts_cave_frlg/metatiles.bin");
+const u16 gMetatileAttributes_DiglettsCave_Hns[] = INCBIN_U16("data/tilesets/secondary/digletts_cave_frlg/metatile_attributes.bin");
+const u16 gMetatiles_TanobyRuins_Hns[] = INCBIN_U16("data/tilesets/secondary/tanoby_ruins_frlg/metatiles.bin");
+const u16 gMetatileAttributes_TanobyRuins_Hns[] = INCBIN_U16("data/tilesets/secondary/tanoby_ruins_frlg/metatile_attributes.bin");
 const u16 gMetatiles_SeviiIslands67_Hns[] = INCBIN_U16("data/tilesets/secondary/sevii_islands_67_frlg/metatiles.bin");
 
 const u16 gMetatileAttributes_SeviiIslands67_Hns[] = INCBIN_U16("data/tilesets/secondary/sevii_islands_67_frlg/metatile_attributes.bin");

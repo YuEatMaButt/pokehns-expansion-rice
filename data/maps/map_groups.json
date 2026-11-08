@@ -30,6 +30,8 @@
     "gMapGroup_IndoorFiveIsland_Hns",
     "gMapGroup_IndoorSixIsland_Hns",
     "gMapGroup_IndoorSixIslandRoute_Hns",
+    "gMapGroup_IndoorSevenIsland_Hns",
+    "gMapGroup_IndoorSevenIslandRoute_Hns",
     "gMapGroup_IndoorIndigo_Hns",
     "gMapGroup_IndoorJohtoRoutes_Hns",
     "gMapGroup_IndoorKantoRoutes_Hns",
@@ -204,7 +206,12 @@
     "SixIsland_OutcastIsland_hns",
     "SixIsland_GreenPath_hns",
     "SixIsland_WaterPath_hns",
-    "SixIsland_RuinValley_hns"
+    "SixIsland_RuinValley_hns",
+    "SevenIsland_hns",
+    "SevenIsland_TrainerTower_hns",
+    "SevenIsland_SevaultCanyon_Entrance_hns",
+    "SevenIsland_SevaultCanyon_hns",
+    "SevenIsland_TanobyRuins_hns"
   ],
   "gMapGroup_IndoorNewBark_Hns": [
     "NewBarkTown_Lab_hns",
@@ -806,7 +813,15 @@
     "SixIsland_DottedHole_B4F_hns",
     "SixIsland_DottedHole_SapphireRoom_hns",
     "SixIsland_PatternBush_hns",
-    "SixIsland_AlteringCave_hns"
+    "SixIsland_AlteringCave_hns",
+    "SevenIsland_TanobyRuins_MoneanChamber_hns",
+    "SevenIsland_TanobyRuins_LiptooChamber_hns",
+    "SevenIsland_TanobyRuins_WeepthChamber_hns",
+    "SevenIsland_TanobyRuins_DilfordChamber_hns",
+    "SevenIsland_TanobyRuins_ScufibChamber_hns",
+    "SevenIsland_TanobyRuins_RixyChamber_hns",
+    "SevenIsland_TanobyRuins_ViapoisChamber_hns",
+    "SevenIsland_SevaultCanyon_TanobyKey_hns"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -1930,5 +1945,16 @@
   "gMapGroup_IndoorSixIslandRoute_Hns": [
     "SixIsland_WaterPath_House1_hns",
     "SixIsland_WaterPath_House2_hns"
+  ],
+  "gMapGroup_IndoorSevenIsland_Hns": [
+    "SevenIsland_House_Room1_hns",
+    "SevenIsland_House_Room2_hns",
+    "SevenIsland_Mart_hns",
+    "SevenIsland_PokemonCenter_1F_hns",
+    "SevenIsland_PokemonCenter_2F_hns",
+    "SevenIsland_Harbor_hns"
+  ],
+  "gMapGroup_IndoorSevenIslandRoute_Hns": [
+    "SevenIsland_SevaultCanyon_House_hns"
   ]
 }
