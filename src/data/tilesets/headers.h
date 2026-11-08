@@ -1543,6 +1543,28 @@ const struct Tileset gTileset_HallOfFame =
 #elif IS_HNS
 
 /* FRLG tilesets required by selected HnS maps. */
+const struct Tileset gTileset_DiglettsCave =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_DiglettsCave_Hns,
+    .palettes = gTilesetPalettes_DiglettsCave_Hns,
+    .metatiles = gMetatiles_DiglettsCave_Hns,
+    .metatileAttributes = gMetatileAttributes_DiglettsCave_Hns,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_TanobyRuins =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_TanobyRuins_Hns,
+    .palettes = gTilesetPalettes_TanobyRuins_Hns,
+    .metatiles = gMetatiles_TanobyRuins_Hns,
+    .metatileAttributes = gMetatileAttributes_TanobyRuins_Hns,
+    .callback = NULL,
+};
+
 const struct Tileset gTileset_BuildingFrlg =
 {
     .isCompressed = TRUE,
