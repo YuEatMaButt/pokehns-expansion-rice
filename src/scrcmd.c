@@ -1376,6 +1376,7 @@ bool8 ScrCmd_givenamedmon(struct ScriptContext *ctx)
     static const u8 sShuckieNickname[] = _("SHUCKIE");
     static const u8 sShuckieOtName[]   = _("KIRK");
     static const u8 sEeveeOtName[]     = _("BILL");
+    static const u8 sCastformOtName[] = _("MOM");
 
     static const u16 sKenyaMailWords[MAIL_WORDS_COUNT] = {
         EC_WORD_YUP,
@@ -1437,6 +1438,20 @@ bool8 ScrCmd_givenamedmon(struct ScriptContext *ctx)
         otId = fullId;
         break;
     }
+    case 5: // CASTFORM (always shiny, OT MOM)
+    {
+        species = SPECIES_CASTFORM_NORMAL;
+        level = 5;
+        item = ITEM_NONE;
+        nickname = NULL;
+        otName = sCastformOtName;
+
+        otId = 0x004D4F4D;
+        u16 tid = (u16)(otId & 0xFFFF);
+        u16 sid = (u16)(otId >> 16);
+        personality = MakeShinyPidWithNature(tid, sid, NATURE_HARDY);
+        break;
+    }
     default:
         gSpecialVar_Result = MON_CANT_GIVE;
         return FALSE;
@@ -1482,6 +1497,11 @@ bool8 ScrCmd_givenamedmon(struct ScriptContext *ctx)
             }
 
             CalculateMonStats(mon);
+            if (giftId == 5)
+            {
+                u8 otGender = TRAINER_GENDER_FEMALE;
+                SetMonData(mon, MON_DATA_OT_GENDER, &otGender);
+            }
 
             u16 dexNum = SpeciesToNationalPokedexNum(species);
             HandleSetPokedexFlag(dexNum, FLAG_SET_SEEN, personality);

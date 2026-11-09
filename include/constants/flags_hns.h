@@ -3450,7 +3450,7 @@
 #define FLAG_DEXNAV_SEARCHING      0x90A
 #define FLAG_DEXNAV_GET            0x90B
 #define FLAG_DEXNAV_DETECTOR_MODE  0x90C
-#define FLAG_UNUSED_0x90D                                       0
+#define FLAG_CASTFORM_RECEIVED_HNS 0x90D
 #define FLAG_UNUSED_0x90E                                       0
 #define FLAG_UNUSED_0x90F                                       0
 #define FLAG_UNUSED_0x910                                       0

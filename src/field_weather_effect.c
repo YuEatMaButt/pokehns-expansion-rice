@@ -2516,6 +2516,7 @@ static void CreateAbnormalWeatherTask(void)
 static u8 TranslateWeatherNum(u8);
 static void UpdateRainCounter(u8, u8);
 static u8 GetDynamicWeather(void);
+static const u8 *GetDynamicWeatherPool(u8 *count, u16 *poolId);
 
 void SetSavedWeather(u32 weather)
 {
@@ -2692,7 +2693,7 @@ static const struct DynamicWeatherPool sDynamicWeatherPools[] =
     { MAPSEC_ROUTE_33, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Johto) },
     { MAPSEC_AZALEA_TOWN, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Johto) },
     { MAPSEC_ROUTE_34, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Johto) },
-    { MAPSEC_GOLDENROD_CITY, DYNAMIC_WEATHER_POOL(sDynamicWeathers_JCoast) },
+    { MAPSEC_GOLDENROD_CITY, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Johto) },
     { MAPSEC_ROUTE_35, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Johto) },
     { MAPSEC_NATIONAL_PARK, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Johto) },
     { MAPSEC_ROUTE_36, DYNAMIC_WEATHER_POOL(sDynamicWeathers_Johto) },
@@ -2756,27 +2757,40 @@ static const struct DynamicWeatherPool sDynamicWeatherPools[] =
 };
 
 
-static const u8 *GetDynamicWeatherPool(u8 *count)
+static const u8 *GetDynamicWeatherPool(u8 *count, u16 *poolId)
 {
     u16 mapSec = gMapHeader.regionMapSectionId;
 
     for (u32 i = 0; i < ARRAY_COUNT(sDynamicWeatherPools); i++)
     {
-        if (sDynamicWeatherPools[i].mapSec == mapSec && sDynamicWeatherPools[i].count != 0)
+        if (sDynamicWeatherPools[i].mapSec == mapSec
+         && sDynamicWeatherPools[i].count != 0)
         {
             *count = sDynamicWeatherPools[i].count;
+
+            for (u32 j = 0; j <= i; j++)
+            {
+                if (sDynamicWeatherPools[j].weathers == sDynamicWeatherPools[i].weathers)
+                {
+                    *poolId = j + 1;
+                    break;
+                }
+            }
+
             return sDynamicWeatherPools[i].weathers;
         }
     }
 
     *count = ARRAY_COUNT(sDefaultDynamicWeathers);
+    *poolId = 0;
     return sDefaultDynamicWeathers;
 }
 
 static u8 GetDynamicWeather(void)
 {
     u8 count;
-    const u8 *weathers = GetDynamicWeatherPool(&count);
+    u16 poolId = 0;
+    const u8 *weathers = GetDynamicWeatherPool(&count, &poolId);
     struct SiiRtcInfo rtc;
     u32 seed;
     rng_value_t localRngState;
@@ -2786,12 +2800,10 @@ static u8 GetDynamicWeather(void)
 
     RtcGetInfo(&rtc);
     seed = RtcGetDayCount(&rtc);
-    seed = seed * 31 + gSaveBlock1Ptr->location.mapGroup;
-    seed = seed * 31 + gSaveBlock1Ptr->location.mapNum;
-    seed = seed * 31 + gMapHeader.mapLayoutId;
-    seed = seed * 31 + gMapHeader.regionMapSectionId;
+    seed = seed * 31 + poolId;
 
     localRngState = LocalRandomSeed(seed);
+
     return weathers[LocalRandom32(&localRngState) % count];
 }
 

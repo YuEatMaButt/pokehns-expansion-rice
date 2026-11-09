@@ -356,3 +356,61 @@ NewBarkTown_PlayersHouse_1F_Text_MomLeaving:
 	.string "You need to work as a team.\p"
 	.string "Now, go on!\n"
 	.string "I'm behind you all the way!$"
+
+NewBarkTown_PlayersHouse_1F_EventScript_Castform::
+    lock
+    faceplayer
+    goto_if_set FLAG_CASTFORM_RECEIVED_HNS, NewBarkTown_PlayersHouse_1F_EventScript_CastformAlreadyReceived
+    goto_if_lt VAR_CHERRYGROVE_CITY_STATE, 4, NewBarkTown_PlayersHouse_1F_EventScript_CastformWaiting
+    msgbox NewBarkTown_PlayersHouse_1F_Text_CastformGift, MSGBOX_YESNO
+    compare VAR_RESULT, YES
+    goto_if_eq NewBarkTown_PlayersHouse_1F_EventScript_CastformGive
+    msgbox NewBarkTown_PlayersHouse_1F_Text_CastformDeclined, MSGBOX_DEFAULT
+    release
+    end
+
+NewBarkTown_PlayersHouse_1F_EventScript_CastformGive::
+    givenamedmon 5
+    goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, NewBarkTown_PlayersHouse_1F_EventScript_CastformReceived
+    goto Common_EventScript_PartyIsFull
+    end
+
+NewBarkTown_PlayersHouse_1F_EventScript_CastformReceived::
+    setflag FLAG_CASTFORM_RECEIVED_HNS
+    removeobject LOCALID_CASTFORM
+    playfanfare MUS_OBTAIN_ITEM
+    msgbox NewBarkTown_PlayersHouse_1F_Text_CastformReceived, MSGBOX_DEFAULT
+    waitmessage
+    waitfanfare
+    release
+    end
+
+NewBarkTown_PlayersHouse_1F_EventScript_CastformWaiting::
+    msgbox NewBarkTown_PlayersHouse_1F_Text_CastformWaiting, MSGBOX_DEFAULT
+    release
+    end
+
+NewBarkTown_PlayersHouse_1F_EventScript_CastformAlreadyReceived::
+    msgbox NewBarkTown_PlayersHouse_1F_Text_CastformAlreadyReceived, MSGBOX_DEFAULT
+    release
+    end
+
+NewBarkTown_PlayersHouse_1F_Text_CastformWaiting:
+    .string "It looks like CASTFORM wants to\n"
+    .string "go on an adventure!$"
+
+NewBarkTown_PlayersHouse_1F_Text_CastformGift:
+    .string "CASTFORM happily comes over to you!\p"
+    .string "Would you like it to join your team?$"
+
+NewBarkTown_PlayersHouse_1F_Text_CastformDeclined:
+    .string "CASTFORM stays here, waiting for\n"
+    .string "you to change your mind.$"
+
+NewBarkTown_PlayersHouse_1F_Text_CastformReceived:
+    .string "MOM's CASTFORM joins your\n"
+    .string "party!$"
+
+NewBarkTown_PlayersHouse_1F_Text_CastformAlreadyReceived:
+    .string "CASTFORM has already gone with\n"
+    .string "you.$"

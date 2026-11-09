@@ -16231,7 +16231,7 @@
     {
       "id": "LAYOUT_ABANDONED_HOUSE_TVROOM_HNS",
       "name": "AbandonedHouse_TVRoom_hns_Layout",
-      "width": 9,
+      "width": 14,
       "height": 9,
       "primary_tileset": "gTileset_Johto_Building_Hns",
       "secondary_tileset": "gTileset_DragonsDen_Shrine_Hns",
