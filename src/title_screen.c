@@ -27,6 +27,7 @@ enum {
     TAG_VERSION = 1000,
     TAG_PRESS_START_COPYRIGHT,
     TAG_LOGO_SHINE,
+    TAG_TITLE_EX,
 };
 
 #define VERSION_BANNER_RIGHT_TILEOFFSET 64
@@ -68,6 +69,9 @@ static const u16 sUnusedUnknownPal[] = INCBIN_U16("graphics/title_screen/unused.
 static const u32 sTitleScreenRayquazaGfx[] = INCBIN_U32("graphics/title_screen/hns/rayquaza.4bpp.smol");
 static const u32 sTitleScreenRayquazaTilemap[] = INCBIN_U32("graphics/title_screen/hns/rayquaza.bin.smolTM");
 static const u32 sTitleScreenLogoShineGfx[] = INCBIN_U32("graphics/title_screen/hns/logo_shine.4bpp.smol");
+static const u32 sTitleScreenExGfx[] = INCBIN_U32("graphics/title_screen/hns/ex_small.4bpp.smol");
+static const u16 sTitleScreenExPal[] = INCBIN_U16("graphics/title_screen/hns/ex_small.gbapal");
+
 #else
 static const u32 sTitleScreenRayquazaGfx[] = INCBIN_U32("graphics/title_screen/rayquaza.4bpp.smol");
 static const u32 sTitleScreenRayquazaTilemap[] = INCBIN_U32("graphics/title_screen/rayquaza.bin.smolTM");
@@ -306,6 +310,8 @@ static const struct CompressedSpriteSheet sSpriteSheet_PressStart[] =
     {},
 };
 
+
+
 static const struct SpritePalette sSpritePalette_PressStart[] =
 {
     {
@@ -361,6 +367,57 @@ static const struct CompressedSpriteSheet sPokemonLogoShineSpriteSheet[] =
     },
     {},
 };
+
+#if IS_HNS
+static const struct OamData sTitleScreenExOamData =
+{
+    .y = DISPLAY_HEIGHT,
+    .affineMode = ST_OAM_AFFINE_OFF,
+    .objMode = ST_OAM_OBJ_NORMAL,
+    .mosaic = FALSE,
+    .bpp = ST_OAM_4BPP,
+    .shape = SPRITE_SHAPE(32x32),
+    .x = 0,
+    .matrixNum = 0,
+    .size = SPRITE_SIZE(32x32),
+    .tileNum = 0,
+    .priority = 0,
+    .paletteNum = 0,
+    .affineParam = 0,
+};
+
+static const struct CompressedSpriteSheet sTitleScreenExSheet[] =
+{
+    { .data = sTitleScreenExGfx, .size = 0x200, .tag = TAG_TITLE_EX },
+    {},
+};
+
+static const struct SpritePalette sTitleScreenExPalette[] =
+{
+    { .data = sTitleScreenExPal, .tag = TAG_TITLE_EX },
+    {},
+};
+
+static const union AnimCmd sTitleScreenExAnim[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd *const sTitleScreenExAnimTable[] =
+{
+    sTitleScreenExAnim,
+};
+
+static const struct SpriteTemplate sTitleScreenExTemplate =
+{
+    .tileTag = TAG_TITLE_EX,
+    .paletteTag = TAG_TITLE_EX,
+    .oam = &sTitleScreenExOamData,
+    .anims = sTitleScreenExAnimTable,
+    .callback = SpriteCallbackDummy,
+};
+#endif
 
 // Task data for the main title screen tasks (Task_TitleScreenPhase#)
 #define tCounter    data[0]
@@ -629,15 +686,18 @@ void CB2_InitTitleScreen(void)
         LoadCompressedSpriteSheet(&sSpriteSheet_EmeraldVersion[0]);
         LoadCompressedSpriteSheet(&sSpriteSheet_PressStart[0]);
         LoadCompressedSpriteSheet(&sPokemonLogoShineSpriteSheet[0]);
-        LoadPalette(gTitleScreenEmeraldVersionPal, OBJ_PLTT_ID(0), PLTT_SIZE_4BPP);
+#if IS_HNS
+        LoadCompressedSpriteSheet(&sTitleScreenExSheet[0]);
+        LoadSpritePalette(&sTitleScreenExPalette[0]);
+#endif
+LoadPalette(gTitleScreenEmeraldVersionPal, OBJ_PLTT_ID(0), PLTT_SIZE_4BPP);
         LoadSpritePalette(&sSpritePalette_PressStart[0]);
         gMain.state = 2;
         break;
     case 2:
     {
         u8 taskId = CreateTask(Task_TitleScreenPhase1, 0);
-
-        gTasks[taskId].tCounter = 256;
+gTasks[taskId].tCounter = 256;
         gTasks[taskId].tSkipToNext = FALSE;
         gTasks[taskId].tPointless = -16;
         gTasks[taskId].tBg2Y = -32;
@@ -782,6 +842,11 @@ static void Task_TitleScreenPhase2(u8 taskId)
         CreatePressStartBanner(START_BANNER_X, 108);
         #endif
         CreateCopyrightBanner(START_BANNER_X, 148);
+
+#if IS_HNS
+        u8 exSpriteId = CreateSprite(&sTitleScreenExTemplate, 160, 72, 0);
+        StartSpriteAnim(&gSprites[exSpriteId], 0);
+#endif
         gTasks[taskId].tBg1Y = 0;
         gTasks[taskId].func = Task_TitleScreenPhase3;
     }
