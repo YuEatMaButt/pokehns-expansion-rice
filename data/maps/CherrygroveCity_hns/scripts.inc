@@ -580,3 +580,30 @@ CherryGroveCity_Movement_Silver_Leave2:
 	walk_fast_left
 	walk_fast_left
 	step_end
+
+
+CherryGroveCity_EventScript_Pidgeot::
+    lock
+    faceplayer
+    setvar VAR_0x8004, 0
+    specialvar VAR_RESULT, ScriptGetPartyMonSpecies
+    goto_if_eq VAR_RESULT, SPECIES_PIDGEY, CherryGroveCity_EventScript_PidgeotReward
+    goto_if_eq VAR_RESULT, SPECIES_PIDGEOTTO, CherryGroveCity_EventScript_PidgeotReward
+    goto_if_eq VAR_RESULT, SPECIES_PIDGEOT, CherryGroveCity_EventScript_PidgeotReward
+    msgbox CherryGroveCity_Text_PidgeotNoMatch, MSGBOX_DEFAULT
+    release
+    end
+
+CherryGroveCity_EventScript_PidgeotReward::
+    giveitem ITEM_PIDGEOTITE
+    goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+    msgbox CherryGroveCity_Text_PidgeotReward, MSGBOX_DEFAULT
+    release
+    end
+
+CherryGroveCity_Text_PidgeotNoMatch:
+    .string "PIDGEOT seems interested in your\n"
+    .string "POKéMON, but it doesn't react.$"
+
+CherryGroveCity_Text_PidgeotReward:
+    .string "PIDGEOT is impressed by your bond!$"

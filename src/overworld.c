@@ -634,6 +634,9 @@ static void InitMapView(void)
     ResetFieldCamera();
     CopyMapTilesetsToVram(gMapHeader.mapLayout);
     LoadMapTilesetPalettes(gMapHeader.mapLayout);
+    UpdateTimeOfDay();
+    UpdateAltBgPalettes(PALETTES_BG);
+    UpdatePalettesWithTime(PALETTES_ALL);
     DrawWholeMapView();
     InitTilesetAnimations();
 }
@@ -2359,6 +2362,9 @@ static bool32 LoadMapInStepsLink(u8 *state)
         if (FreeTempTileDataBuffersIfPossible() != TRUE)
         {
             LoadMapTilesetPalettes(gMapHeader.mapLayout);
+            UpdateTimeOfDay();
+            UpdateAltBgPalettes(PALETTES_BG);
+            UpdatePalettesWithTime(PALETTES_ALL);
             (*state)++;
         }
         break;
@@ -2434,6 +2440,9 @@ static bool32 LoadMapInStepsLocal(u8 *state, bool32 a2)
         if (FreeTempTileDataBuffersIfPossible() != TRUE)
         {
             LoadMapTilesetPalettes(gMapHeader.mapLayout);
+            UpdateTimeOfDay();
+            UpdateAltBgPalettes(PALETTES_BG);
+            UpdatePalettesWithTime(PALETTES_ALL);
             (*state)++;
         }
         break;
@@ -2537,6 +2546,9 @@ static bool32 ReturnToFieldLink(u8 *state)
         if (FreeTempTileDataBuffersIfPossible() != TRUE)
         {
             LoadMapTilesetPalettes(gMapHeader.mapLayout);
+            UpdateTimeOfDay();
+            UpdateAltBgPalettes(PALETTES_BG);
+            UpdatePalettesWithTime(PALETTES_ALL);
             (*state)++;
         }
         break;
@@ -4108,6 +4120,9 @@ static bool8 MapLdr_Credits(void)
         if (FreeTempTileDataBuffersIfPossible() != TRUE)
         {
             LoadMapTilesetPalettes(gMapHeader.mapLayout);
+            UpdateTimeOfDay();
+            UpdateAltBgPalettes(PALETTES_BG);
+            UpdatePalettesWithTime(PALETTES_ALL);
             (*state)++;
         }
         break;

@@ -20,6 +20,8 @@
 #include "gpu_regs.h"
 #include "field_camera.h"
 #include "overworld.h"
+#include "siirtc.h"
+#include "rtc.h"
 
 #define DROUGHT_COLOR_INDEX(color) ((((color) >> 1) & 0xF) | (((color) >> 2) & 0xF0) | (((color) >> 3) & 0xF00))
 
@@ -57,6 +59,10 @@ static void None_Main(void);
 static u8 None_Finish(void);
 
 EWRAM_DATA struct Weather gWeather = {0};
+EWRAM_DATA static u8 sDynamicWeatherRtcCheckTimer = 0;
+EWRAM_DATA static u32 sLastDynamicWeatherHour = 0;
+EWRAM_DATA static bool8 sHasLastDynamicWeatherHour = FALSE;
+
 EWRAM_DATA static u8 ALIGNED(2) sFieldEffectPaletteColorMapTypes[32] = {0};
 
 static const u8 *sPaletteColorMapTypes;
@@ -290,6 +296,36 @@ static void Task_WeatherInit(u8 taskId)
 
 static void Task_WeatherMain(u8 taskId)
 {
+    if (gMapHeader.weather == WEATHER_DYNAMIC)
+    {
+        if (++sDynamicWeatherRtcCheckTimer >= 60)
+        {
+            struct SiiRtcInfo rtc;
+            u32 currentHour;
+
+            sDynamicWeatherRtcCheckTimer = 0;
+            RtcGetInfo(&rtc);
+            currentHour = (u32)RtcGetDayCount(&rtc) * 24 + ConvertBcdToBinary(rtc.hour);
+
+            if (!sHasLastDynamicWeatherHour)
+            {
+                sLastDynamicWeatherHour = currentHour;
+                sHasLastDynamicWeatherHour = TRUE;
+            }
+            else if (currentHour != sLastDynamicWeatherHour)
+            {
+                sLastDynamicWeatherHour = currentHour;
+                SetSavedWeatherFromCurrMapHeader();
+                DoCurrentWeather();
+            }
+        }
+    }
+    else
+    {
+        sDynamicWeatherRtcCheckTimer = 0;
+        sHasLastDynamicWeatherHour = FALSE;
+    }
+
     if (gWeatherPtr->currWeather != gWeatherPtr->nextWeather)
     {
         if (!sWeatherFuncs[gWeatherPtr->currWeather].finish()
@@ -373,9 +409,9 @@ static void FadeInScreenWithWeather(void)
         }
         break;
     case WEATHER_DROUGHT:
-        if (FadeInScreen_Drought() == FALSE)
+        if (!gPaletteFade.active)
         {
-            gWeatherPtr->colorMapIndex = -6;
+            gWeatherPtr->colorMapIndex = 0;
             gWeatherPtr->palProcessingState = WEATHER_PAL_STATE_IDLE;
         }
         break;
@@ -431,7 +467,6 @@ static bool8 FadeInScreen_Drought(void)
     ApplyDroughtColorMapWithBlend(-6, 16 - gWeatherPtr->fadeScreenCounter, gWeatherPtr->fadeDestColor);
     return TRUE;
 }
-
 static bool8 FadeInScreen_FogHorizontal(void)
 {
     if (gWeatherPtr->fadeScreenCounter == 16)
@@ -447,6 +482,10 @@ static void DoNothing(void)
 
 static void ApplyColorMap(u8 startPalIndex, u8 numPalettes, s8 colorMapIndex)
 {
+    // Disable drought brightness mapping, but preserve time-of-day palettes.
+    if (colorMapIndex < 0)
+        colorMapIndex = 0;
+
     u16 curPalIndex;
     u16 palOffset;
     const u8 *colorMap;
@@ -506,6 +545,17 @@ static void ApplyColorMap(u8 startPalIndex, u8 numPalettes, s8 colorMapIndex)
     }
     else if (colorMapIndex < 0)
     {
+        // Drought uses the original palettes without its brightness color map.
+        palOffset = PLTT_ID(startPalIndex);
+        for (curPalIndex = startPalIndex; curPalIndex < numPalettes + startPalIndex; curPalIndex++)
+        {
+            CpuFastCopy(&gPlttBufferUnfaded[palOffset], &gPlttBufferFaded[palOffset], PLTT_SIZE_4BPP);
+            palOffset += 16;
+        }
+    }
+    /*
+    else if (colorMapIndex < 0)
+    {
         // A negative gammIndex value means that the blending will come from the special Drought weather's palette tables.
         colorMapIndex = -colorMapIndex - 1;
         palOffset = PLTT_ID(startPalIndex);
@@ -532,6 +582,7 @@ static void ApplyColorMap(u8 startPalIndex, u8 numPalettes, s8 colorMapIndex)
             curPalIndex++;
         }
     }
+    */
     else
     {
         if (MapHasNaturalLight(gMapHeader.mapType))
@@ -604,57 +655,18 @@ static void ApplyColorMapWithBlend(u8 startPalIndex, u8 numPalettes, s8 colorMap
 
 static void ApplyDroughtColorMapWithBlend(s8 colorMapIndex, u8 blendCoeff, u32 blendColor)
 {
-    struct RGBColor color;
-    u8 rBlend;
-    u8 gBlend;
-    u8 bBlend;
-    u16 curPalIndex;
     u16 palOffset;
-    u16 i;
 
-    colorMapIndex = -colorMapIndex - 1;
-    color = *(struct RGBColor *)&blendColor;
-    rBlend = color.r;
-    gBlend = color.g;
-    bBlend = color.b;
-    palOffset = 0;
-    for (curPalIndex = 0; curPalIndex < 32; curPalIndex++)
-    {
-        if (sPaletteColorMapTypes[curPalIndex] == COLOR_MAP_NONE)
-        {
-            // No color map. Simply blend the colors.
-            BlendPalette(palOffset, 16, blendCoeff, blendColor);
-            palOffset += 16;
-        }
-        else
-        {
-            for (i = 0; i < 16; i++)
-            {
-                u32 offset;
-                struct RGBColor color1;
-                struct RGBColor color2;
-                u8 r1, g1, b1;
-                u8 r2, g2, b2;
+    // Preserve the normal time-of-day palettes; only perform the screen fade.
+    UpdateAltBgPalettes(PALETTES_BG);
 
-                color1 = *(struct RGBColor *)&gPlttBufferUnfaded[palOffset];
-                r1 = color1.r;
-                g1 = color1.g;
-                b1 = color1.b;
+    if (MapHasNaturalLight(gMapHeader.mapType))
+        UpdatePalettesWithTime(PALETTES_ALL);
+    else
+        CpuFastCopy(gPlttBufferUnfaded, gPlttBufferFaded, PLTT_BUFFER_SIZE * 2);
 
-                offset = ((b1 & 0x1E) << 7) | ((g1 & 0x1E) << 3) | ((r1 & 0x1E) >> 1);
-                color2 = *(struct RGBColor *)&sDroughtWeatherColors[colorMapIndex][offset];
-                r2 = color2.r;
-                g2 = color2.g;
-                b2 = color2.b;
-
-                r2 += ((rBlend - r2) * blendCoeff) >> 4;
-                g2 += ((gBlend - g2) * blendCoeff) >> 4;
-                b2 += ((bBlend - b2) * blendCoeff) >> 4;
-
-                gPlttBufferFaded[palOffset++] = RGB2(r2, g2, b2);
-            }
-        }
-    }
+    for (palOffset = 0; palOffset < PLTT_BUFFER_SIZE; palOffset += 16)
+        BlendPalette(palOffset, 16, blendCoeff, blendColor);
 }
 
 // This is only called during fade-in/fade-out in fog
@@ -768,7 +780,6 @@ void FadeSelectedPals(u8 mode, s8 delay, u32 selectedPalettes)
     case WEATHER_DOWNPOUR:
     case WEATHER_FOG_HORIZONTAL:
     case WEATHER_SHADE:
-    case WEATHER_DROUGHT:
         useWeatherPal = TRUE;
         break;
     default:
@@ -961,38 +972,10 @@ void DroughtStateInit(void)
 
 void DroughtStateRun(void)
 {
-    switch (gWeatherPtr->droughtState)
-    {
-    case 0:
-        if (++gWeatherPtr->droughtTimer > 5)
-        {
-            gWeatherPtr->droughtTimer = 0;
-            SetDroughtColorMap(gWeatherPtr->droughtBrightnessStage++);
-            if (gWeatherPtr->droughtBrightnessStage > 5)
-            {
-                gWeatherPtr->droughtLastBrightnessStage = gWeatherPtr->droughtBrightnessStage;
-                gWeatherPtr->droughtState = 1;
-                gWeatherPtr->droughtTimer = 60;
-            }
-        }
-        break;
-    case 1:
-        gWeatherPtr->droughtTimer = (gWeatherPtr->droughtTimer + 3) & 0x7F;
-        gWeatherPtr->droughtBrightnessStage = ((gSineTable[gWeatherPtr->droughtTimer] - 1) >> 6) + 2;
-        if (gWeatherPtr->droughtBrightnessStage != gWeatherPtr->droughtLastBrightnessStage)
-            SetDroughtColorMap(gWeatherPtr->droughtBrightnessStage);
-        gWeatherPtr->droughtLastBrightnessStage = gWeatherPtr->droughtBrightnessStage;
-        break;
-    case 2:
-        if (++gWeatherPtr->droughtTimer > 5)
-        {
-            gWeatherPtr->droughtTimer = 0;
-            SetDroughtColorMap(--gWeatherPtr->droughtBrightnessStage);
-            if (gWeatherPtr->droughtBrightnessStage == 3)
-                gWeatherPtr->droughtState = 0;
-        }
-        break;
-    }
+    // Keep drought weather active without changing screen brightness.
+    gWeatherPtr->droughtBrightnessStage = 6;
+    gWeatherPtr->droughtLastBrightnessStage = 6;
+    gWeatherPtr->droughtState = 1;
 }
 
 void Weather_SetBlendCoeffs(u8 eva, u8 evb)

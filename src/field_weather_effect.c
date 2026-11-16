@@ -298,68 +298,8 @@ bool8 Drought_Finish(void)
 
 void StartDroughtWeatherBlend(void)
 {
-    CreateTask(UpdateDroughtBlend, 80);
+    // Drought no longer brightens the screen.
 }
-
-#define tState      data[0]
-#define tBlendY     data[1]
-#define tBlendDelay data[2]
-#define tWinRange   data[3]
-
-static void UpdateDroughtBlend(u8 taskId)
-{
-    struct Task *task = &gTasks[taskId];
-
-    switch (task->tState)
-    {
-    case 0:
-        task->tBlendY = 0;
-        task->tBlendDelay = 0;
-        task->tWinRange = REG_WININ;
-        SetGpuReg(REG_OFFSET_WININ, WININ_WIN0_ALL | WININ_WIN1_ALL);
-        SetGpuReg(REG_OFFSET_BLDCNT, BLDCNT_TGT1_BG1 | BLDCNT_TGT1_BG2 | BLDCNT_TGT1_BG3 | BLDCNT_TGT1_OBJ | BLDCNT_EFFECT_LIGHTEN);
-        SetGpuReg(REG_OFFSET_BLDY, 0);
-        task->tState++;
-        // fall through
-    case 1:
-        task->tBlendY += 3;
-        if (task->tBlendY > 16)
-            task->tBlendY = 16;
-        SetGpuReg(REG_OFFSET_BLDY, task->tBlendY);
-        if (task->tBlendY >= 16)
-            task->tState++;
-        break;
-    case 2:
-        task->tBlendDelay++;
-        if (task->tBlendDelay > 9)
-        {
-            task->tBlendDelay = 0;
-            task->tBlendY--;
-            if (task->tBlendY <= 0)
-            {
-                task->tBlendY = 0;
-                task->tState++;
-            }
-            SetGpuReg(REG_OFFSET_BLDY, task->tBlendY);
-        }
-        break;
-    case 3:
-        SetGpuReg(REG_OFFSET_BLDCNT, 0);
-        SetGpuReg(REG_OFFSET_BLDY, 0);
-        SetGpuReg(REG_OFFSET_WININ, task->tWinRange);
-        task->tState++;
-        break;
-    case 4:
-        ScriptContext_Enable();
-        DestroyTask(taskId);
-        break;
-    }
-}
-
-#undef tState
-#undef tBlendY
-#undef tBlendDelay
-#undef tWinRange
 
 //------------------------------------------------------------------------------
 // WEATHER_RAIN
@@ -2629,6 +2569,11 @@ static const u8 sDefaultDynamicWeathers[] =
 static const u8 sDynamicWeathers_Johto[] =
 {
     WEATHER_SUNNY,
+    WEATHER_SUNNY,
+    WEATHER_SUNNY,
+    WEATHER_SUNNY,
+    WEATHER_DROUGHT,
+    WEATHER_DROUGHT,
     WEATHER_RAIN,
     WEATHER_RAIN_THUNDERSTORM,
     WEATHER_SHADE,
@@ -2638,10 +2583,15 @@ static const u8 sDynamicWeathers_Johto[] =
 static const u8 sDynamicWeathers_JCoast[] =
 {
     WEATHER_SUNNY,
+    WEATHER_SUNNY,
+    WEATHER_SUNNY,
+    WEATHER_SUNNY,
     WEATHER_RAIN,
     WEATHER_RAIN_THUNDERSTORM,
     WEATHER_SHADE,
     WEATHER_DOWNPOUR,
+    WEATHER_DROUGHT,
+    WEATHER_DROUGHT,
     WEATHER_DROUGHT,
 };
 
@@ -2651,10 +2601,18 @@ static const u8 sDynamicWeathers_Mountains[] =
     WEATHER_RAIN,
     WEATHER_SHADE,
     WEATHER_SNOW,
+    WEATHER_SNOW,
+    WEATHER_SNOW,
+    WEATHER_SUNNY,
+    WEATHER_SUNNY,
+    WEATHER_SUNNY,
 };
 
 static const u8 sDynamicWeathers_Kanto[] =
 {
+    WEATHER_SUNNY,
+    WEATHER_SUNNY,
+    WEATHER_SUNNY,
     WEATHER_SUNNY,
     WEATHER_RAIN,
     WEATHER_RAIN_THUNDERSTORM,
@@ -2667,10 +2625,13 @@ static const u8 sDynamicWeathers_Kanto[] =
 static const u8 sDynamicWeathers_KCoast[] =
 {
     WEATHER_SUNNY,
+    WEATHER_SUNNY,
+    WEATHER_SUNNY,
     WEATHER_RAIN,
     WEATHER_RAIN_THUNDERSTORM,
     WEATHER_SHADE,
     WEATHER_DOWNPOUR,
+    WEATHER_DROUGHT,
     WEATHER_DROUGHT,
 };
 /*static const u8 sDynamicWeathers_DewfordTown[] =
@@ -2799,7 +2760,7 @@ static u8 GetDynamicWeather(void)
         return WEATHER_NONE;
 
     RtcGetInfo(&rtc);
-    seed = RtcGetDayCount(&rtc);
+    seed = (u32)RtcGetDayCount(&rtc) * 24 + ConvertBcdToBinary(rtc.hour);
     seed = seed * 31 + poolId;
 
     localRngState = LocalRandomSeed(seed);
