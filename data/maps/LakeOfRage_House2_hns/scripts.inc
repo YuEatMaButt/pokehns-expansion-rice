@@ -103,6 +103,39 @@ LakeOfRage_House2_EventScript_FisherSatisfied::
 	release
 	end
 
+LakeOfRage_House2_EventScript_GyaradositeFisher::
+    lock
+    faceplayer
+    msgbox LakeOfRage_House2_Text_GyaradositeIntro, MSGBOX_YESNO
+    goto_if_eq VAR_RESULT, FALSE, LakeOfRage_House2_EventScript_GyaradositeDeclined
+    special ChoosePartyMon
+    waitstate
+    lock
+    goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, LakeOfRage_House2_EventScript_GyaradositeDeclined
+    specialvar VAR_RESULT, ScriptGetPartyMonSpecies
+    goto_if_eq VAR_RESULT, SPECIES_GYARADOS, LakeOfRage_House2_EventScript_GyaradositeCorrect
+    msgbox LakeOfRage_House2_Text_GyaradositeWrong, MSGBOX_DEFAULT
+    release
+    end
+
+LakeOfRage_House2_EventScript_GyaradositeCorrect::
+    checkitemspace ITEM_GYARADOSITE
+    goto_if_eq VAR_RESULT, FALSE, LakeOfRage_House2_EventScript_GyaradositeBagFull
+    giveitem ITEM_GYARADOSITE
+    msgbox LakeOfRage_House2_Text_GyaradositeReceived, MSGBOX_DEFAULT
+    release
+    end
+
+LakeOfRage_House2_EventScript_GyaradositeBagFull::
+    msgbox LakeOfRage_House2_Text_GyaradositeBagFull, MSGBOX_DEFAULT
+    release
+    end
+
+LakeOfRage_House2_EventScript_GyaradositeDeclined::
+    msgbox LakeOfRage_House2_Text_GyaradositeDeclined, MSGBOX_DEFAULT
+    release
+    end
+
 LakeOfRage_House2_Text_LakeHistory:
     .string "LAKE OF RAGE is actually a crater\n"
     .string "made by rampaging GYARADOS.\p"
@@ -161,3 +194,22 @@ LakeOfRage_House2_Text_NotMagikarp:
 LakeOfRage_House2_Text_Refused:
     .string "Oh… So you didn't get one good\n"
     .string "enough to show me? Maybe next time.$"
+
+LakeOfRage_House2_Text_GyaradositeIntro:
+    .string "I study the power of GYARADOS.\p"
+    .string "Could you show me one of yours?$"
+
+LakeOfRage_House2_Text_GyaradositeWrong:
+    .string "Hmm... That's not a GYARADOS.\p"
+    .string "Come back when you have one!$"
+
+LakeOfRage_House2_Text_GyaradositeReceived:
+    .string "Amazing! The power of GYARADOS\n"
+    .string "never ceases to impress me!$"
+
+LakeOfRage_House2_Text_GyaradositeBagFull:
+    .string "Your BAG is full!\p"
+    .string "Come back when you have room.$"
+
+LakeOfRage_House2_Text_GyaradositeDeclined:
+    .string "Perhaps another time, then.$"

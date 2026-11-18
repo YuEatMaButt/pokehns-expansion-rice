@@ -14,7 +14,7 @@ SlowpokeWell_B1F_EventScript_Item_Great_Ball::
 	end
 
 SlowpokeWell_B1F_EventScript_Item_Full_Heal::
-	finditem ITEM_FULL_HEAL
+	finditem ITEM_SLOWBRONITE
 	end
 
 SlowpokeWell_B1F_EventScript_Kurt::
